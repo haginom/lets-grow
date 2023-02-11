@@ -1,0 +1,50 @@
+@font-face {
+  font-family: LetsGrow;
+  src: 
+  url("../fonts/lets-grow-neue.woff") format("woff"),    
+  url("../fonts/lets-grow-neue.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Coffee Tea';
+  src: 
+  url("../fonts/coffee+tea-Medium.woff") format("woff"),    
+  url("../fonts/coffee+tea-Medium.woff2") format("truetype");
+}
+
+
+@font-face {
+  font-family: 'Brady Bunch Remastered';
+  src: url('../fonts/BradyBunchRemastered.woff2') format('woff2'),
+      url('../fonts/BradyBunchRemastered.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Brady Bunch Remastered';
+  src: url('../fonts/BradyBunchRemastered.woff2') format('woff2'),
+      url('../fonts/BradyBunchRemastered.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+.bradbunfont{
+  font-family: "Brady Bunch Remastered";
+}
+
+.letsgrowfont {
+  font-family: LetsGrow;
+}
+
+.letsgrowfont--copy {
+  font-size: 1.5rem;
+  line-height: 1.85;
+}
+
+.coffeeTea{
+  font-family: "Coffee Tea"
+}

@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
- module.exports = {
+module.exports = {
   siteMetadata: {
     title: `Let's Grow`,
     description: `Let's Grow is an innovative, multi-media resource for educational settings that offers an irresistible invitation to learn and play for children and their educators.`,
@@ -21,10 +21,10 @@
       },
     },
     {
-        resolve: 'gatsby-plugin-manifest',
-        options: {
-          icon: 'src/images/favicon.png',
-        },
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/favicon.png",
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -43,6 +43,17 @@
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
+    {
+      resolve: "gatsby-source-sanity",
+      options: {
+        projectId: "a6vt2u3f",
+        dataset: "production",
+        // To enable preview of drafts, copy .env-example into .env,
+        // and add a token with read permissions
+        token: process.env.SANITY_TOKEN,
+        watchMode: true,
+        overlayDrafts: true,
+      },
+    },
   ],
-};
-
+}

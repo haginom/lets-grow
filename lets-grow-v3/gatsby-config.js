@@ -41,7 +41,17 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`],
+          placeholder: `blurred`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+        },
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: "gatsby-source-sanity",
@@ -53,6 +63,14 @@ module.exports = {
         token: process.env.SANITY_TOKEN,
         watchMode: true,
         overlayDrafts: true,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sanity-image",
+      options: {
+        // Sanity project info (required)
+        projectId: "a6vt2u3f",
+        dataset: "production",
       },
     },
   ],

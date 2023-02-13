@@ -119,8 +119,3 @@ const Grid = styled.div`
     grid-area: eight;
   }
 `
-
-const ImageContainer = styled.div`
-  margin: auto;
-  margin-top: -0.25rem;
-`

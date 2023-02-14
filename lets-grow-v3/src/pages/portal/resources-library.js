@@ -1,26 +1,60 @@
 import React from "react"
 import { graphql } from "gatsby"
 import GraphQLErrorList from "../../components/graphql-error-list"
-import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from "../../lib/helpers"
 import Layout from "../../components/layout/layout"
 import WithAuthCheck from "../../components/withAuthCheck"
+import HandyHintTitle from "../../components/hhTitle"
+import ThemeTitle from "../../components/themeTitle"
+import { mapEdgesToNodes } from "../../lib/helpers"
 
 export const query = graphql`
-  {
+  query ResourcesLibraryQuery {
     themes: allSanityTheme {
       edges {
         node {
-          id
           name
+          sessions {
+            _id
+            name
+            color {
+              hex
+            }
+            image {
+              hotspot {
+                height
+                width
+                x
+                y
+              }
+              asset {
+                id
+                url
+              }
+              crop {
+                bottom
+                left
+                right
+                top
+              }
+            }
+          }
+          id
+          handyHints
+          backgroundColour {
+            hex
+          }
+          overview
+          slug {
+            current
+          }
         }
       }
     }
   }
 `
 
-const LB = props => {
+const Lb = props => {
   const { data, errors } = props
-
   if (errors) {
     return (
       <Layout>
@@ -31,18 +65,19 @@ const LB = props => {
 
   const themeNodes = (data || {}).themes ? mapEdgesToNodes(data.themes) : []
 
-  console.log(themeNodes)
   return (
-    <>
-      <h1>hello</h1>
-      <p>hello</p>
-    </>
+    <Layout>
+      <HandyHintTitle title="resources library" />
+      {themeNodes
+        ? themeNodes.map(theme => <ThemeTitle key={theme.id} {...theme} />)
+        : null}
+    </Layout>
   )
 }
 
 const ResourcesLibrary = ({ data, ...props }) => (
   <WithAuthCheck>
-    <LB data={data} {...props} />
+    <Lb data={data} {...props} />
   </WithAuthCheck>
 )
 

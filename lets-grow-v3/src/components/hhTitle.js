@@ -15,7 +15,7 @@ const HandyHintTitle = ({ title, icon, maxWidth, colour }) => (
       </Title>
     </Container>
     <ImageContainer>
-      <GatsbyImage image={icon} alt="" />
+      {icon ? <GatsbyImage image={icon} alt="" /> : null}
     </ImageContainer>
   </section>
 )

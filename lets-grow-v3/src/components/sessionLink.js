@@ -5,10 +5,17 @@ import client from "../services/sanity"
 import imageUrlBuilder from "@sanity/image-url"
 
 const SessionLink = ({ className, ...props }) => {
+  const { name, color, image } = props
+  let colorHex = null
+  if (color) {
+    colorHex = color.hex
+  }
+
   const builder = imageUrlBuilder(client)
   function urlFor(source) {
     return builder.image(source)
   }
+
   const capitalizeWords = str => {
     return str
       .toLowerCase()
@@ -16,25 +23,24 @@ const SessionLink = ({ className, ...props }) => {
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(" ")
   }
-  const name = capitalizeWords(props.name)
   return (
-    <StyledLink
-      color={props.color.hex}
-      className={`${className ? ` ${className}` : ""} br4`}
-    >
-      <Container>
-        <InnerWrapper>{name}</InnerWrapper>
-        {props.image && (
-          <StyledImg
-            src={urlFor(props.image)
-              .auto("format")
-              .fit("max")
-              .height(100)
-              .url()}
-          />
-        )}
-      </Container>
-    </StyledLink>
+    <>
+      <StyledLink
+        className={`${className ? ` ${className}` : ""} br4`}
+        color={colorHex}
+      >
+        <Container>
+          <InnerWrapper>
+            {name ? <p>{capitalizeWords(name)}</p> : null}
+          </InnerWrapper>
+          {image && (
+            <StyledImg
+              src={urlFor(image).auto("format").fit("max").height(100).url()}
+            />
+          )}
+        </Container>
+      </StyledLink>
+    </>
   )
 }
 

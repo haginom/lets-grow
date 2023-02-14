@@ -1,19 +1,15 @@
 import * as React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import client from "../services/sanity"
-import imageUrlBuilder from "@sanity/image-url"
+import { urlFor } from "../lib/helpers"
 
 const SessionLink = ({ className, ...props }) => {
   const { name, color, image } = props
+  console.log(image, "session link")
+
   let colorHex = null
   if (color) {
     colorHex = color.hex
-  }
-
-  const builder = imageUrlBuilder(client)
-  function urlFor(source) {
-    return builder.image(source)
   }
 
   const capitalizeWords = str => {

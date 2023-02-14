@@ -4,9 +4,11 @@ import Layout from "../components/layout/layout"
 import GraphQLErrorList from "./graphql-error-list"
 import SessionLink from "./sessionLink"
 import SessionIntroLink from "./sessionIntroLink"
+import { urlFor } from "../lib/helpers"
 
 const ThemeDetails = props => {
-  const { data, errors } = props
+  const { image, overview, handyHints, sessions, slug, errors } = props
+  console.log(image, "theme details")
   if (errors) {
     return (
       <Layout>
@@ -14,10 +16,14 @@ const ThemeDetails = props => {
       </Layout>
     )
   }
-  const { overview, handyHints, sessions, slug } = props
-
   return (
     <>
+      {image ? (
+        <StyledImg
+          src={urlFor(image).auto("format").fit("max").height(200).url()}
+        />
+      ) : null}
+
       <Subheading className="coffeeTea i pv2 ml4">About...</Subheading>
       <TwoColumns className="flex ">
         {overview ? (
@@ -34,15 +40,24 @@ const ThemeDetails = props => {
       <Subheading className="coffeeTea i pv2 ml4">Sessions...</Subheading>
       <ThreeColumns>
         {sessions &&
-          sessions.map(session => (
-            <div key={session._id}>
-              <SessionLink {...session} />
-            </div>
-          ))}
+          sessions.map(session =>
+            session ? (
+              <div key={session._id}>
+                <SessionLink {...session} />
+              </div>
+            ) : null
+          )}
       </ThreeColumns>
     </>
   )
 }
+
+const StyledImg = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: -3rem;
+`
 
 const TwoColumns = styled.div`
   gap: 1rem;
@@ -60,6 +75,7 @@ const ThreeColumns = styled.div`
 `
 
 const Subheading = styled.h3`
+  margin-top: -3rem;
   font-size: 1.4rem;
   font-weight: 600;
   @media screen and (min-width: 60em) {

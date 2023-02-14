@@ -10,6 +10,24 @@ export const query = graphql`
       backgroundColour {
         hex
       }
+      image {
+        asset {
+          id
+          url
+        }
+        crop {
+          top
+          bottom
+          left
+          right
+        }
+        hotspot {
+          x
+          y
+          height
+          width
+        }
+      }
       sessions {
         id
         name

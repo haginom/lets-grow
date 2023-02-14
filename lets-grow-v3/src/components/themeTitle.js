@@ -8,7 +8,7 @@ const ThemeTitle = ({ className, ...props }) => {
   return (
     <section className="w-100 ph1 mb2">
       <Tab
-        className="br4 mh1 ph3 pv4 ph5-ns pv4-ns f6 f5-ns fw5"
+        className="br4 mh1 ph3 ph5-ns  f6 f5-ns fw5"
         color={props.backgroundColour.hex}
       >
         <Centered className="relative">
@@ -49,7 +49,7 @@ const StyledButton = styled.button`
 `
 
 const InnerWrapper = styled.p`
-  padding-top: 1.25rem;
+  padding-top: 1.65rem;
   padding-bottom: 1rem;
   &:visited {
     color: white;

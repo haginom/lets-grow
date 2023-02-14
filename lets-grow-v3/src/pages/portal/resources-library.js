@@ -12,7 +12,34 @@ export const query = graphql`
     themes: allSanityTheme {
       edges {
         node {
+          id
           name
+          backgroundColour {
+            hex
+          }
+          slug {
+            current
+          }
+          image {
+            asset {
+              id
+              url
+            }
+            crop {
+              top
+              bottom
+              left
+              right
+            }
+            hotspot {
+              x
+              y
+              height
+              width
+            }
+          }
+          handyHints
+          overview
           sessions {
             _id
             name
@@ -37,15 +64,6 @@ export const query = graphql`
                 top
               }
             }
-          }
-          id
-          handyHints
-          backgroundColour {
-            hex
-          }
-          overview
-          slug {
-            current
           }
         }
       }

@@ -5,9 +5,10 @@ import Seo from "./seo"
 // import Session from "./session"
 import GraphQLErrorList from "./graphql-error-list"
 import ThemeDetails from "./themeDetails"
+import { capitalizeWords } from "../lib/helpers"
 
 const Theme = props => {
-  const { data, errors } = props
+  const { name, backgroundColour, errors } = props
   if (errors) {
     return (
       <Layout>
@@ -15,15 +16,7 @@ const Theme = props => {
       </Layout>
     )
   }
-  const { name, backgroundColour, overview, handyHints, sessions, slug } = props
 
-  const capitalizeWords = str => {
-    return str
-      .toLowerCase()
-      .split(" ")
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ")
-  }
   return (
     <Layout>
       <Seo title={capitalizeWords(name)} />
@@ -42,39 +35,15 @@ const Theme = props => {
   )
 }
 
-const TwoColumns = styled.div`
-  gap: 1rem;
-  margin-bottom: 4rem;
-`
-
-const ThreeColumns = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-
-  @media screen and (min-width: 60em) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin-bottom: 4rem;
-  }
-`
-
 const Tab = styled.div`
   background-color: ${props => props.color || "orange"};
   color: white;
   overflow: hidden;
 `
-
 const Heading = styled.h1`
   font-size: 1.6rem;
   @media screen and (min-width: 60em) {
     font-size: 2.2rem;
-  }
-`
-
-const Subheading = styled.h3`
-  font-size: 1.4rem;
-  font-weight: 600;
-  @media screen and (min-width: 60em) {
-    font-size: 1.8rem;
   }
 `
 const Centered = styled.div`

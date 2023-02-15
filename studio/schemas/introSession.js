@@ -1,8 +1,9 @@
 import {FaFolder} from 'react-icons/fa'
+import {SlugInput} from 'sanity-plugin-prefixed-slug'
 
 export default {
-  name: 'sessions',
-  title: 'Sessions',
+  name: 'introSessions',
+  title: 'Intro Sessions',
   type: 'document',
   icon: FaFolder,
   fields: [
@@ -27,24 +28,26 @@ export default {
       type: 'color',
     },
     {
-      name: 'sessionPlan',
-      title: 'Session Plan',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: [{type: 'sessionPlan'}],
-        },
-      ],
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      components: {
+        input: SlugInput,
+      },
+      options: {
+        urlPrefix: 'http://localhost:8000/sessions/',
+        slugify: (slugString) => slugString.toLowerCase(),
+        // You can also avoid slugifying entirely by returning the full value:
+      },
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'sessionResources',
-      title: 'Session Resources',
       type: 'array',
       of: [
         {
           type: 'reference',
-          to: [{type: 'sessionResources'}],
+          to: [{type: 'sessionResources', title: 'Session Resources'}],
         },
       ],
     },

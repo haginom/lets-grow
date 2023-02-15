@@ -14,6 +14,12 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      name: 'orderRank',
+      title: 'Order Rank',
+      type: 'string',
+      hidden: true,
+    },
+    {
       name: 'backgroundColour',
       title: 'background color',
       type: 'color',
@@ -27,13 +33,24 @@ export default {
       },
     },
     {
-      title: 'Does the theme have an Overview page?',
+      title: 'Include the Overview page?',
       name: 'overview',
       type: 'boolean',
     },
     {
-      title: 'Does the theme have a Handy Hints page?',
+      title: 'Include Handy Hints?',
       name: 'handyHints',
+      type: 'boolean',
+    },
+    {
+      title: "Include the Welcome to Let's Grow with Mr Bloom session",
+      name: 'welcomeMrBloom',
+      type: 'boolean',
+    },
+
+    {
+      title: 'Include the Introductory session with Bob, Flo & the Babies session',
+      name: 'introSession',
       type: 'boolean',
     },
     {
@@ -50,7 +67,6 @@ export default {
       },
       validation: (Rule) => Rule.required(),
     },
-
     {
       name: 'sessions',
       title: 'Sessions',

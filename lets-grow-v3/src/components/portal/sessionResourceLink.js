@@ -1,43 +1,52 @@
 import * as React from "react"
 import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
+
 import { urlFor } from "../../lib/helpers"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { capitalizeWords } from "../../lib/helpers"
 
-const SessionResourceLink = ({
-  className,
-  color,
-  play,
-  download,
-  songs,
-  ...props
-}) => {
-  const { fileCategory, fileName, name, image, url, file, fileAttachment } =
-    props
-
-  let linkColor = "rgba(255, 255, 255, 0.25)"
-  if (color === "#7ba1aa") {
-    linkColor = "#cec7ab"
-  } else if (color === "#cec7ab") {
-    linkColor = "#9FB7BF "
-  }
-
+const SessionResourceLink = ({ className, color, ...props }) => {
+  const data = useStaticQuery(graphql`
+    query resourceLinkQuery {
+      iconDownload: file(relativePath: { eq: "icon-download.png" }) {
+        childImageSharp {
+          gatsbyImageData(height: 50)
+        }
+      }
+      iconPlay: file(relativePath: { eq: "play-button-white.png" }) {
+        childImageSharp {
+          gatsbyImageData(height: 60)
+        }
+      }
+      iconSongs: file(relativePath: { eq: "portal/GSG-5.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 150)
+        }
+      }
+    }
+  `)
+  const { fileCategory, image, fileAttachment, url } = props
   return (
     <>
       <StyledLink
         href={`${
-          url ? `${url}` : `${file}` ? `${fileAttachment.file.asset.url}` : ""
+          url
+            ? `${url.url}`
+            : fileAttachment.file?.asset
+            ? `${fileAttachment.file.asset.url}`
+            : "resource-not-found"
         }`}
         target="_blank"
         className={`${className ? ` ${className}` : ""} br4`}
-        color={linkColor}
+        color={color?.hex}
       >
         <Container>
           <InnerWrapper>
-            {name ? (
-              <p>{capitalizeWords(name)}</p>
-            ) : fileName ? (
-              <p>{capitalizeWords(fileName)}</p>
+            {fileAttachment ? (
+              <p>{capitalizeWords(fileAttachment?.fileName)}</p>
+            ) : url ? (
+              <p>{capitalizeWords(url?.linkName)}</p>
             ) : null}
           </InnerWrapper>
           {image && (
@@ -47,32 +56,37 @@ const SessionResourceLink = ({
           )}
           {fileCategory === "video" && (
             <GatsbyImage
+              alt=""
               objectFit="contain"
-              image={play.childImageSharp.gatsbyImageData}
+              image={data.iconPlay.childImageSharp.gatsbyImageData}
             />
           )}
           {fileCategory === "image" && (
             <GatsbyImage
+              alt=""
               objectFit="contain"
-              image={download.childImageSharp.gatsbyImageData}
+              image={data.iconDownload.childImageSharp.gatsbyImageData}
             />
           )}
           {fileCategory === "webpage" && (
             <GatsbyImage
+              alt=""
               objectFit="contain"
-              image={download.childImageSharp.gatsbyImageData}
+              image={data.iconDownload.childImageSharp.gatsbyImageData}
             />
           )}
           {fileCategory === "pdf" && (
             <GatsbyImage
+              alt=""
               objectFit="contain"
-              image={download.childImageSharp.gatsbyImageData}
+              image={data.iconDownload.childImageSharp.gatsbyImageData}
             />
           )}
           {fileCategory === "song" && (
             <GatsbyImage
+              alt=""
               objectFit="contain"
-              image={songs.childImageSharp.gatsbyImageData}
+              image={data.iconSongs.childImageSharp.gatsbyImageData}
             />
           )}
         </Container>
@@ -106,7 +120,8 @@ const Container = styled.div`
   div:last-child {
     max-height: 4rem;
     box-sizing: border-box;
-    margin: 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
   }
 `
 
@@ -118,7 +133,6 @@ const InnerWrapper = styled.div`
   padding-top: 2.5rem;
   padding-bottom: 2.35rem;
   padding-left: 1rem;
-  padding-right: 1rem;
   @media screen and (min-width: 60em) {
     font-size: 1.3rem;
   }
@@ -126,11 +140,14 @@ const InnerWrapper = styled.div`
   &:visited {
     color: white;
   }
+  p {
+    padding-left: 0.25rem;
+  }
 `
 
 const StyledImg = styled.img`
   position: absolute;
-  right: 10px;
+  right: 0px;
   bottom: -20px;
 `
 

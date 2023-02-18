@@ -6,11 +6,6 @@ import { urlFor } from "../../lib/helpers"
 const SessionLink = ({ className, ...props }) => {
   const { fileName, name, color, image } = props
 
-  let colorHex = null
-  if (color) {
-    colorHex = color.hex
-  }
-
   const capitalizeWords = str => {
     return str
       .toLowerCase()
@@ -22,7 +17,7 @@ const SessionLink = ({ className, ...props }) => {
     <>
       <StyledLink
         className={`${className ? ` ${className}` : ""} br4`}
-        color={colorHex}
+        color={color?.hex}
       >
         <Container>
           <InnerWrapper>
@@ -83,7 +78,6 @@ const InnerWrapper = styled.div`
 `
 
 const StyledImg = styled.img`
-  
   position: absolute;
   right: 10px;
   bottom: -20px;

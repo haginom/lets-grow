@@ -1,18 +1,18 @@
 export default {
-  name: 'fileAttachment',
-  title: 'File Attachment',
+  name: 'urlLink',
+  title: 'Link',
   type: 'object',
   fields: [
     {
-      name: 'fileName',
+      name: 'linkName',
       title: 'Name',
       type: 'string',
       validation: (Rule) => Rule.required(),
     },
     {
-      name: 'file',
-      type: 'file',
-      title: 'File Attachment',
+      name: 'url',
+      type: 'url',
+      title: 'Url Address',
     },
   ],
 }

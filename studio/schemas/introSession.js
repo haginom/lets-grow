@@ -1,11 +1,11 @@
-import {FaFolder} from 'react-icons/fa'
+import {FaTag} from 'react-icons/fa'
 import {SlugInput} from 'sanity-plugin-prefixed-slug'
 
 export default {
   name: 'introSessions',
-  title: 'Intro Sessions',
+  title: "Welcome to Let's Grow Sessions",
   type: 'document',
-  icon: FaFolder,
+  icon: FaTag,
   fields: [
     {
       name: 'name',
@@ -24,12 +24,13 @@ export default {
     },
     {
       name: 'color',
-      title: 'color',
+      title: 'Background Colour',
       type: 'color',
     },
     {
       name: 'slug',
       title: 'Slug',
+      description: 'The URL for the Introductory Session',
       type: 'slug',
       components: {
         input: SlugInput,

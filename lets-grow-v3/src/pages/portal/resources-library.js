@@ -7,24 +7,10 @@ import HandyHintTitle from "../../components/portal/hhTitle"
 import ThemeTitle from "../../components/portal/themeTitle"
 import { mapEdgesToNodes } from "../../lib/helpers"
 import IntroSessionTitle from "../../components/portal/introSessionTitle"
+import Seo from "../../components/seo"
 
 export const query = graphql`
   query ResourcesLibraryQuery {
-    iconDownload: file(relativePath: { eq: "icon-download.png" }) {
-      childImageSharp {
-        gatsbyImageData(width: 124)
-      }
-    }
-    iconPlay: file(relativePath: { eq: "play-button-white.png" }) {
-      childImageSharp {
-        gatsbyImageData(width: 124)
-      }
-    }
-    iconSongs: file(relativePath: { eq: "portal/GSG-5.png" }) {
-      childImageSharp {
-        gatsbyImageData(width: 124)
-      }
-    }
     themes: allSanityTheme {
       edges {
         node {
@@ -89,44 +75,83 @@ export const query = graphql`
     introSessions: allSanityIntroSessions {
       edges {
         node {
+          id
           name
           color {
             hex
           }
           image {
-            asset {
-              id
-              url
-            }
             crop {
-              top
               bottom
               left
               right
+              top
             }
             hotspot {
-              x
-              y
               height
               width
+              x
+              y
+            }
+            asset {
+              url
             }
           }
-          id
           slug {
             current
           }
           sessionResources {
-            id
-            fileName
             fileCategory
-            fileTypeUrl
-            file
-            url
+            id
+            url {
+              linkName
+              url
+            }
             fileAttachment {
+              fileName
               file {
                 asset {
-                  id
-                  extension
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    sessions: allSanitySessions {
+      edges {
+        node {
+          id
+          name
+          visitingBaby
+          characterPrep {
+            id
+            fileCategory
+            fileAttachment {
+              fileName
+              file {
+                asset {
+                  url
+                }
+              }
+            }
+            url {
+              linkName
+              url
+            }
+          }
+          howToVideo {
+            id
+            fileCategory
+            url {
+              linkName
+              url
+            }
+            fileAttachment {
+              fileName
+              file {
+                asset {
                   url
                 }
               }
@@ -140,12 +165,11 @@ export const query = graphql`
 
 const Lb = props => {
   const { data, errors } = props
-  const iconDownload = data && data.iconDownload
-  const iconPlay = data && data.iconPlay
-  const iconSongs = data && data.iconSongs
+
   if (errors) {
     return (
       <Layout>
+        <Seo title="Resource Library" />
         <GraphQLErrorList errors={errors} />
       </Layout>
     )
@@ -158,14 +182,10 @@ const Lb = props => {
 
   return (
     <Layout>
+      <Seo title="Resource Library" />
       <HandyHintTitle title="resources library" />
       {introSessions ? (
-        <IntroSessionTitle
-          introSessions={introSessions}
-          download={iconDownload}
-          play={iconPlay}
-          songs={iconSongs}
-        />
+        <IntroSessionTitle introSessions={introSessions} />
       ) : null}
       {themeNodes
         ? themeNodes.map(theme => <ThemeTitle key={theme.id} {...theme} />)

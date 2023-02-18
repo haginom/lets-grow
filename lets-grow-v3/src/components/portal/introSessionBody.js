@@ -1,7 +1,5 @@
 import * as React from "react"
 import styled from "styled-components"
-import Layout from "../layout/layout"
-import Seo from "../seo"
 import { urlFor } from "../../lib/helpers"
 import SessionResourceLink from "./sessionResourceLink"
 
@@ -11,7 +9,7 @@ const IntroSessionBody = ({ play, download, songs, ...props }) => {
     <>
       <section className="w-100 ph1 mv4">
         <Tab
-          color={color.hex}
+          color={color?.hex}
           className="br3 ph3 pv4 ph5-ns pv4-ns f6 f5-ns fw5"
         >
           <Centered className="relative">
@@ -22,13 +20,7 @@ const IntroSessionBody = ({ play, download, songs, ...props }) => {
                   sessionResources.map(resource =>
                     resource ? (
                       <div key={resource.id}>
-                        <SessionResourceLink
-                          {...resource}
-                          play={play}
-                          color={color.hex}
-                          download={download}
-                          songs={songs}
-                        />
+                        <SessionResourceLink {...resource} color={color?.hex} />
                       </div>
                     ) : null
                   )}
@@ -48,7 +40,7 @@ const IntroSessionBody = ({ play, download, songs, ...props }) => {
 
 const FlexContainer = styled.div`
   div: first-child {
-    flex: 0 1 30rem;
+    flex: 0 1 26rem;
   }
 `
 

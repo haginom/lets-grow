@@ -1,6 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
-import IntroSessionBody from "./intro"
+import IntroSessionBody from "./introSessionBody"
 
 const IntroSessionTitle = ({
   play,
@@ -10,7 +10,6 @@ const IntroSessionTitle = ({
   introSessions,
 }) => {
   const [showMore, setShowMore] = React.useState(false)
-
   return (
     <section className="w-100 ph1 mb2">
       <Tab className="br4 mh1 ph3 ph5-ns  f6 f5-ns fw5">

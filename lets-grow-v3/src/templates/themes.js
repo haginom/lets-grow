@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Theme from "../components/portal/themePage"
 import Layout from "../components/layout/layout"
 import GraphQLErrorList from "../components/portal/graphql-error-list"
+import WithAuthCheck from "../components/withAuthCheck"
 
 export const query = graphql`
   query ThemePageTemplateQuery($id: String!) {
@@ -65,7 +66,7 @@ export const query = graphql`
     }
   }
 `
-const ThemeTemplate = props => {
+const ThemeTemplateBody = props => {
   const { data, errors } = props
   const theme = data && data.theme
   if (errors) {
@@ -77,5 +78,11 @@ const ThemeTemplate = props => {
   }
   return <>{theme && <Theme {...theme} />}</>
 }
+
+const ThemeTemplate = ({ data, ...props }) => (
+  <WithAuthCheck>
+    <ThemeTemplateBody data={data} {...props} />
+  </WithAuthCheck>
+)
 
 export default ThemeTemplate

@@ -1,26 +1,16 @@
-import {FaFolder} from 'react-icons/fa'
-
 export default {
   name: 'sessionResources',
   title: 'Session Resources',
   type: 'document',
-  icon: FaFolder,
   fields: [
     {
-      name: 'fileName',
-      title: 'File Name',
+      name: 'name',
+      title: 'Name',
       type: 'string',
+      description: 'This should contain Session and Resource name',
       validation: (Rule) => Rule.required(),
     },
-    {
-      name: 'session',
-      type: 'reference',
-      to: [{type: 'introSessions'}, {type: 'sessions'}],
-      validation: (Rule) => Rule.required(),
-      options: {
-        filter: '!defined(parent)',
-      },
-    },
+
     {
       name: 'fileCategory',
       title: 'File Type',
@@ -37,43 +27,19 @@ export default {
         direction: 'horizontal',
       },
     },
-    
-    {
-      name: 'fileTypeUrl',
-      title: 'Is the session resource accessible via a url link?',
-      type: 'boolean',
 
-      validation: (Rule) =>
-        Rule.custom((field, context) =>
-          (field === false && context.document.file === false) ||
-          (field === true && context.document.file === true)
-            ? 'Either Url or File attachment must have a value'
-            : true
-        ),
-    },
     {
       name: 'url',
       title: 'Link',
-      type: 'string',
-      hidden: ({document}) => !document?.fileTypeUrl,
+      type: 'urlLink',
+      hidden: ({document}) => document?.fileCategory !== 'webpage',
     },
-    {
-      name: 'file',
-      title: 'Upload a file? ',
-      type: 'boolean',
-      validation: (Rule) =>
-        Rule.custom((field, context) =>
-          (field === false && context.document.fileTypeUrl === false) ||
-          (field === true && context.document.fileTypeUrl === true)
-            ? 'Either Url or File attachment must have a value'
-            : true
-        ),
-    },
+
     {
       name: 'fileAttachment',
-      title: 'File Attachment',
+      title: 'Upload File',
       type: 'fileAttachment',
-      hidden: ({document}) => !document?.file,
+      hidden: ({document}) => document?.fileCategory === 'webpage',
     },
   ],
 }

@@ -2,8 +2,8 @@ import React from "react"
 import FullWidthPanelTwo from "../../components/fullWidthPanel"
 import styled from "styled-components"
 import IconButton from "../../components/iconButton"
-import HandyHintsPanel from "../../components/handyHintsPanel"
-import { HHGrid, HHGridItem, HHGridItemTwo } from "../../components/hhGrid"
+import HandyHintsPanel from "../../components/portal/handyHintsPanel"
+import { HHGrid, HHGridItem, HHGridItemTwo } from "../../components/portal/hhGrid"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const HHOne = () => (

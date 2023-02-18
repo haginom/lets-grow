@@ -12,7 +12,32 @@ export default {
       type: 'string',
       validation: (Rule) => Rule.required(),
     },
-
+    {
+      name: 'session',
+      type: 'reference',
+      to: [{type: 'introSessions'}, {type: 'sessions'}],
+      validation: (Rule) => Rule.required(),
+      options: {
+        filter: '!defined(parent)',
+      },
+    },
+    {
+      name: 'fileCategory',
+      title: 'File Type',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'PDF', value: 'pdf'},
+          {title: 'Video', value: 'video'},
+          {title: 'Image', value: 'image'},
+          {title: 'Song', value: 'song'},
+          {title: 'Webpage', value: 'webpage'},
+        ],
+        layout: 'radio',
+        direction: 'horizontal',
+      },
+    },
+    
     {
       name: 'fileTypeUrl',
       title: 'Is the session resource accessible via a url link?',
@@ -34,7 +59,7 @@ export default {
     },
     {
       name: 'file',
-      title: 'Is the session resource a file (image, pdf etc.)? ',
+      title: 'Upload a file? ',
       type: 'boolean',
       validation: (Rule) =>
         Rule.custom((field, context) =>

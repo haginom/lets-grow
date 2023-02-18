@@ -1,11 +1,10 @@
 import * as React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { urlFor } from "../lib/helpers"
+import { urlFor } from "../../lib/helpers"
 
 const SessionLink = ({ className, ...props }) => {
-  const { name, color, image } = props
-  console.log(image, "session link")
+  const { fileName, name, color, image } = props
 
   let colorHex = null
   if (color) {
@@ -27,7 +26,11 @@ const SessionLink = ({ className, ...props }) => {
       >
         <Container>
           <InnerWrapper>
-            {name ? <p>{capitalizeWords(name)}</p> : null}
+            {name ? (
+              <p>{capitalizeWords(name)}</p>
+            ) : fileName ? (
+              <p>{capitalizeWords(fileName)}</p>
+            ) : null}
           </InnerWrapper>
           {image && (
             <StyledImg
@@ -66,7 +69,10 @@ const InnerWrapper = styled.div`
   font-weight: 550;
   letter-spacing: 0.01em;
   color: white;
-  padding: 2.2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.35rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   @media screen and (min-width: 60em) {
     font-size: 1.3rem;
   }
@@ -77,7 +83,7 @@ const InnerWrapper = styled.div`
 `
 
 const StyledImg = styled.img`
-  flex: 0 0 50px;
+  
   position: absolute;
   right: 10px;
   bottom: -20px;

@@ -8,6 +8,7 @@ exports.onPostBuild = ({ reporter }) => {
  */
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
+  const introSessionPageTemplate = path.resolve(`src/templates/intro.js`)
   const themePageTemplate = path.resolve(`src/templates/themes.js`)
   const result = await graphql(`
     query {
@@ -22,6 +23,17 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allSanityIntroSessions {
+        edges {
+          node {
+            slug {
+              current
+            }
+            id
+            name
+          }
+        }
+      }
     }
   `)
   result.data.allSanityTheme.edges.forEach(edge => {
@@ -29,6 +41,16 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `portal/${edge.node.slug.current}`,
       component: themePageTemplate,
+      context: {
+        id,
+      },
+    })
+  })
+  result.data.allSanityIntroSessions.edges.forEach(edge => {
+    const id = edge.node.id
+    createPage({
+      path: `portal/sessions/${edge.node.slug.current}`,
+      component: introSessionPageTemplate,
       context: {
         id,
       },

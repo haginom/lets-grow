@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../../components/layout/layout"
 import Seo from "../../components/seo"
 import WithAuthCheck from "../../components/withAuthCheck"
-import HandyHintTitle from "../../components/hhTitle"
+import HandyHintTitle from "../../components/portal/hhTitle"
 import {
   HHFour,
   HHOne,

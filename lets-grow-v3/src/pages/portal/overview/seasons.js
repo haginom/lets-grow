@@ -3,11 +3,11 @@ import Layout from "../../../components/layout/layout"
 import { GatsbyImage } from "gatsby-plugin-image"
 import WithAuthCheck from "../../../components/withAuthCheck"
 import { graphql, useStaticQuery } from "gatsby"
-import HandyHintTitle from "../../../components/hhTitle"
+import HandyHintTitle from "../../../components/portal/hhTitle"
 import styled from "styled-components"
 import FullWidthPanel from "../../../components/fullWidthPanel"
 import OrangeButton from "../../../components/button"
-import FloatingPhotoBL from "../../../components/floatingPhotoBorderless"
+import FloatingPhotoBL from "../../../components/portal/floatingPhotoBorderless"
 
 const SeasonsOverview = () => {
   const data = useStaticQuery(graphql`

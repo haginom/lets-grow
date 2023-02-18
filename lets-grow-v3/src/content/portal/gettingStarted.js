@@ -3,7 +3,7 @@ import FullWidthPanel from "../../components/fullWidthPanel"
 import { SubHeading, Paragraph } from "../../components/tachyons/text"
 import OrangeButton from "../../components/button"
 import styled from "styled-components"
-import { ThemeIntro } from "../../components/guideTable"
+import { ThemeIntro } from "../../components/portal/guideTable"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const GSOne = ({ data }) => (

@@ -2,30 +2,27 @@ import * as React from "react"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-const IntroSession = ({ menu, className, ...props }) => {
+const IntroSession = ({ menu, ...props }) => {
   const [showMore, setShowMore] = React.useState(false)
-  {
-    menu && (
-      <IntroSessionTitle
-        showMore={showMore}
-        setShowMore={setShowMore}
-        {...props}
-      />
-    )
-  }
+  return (
+    <IntroSessionTitle
+      showMore={showMore}
+      setShowMore={setShowMore}
+      {...props}
+    />
+  )
 }
 
-const IntroSessionTitle = ({ showMore, setShowMore, ...props }) => {
+const IntroSessionTitle = ({ className, showMore, setShowMore, ...props }) => {
   return (
     <StyledButton
-      color={props.backgroundColour.hex}
       onClick={() => setShowMore(!showMore)}
       className={`${
         className ? ` ${className}` : ""
       } dt white br4 f8 f5-ns fw5 mh1`}
     >
       {showMore ? (
-        <IntroSessionBody {...body} />
+        <IntroSessionBody />
       ) : (
         <InnerWrapper className="f2 ttu coffeeTea pv3-ns pv1 tc b dtc v-mid">
           {props.name}{" "}
@@ -44,7 +41,7 @@ const IntroSessionBody = ({ ...props }) => {
           <div>Meet the Characters</div>
           <div>Video Call</div>
         </div>
-        <GatsbyImage image={props.image} />
+        {/* <GatsbyImage image={props.image} /> */}
       </div>
     </>
   )

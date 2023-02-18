@@ -14,12 +14,6 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      name: 'orderRank',
-      title: 'Order Rank',
-      type: 'string',
-      hidden: true,
-    },
-    {
       name: 'backgroundColour',
       title: 'background color',
       type: 'color',

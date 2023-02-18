@@ -47,7 +47,7 @@ export default {
       of: [
         {
           type: 'reference',
-          to: [{type: 'sessionResources', title: 'Session Resources'}],
+          to: [{type: 'sessionResources'}],
         },
       ],
     },

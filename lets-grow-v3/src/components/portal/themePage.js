@@ -1,11 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import Layout from "../components/layout/layout"
-import Seo from "./seo"
-// import Session from "./session"
+import Layout from "../layout/layout"
+import Seo from "../seo"
 import GraphQLErrorList from "./graphql-error-list"
 import ThemeDetails from "./themeDetails"
-import { capitalizeWords } from "../lib/helpers"
+import { capitalizeWords } from "../../lib/helpers"
 
 const Theme = props => {
   const { name, backgroundColour, errors } = props
@@ -16,7 +15,6 @@ const Theme = props => {
       </Layout>
     )
   }
-
   return (
     <Layout>
       <Seo title={capitalizeWords(name)} />

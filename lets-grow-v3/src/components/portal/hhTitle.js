@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 const HandyHintTitle = ({ title, icon, maxWidth, colour }) => (
-  <section className="flex w-100 ph1 mb1">
+  <section className="flex w-100 ph1 ma1 mb2">
     <Container
       style={{ overflow: "hidden" }}
       className={`dt ${colour ? colour : "bg-navy"} white br4 f8 f5-ns fw5 ${

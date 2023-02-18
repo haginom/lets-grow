@@ -2,9 +2,10 @@ import * as React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-const SessionIntroLink = ({ navigation, children, className }) => {
+const SessionIntroLink = ({ color, navigation, children, className }) => {
   return (
     <StyledLink
+      color={color}
       to={navigation}
       className={`${className ? ` ${className}` : ""} br4`}
     >
@@ -38,9 +39,13 @@ const Container = styled.div`
 const InnerWrapper = styled.div`
   font: inherit;
   font-weight: 550;
-  letter-spacing: 0.01em;
   color: white;
-  padding: 2.2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.35rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
   @media screen and (min-width: 60em) {
     font-size: 1.3rem;
   }
@@ -48,13 +53,6 @@ const InnerWrapper = styled.div`
   &:visited {
     color: white;
   }
-`
-
-const StyledImg = styled.img`
-  flex: 0 0 50px;
-  position: absolute;
-  right: 10px;
-  bottom: -20px;
 `
 
 export default SessionIntroLink

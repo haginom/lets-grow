@@ -1,6 +1,8 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import Theme from "../components/themePage"
+import Theme from "../components/portal/themePage"
+import Layout from "../components/layout/layout"
+import GraphQLErrorList from "../components/portal/graphql-error-list"
 
 export const query = graphql`
   query ThemePageTemplateQuery($id: String!) {
@@ -53,6 +55,8 @@ export const query = graphql`
           }
         }
       }
+      introSession
+      welcomeMrBloom
       overview
       handyHints
       slug {
@@ -64,6 +68,13 @@ export const query = graphql`
 const ThemeTemplate = props => {
   const { data, errors } = props
   const theme = data && data.theme
+  if (errors) {
+    return (
+      <Layout>
+        <GraphQLErrorList errors={errors} />
+      </Layout>
+    )
+  }
   return <>{theme && <Theme {...theme} />}</>
 }
 

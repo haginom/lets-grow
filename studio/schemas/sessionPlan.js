@@ -9,6 +9,12 @@ export default {
       type: 'string',
     },
     {
+      name: 'session',
+      title: 'Session',
+      type: 'reference',
+      to: {type: 'sessions'},
+    },
+    {
       name: 'fileAttachment',
       type: 'fileAttachment',
     },

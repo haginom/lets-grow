@@ -5,7 +5,6 @@ import {schemaTypes} from './schemas'
 import {colorInput} from '@sanity/color-input'
 import {myStructure} from './deskStructure'
 
-
 export default defineConfig({
   name: 'default',
   title: 'Studio',
@@ -22,5 +21,6 @@ export default defineConfig({
 
   schema: {
     types: schemaTypes,
+    
   },
 })

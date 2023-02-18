@@ -1,14 +1,22 @@
 import React from "react"
 import styled from "styled-components"
-import Layout from "../components/layout/layout"
+import Layout from "../layout/layout"
 import GraphQLErrorList from "./graphql-error-list"
 import SessionLink from "./sessionLink"
 import SessionIntroLink from "./sessionIntroLink"
-import { urlFor } from "../lib/helpers"
+import { urlFor } from "../../lib/helpers"
 
 const ThemeDetails = props => {
-  const { image, overview, handyHints, sessions, slug, errors } = props
-  console.log(image, "theme details")
+  const {
+    image,
+    overview,
+    handyHints,
+    introSession,
+    welcomeMrBloom,
+    sessions,
+    slug,
+    errors,
+  } = props
   if (errors) {
     return (
       <Layout>
@@ -25,19 +33,41 @@ const ThemeDetails = props => {
       ) : null}
 
       <Subheading className="coffeeTea i pv2 ml4">About...</Subheading>
-      <TwoColumns className="flex ">
+      <TwoColumns mb="6.5rem" className="flex ">
         {overview ? (
-          <SessionIntroLink navigation={`../overview/${slug.current}`}>
+          <SessionIntroLink
+            className="ttu"
+            navigation={`../overview/${slug.current}`}
+          >
             Overview
           </SessionIntroLink>
         ) : null}
         {handyHints ? (
-          <SessionIntroLink navigation={`../handy-hints`}>
+          <SessionIntroLink className="ttu" navigation={`../handy-hints`}>
             Handy Hints
           </SessionIntroLink>
         ) : null}
       </TwoColumns>
       <Subheading className="coffeeTea i pv2 ml4">Sessions...</Subheading>
+
+      <TwoColumns className="flex ">
+        {welcomeMrBloom ? (
+          <SessionIntroLink
+            color={"#cfc7ac"}
+            navigation={`../sessions/welcome-session`}
+          >
+            Welcome to Let’s Grow with Mr. Bloom
+          </SessionIntroLink>
+        ) : null}
+        {introSession ? (
+          <SessionIntroLink
+            color={"#cfc7ac"}
+            navigation={`../overview/${slug.current}`}
+          >
+            Introductory session with Bob, Flo & the Babies
+          </SessionIntroLink>
+        ) : null}
+      </TwoColumns>
       <ThreeColumns>
         {sessions &&
           sessions.map(session =>
@@ -61,7 +91,8 @@ const StyledImg = styled.img`
 
 const TwoColumns = styled.div`
   gap: 1rem;
-  margin-bottom: 4rem;
+
+  margin-bottom: ${props => props.mb || "0.25rem"};
 `
 
 const ThreeColumns = styled.div`

@@ -1,5 +1,4 @@
 import fileAttachment from './fileAttachment'
-import category from './category'
 import session from './session'
 import sessionPlan from './sessionPlan'
 import sessionResource from './sessionResource'
@@ -11,7 +10,6 @@ export const schemaTypes = [
   theme,
   session,
   fileAttachment,
-  category,
   introSession,
   sessionPlan,
   sessionResource,

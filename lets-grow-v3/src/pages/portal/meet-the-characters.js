@@ -7,7 +7,7 @@ import WithAuthCheck from "../../components/withAuthCheck"
 import styled from "styled-components"
 import { SubHeading } from "../../components/tachyons/text"
 import { GatsbyImage } from "gatsby-plugin-image"
-import FloatingPhotoBL from "../../components/floatingPhotoBorderless"
+import FloatingPhotoBL from "../../components/portal/floatingPhotoBorderless"
 
 const Mtc = () => {
   const data = useStaticQuery(graphql`
@@ -246,7 +246,7 @@ const Wrapper = styled.div`
   }
 `
 
-export const Paragraph = styled.p`
+const Paragraph = styled.p`
   line-height: 1.2rem;
   font-size: 0.9rem;
   padding-bottom: 0.5rem;

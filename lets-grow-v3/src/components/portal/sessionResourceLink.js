@@ -6,7 +6,7 @@ import { urlFor } from "../../lib/helpers"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { capitalizeWords } from "../../lib/helpers"
 
-const SessionResourceLink = ({ className, color, ...props }) => {
+const SessionResourceLink = ({ className, margin, colour, ...props }) => {
   const data = useStaticQuery(graphql`
     query resourceLinkQuery {
       iconDownload: file(relativePath: { eq: "icon-download.png" }) {
@@ -39,7 +39,8 @@ const SessionResourceLink = ({ className, color, ...props }) => {
         }`}
         target="_blank"
         className={`${className ? ` ${className}` : ""} br4`}
-        color={color?.hex}
+        color={colour}
+        margin={margin}
       >
         <Container>
           <InnerWrapper>
@@ -102,9 +103,9 @@ const StyledLink = styled.a`
   position: relative;
   background-color: ${props => props.color || "rgba(255, 255, 255, 0.25)"};
   outline: none;
-  margin: 0.75rem;
   text-decoration: none;
   width: 100%;
+  margin: ${props => props.margin || "0rem"};
 
   :not(:disabled) {
     cursor: pointer;

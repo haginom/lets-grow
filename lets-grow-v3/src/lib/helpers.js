@@ -8,25 +8,20 @@ export function urlFor(source) {
   return builder.image(source)
 }
 
-export function cn (...args) {
-  return args.filter(Boolean).join(' ')
+export function cn(...args) {
+  return args.filter(Boolean).join(" ")
 }
 
-export function mapEdgesToNodes (data) {
+export function mapEdgesToNodes(data) {
   if (!data.edges) return []
   return data.edges.map(edge => edge.node)
 }
 
-export function filterOutDocsWithoutSlugs ({ slug }) {
+export function filterOutDocsWithoutSlugs({ slug }) {
   return (slug || {}).current
 }
 
-export function capitalizeWords(str) {
-  return str
-    .toLowerCase()
-    .split(" ")
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ")
-}
-
-
+export const capitalizeWords = (str, lower = false) =>
+  (lower ? str.toLowerCase() : str).replace(/(?:^|\s|["'([{])+\S/g, match =>
+    match.toUpperCase()
+  )

@@ -13,6 +13,23 @@ export const query = graphql`
       color {
         hex
       }
+      image {
+        crop {
+          bottom
+          left
+          right
+          top
+        }
+        hotspot {
+          height
+          width
+          x
+          y
+        }
+        asset {
+          url
+        }
+      }
       visitingBaby
       sessionResources {
         id
@@ -197,7 +214,7 @@ export const query = graphql`
 const SessionTemplateBody = props => {
   const { data, errors } = props
   const session = data && data.session
- 
+
   if (errors) {
     return (
       <Layout>
@@ -205,16 +222,7 @@ const SessionTemplateBody = props => {
       </Layout>
     )
   }
-  return (
-    <>
-      {session && (
-        <Session
-          {...session}
-      
-        />
-      )}
-    </>
-  )
+  return <>{session && <Session {...session} />}</>
 }
 
 const SessionTemplate = ({ data, ...props }) => (

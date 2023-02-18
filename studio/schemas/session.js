@@ -11,7 +11,7 @@ export default {
       name: 'name',
       title: 'Name',
       type: 'string',
-      validation: (Rule) => Rule.required(),
+      validation: (Rule) => Rule.max(30).warning(`A title shouldn't be more than 30 characters.`),
     },
 
     {
@@ -90,7 +90,7 @@ export default {
       name: 'videoStill',
       title: 'Video Still',
       type: 'image',
-      hidden: ({document}) => document?.visitingBaby,   
+      hidden: ({document}) => document?.visitingBaby,
     },
     {
       name: 'videoCall',

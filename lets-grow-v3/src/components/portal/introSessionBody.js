@@ -19,9 +19,12 @@ const IntroSessionBody = ({ play, download, songs, ...props }) => {
                 {sessionResources &&
                   sessionResources.map(resource =>
                     resource ? (
-                      <div key={resource.id}>
-                        <SessionResourceLink {...resource} color={color?.hex} />
-                      </div>
+                      <SessionResourceLink
+                        margin="0.75rem"
+                        key={resource.id}
+                        {...resource}
+                        color={color?.hex}
+                      />
                     ) : null
                   )}
               </div>

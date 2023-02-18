@@ -6,6 +6,7 @@ import GraphQLErrorList from "./graphql-error-list"
 import { capitalizeWords } from "../../lib/helpers"
 import SessionResourceLink from "./sessionResourceLink"
 import { urlFor } from "../../lib/helpers"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const Session = props => {
   const {
@@ -20,8 +21,10 @@ const Session = props => {
     topTips,
     scrapbook,
     songs,
+    sessionResources,
     name,
     color,
+    image,
     errors,
   } = props
   if (errors) {
@@ -32,7 +35,7 @@ const Session = props => {
     )
   }
 
-  console.log(email, "session page")
+  console.log(image, "session page")
 
   return (
     <Layout>
@@ -49,21 +52,19 @@ const Session = props => {
                 Before you start...
               </Subheading>
             ) : null}
-            <ThreeColumns>
+            <ThreeRegColumns>
               {characterPrep ? (
-                <SessionResourceLink {...characterPrep} />
+                <SessionResourceLink colour="#cec7ab" {...characterPrep} />
               ) : null}
-              {howToVideo ? <SessionResourceLink {...howToVideo} /> : null}
+              {howToVideo ? (
+                <SessionResourceLink colour="#cec7ab" {...howToVideo} />
+              ) : null}
               {whiteArt && (
                 <StyledImg
-                  src={urlFor(whiteArt)
-                    .auto("format")
-                    .fit("max")
-                    .height(100)
-                    .url()}
+                  src={urlFor(whiteArt).auto("format").fit("max").url()}
                 />
               )}
-            </ThreeColumns>
+            </ThreeRegColumns>
             <Subheading mt="3rem" className="coffeeTea i pv2 ml4">
               Session Plan...
             </Subheading>
@@ -74,15 +75,37 @@ const Session = props => {
             <Subheading mt="3rem" className="coffeeTea i pv2 ml4">
               Resources...
             </Subheading>
-            <ThreeColumns>
-              {videoCall ? <SessionResourceLink {...videoCall} /> : null}
-              {email ? <SessionResourceLink {...email} /> : null}
-              {topTips ? <SessionResourceLink {...topTips} /> : null}
-            </ThreeColumns>
-            <ThreeColumns mt="-0.75rem">
-              {scrapbook ? <SessionResourceLink {...scrapbook} /> : null}
-              {songs ? <SessionResourceLink {...songs} /> : null}
-            </ThreeColumns>
+            <Resources>
+              <ThreeColumns>
+                {visitingBaby && (
+                  <PokingBaby>
+                    <img
+                      src={urlFor(image)
+                        .auto("format")
+                        .height(170)
+                        .fit("max")
+                        .url()}
+                    />
+                  </PokingBaby>
+                )}
+                {videoCall ? <SessionResourceLink {...videoCall} /> : null}
+                {email ? <SessionResourceLink {...email} /> : null}
+                {topTips ? (
+                  <SessionResourceLink colour="#9d8f99" {...topTips} />
+                ) : null}
+              </ThreeColumns>
+              <ThreeColumns mt="0.5rem">
+                {scrapbook ? <SessionResourceLink {...scrapbook} /> : null}
+                {songs ? <SessionResourceLink {...songs} /> : null}
+              </ThreeColumns>
+              <ThreeColumns mt="0.5rem" mb="4rem">
+                {sessionResources
+                  ? sessionResources.map(resource => (
+                      <SessionResourceLink {...resource} />
+                    ))
+                  : null}
+              </ThreeColumns>
+            </Resources>
           </Centered>
         </Tab>
       </section>
@@ -106,26 +129,62 @@ const Centered = styled.div`
   margin-left: auto;
   margin-right: auto;
 `
+
+const ThreeRegColumns = styled.div`
+  column-count: 3;
+  columns: 20rem;
+  column-gap: 10px;
+  * {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid; /* Firefox is dumb */
+    break-inside: avoid;
+  }
+
+  div:first-child {
+    margin-top: 0;
+  }
+  img:last-child {
+    width: 10rem;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 6rem;
+  }
+`
+const Resources = styled.div``
+
 const ThreeColumns = styled.div`
   display: grid;
+  position: relative;
+  z-index: 4;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.5rem;
 
   @media screen and (min-width: 60em) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-row-gap: 0rem;
     margin-top: ${props => props.mt || "0rem"};
+    margin-bottom: ${props => props.mb || "0rem"};
   }
 `
 const Subheading = styled.h3`
   font-size: 1.4rem;
   font-weight: 600;
+  margin-bottom: 0.5rem;
   @media screen and (min-width: 60em) {
     font-size: 1.8rem;
     margin-top: ${props => props.mt || "0rem"};
   }
 `
 
-const StyledImg = styled.img``
+const StyledImg = styled.img`
+  justify-self: end;
+  align-self: center;
+  height: 6rem;
+`
+
+const PokingBaby = styled.div`
+  position: absolute;
+  left: 46rem;
+  bottom: 1rem;
+`
 
 export default Session

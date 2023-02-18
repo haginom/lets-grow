@@ -224,7 +224,7 @@ export const query = graphql`
       }
     }
     mtwOne: file(
-      relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw-1.JPG" }
+      relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw-1.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 390)
@@ -252,7 +252,7 @@ export const query = graphql`
       }
     }
     mtwFive: file(
-      relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw-5.JPG" }
+      relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw-5.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 390)

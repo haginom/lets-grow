@@ -43,6 +43,24 @@ export const query = graphql`
           handyHints
           overview
           introSession
+          mrBloom {
+            hotspot {
+              height
+              width
+              x
+              y
+            }
+            asset {
+              id
+              url
+            }
+            crop {
+              bottom
+              left
+              right
+              top
+            }
+          }
           welcomeMrBloom
           sessions {
             _id

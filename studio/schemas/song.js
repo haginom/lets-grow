@@ -1,17 +1,12 @@
 import {FaMusic} from 'react-icons/fa'
 
 export default {
-  name: 'song',
-  title: 'All Songs',
+  name: 'songs',
+  title: 'Songs',
   type: 'document',
   icon: FaMusic,
   fields: [
-    {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    },
+
     {
       name: 'name',
       title: 'Name',

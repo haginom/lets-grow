@@ -18,7 +18,7 @@ const SessionIntroLink = ({ color, navigation, children, className }) => {
 
 const StyledLink = styled(props => <Link {...props} />)`
   display: block;
-  max-width: 30rem;
+  max-width: 31rem;
   overflow: hidden;
   box-sizing: border-box;
   position: relative;

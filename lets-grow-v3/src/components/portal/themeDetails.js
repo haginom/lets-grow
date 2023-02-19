@@ -49,6 +49,7 @@ const ThemeDetails = props => {
           </SessionIntroLink>
         ) : null}
       </TwoColumns>
+
       <Subheading className="coffeeTea i pv2 ml4">Sessions...</Subheading>
       <TwoColumns className="flex ">
         {welcomeMrBloom ? (
@@ -59,19 +60,22 @@ const ThemeDetails = props => {
             Welcome to Let’s Grow with Mr. Bloom
           </SessionIntroLink>
         ) : null}
-        {introSession ? (
+        {introSession && (
           <SessionIntroLink
             color={"#cfc7ac"}
-            navigation={`../overview/${slug.current}`}
+            navigation={`../sessions/introductory-session`}
           >
             Introductory session with Bob, Flo & the Babies
           </SessionIntroLink>
-        ) : (
+        )}
+        {mrBloom && (
           <StyledMrBloom
+            alt="Mr Bloom "
             src={urlFor(mrBloom).auto("format").fit("max").height(400).url()}
           />
         )}
       </TwoColumns>
+
       {sessions.length <= 4 ? (
         <TwoColumns>
           {sessions &&

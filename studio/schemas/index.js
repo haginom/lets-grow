@@ -5,8 +5,8 @@ import theme from './theme'
 import siteSettings from './siteSettings'
 import introSession from './introSession'
 import link from './link'
-import song from './song'
-import songs from './songs'
+import albums from './songs'
+import songs from './song'
 import songUpload from './songUpload'
 
 export const schemaTypes = [
@@ -17,7 +17,7 @@ export const schemaTypes = [
   introSession,
   sessionResource,
   siteSettings,
-  song,
+  albums,
   songs,
   songUpload,
 ]

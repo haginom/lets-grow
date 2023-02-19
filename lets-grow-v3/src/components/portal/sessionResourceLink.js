@@ -1,5 +1,5 @@
 import * as React from "react"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { urlFor } from "../../lib/helpers"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -33,7 +33,6 @@ const SessionResourceLink = ({
     }
   `)
   const { fileCategory, image, fileAttachment, url } = props
-  console.log(gridColumnShift, "shift column")
   return (
     <>
       <StyledLink
@@ -69,15 +68,28 @@ const SessionResourceLink = ({
               image={data.iconPlay.childImageSharp.gatsbyImageData}
             />
           )}
-          {fileCategory === "image" ||
-            fileCategory === "webpage" ||
-            (fileCategory === "pdf" && (
-              <GatsbyImage
-                alt=""
-                objectFit="contain"
-                image={data.iconDownload.childImageSharp.gatsbyImageData}
-              />
-            ))}
+          {fileCategory === "image" && (
+            <GatsbyImage
+              alt=""
+              objectFit="contain"
+              image={data.iconDownload.childImageSharp.gatsbyImageData}
+            />
+          )}
+          {fileCategory === "webpage" && (
+            <GatsbyImage
+              alt=""
+              objectFit="contain"
+              image={data.iconDownload.childImageSharp.gatsbyImageData}
+            />
+          )}
+
+          {fileCategory === "pdf" && (
+            <GatsbyImage
+              alt=""
+              objectFit="contain"
+              image={data.iconDownload.childImageSharp.gatsbyImageData}
+            />
+          )}
           {fileCategory === "song" && (
             <GatsbyImage
               alt=""
@@ -90,10 +102,6 @@ const SessionResourceLink = ({
     </>
   )
 }
-
-const lighten = value => css`
-  filter: brightness(${value + 1});
-`
 
 const StyledLink = styled.a`
   display: block;

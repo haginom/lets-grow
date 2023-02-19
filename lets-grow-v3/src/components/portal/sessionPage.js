@@ -87,6 +87,7 @@ const Session = props => {
                 {visitingBaby && (
                   <PokingBaby>
                     <img
+                      alt="visiting baby for the session"
                       src={urlFor(image)
                         .auto("format")
                         .height(170)
@@ -124,6 +125,7 @@ const Session = props => {
                 {!visitingBaby && (
                   <WhiteArt>
                     <img
+                      alt=""
                       src={urlFor(image)
                         .auto("format")
                         .height(170)

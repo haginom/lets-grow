@@ -8,8 +8,6 @@ export default {
       title: 'Name',
       type: 'string',
       description: 'This should contain Session and Resource name',
-      validation: (Rule) =>
-        Rule.required().max(30).warning(`A title shouldn't be more than 30 characters.`),
     },
 
     {

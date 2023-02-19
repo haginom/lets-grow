@@ -5,8 +5,6 @@ import { capitalizeWords, urlFor } from "../../lib/helpers"
 
 const SessionLink = ({ className, ...props }) => {
   const { fileName, name, color, image, slug, visitingBaby } = props
-  console.log(visitingBaby)
-
   return (
     <>
       <StyledLink

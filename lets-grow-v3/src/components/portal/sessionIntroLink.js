@@ -18,6 +18,7 @@ const SessionIntroLink = ({ color, navigation, children, className }) => {
 
 const StyledLink = styled(props => <Link {...props} />)`
   display: block;
+  max-width: 30rem;
   overflow: hidden;
   box-sizing: border-box;
   position: relative;
@@ -42,8 +43,7 @@ const InnerWrapper = styled.div`
   color: white;
   padding-top: 2.5rem;
   padding-bottom: 2.35rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+
   margin-left: auto;
   margin-right: auto;
   @media screen and (min-width: 60em) {

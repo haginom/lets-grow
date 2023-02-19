@@ -34,6 +34,10 @@ export const query = graphql`
       sessions {
         id
         name
+        visitingBaby
+        slug {
+          current
+        }
         color {
           hex
         }
@@ -57,6 +61,25 @@ export const query = graphql`
         }
       }
       introSession
+      mrBloom {
+        hotspot {
+          height
+          width
+          x
+          y
+        }
+        asset {
+          id
+          url
+        }
+        crop {
+          bottom
+          left
+          right
+          top
+        }
+      }
+
       welcomeMrBloom
       overview
       handyHints

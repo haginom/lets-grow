@@ -78,6 +78,7 @@ export default {
       type: 'reference',
       to: [{type: 'sessionResources'}],
       validation: (Rule) => Rule.required(),
+      
     },
     {
       name: 'sessionPlan2',

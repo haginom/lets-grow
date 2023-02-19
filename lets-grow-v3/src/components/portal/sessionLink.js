@@ -1,21 +1,16 @@
 import * as React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { urlFor } from "../../lib/helpers"
+import { capitalizeWords, urlFor } from "../../lib/helpers"
 
 const SessionLink = ({ className, ...props }) => {
-  const { fileName, name, color, image } = props
+  const { fileName, name, color, image, slug, visitingBaby } = props
+  console.log(visitingBaby)
 
-  const capitalizeWords = str => {
-    return str
-      .toLowerCase()
-      .split(" ")
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ")
-  }
   return (
     <>
       <StyledLink
+        to={`/portal/sessions/${slug?.current}`}
         className={`${className ? ` ${className}` : ""} br4`}
         color={color?.hex}
       >
@@ -29,6 +24,7 @@ const SessionLink = ({ className, ...props }) => {
           </InnerWrapper>
           {image && (
             <StyledImg
+              bottom={`${visitingBaby ? "-20px" : "0rem"}`}
               src={urlFor(image).auto("format").fit("max").height(100).url()}
             />
           )}
@@ -80,7 +76,7 @@ const InnerWrapper = styled.div`
 const StyledImg = styled.img`
   position: absolute;
   right: 10px;
-  bottom: -20px;
+  bottom: ${props => props.bottom || "0rem"};
 `
 
 export default SessionLink

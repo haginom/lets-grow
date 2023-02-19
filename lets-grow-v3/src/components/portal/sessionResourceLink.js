@@ -1,12 +1,18 @@
 import * as React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
-
 import { urlFor } from "../../lib/helpers"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { capitalizeWords } from "../../lib/helpers"
+import { LightenDarkenColor } from "../../lib/helpers"
 
-const SessionResourceLink = ({ className, margin, colour, ...props }) => {
+const SessionResourceLink = ({
+  className,
+  margin,
+  gridColumnShift,
+  color,
+  ...props
+}) => {
   const data = useStaticQuery(graphql`
     query resourceLinkQuery {
       iconDownload: file(relativePath: { eq: "icon-download.png" }) {
@@ -27,6 +33,7 @@ const SessionResourceLink = ({ className, margin, colour, ...props }) => {
     }
   `)
   const { fileCategory, image, fileAttachment, url } = props
+  console.log(gridColumnShift, "shift column")
   return (
     <>
       <StyledLink
@@ -39,8 +46,8 @@ const SessionResourceLink = ({ className, margin, colour, ...props }) => {
         }`}
         target="_blank"
         className={`${className ? ` ${className}` : ""} br4`}
-        color={colour}
         margin={margin}
+        color={color ? color : "#bab397"}
       >
         <Container>
           <InnerWrapper>
@@ -62,27 +69,15 @@ const SessionResourceLink = ({ className, margin, colour, ...props }) => {
               image={data.iconPlay.childImageSharp.gatsbyImageData}
             />
           )}
-          {fileCategory === "image" && (
-            <GatsbyImage
-              alt=""
-              objectFit="contain"
-              image={data.iconDownload.childImageSharp.gatsbyImageData}
-            />
-          )}
-          {fileCategory === "webpage" && (
-            <GatsbyImage
-              alt=""
-              objectFit="contain"
-              image={data.iconDownload.childImageSharp.gatsbyImageData}
-            />
-          )}
-          {fileCategory === "pdf" && (
-            <GatsbyImage
-              alt=""
-              objectFit="contain"
-              image={data.iconDownload.childImageSharp.gatsbyImageData}
-            />
-          )}
+          {fileCategory === "image" ||
+            fileCategory === "webpage" ||
+            (fileCategory === "pdf" && (
+              <GatsbyImage
+                alt=""
+                objectFit="contain"
+                image={data.iconDownload.childImageSharp.gatsbyImageData}
+              />
+            ))}
           {fileCategory === "song" && (
             <GatsbyImage
               alt=""
@@ -96,12 +91,17 @@ const SessionResourceLink = ({ className, margin, colour, ...props }) => {
   )
 }
 
+const lighten = value => css`
+  filter: brightness(${value + 1});
+`
+
 const StyledLink = styled.a`
   display: block;
   overflow: hidden;
   box-sizing: border-box;
   position: relative;
-  background-color: ${props => props.color || "rgba(255, 255, 255, 0.25)"};
+  background-color: ${props =>
+    LightenDarkenColor(props.color, 20) || "#cec7ab"};
   outline: none;
   text-decoration: none;
   width: 100%;

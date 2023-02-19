@@ -23,7 +23,7 @@ const ResourcesLibraryIntro = ({ data }) => {
           </Paragraph>
           <ButtonContainer>
             <OrangeButton
-              navigation={""}
+              navigation={"/portal/resources-library"}
               markup={"Let's Go"}
               className="grow mt4-l ml5-l center "
             />

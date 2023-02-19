@@ -9,6 +9,7 @@ import { urlFor } from "../../lib/helpers"
 const ThemeDetails = props => {
   const {
     image,
+    mrBloom,
     overview,
     handyHints,
     introSession,
@@ -24,6 +25,7 @@ const ThemeDetails = props => {
       </Layout>
     )
   }
+
   return (
     <>
       {image ? (
@@ -31,7 +33,6 @@ const ThemeDetails = props => {
           src={urlFor(image).auto("format").fit("max").height(200).url()}
         />
       ) : null}
-
       <Subheading className="coffeeTea i pv2 ml4">About...</Subheading>
       <TwoColumns mb="6.5rem" className="flex ">
         {overview ? (
@@ -49,7 +50,6 @@ const ThemeDetails = props => {
         ) : null}
       </TwoColumns>
       <Subheading className="coffeeTea i pv2 ml4">Sessions...</Subheading>
-
       <TwoColumns className="flex ">
         {welcomeMrBloom ? (
           <SessionIntroLink
@@ -66,22 +66,42 @@ const ThemeDetails = props => {
           >
             Introductory session with Bob, Flo & the Babies
           </SessionIntroLink>
-        ) : null}
+        ) : (
+          <StyledMrBloom
+            src={urlFor(mrBloom).auto("format").fit("max").height(400).url()}
+          />
+        )}
       </TwoColumns>
-      <ThreeColumns>
-        {sessions &&
-          sessions.map(session =>
-            session ? (
-              <div key={session._id}>
-                <SessionLink {...session} />
-              </div>
-            ) : null
-          )}
-      </ThreeColumns>
+      {sessions.length <= 4 ? (
+        <TwoColumns>
+          {sessions &&
+            sessions.map(session =>
+              session ? (
+                <div key={session._id}>
+                  <SessionLink {...session} />
+                </div>
+              ) : null
+            )}
+        </TwoColumns>
+      ) : (
+        <ThreeColumns>
+          {sessions &&
+            sessions.map(session =>
+              session ? (
+                <div key={session._id}>
+                  <SessionLink {...session} />
+                </div>
+              ) : null
+            )}
+        </ThreeColumns>
+      )}
     </>
   )
 }
 
+const StyledMrBloom = styled.img`
+  position: absolute;
+`
 const StyledImg = styled.img`
   display: block;
   margin-left: auto;
@@ -91,8 +111,9 @@ const StyledImg = styled.img`
 
 const TwoColumns = styled.div`
   gap: 1rem;
-
+  display: grid;
   margin-bottom: ${props => props.mb || "0.25rem"};
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 `
 
 const ThreeColumns = styled.div`

@@ -13,6 +13,9 @@ export const query = graphql`
       color {
         hex
       }
+      slug {
+        current
+      }
       image {
         crop {
           bottom
@@ -157,6 +160,23 @@ export const query = graphql`
         url {
           linkName
           url
+        }
+      }
+      videoStill {
+        asset {
+          url
+        }
+        crop {
+          bottom
+          right
+          left
+          top
+        }
+        hotspot {
+          height
+          width
+          x
+          y
         }
       }
       whiteArt {

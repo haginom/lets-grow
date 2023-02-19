@@ -6,7 +6,6 @@ import GraphQLErrorList from "./graphql-error-list"
 import { capitalizeWords } from "../../lib/helpers"
 import SessionResourceLink from "./sessionResourceLink"
 import { urlFor } from "../../lib/helpers"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 const Session = props => {
   const {
@@ -16,6 +15,7 @@ const Session = props => {
     whiteArt,
     sessionPlan1,
     sessionPlan2,
+    videoStill,
     videoCall,
     email,
     topTips,
@@ -35,8 +35,6 @@ const Session = props => {
     )
   }
 
-  console.log(image, "session page")
-
   return (
     <Layout>
       <Seo title={capitalizeWords(name)} />
@@ -54,13 +52,12 @@ const Session = props => {
             ) : null}
             <ThreeRegColumns>
               {characterPrep ? (
-                <SessionResourceLink colour="#cec7ab" {...characterPrep} />
+                <SessionResourceLink {...characterPrep} />
               ) : null}
-              {howToVideo ? (
-                <SessionResourceLink colour="#cec7ab" {...howToVideo} />
-              ) : null}
+              {howToVideo && <SessionResourceLink {...howToVideo} />}
               {whiteArt && (
                 <StyledImg
+                  className="whiteArt"
                   src={urlFor(whiteArt).auto("format").fit("max").url()}
                 />
               )}
@@ -68,10 +65,20 @@ const Session = props => {
             <Subheading mt="3rem" className="coffeeTea i pv2 ml4">
               Session Plan...
             </Subheading>
-            <ThreeColumns>
-              {sessionPlan1 ? <SessionResourceLink {...sessionPlan1} /> : null}
-              {sessionPlan2 ? <SessionResourceLink {...sessionPlan2} /> : null}
-            </ThreeColumns>
+            <ThreeRegColumns>
+              {sessionPlan1 && (
+                <SessionResourceLink color={color?.hex} {...sessionPlan1} />
+              )}
+              {sessionPlan2 && (
+                <SessionResourceLink color={color?.hex} {...sessionPlan2} />
+              )}
+              {videoStill && (
+                <StyledVideoStill
+                  className="videoStill"
+                  src={urlFor(videoStill).auto("format").fit("max").url()}
+                />
+              )}
+            </ThreeRegColumns>
             <Subheading mt="3rem" className="coffeeTea i pv2 ml4">
               Resources...
             </Subheading>
@@ -88,22 +95,43 @@ const Session = props => {
                     />
                   </PokingBaby>
                 )}
-                {videoCall ? <SessionResourceLink {...videoCall} /> : null}
-                {email ? <SessionResourceLink {...email} /> : null}
+                {videoCall ? (
+                  <SessionResourceLink color={color?.hex} {...videoCall} />
+                ) : null}
+                {email ? (
+                  <SessionResourceLink color={color?.hex} {...email} />
+                ) : null}
                 {topTips ? (
-                  <SessionResourceLink colour="#9d8f99" {...topTips} />
+                  <SessionResourceLink color={color?.hex} {...topTips} />
                 ) : null}
               </ThreeColumns>
               <ThreeColumns mt="0.5rem">
-                {scrapbook ? <SessionResourceLink {...scrapbook} /> : null}
-                {songs ? <SessionResourceLink {...songs} /> : null}
+                {scrapbook && (
+                  <SessionResourceLink color={color?.hex} {...scrapbook} />
+                )}
+                {songs && <SessionResourceLink color={color?.hex} {...songs} />}
               </ThreeColumns>
-              <ThreeColumns mt="0.5rem" mb="4rem">
+              <ThreeColumns visitingBaby={!visitingBaby} mt="0.5rem" mb="4rem">
                 {sessionResources
                   ? sessionResources.map(resource => (
-                      <SessionResourceLink {...resource} />
+                      <SessionResourceLink
+                        key={resource.id}
+                        color={color?.hex}
+                        {...resource}
+                      />
                     ))
                   : null}
+                {!visitingBaby && (
+                  <WhiteArt>
+                    <img
+                      src={urlFor(image)
+                        .auto("format")
+                        .height(170)
+                        .fit("max")
+                        .url()}
+                    />
+                  </WhiteArt>
+                )}
               </ThreeColumns>
             </Resources>
           </Centered>
@@ -129,7 +157,6 @@ const Centered = styled.div`
   margin-left: auto;
   margin-right: auto;
 `
-
 const ThreeRegColumns = styled.div`
   column-count: 3;
   columns: 20rem;
@@ -140,10 +167,16 @@ const ThreeRegColumns = styled.div`
     break-inside: avoid;
   }
 
-  div:first-child {
-    margin-top: 0;
+  .videoStill {
+    height: 100%;
+
+    margin-left: 1rem;
+    margin-top: -1.5rem;
+    transform: rotate(-3deg);
+    border-radius: 0.6rem;
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.73);
   }
-  img:last-child {
+  .whiteArt {
     width: 10rem;
     height: 100%;
     object-fit: cover;
@@ -163,6 +196,20 @@ const ThreeColumns = styled.div`
     grid-template-columns: repeat(3, minmax(0, 1fr));
     margin-top: ${props => props.mt || "0rem"};
     margin-bottom: ${props => props.mb || "0rem"};
+
+    ${({ visitingBaby }) =>
+      visitingBaby &&
+      `
+    > * {
+      &:nth-child(even){
+        grid-column:2;
+      };
+      &:nth-child(odd){
+        grid-column:1;
+      }
+      
+    }
+  `}
   }
 `
 const Subheading = styled.h3`
@@ -174,17 +221,25 @@ const Subheading = styled.h3`
     margin-top: ${props => props.mt || "0rem"};
   }
 `
-
 const StyledImg = styled.img`
   justify-self: end;
   align-self: center;
   height: 6rem;
 `
-
+const StyledVideoStill = styled.img`
+  justify-self: end;
+  align-self: center;
+  height: 6rem;
+`
 const PokingBaby = styled.div`
   position: absolute;
   left: 46rem;
-  bottom: 1rem;
+  bottom: 2rem;
+`
+const WhiteArt = styled.div`
+  position: absolute;
+  left: 28rem;
+  top: -4rem;
 `
 
 export default Session

@@ -37,18 +37,18 @@ const HeadlineShow = ({data}) => (
         </TextWrapper>
         <ImgContainer>
           <RoundedImg
-                image={data.hsTwo.childImageSharp.gatsbyImageData}
+                image={data.hsTwo?.childImageSharp.gatsbyImageData}
                 alt="Mr Bloom & Band"
             />
         </ImgContainer>
       </Rows>
       <LastRow>
         <RoundedImg
-          image={data.hsOne.childImageSharp.gatsbyImageData}
+          image={data.hsOne?.childImageSharp.gatsbyImageData}
           alt="Stage of Mr Bloom & Band playing live"
         />
         <RoundedImg
-          image={data.hsThree.childImageSharp.gatsbyImageData}
+          image={data.hsThree?.childImageSharp.gatsbyImageData}
           alt="Crowd at Mr Bloom & Band playing live"
         />
       </LastRow>         

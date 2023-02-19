@@ -47,6 +47,10 @@ export const query = graphql`
           sessions {
             _id
             name
+            visitingBaby
+            slug {
+              current
+            }
             color {
               hex
             }
@@ -124,6 +128,9 @@ export const query = graphql`
         node {
           id
           name
+          slug {
+            current
+          }
           visitingBaby
           characterPrep {
             id

@@ -41,11 +41,16 @@ export default {
       name: 'welcomeMrBloom',
       type: 'boolean',
     },
-
     {
       title: 'Include the Introductory session with Bob, Flo & the Babies session',
       name: 'introSession',
       type: 'boolean',
+    },
+    {
+      title: 'Upload Mr Bloom image',
+      name: 'mrBloom',
+      type: 'image',
+      hidden: ({document}) => document?.introSession,
     },
     {
       name: 'slug',

@@ -11,13 +11,24 @@ const Logo = ({ image, className, portal }) => {
     `db dtc-l v-mid mid-gray link dim w-100  tc tl-l mb0 mb0-l pt3  ${className ? ` ${className}` : "pv3-ns"} ${portal ? "w-50-l" : "w-20-l"}`
   );
   return (
-    <Container to="/">
+    <>
+    {portal?
+    <Container to="/portal">
       <GatsbyImage 
         className={`dib ${portal ? "w-100" : " w2 h2"}`}
         style={{zIndex: -1}}
         image={image} 
         alt="logo"/>
-    </Container>
+    </Container>: 
+    <Container to="/">
+    <GatsbyImage 
+      className={`dib ${portal ? "w-100" : " w2 h2"}`}
+      style={{zIndex: -1}}
+      image={image} 
+      alt="logo"/>
+  </Container> }
+    
+    </>
   );
 };
 

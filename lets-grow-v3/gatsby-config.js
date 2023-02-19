@@ -56,13 +56,11 @@ module.exports = {
     {
       resolve: "gatsby-source-sanity",
       options: {
-        projectId: "a6vt2u3f",
-        dataset: "production",
+        projectId: process.env.SANITY_STUDIO_PROJECT_ID,
+        dataset: process.env.SANITY_STUDIO_DATASET,
         // To enable preview of drafts, copy .env-example into .env,
         // and add a token with read permissions
         token: process.env.SANITY_TOKEN,
-        watchMode: true,
-        overlayDrafts: true,
       },
     },
     {

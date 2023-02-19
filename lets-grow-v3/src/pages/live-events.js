@@ -24,7 +24,7 @@ const LiveEvents = ({ data }) => {
       <div id="events-pitch" />
       <EventsPitch data={data} />
       <div id="events-explainers" />
-      <HeadlineShow data={data} />
+      {/* <HeadlineShow data={data} /> */}
       <RoamingInteractive data={data} />
       <InteractiveInstallation data={data} />
       <MakeTakeWorkshops data={data} />

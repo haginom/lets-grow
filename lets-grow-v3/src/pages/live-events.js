@@ -27,7 +27,7 @@ const LiveEvents = ({ data }) => {
       {/* <HeadlineShow data={data} /> */}
       <RoamingInteractive data={data} />
       <InteractiveInstallation data={data} />
-      <MakeTakeWorkshops data={data} />
+      {/* <MakeTakeWorkshops data={data} /> */}
     </Layout>
   )
 }

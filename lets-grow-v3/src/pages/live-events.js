@@ -12,6 +12,7 @@ import InteractiveInstallation from "../content/liveEvents/InteractiveInstallati
 import MakeTakeWorkshops from "../content/liveEvents/MakeTakeWorkshops"
 
 const LiveEvents = ({ data }) => {
+  console.log(data)
   return (
     <Layout>
       <Seo title="Live Events" />

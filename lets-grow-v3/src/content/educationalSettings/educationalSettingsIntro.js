@@ -7,7 +7,6 @@ import {
   ListItem,
 } from "../../components/tachyons/text"
 import { IconButton } from "../../components/iconButton"
-import IconSong from "../../components/iconSong"
 import { StyledSmallWidth } from "../../components/styled/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
@@ -62,28 +61,34 @@ const EducationalSettingsIntro = ({ data }) => {
 
           <IconDiv className="mh3-m">
             <IconButton
-              heading="Session Plans"
               icon={data.iconOne.childImageSharp.gatsbyImageData}
-              text={"Click Here to see a Sample Session Plan"}
-              file={data.sessionPlans.publicURL}
+              text={"Mr. Bloom Session Plan"}
+              file={data.bloomSessionPlan.publicURL}
             />
             <IconButton
-              heading="Toolkit"
-              icon={data.iconTwo.childImageSharp.gatsbyImageData}
-              text={"Click Here to learn about our toolkit"}
-              file={data.toolkit.publicURL}
-            />
-            <IconButton
-              heading="Video Calls"
               icon={data.iconThree.childImageSharp.gatsbyImageData}
-              text={"Click Here to see a video call"}
-              file={data.videoCall.publicURL}
+              text={"Mr. Bloom Video Call"}
+              file={data.bloomVideoCall.publicURL}
             />
-            <IconSong
-              heading="Songs"
+            <IconButton
               icon={data.iconFour.childImageSharp.gatsbyImageData}
-              text={"Click Here to hear the tidy up song"}
+              text={"Songs"}
               file={data.song.publicURL}
+            />
+            <IconButton
+              icon={data.iconTwo.childImageSharp.gatsbyImageData}
+              text={"Handy Hints"}
+              file={data.handyHintsInfo.publicURL}
+            />
+            <IconButton
+              icon={data.iconOne.childImageSharp.gatsbyImageData}
+              text={"Bob & Flo Session Plan"}
+              file={data.bobFloSessionPlan.publicURL}
+            />
+            <IconButton
+              icon={data.iconThree.childImageSharp.gatsbyImageData}
+              text={"Bob & Flo Video Call"}
+              file={data.bobFloVideoCall.publicURL}
             />
           </IconDiv>
         </Column>

@@ -6,7 +6,6 @@ import { Link } from "gatsby"
 export const IconLink = ({ icon, text, heading, navigation }) => {
   return (
     <StyledLink to={navigation}>
-      <StyledHeading className="letsgrowfont">{heading}</StyledHeading>
       <GatsbyImage image={icon} alt="" />
       <InnerWrapper>{text}</InnerWrapper>
     </StyledLink>
@@ -16,16 +15,11 @@ export const IconLink = ({ icon, text, heading, navigation }) => {
 export const IconButton = ({ icon, text, heading, file }) => {
   return (
     <StyledButton target="_BLANK" rel="noopener noreferrer" href={file}>
-      <StyledHeading className="letsgrowfont">{heading}</StyledHeading>
       <GatsbyImage image={icon} alt="" />
       <InnerWrapper>{text}</InnerWrapper>
     </StyledButton>
   )
 }
-
-const StyledHeading = styled.h4`
-  font-size: 1.3rem;
-`
 
 const StyledButton = styled.a`
   display: flex;
@@ -54,8 +48,7 @@ const InnerWrapper = styled.div`
   margin-top: 0.5rem;
   max-width: 100px;
   font-weight: 600;
-  font-size: 0.6rem;
-  line-height: 0.75rem;
-  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 1rem;
   text-align: center;
 `

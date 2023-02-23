@@ -30,7 +30,7 @@ const SessionIntro = ({ data, portal }) => {
             {portal ? (
               <OrangeButton
                 targetBlank={true}
-                navigation="portal/getting-to-know-each-other"
+                navigation="/portal/getting-to-know-each-other"
                 className="self-center mt3-l grow"
                 markup={"let's go"}
               />
@@ -68,7 +68,7 @@ const SessionIntro = ({ data, portal }) => {
             {portal ? (
               <OrangeButton
                 targetBlank={true}
-                navigation="portal/growing-things"
+                navigation="/portal/growing-things"
                 className="self-center mt3-l grow"
                 markup={"let's go"}
               />
@@ -112,7 +112,7 @@ const SessionIntro = ({ data, portal }) => {
             </TextWrapper>
             {portal ? (
               <OrangeButton
-                navigation="portal/celebrations"
+                navigation="/portal/celebrations"
                 targetBlank={true}
                 className="self-center mt3-l grow"
                 markup={"let's go"}

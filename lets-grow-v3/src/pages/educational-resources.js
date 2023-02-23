@@ -191,13 +191,21 @@ export const query = graphql`
         gatsbyImageData(width: 210, layout: FIXED)
       }
     }
-    sessionPlans: file(relativePath: { eq: "session-plans.pdf" }) {
+    bloomSessionPlan: file(
+      relativePath: { eq: "Bloom_Example_SessionPlan.pdf" }
+    ) {
       publicURL
     }
-    toolkit: file(relativePath: { eq: "Toolkit.pdf" }) {
+    bloomVideoCall: file(relativePath: { eq: "find-seed-video-call.mp4" }) {
       publicURL
     }
-    videoCall: file(relativePath: { eq: "video-call.mp4" }) {
+    handyHintsInfo: file(relativePath: { eq: "handy-hints-info.pdf" }) {
+      publicURL
+    }
+    bobFloSessionPlan: file(relativePath: { eq: "Bob_Flo_Session_plan.pdf" }) {
+      publicURL
+    }
+    bobFloVideoCall: file(relativePath: { eq: "bob-flo-video-call.mp4" }) {
       publicURL
     }
     song: file(relativePath: { eq: "tidy-up-song.wav" }) {

@@ -2,7 +2,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import * as React from "react"
 import styled from "styled-components"
 
-const HandyHintsPanel = ({
+const  HandyHintsPanel = ({
   banner,
   health,
   intro,

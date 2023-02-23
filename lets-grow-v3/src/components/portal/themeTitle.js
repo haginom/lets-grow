@@ -1,14 +1,16 @@
 import * as React from "react"
 import styled from "styled-components"
+import SongBody from "./songBody"
 import ThemeDetails from "./themeDetails"
 
-const ThemeTitle = ({ className, ...props }) => {
+const ThemeTitle = ({ ArrayAlbums, className, song, ...props }) => {
+  const { name, backgroundColour, id, comingSoon } = props
   const [showMore, setShowMore] = React.useState(false)
   return (
     <section className="w-100 ph1 mb2">
       <Tab
         className="br4 mh1 ph3 ph5-ns  f6 f5-ns fw5"
-        color={props.backgroundColour.hex}
+        color={backgroundColour?.hex}
       >
         <Centered className="relative">
           <StyledButton
@@ -18,10 +20,18 @@ const ThemeTitle = ({ className, ...props }) => {
             } dt white f8 f5-ns fw5 center`}
           >
             <InnerWrapper className="f2 ttu coffeeTea pv3-ns pv1 tc b dtc v-mid">
-              {props.name}{" "}
+              {name}
+              {comingSoon ? (
+                <span className="ttl">(coming soon ...)</span>
+              ) : null}
             </InnerWrapper>
           </StyledButton>
-          {showMore ? <ThemeDetails key={props.id} {...props} /> : null}
+          {!comingSoon && showMore && !song ? (
+            <ThemeDetails key={id} {...props} />
+          ) : null}
+          {!comingSoon && showMore && song ? (
+            <SongBody ArrayAlbums={ArrayAlbums} />
+          ) : null}
         </Centered>
       </Tab>
     </section>
@@ -29,7 +39,7 @@ const ThemeTitle = ({ className, ...props }) => {
 }
 
 const Tab = styled.div`
-  background-color: ${props => props.color || "orange"};
+  background-color: ${props => props.color || "rgb(140, 113, 131)"};
   color: white;
   overflow: hidden;
   width: 100%;

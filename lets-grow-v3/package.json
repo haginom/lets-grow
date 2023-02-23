@@ -39,6 +39,7 @@
     "gbimage-bridge": "^0.2.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-h5-audio-player": "^3.8.6",
     "react-masonry-css": "^1.0.16",
     "sass": "^1.53.0",
     "sharp": "^0.31.3",

@@ -5,17 +5,36 @@ import Layout from "../../components/layout/layout"
 import WithAuthCheck from "../../components/withAuthCheck"
 import HandyHintTitle from "../../components/portal/hhTitle"
 import ThemeTitle from "../../components/portal/themeTitle"
-import { mapEdgesToNodes } from "../../lib/helpers"
+import { mapEdgesToNodes, groupBy } from "../../lib/helpers"
 import IntroSessionTitle from "../../components/portal/introSessionTitle"
 import Seo from "../../components/seo"
 
 export const query = graphql`
   query ResourcesLibraryQuery {
+    songs: allSanitySongs {
+      edges {
+        node {
+          name
+          id
+          artist
+          category
+          songUpload {
+            song {
+              asset {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
     themes: allSanityTheme {
       edges {
         node {
           id
           name
+          order
+          comingSoon
           backgroundColour {
             hex
           }
@@ -190,7 +209,6 @@ export const query = graphql`
 
 const Lb = props => {
   const { data, errors } = props
-
   if (errors) {
     return (
       <Layout>
@@ -200,10 +218,18 @@ const Lb = props => {
     )
   }
 
+  const songNodes = (data || {}).songs ? mapEdgesToNodes(data.songs) : []
   const themeNodes = (data || {}).themes ? mapEdgesToNodes(data.themes) : []
   const introSessions = (data || {}).introSessions
     ? mapEdgesToNodes(data.introSessions)
     : []
+
+  const GroupedSongs = groupBy(songNodes, "name")
+  const ArrayAlbums = Object.entries(GroupedSongs).map(([key, val]) => ({
+    name: key,
+    albums: val,
+  }))
+  const SortThemesByOrder = themeNodes.sort((a, b) => a.order - b.order)
 
   return (
     <Layout>
@@ -212,8 +238,12 @@ const Lb = props => {
       {introSessions ? (
         <IntroSessionTitle introSessions={introSessions} />
       ) : null}
-      {themeNodes
-        ? themeNodes.map(theme => <ThemeTitle key={theme.id} {...theme} />)
+      {songNodes ? (
+        <ThemeTitle name={"Songs"} song ArrayAlbums={ArrayAlbums} />
+      ) : null}
+
+      {SortThemesByOrder
+        ? SortThemesByOrder.map(theme => <ThemeTitle key={theme.id} {...theme} />)
         : null}
     </Layout>
   )

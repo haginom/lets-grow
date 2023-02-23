@@ -14,6 +14,17 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      name: 'comingSoon',
+      title: 'Coming Soon',
+      type: 'boolean',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: 'order',
+      title: 'Order ',
+      type: 'number',
+    },
+    {
       name: 'backgroundColour',
       title: 'background color',
       type: 'color',
@@ -78,4 +89,7 @@ export default {
       ],
     },
   ],
+  initialValue: {
+    comingSoon: false,
+  },
 }

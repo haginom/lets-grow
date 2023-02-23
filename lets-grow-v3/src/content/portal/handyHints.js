@@ -1,21 +1,27 @@
 import React from "react"
 import FullWidthPanelTwo from "../../components/fullWidthPanel"
 import styled from "styled-components"
-import IconButton from "../../components/iconButton"
+import { IconLink } from "../../components/iconButton"
 import HandyHintsPanel from "../../components/portal/handyHintsPanel"
-import { HHGrid, HHGridItem, HHGridItemTwo } from "../../components/portal/hhGrid"
+import {
+  HHGrid,
+  HHGridItem,
+  HHGridItemTwo,
+} from "../../components/portal/hhGrid"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const HHOne = () => (
   <FullWidthPanelTwo colours="bg-gold white" maxWidth="56rem">
     <Paragraph className="fw6">
       Our Handy Hints help you prepare for and deliver brilliant Let’s Grow
-      sessions that feature a visiting fruit or vegetable baby.
+      sessions, helping you to create the best learning experience from the
+      visiting fruit or vegetable babies.
     </Paragraph>
     <Paragraph className="mb5">
-      Of course, all session plans tell you everything you need to know but for
-      those who want a bit more information and a deep dive into best practice,
-      you’ll find it here!
+      Each session plan tells you everything you need to know, but the Handy
+      Hints sections supplement this with more in-depth practical information on
+      what makes the sessions work best and offers insights into the creative
+      practice that underpins Let’s Grow.
     </Paragraph>
   </FullWidthPanelTwo>
 )
@@ -24,15 +30,18 @@ export const HHTwo = ({ data }) => (
   <FullWidthPanelTwo colours="bg-gold white" maxWidth="56rem">
     <Subheading className="coffeeTea">Pratical Preparation</Subheading>
     <IconDiv className="mh3-m">
-      <IconButton
+      <IconLink
+        navigation="#resources_accessories"
         icon={data.icon.childImageSharp.gatsbyImageData}
         text={"Resources and Accessories"}
       />
-      <IconButton
+      <IconLink
+        navigation="#shopping"
         icon={data.iconOne.childImageSharp.gatsbyImageData}
         text={"Shopping for the Right Vegetable"}
       />
-      <IconButton
+      <IconLink
+        navigation="#characters"
         icon={data.iconOne.childImageSharp.gatsbyImageData}
         text={"Turning fruits and vegetables into characters"}
       />
@@ -46,19 +55,23 @@ export const HHThree = ({ data }) => (
       Making the most of the fruit & vegetable babies
     </Subheading>
     <IconDiv className="mh3-m">
-      <IconButton
+      <IconLink
+        navigation="#interaction"
         icon={data.iconOne.childImageSharp.gatsbyImageData}
         text={"REVEALING & INTERACTING WITH THE BABY"}
       />
-      <IconButton
+      <IconLink
+        navigation="#creative_teaching"
         icon={data.iconOne.childImageSharp.gatsbyImageData}
         text={"CREATIVE TEACHING WITH THE BABIES"}
       />
-      <IconButton
+      <IconLink
+        navigation="#rules"
         icon={data.iconOne.childImageSharp.gatsbyImageData}
         text={"RULES FOR PLAY"}
       />
-      <IconButton
+      <IconLink
+        navigation="#faqs"
         icon={data.iconOne.childImageSharp.gatsbyImageData}
         text={"FAQ’S"}
       />
@@ -70,7 +83,8 @@ export const HHFour = ({ data }) => (
   <FullWidthPanelTwo colours="bg-gold white" maxWidth="56rem">
     <Subheading className="coffeeTea">Health & Safety</Subheading>
     <IconDiv className="mh3-m">
-      <IconButton
+      <IconLink
+        navigation="#health_and_safety"
         icon={data.iconTwo.childImageSharp.gatsbyImageData}
         text={"Health & safety in preparation and playing"}
       />
@@ -529,77 +543,90 @@ export const HHTen = ({ data }) => (
     bottom={"0rem"}
     banner={data.banner.childImageSharp.gatsbyImageData}
   >
-    <Paragraph mb={"0.1rem"} fw={"600"}>
+    <Paragraph mb={"-0.25rem"} fw={"600"}>
       Making the moment special
     </Paragraph>
-    <Paragraph>
-      How the baby is revealed, especially for the very first time, is the most
-      important part of the process. Think of the experience a child has when
-      they go and see Father Christmas in his grotto. There’s a sense of
-      expectation and anticipation and then the BIG reveal. The same
-      embellishment should be used for the visiting babies.{" "}
+    <Paragraph mb={"-0.25rem"}>
+      How the baby is revealed, especially for the very first time, is crucial.
+      Think of the experience a child has when they see Father Christmas in his
+      grotto. There’s a sense of anticipation in meeting the magical character
+      and then a BIG reveal. Your excitement will be mirrored by the children,
+      so don’t hold back.
     </Paragraph>
-    <Paragraph>
-      <span className="fw6">Firstly...</span>Each visiting character should be
-      presented or revealed as if they are a REAL baby. Cradle them carefully
-      and the children will follow your behaviour in doing the same.{" "}
+    <Paragraph mb={"0rem"}>
+      <span className="fw6">Firstly...</span>each visiting character should be
+      presented or revealed as if they are a REAL baby. Cradle them carefully,
+      speak gently to them and the children will naturally do the same.{" "}
     </Paragraph>
-    <Paragraph>
-      <span className="fw6">Secondly... </span>Think about HOW each visiting
-      character is revealed. Have fun, as this is the moment when a child will
-      begin laying the foundations for how they will engage with that character
-      and the whole experience of Let’s Grow.
+    <Paragraph mb={"0.25rem"}>
+      <span className="fw6">Secondly... </span>think carefully about HOW the
+      baby is revealed. Make sure this is an important moment for the children,
+      as it will lay the foundations for how they engage with the character and
+      therefore the whole experience of Let’s Grow.
     </Paragraph>
-    <Paragraph fw={"600"}>Here are some ideas...</Paragraph>
-    <List>
+    <Paragraph mb={"-1rem"} fw={"600"}>
+      Some ideas:
+    </Paragraph>
+    <List mb="0.25rem">
       <li>
-        Hide the baby outside the door to the classroom, before the session
-        begins. When ready, perhaps you hear a knock at the door. When you go to
-        investiagte you find the visiting baby concealed, fast asleep in a
-        special basket or wrapped in a blanket.
+        Unseen by the children, place the baby outside the door to the
+        classroom. Suggest that you think you heard a knock at the door. When
+        you go to investigate you find the visiting baby concealed, fast asleep
+        in a special basket or wrapped in a blanket.
       </li>
       <li>
-        Have the baby arrive at a predetermined time, with a staff member
-        interrupting the lesson to announce the arrival of the special visitor.
+        Have an amenable adult arrive, carefully carrying the baby, at an
+        arranged time. The announcement of the arrival of their special visitor
+        will no doubt cause much excitement.
       </li>
       <li>
-        Use the Countdown Clock Song as an exciting one-minute countdown to the
-        arrival. Plant the baby outside the door to the classroom, so that at
-        the end of the song it’s waiting for you to gather it up in your arms,
-        be cuddled and presented to the children.
+        Establish a ’special place’ where a new baby will be found for each
+        session. This could be outside the classroom door or from within a
+        special box or hamper that is placed in the font of the carpet area for
+        the reveal. Use the{" "}
+        <Highlight>
+          <a href="https://cdn.sanity.io/files/a6vt2u3f/production/bb9d74194874557f6fc6d37bf180d4a42e885b40.mp4">
+            Countdown Clock Song
+          </a>
+        </Highlight>{" "}
+        as an exciting one-minute countdown to the arrival – as the song
+        finishes the baby is revealed, gathered up in your arms to be cuddled
+        and presented to the children.
       </li>
     </List>
-    <Paragraph>
-      We suggest establishing a routine for revealing the baby that is repeated,
-      so that children know what to expect. They will enjoy the repetition and
-      sense of anticipation this brings. Over time this process can be altered
-      to sub- vert expectation, enabling some exciting surprises and learning
-      opportunities that reflect the babies different character traits. For
-      example, the ‘Feelings’ session features a shy cauliflower called Peep who
-      tends to get nerv- ous about new people and places. The session starts
-      with Peep not being in the place that the children expect. The children
-      must then actively look for Peep. It turns out that Peep had hidden
-      because of nervous feelings. It’s therefore up to the children to support
-      Peep in dealing with these uncomfortable feelings. We encourage you to put
-      your own twist on the reveal or on any part of the baby’s visit. For
-      example, a ‘playful’ character may be found hiding somewhere unexpected.
-      An ‘cheeky’ character may be found getting up to some mischief. A baby may
-      even be discovered having caused an accident and is covered in paint! Be
-      creative and have fun!
+    <Paragraph mb={"0rem"} mt="1rem">
+      Establishing a routine for revealing the baby, so that children know what
+      to expect, is strongly recommended. Most children will enjoy the sense of
+      anticipation that this brings. Of course, this process can be playfully
+      subverted, providing some exciting surprises and learning opportunities
+      that reflect the babies’ different character traits. For example, the
+      ‘Feelings’ session features a shy cauliflower called Peep who tends to get
+      nervous about new people and places. The session starts with Peep not
+      being in the place that the children expect. The children must then
+      actively look for Peep. It turns out that Peep has hidden because they’re
+      nervous. It’s therefore up to the children to support Peep in dealing with
+      these uncomfortable feelings. We encourage you to put your own twist on
+      the reveal or on any part of the baby’s visit. For example, a ‘cheeky’
+      character may be found getting up to some mischief or somehow covered in
+      paint. Be creative and have fun!
     </Paragraph>
-    <Paragraph fw={"600"}>
+    <Paragraph mb={"-1rem"} fw={"600"}>
       When interacting with the babies remember to...{" "}
     </Paragraph>
     <List>
       <li>
-        Imbue them with life by holding and treating them as REAL babies. No
-        acting is needed! The children will observe this, emulate your example
-        and enjoy engaging in the fiction
+        Treat them as REAL babies. No ‘acting’ is needed, simply draw on your
+        own experience of caring for a baby. Children instinctively understand
+        the nature of caring for the very young or for animals, and will emulate
+        your behaviour. Resist the temptation to break the fiction with any
+        other adults who are present - some children will pick up on this, even
+        if it’s just for a moment.
       </li>
       <li>
-        {" "}
-        Think of each baby as a new member of the class complete with their own
-        personalities and character traits
+        Think of each baby as a new member of the class. Get to know them, their
+        personality and character traits. These can develop for you and the
+        children over time, but referring back to things they’ve done or said
+        will help build the sense of character for the children.
       </li>
       <li>
         Respond to the babies as if they have spoken to you - “Oh that’s right
@@ -608,18 +635,17 @@ export const HHTen = ({ data }) => (
         through
       </li>
       <li>
-        Don’t be tempted to give the babies a voice as this destroys the sense
-        of character. It’s much better to let children imagine what the babies
-        might be saying.
+        Demonstrate how to feed any baby that comes with a bottle. Ask the
+        children about why we need to be gentle with babies – this not only
+        develops intrinsic motivation to take care of things but will also help
+        the fruit and vegetables to last longer!
       </li>
       <li>
-        If the baby arrives with a bottle demonstrate how to feed correctly by
-        encouraging the children not to force it. Talk to the children about why
-        we need to be gentle with babies – this not only develops intrinsic
-        motivation to take care of things but should help the fruit and
-        vegetables to last longer!
+        Be playful and allow yourself to be ‘in the moment’. Often, the
+        spontaneous suggestions the children make can be acted on, and
+        unexpected learning opportunities could come from them.
       </li>
-      <li>Playfulness is key. Have fun!</li>
+      <li>Enjoy yourself! Having fun is key (for adults and children).</li>
     </List>
   </HandyHintsPanel>
 )
@@ -632,9 +658,10 @@ export const HHEleven = ({ data }) => (
     banner={data.banner.childImageSharp.gatsbyImageData}
   >
     <Paragraph>
-      The babies are a fantastic vehicle for creative teaching and learning.
-      They can help children to develop new skills and perspectives, be
-      empowered, empathise, support, advise and nurture.
+      Let’s Grow is a fantastic resource for creative teaching and learning, and
+      caring for the fruit and vegetable babies is at the very heart of this.
+      Your children will build empathy and develop communication skills as they
+      explore the world from the babies’ perspective. To maximise this, try to…
     </Paragraph>
     <Paragraph mb={"0.1rem"} fw={"600"}>
       Develop the identities of the babies{" "}
@@ -642,10 +669,10 @@ export const HHEleven = ({ data }) => (
     <Paragraph>
       The babies are archetypal characters and can be personalised to mirror the
       children’s own challenges, so that day-to-day issues can be effectively
-      addressed. For example, Dilly & Dally are great at making a mess but not
-      so good at tidying up. This is a perfect opportunity for children to
-      demonstrate how grown-up and capable they are, by showing Dilly & Dally
-      how to tidy up.{" "}
+      addressed. For example, Dilly &amp; Dally are great at making a mess but
+      not so good at tidying up. This is a perfect opportunity for children to
+      demonstrate how grown-up and capable they are, by showing Dilly &amp;
+      Dally how to tidy up.
     </Paragraph>
     <Paragraph mb={"0.1rem"} fw={"600"}>
       Use the babies to help the children develop age-appropriate skills{" "}
@@ -653,8 +680,8 @@ export const HHEleven = ({ data }) => (
     <Paragraph>
       For example, the babies can be effectively used to support children who
       are transitioning from baby bottles to cups; or moving on from using a
-      dummy. You can explain that only the fruit & vegetable babies need bottles
-      and dummies as they are so little.{" "}
+      dummy. You can explain that only some of the fruit &amp; vegetable babies
+      need bottles and dummies as they are so little.
     </Paragraph>
     <Paragraph mb={"0.1rem"} fw={"600"}>
       Use the babies to enable children to safely address personal issues{" "}
@@ -663,15 +690,27 @@ export const HHEleven = ({ data }) => (
       For example, if a child is feeling worried about trying something new,
       deciding as a group that we need to help one of the babies who is
       experiencing the same thing, can help the child to work through their
-      difficulty.{" "}
+      difficulty.
     </Paragraph>
     <Paragraph mb={"0.1rem"} fw={"600"}>
       Use the babies to talk about gender stereotypes{" "}
     </Paragraph>
     <Paragraph>
       The gender of the babies isn’t defined. Use them to explore any
-      expectations that the children may have around to things such aspirations,
-      characteristics, colours, hairstyles, toys and sports.
+      expectations that the children may have around things such aspirations,
+      characteristics, clothing, colours, hairstyles, toys and activities.
+    </Paragraph>
+    <Paragraph mb={"0.1rem"} fw={"600"}>
+      Keep communication in mind
+    </Paragraph>
+    <Paragraph>
+      Build in moments where the children need to listen carefully and give
+      their attention, as well as communicating their own ideas. This is a key
+      aspect of SLCN (Speech language and communication needs) that young
+      children need support to develop. For example, “What’s that Dug, you’ve
+      got a question you’d like to ask the children?” or “Oh dear, Peep looks a
+      bit upset. Shall we find out what’s the matter?” can be very effective way
+      of bringing everyone’s attention back to the baby.
     </Paragraph>
   </HandyHintsPanel>
 )
@@ -1074,7 +1113,7 @@ const List = styled.ul`
     font-size: 0.7rem;
     list-style-position: inside;
     list-style-type: none;
-    margin-bottom: 0.5rem;
+    margin-bottom: ${props => (props.mb ? props.ml : "0.5rem")};
     margin-left: ${props => (props.ml ? props.ml : "1rem")};
     margin-right: 1rem;
     margin-top: 0;
@@ -1135,5 +1174,31 @@ const IconDiv = styled.div`
   }
 
   @media screen and (min-width: 60em) {
+  }
+`
+
+const Highlight = styled.span`
+  position: relative;
+  background-color: #7fb5aa;
+  transform: rotate(2deg);
+  border-radius: 0px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: -8px;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+  line-height: 1rem;
+  a {
+    transform: rotate(-2deg);
+    line-height: 1.1rem;
+    text-decoration: none;
+    color: white;
+
+    &: hover {
+      text-decoration: underline;
+    }
+    & :visited {
+      color: white;
+    }
   }
 `

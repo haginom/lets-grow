@@ -331,9 +331,9 @@ const Hh = () => {
         <HHOne />
         <HHTwo data={data} />
         <HHThree data={data} />
-
         <HHFour data={data} />
       </Layout>
+      <div id="resources_accessories" />
       <HandyHintTitle
         icon={data.icon.childImageSharp.gatsbyImageData}
         title="Resources"
@@ -349,41 +349,50 @@ const Hh = () => {
         title="Accessories"
       />
       <HHSeven data={data} />
+      <div id="shopping" />
       <HandyHintTitle
         icon={data.iconOne.childImageSharp.gatsbyImageData}
         title="SHOPPING FOR THE RIGHT FRUIT & VEGETABLE"
       />
       <HHEight data={data} />
+      <div id="characters" />
       <HandyHintTitle
         icon={data.iconOne.childImageSharp.gatsbyImageData}
-        title="REVEALING & INTERACTING WITH THE VISITING BABY"
+        title="TURNING THE FRUITS & VEGETABLES INTO CHARACTERS"
       />
       <HHNine data={data} />
+      <div id="interaction" />
       <HandyHintTitle
         icon={data.iconOne.childImageSharp.gatsbyImageData}
         title="REVEALING & INTERACTING WITH THE VISITING BABY"
       />
       <HHTen data={data} />
+      <div id="creative_teaching" />
       <HandyHintTitle
         icon={data.iconOne.childImageSharp.gatsbyImageData}
         title="CREATIVE TEACHING WITH THE BABIES"
       />
       <HHEleven data={data} />
+      <div id="rules" />
       <HandyHintTitle
         icon={data.iconOne.childImageSharp.gatsbyImageData}
         title="Rules for play"
       />
       <HHTwelve data={data} />
+      <div id="faqs" />
       <HandyHintTitle
         icon={data.iconOne.childImageSharp.gatsbyImageData}
         title="Faq's"
       />
       <HHThirteen data={data} />
+      <div id="health_and_safety" />
       <HandyHintTitle
         icon={data.iconTwo.childImageSharp.gatsbyImageData}
         title="HEALTH & SAFETY IN PREPARATION"
       />
       <HHFourteen data={data} />
+      <div id="health_and_safety_playing" />
+
       <HandyHintTitle
         icon={data.iconTwo.childImageSharp.gatsbyImageData}
         title="HEALTH & SAFETY IN PLAYING"

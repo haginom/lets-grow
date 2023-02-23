@@ -160,18 +160,27 @@ const Centered = styled.div`
   margin-right: auto;
 `
 const ThreeRegColumns = styled.div`
-  column-count: 3;
-  columns: 20rem;
-  column-gap: 10px;
+  display: grid;
+  gap: 0.25rem;
+  @media screen and (min-width: 30em) {
+    grid-template-columns: repeat(2, minmax(15rem, 20rem));
+  }
+
+  @media screen and (min-width: 50em) {
+    display: block;
+    column-count: 3;
+    columns: 20rem;
+    column-gap: 10px;
+  }
+
   * {
     -webkit-column-break-inside: avoid;
-    page-break-inside: avoid; /* Firefox is dumb */
-    break-inside: avoid;
+    page-break-inside: avoid-column; /* Firefox is dumb */
+    break-inside: avoid-column;
   }
 
   .videoStill {
     height: 100%;
-
     margin-left: 1rem;
     margin-top: -1.5rem;
     transform: rotate(-3deg);
@@ -179,10 +188,16 @@ const ThreeRegColumns = styled.div`
     box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.73);
   }
   .whiteArt {
-    width: 10rem;
-    height: 100%;
-    object-fit: cover;
-    margin-left: 6rem;
+    margin-left: 12rem;
+    display: none;
+
+    @media screen and (min-width: 60em) {
+      display: block;
+      margin-left: 6rem;
+      width: 15rem;
+      height: 100%;
+      object-fit: contain;
+    }
   }
 `
 const Resources = styled.div``
@@ -191,9 +206,13 @@ const ThreeColumns = styled.div`
   display: grid;
   position: relative;
   z-index: 4;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 0.5rem;
+  margin-bottom: 0.5rem;
 
+  @media screen and (min-width: 35rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   @media screen and (min-width: 60em) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     margin-top: ${props => props.mt || "0rem"};
@@ -218,6 +237,7 @@ const Subheading = styled.h3`
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  margin-top: 1rem;
   @media screen and (min-width: 60em) {
     font-size: 1.8rem;
     margin-top: ${props => props.mt || "0rem"};
@@ -235,8 +255,18 @@ const StyledVideoStill = styled.img`
 `
 const PokingBaby = styled.div`
   position: absolute;
-  left: 46rem;
-  bottom: 2rem;
+  right: 4rem;
+  bottom: 16rem;
+
+  @media screen and (min-width: 35em) and (max-width: 60em) {
+    right: 0rem;
+    bottom: 9rem;
+  }
+
+  @media screen and (min-width: 60em) {
+    right: 6rem;
+    bottom: 2rem;
+  }
 `
 const WhiteArt = styled.div`
   position: absolute;

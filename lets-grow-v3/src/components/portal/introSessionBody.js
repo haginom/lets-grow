@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { urlFor } from "../../lib/helpers"
 import SessionResourceLink from "./sessionResourceLink"
 
-const IntroSessionBody = ({ play, download, songs, ...props }) => {
+const IntroSessionBody = ({ ...props }) => {
   const { name, color, image, sessionResources } = props
   return (
     <>

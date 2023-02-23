@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { urlFor } from "../../lib/helpers"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { capitalizeWords } from "../../lib/helpers"
 import { LightenDarkenColor } from "../../lib/helpers"
 
 const SessionResourceLink = ({
@@ -17,12 +16,12 @@ const SessionResourceLink = ({
     query resourceLinkQuery {
       iconDownload: file(relativePath: { eq: "icon-download.png" }) {
         childImageSharp {
-          gatsbyImageData(height: 50)
+          gatsbyImageData(height: 45)
         }
       }
       iconPlay: file(relativePath: { eq: "play-button-white.png" }) {
         childImageSharp {
-          gatsbyImageData(height: 60)
+          gatsbyImageData(height: 45)
         }
       }
       iconSongs: file(relativePath: { eq: "portal/GSG-5.png" }) {
@@ -30,30 +29,29 @@ const SessionResourceLink = ({
           gatsbyImageData(width: 150)
         }
       }
+      iconMagGlass: file(relativePath: { eq: "icon-mag-glass.png" }) {
+        childImageSharp {
+          gatsbyImageData(height: 45)
+        }
+      }
     }
   `)
   const { fileCategory, image, fileAttachment, url } = props
   return (
     <>
-      <StyledLink
-        href={`${
-          url
-            ? `${url.url}`
-            : fileAttachment.file?.asset
-            ? `${fileAttachment.file.asset.url}`
-            : "resource-not-found"
-        }`}
-        target="_blank"
+      <StyledBox
         className={`${className ? ` ${className}` : ""} br4`}
         margin={margin}
         color={color ? color : "#bab397"}
       >
         <Container>
-          <InnerWrapper>
+          <InnerWrapper
+            mw={`${fileCategory === "webpage" ? "20rem" : "12rem"}`}
+          >
             {fileAttachment ? (
-              <p>{capitalizeWords(fileAttachment?.fileName)}</p>
+              <p>{fileAttachment?.fileName}</p>
             ) : url ? (
-              <p>{capitalizeWords(url?.linkName)}</p>
+              <p>{url?.linkName}</p>
             ) : null}
           </InnerWrapper>
           {image && (
@@ -61,91 +59,156 @@ const SessionResourceLink = ({
               src={urlFor(image).auto("format").fit("max").height(100).url()}
             />
           )}
-          {fileCategory === "video" && (
-            <GatsbyImage
-              alt=""
-              objectFit="contain"
-              image={data.iconPlay.childImageSharp.gatsbyImageData}
-            />
-          )}
-          {fileCategory === "image" && (
-            <GatsbyImage
-              alt=""
-              objectFit="contain"
-              image={data.iconDownload.childImageSharp.gatsbyImageData}
-            />
-          )}
-          {fileCategory === "webpage" && (
-            <GatsbyImage
-              alt=""
-              objectFit="contain"
-              image={data.iconDownload.childImageSharp.gatsbyImageData}
-            />
-          )}
+          <StyledIconButton
+            href={`${
+              url
+                ? `${url.url}`
+                : fileAttachment?.file?.asset
+                ? `${fileAttachment.file.asset.url}`
+                : "resource-not-found"
+            }`}
+            target="_blank"
+            className="grow"
+          >
+            {fileCategory === "video" && (
+              <GatsbyImage
+                alt=""
+                objectFit="contain"
+                className="play"
+                image={data.iconPlay.childImageSharp.gatsbyImageData}
+              />
+            )}
+            {fileCategory === "image" && (
+              <GatsbyImage
+                alt=""
+                className="download"
+                objectFit="contain"
+                image={data.iconDownload.childImageSharp.gatsbyImageData}
+              />
+            )}
+            {fileCategory === "webpage" && (
+              <GatsbyImage
+                alt=""
+                objectFit="contain"
+                className="magGlass"
+                image={data.iconMagGlass.childImageSharp.gatsbyImageData}
+              />
+            )}
+            {fileCategory === "song" && (
+              <GatsbyImage
+                alt=""
+                objectFit="contain"
+                className="song"
+                image={data.iconSongs.childImageSharp.gatsbyImageData}
+              />
+            )}
+          </StyledIconButton>
 
           {fileCategory === "pdf" && (
-            <GatsbyImage
-              alt=""
-              objectFit="contain"
-              image={data.iconDownload.childImageSharp.gatsbyImageData}
-            />
-          )}
-          {fileCategory === "song" && (
-            <GatsbyImage
-              alt=""
-              objectFit="contain"
-              image={data.iconSongs.childImageSharp.gatsbyImageData}
-            />
+            <TwoIcons>
+              <StyledIconButton
+                href={`${
+                  url
+                    ? `${url.url}`
+                    : fileAttachment?.file?.asset
+                    ? `${fileAttachment.file.asset.url}`
+                    : "resource-not-found"
+                }`}
+                className="grow"
+                target="_blank"
+              >
+                <GatsbyImage
+                  alt=""
+                  objectFit="contain"
+                  className="download"
+                  image={data.iconMagGlass.childImageSharp.gatsbyImageData}
+                />
+              </StyledIconButton>
+              <StyledIconButton
+                href={`${
+                  url
+                    ? `${url.url}`
+                    : fileAttachment?.file?.asset
+                    ? `${fileAttachment.file.asset.url}?dl=`
+                    : "resource-not-found"
+                }`}
+                className="grow"
+                target="_blank"
+              >
+                <GatsbyImage
+                  alt=""
+                  objectFit="contain"
+                  className="download"
+                  image={data.iconDownload.childImageSharp.gatsbyImageData}
+                />
+              </StyledIconButton>
+            </TwoIcons>
           )}
         </Container>
-      </StyledLink>
+      </StyledBox>
     </>
   )
 }
 
-const StyledLink = styled.a`
-  display: block;
-  overflow: hidden;
-  box-sizing: border-box;
-  position: relative;
-  background-color: ${props =>
-    LightenDarkenColor(props.color, 20) || "#cec7ab"};
+const StyledIconButton = styled.a`
   outline: none;
-  text-decoration: none;
-  width: 100%;
-  margin: ${props => props.margin || "0rem"};
+  padding: 0rem;
 
   :not(:disabled) {
     cursor: pointer;
     outline: none;
   }
 `
+const TwoIcons = styled.div`
+  display: flex;
+  margin-right: 0.8rem;
+  gap: 0.5rem;
+`
+
+const StyledBox = styled.div`
+  height: 6.5rem;
+  max-width: 26rem;
+  display: flex;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  background-color: ${props =>
+    LightenDarkenColor(props.color, 20) || "#cec7ab"};
+  width: 100%;
+  margin: ${props => props.margin || "0rem"};
+`
 
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex: 0 1 32rem;
 
-  div:last-child {
-    max-height: 4rem;
+  .play {
     box-sizing: border-box;
-    margin-top: 1rem;
-    margin-right: 1rem;
+    margin-right: 1.25rem;
+  }
+  .song {
+    margin-right: 0.75rem;
+  }
+  .magGlass {
+    margin-right: 1.5rem;
   }
 `
 
 const InnerWrapper = styled.div`
   font: inherit;
   font-weight: 550;
+  line-height: 1.6rem;
   letter-spacing: 0.01em;
   color: white;
-  padding-top: 2.5rem;
-  padding-bottom: 2.35rem;
-  padding-left: 1rem;
+  max-width: ${props => props.mw || "12rem"};
+  padding-left: 1.2rem;
+  margin: 0.2rem;
+
   @media screen and (min-width: 60em) {
     font-size: 1.3rem;
   }
-
   &:visited {
     color: white;
   }

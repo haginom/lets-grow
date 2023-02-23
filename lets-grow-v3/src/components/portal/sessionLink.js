@@ -22,8 +22,8 @@ const SessionLink = ({ className, ...props }) => {
           </InnerWrapper>
           {image && (
             <StyledImg
-              bottom={`${visitingBaby ? "-20px" : "0rem"}`}
-              src={urlFor(image).auto("format").fit("max").height(100).url()}
+              bottom={`${visitingBaby ? "-25px" : "0rem"}`}
+              src={urlFor(image).auto("format").fit("max").height(120).url()}
             />
           )}
         </Container>
@@ -49,19 +49,24 @@ const StyledLink = styled(props => <Link {...props} />)`
 `
 
 const Container = styled.div`
+  height: 6.7rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  img:last-child {
+    max-width: 40%;
+  }
 `
 
 const InnerWrapper = styled.div`
   font: inherit;
   font-weight: 550;
   letter-spacing: 0.01em;
+  line-height: 1.6rem;
   color: white;
-  padding-top: 2.5rem;
-  padding-bottom: 2.35rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  margin-left: 1.5rem;
+  max-width: 50%;
   @media screen and (min-width: 60em) {
     font-size: 1.3rem;
   }

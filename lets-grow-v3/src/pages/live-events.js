@@ -12,7 +12,6 @@ import InteractiveInstallation from "../content/liveEvents/InteractiveInstallati
 import MakeTakeWorkshops from "../content/liveEvents/MakeTakeWorkshops"
 
 const LiveEvents = ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <Seo title="Live Events" />
@@ -225,7 +224,7 @@ export const query = graphql`
       }
     }
     mtwOne: file(
-      relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw-1.jpg" }
+      relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw1.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 390)
@@ -253,7 +252,7 @@ export const query = graphql`
       }
     }
     mtwFive: file(
-      relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw-5.jpg" }
+      relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw5.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 390)

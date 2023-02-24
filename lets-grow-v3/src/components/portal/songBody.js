@@ -31,7 +31,8 @@ const SongBody = ({ ArrayAlbums }) => {
         alt="musical notes"
         image={data.iconSongs.childImageSharp.gatsbyImageData}
       />
-      <StyledGatsbyImage
+      <GatsbyImage
+        style={{ position: "absolute", left: "40rem", top: "-4rem" }}
         alt="mr bloom on guitar"
         image={data.MrBloom.childImageSharp.gatsbyImageData}
       />
@@ -55,11 +56,6 @@ const SongBody = ({ ArrayAlbums }) => {
 const StyledBackground = styled.div`
   background: rgb(140, 113, 131);
   margin-bottom: 4rem;
-`
-const StyledGatsbyImage = styled(props => <GatsbyImage {...props} />)`
-  position: absolute;
-  left: 40rem;
-  top: -4rem;
 `
 
 const StyledLink = styled.div`

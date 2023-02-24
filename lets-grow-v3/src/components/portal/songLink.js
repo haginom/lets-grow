@@ -82,10 +82,4 @@ const InnerWrapper = styled.div`
   }
 `
 
-const StyledImg = styled.img`
-  position: absolute;
-  right: 10px;
-  bottom: ${props => props.bottom || "0rem"};
-`
-
 export default SongLink

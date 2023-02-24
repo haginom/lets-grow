@@ -15,13 +15,15 @@ export const HHOne = () => (
     <Paragraph className="fw6">
       Our Handy Hints help you prepare for and deliver brilliant Let’s Grow
       sessions, helping you to create the best learning experience from the
-      visiting fruit or vegetable babies.
+      visiting fruit or vegetable babies. The Handy Hints supplement the session
+      plans, offering more in-depth practical information on what makes the
+      sessions work best and offers insights into the creative practice that
+      underpins Let’s Grow.
     </Paragraph>
     <Paragraph className="mb5">
-      Each session plan tells you everything you need to know, but the Handy
-      Hints sections supplement this with more in-depth practical information on
-      what makes the sessions work best and offers insights into the creative
-      practice that underpins Let’s Grow.
+      Of course, all session plans tell you everything you need to know but for
+      those who want a bit more information and a deep dive into best practice,
+      you’ll find it here!
     </Paragraph>
   </FullWidthPanelTwo>
 )
@@ -86,7 +88,7 @@ export const HHFour = ({ data }) => (
       <IconLink
         navigation="#health_and_safety"
         icon={data.iconTwo.childImageSharp.gatsbyImageData}
-        text={"Health & safety in preparation and playing"}
+        text={"HEALTH & SAFETY IN PREPARATION AND PLAYING"}
       />
     </IconDiv>
     <GatsbyImage
@@ -567,7 +569,7 @@ export const HHTen = ({ data }) => (
     <Paragraph mb={"-1rem"} fw={"600"}>
       Some ideas:
     </Paragraph>
-    <List mb="0.25rem">
+    <List mb="1rem">
       <li>
         Unseen by the children, place the baby outside the door to the
         classroom. Suggest that you think you heard a knock at the door. When
@@ -593,24 +595,24 @@ export const HHTen = ({ data }) => (
         finishes the baby is revealed, gathered up in your arms to be cuddled
         and presented to the children.
       </li>
+      <li>
+        Establishing a routine for revealing the baby, so that children know
+        what to expect, is strongly recommended. Most children will enjoy the
+        sense of anticipation that this brings. Of course, this process can be
+        playfully subverted, providing some exciting surprises and learning
+        opportunities that reflect the babies’ different character traits. For
+        example, the ‘Feelings’ session features a shy cauliflower called Peep
+        who tends to get nervous about new people and places. The session starts
+        with Peep not being in the place that the children expect. The children
+        must then actively look for Peep. It turns out that Peep has hidden
+        because they’re nervous. It’s therefore up to the children to support
+        Peep in dealing with these uncomfortable feelings. We encourage you to
+        put your own twist on the reveal or on any part of the baby’s visit. For
+        example, a ‘cheeky’ character may be found getting up to some mischief
+        or somehow covered in paint. Be creative and have fun!
+      </li>
     </List>
-    <Paragraph mb={"0rem"} mt="1rem">
-      Establishing a routine for revealing the baby, so that children know what
-      to expect, is strongly recommended. Most children will enjoy the sense of
-      anticipation that this brings. Of course, this process can be playfully
-      subverted, providing some exciting surprises and learning opportunities
-      that reflect the babies’ different character traits. For example, the
-      ‘Feelings’ session features a shy cauliflower called Peep who tends to get
-      nervous about new people and places. The session starts with Peep not
-      being in the place that the children expect. The children must then
-      actively look for Peep. It turns out that Peep has hidden because they’re
-      nervous. It’s therefore up to the children to support Peep in dealing with
-      these uncomfortable feelings. We encourage you to put your own twist on
-      the reveal or on any part of the baby’s visit. For example, a ‘cheeky’
-      character may be found getting up to some mischief or somehow covered in
-      paint. Be creative and have fun!
-    </Paragraph>
-    <Paragraph mb={"-1rem"} fw={"600"}>
+    <Paragraph mt={"0.5rem"} mb={"-1rem"} fw={"600"}>
       When interacting with the babies remember to...{" "}
     </Paragraph>
     <List>
@@ -658,7 +660,7 @@ export const HHEleven = ({ data }) => (
     banner={data.banner.childImageSharp.gatsbyImageData}
   >
     <Paragraph>
-      Let’s Grow is a fantastic resource for creative teaching and learning, and
+      Let’s Grow is a fantastic resource for creative teaching and learning and
       caring for the fruit and vegetable babies is at the very heart of this.
       Your children will build empathy and develop communication skills as they
       explore the world from the babies’ perspective. To maximise this, try to…
@@ -1113,7 +1115,7 @@ const List = styled.ul`
     font-size: 0.7rem;
     list-style-position: inside;
     list-style-type: none;
-    margin-bottom: ${props => (props.mb ? props.ml : "0.5rem")};
+    margin-bottom: ${props => (props.mb ? props.ml : "0.4rem")};
     margin-left: ${props => (props.ml ? props.ml : "1rem")};
     margin-right: 1rem;
     margin-top: 0;
@@ -1125,7 +1127,7 @@ const List = styled.ul`
     @media screen and (min-width: 35em) {
       font-size: 1rem;
       line-height: 1.3rem;
-      margin-top: 1rem;
+      margin-top: 0.75rem;
     }
   }
 

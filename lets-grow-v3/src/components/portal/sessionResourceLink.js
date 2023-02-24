@@ -78,7 +78,7 @@ const SessionResourceLink = ({
                 image={data.iconPlay.childImageSharp.gatsbyImageData}
               />
             )}
-            {fileCategory === "image" && (
+            {fileCategory === "folder" && (
               <GatsbyImage
                 alt=""
                 className="download"
@@ -120,7 +120,6 @@ const SessionResourceLink = ({
                 <GatsbyImage
                   alt=""
                   objectFit="contain"
-                  className="download"
                   image={data.iconMagGlass.childImageSharp.gatsbyImageData}
                 />
               </StyledIconButton>
@@ -138,7 +137,6 @@ const SessionResourceLink = ({
                 <GatsbyImage
                   alt=""
                   objectFit="contain"
-                  className="download"
                   image={data.iconDownload.childImageSharp.gatsbyImageData}
                 />
               </StyledIconButton>
@@ -184,6 +182,9 @@ const Container = styled.div`
   align-items: center;
   flex: 0 1 32rem;
 
+  .download {
+    margin-right: 1rem;
+  }
   .play {
     box-sizing: border-box;
     margin-right: 1.25rem;

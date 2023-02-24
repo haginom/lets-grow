@@ -9,6 +9,7 @@ import TeacherTestimonials from "../content/educationalSettings/teacherTestimoni
 import { graphql } from "gatsby"
 import SessionIntro from "../content/educationalSettings/sessionIntro"
 import ArtsAwards from "../content/educationalSettings/artsAwards"
+import Login from "../content/login"
 
 const EducationalResources = ({ data }) => {
   return (
@@ -22,6 +23,8 @@ const EducationalResources = ({ data }) => {
       <ArtsAwards data={data} />
       <WhyUse data={data} />
       <TeacherTestimonials data={data} />
+      <div id="login" />
+      <Login data={data} />
       <div id="contact" />
       <Contact data={data} />
     </Layout>
@@ -32,6 +35,11 @@ export default EducationalResources
 
 export const query = graphql`
   {
+    loginImage: file(relativePath: { eq: "log in.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+    }
     iconOne: file(
       relativePath: { eq: "educationalSettings/intro-session-plans.png" }
     ) {

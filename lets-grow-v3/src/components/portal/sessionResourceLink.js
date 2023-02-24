@@ -37,6 +37,7 @@ const SessionResourceLink = ({
     }
   `)
   const { fileCategory, image, fileAttachment, url } = props
+  console.log(fileAttachment, url)
   return (
     <>
       <StyledBox
@@ -48,10 +49,10 @@ const SessionResourceLink = ({
           <InnerWrapper
             mw={`${fileCategory === "webpage" ? "20rem" : "12rem"}`}
           >
-            {fileAttachment ? (
-              <p>{fileAttachment?.fileName}</p>
-            ) : url ? (
+            {url ? (
               <p>{url?.linkName}</p>
+            ) : fileAttachment ? (
+              <p>{fileAttachment?.fileName}</p>
             ) : null}
           </InnerWrapper>
           {image && (

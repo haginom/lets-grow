@@ -121,7 +121,9 @@ const GTKEOOverview = () => {
           </li>
           <li>Our 'Handy Hints' support preparation and delivery.</li>
         </List>
-        <Subheading className="coffeeTea i mv4 ml3">Additionally...</Subheading>
+        <Subheading className="letsgrowfont i mv4 ml3">
+          Additionally...
+        </Subheading>
         <List>
           <li>
             'Getting To Know Each Other' is a fantastic way to begin Let’s Grow.
@@ -207,7 +209,7 @@ const GTKEOOverview = () => {
           'Getting To Know Each Other' builds development in all seven key
           areas, but has Understanding the World at its core.
         </Paragraph>
-        <Subheading className="coffeeTea i mv3">
+        <Subheading className="letsgrowfont i mv3">
           Opportunities for...
         </Subheading>
         <CheckList className="mt4" mb="22rem">

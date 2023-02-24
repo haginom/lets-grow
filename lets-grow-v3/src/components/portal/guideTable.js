@@ -1,6 +1,7 @@
 import * as React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
+import { LightenDarkenColor } from "../../lib/helpers"
 
 export const ThemeIntro = ({ data }) => (
   <>
@@ -35,7 +36,7 @@ export const ThemeIntro = ({ data }) => (
       </tr>
       <tr>
         <td className="bg-yellow white">
-          <SessionGrid>
+          <SessionGrid color="#DDBE4B">
             <div>
               <p>All About Me</p>
             </div>
@@ -60,7 +61,7 @@ export const ThemeIntro = ({ data }) => (
           </SessionGrid>
         </td>
         <td className="bg-green white">
-          <SessionGrid>
+          <SessionGrid color="#6CA67F">
             <div>
               <p>Harvest</p>
             </div>
@@ -100,7 +101,7 @@ export const ThemeIntro = ({ data }) => (
           </SessionGrid>
         </td>
         <td className="bg-orange white">
-          <SessionGrid>
+          <SessionGrid color="#E87D2E">
             <div>
               <p>Seeds</p>
             </div>
@@ -116,7 +117,7 @@ export const ThemeIntro = ({ data }) => (
           </SessionGrid>
         </td>
         <td className="bg-pink white">
-          <SessionGrid>
+          <SessionGrid color="#DD8385">
             <div>
               <p>Autumn</p>
             </div>
@@ -266,7 +267,8 @@ const SessionGrid = styled.div`
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
     height: 2rem;
-    background: rgba(228, 203, 112, 1);
+    background-color: ${props =>
+      LightenDarkenColor(props.color, 25) || "#cec7ab"};
     border-radius: 12px;
 
     @media screen and (min-width: 60em) {
@@ -306,5 +308,11 @@ const AAbox = styled.div`
 
   div {
     width: 20%;
+  }
+
+  @media screen and (min-width: 60em) {
+    p {
+      transform: translateX(90px);
+    }
   }
 `

@@ -217,7 +217,7 @@ const CelebrationOverview = () => {
           'Growing Things' builds development in all seven key areas, but has
           Understanding the World at its core.
         </Paragraph>
-        <Subheading className="coffeeTea i mv3">
+        <Subheading className="letsgrowfont i mv3">
           Opportunities for...
         </Subheading>
         <CheckList className="mt4" mb="8rem">

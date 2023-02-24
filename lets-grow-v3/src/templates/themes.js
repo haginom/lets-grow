@@ -94,7 +94,7 @@ const ThemeTemplateBody = props => {
   const theme = data && data.theme
   if (errors) {
     return (
-      <Layout>
+      <Layout portal>
         <GraphQLErrorList errors={errors} />
       </Layout>
     )

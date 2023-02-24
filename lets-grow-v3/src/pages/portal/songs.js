@@ -6,6 +6,7 @@ import Seo from "../../components/seo"
 import { mapEdgesToNodes, groupBy } from "../../lib/helpers"
 import SongBody from "../../components/portal/songBody"
 import styled from "styled-components"
+import HandyHintTitle from "../../components/portal/hhTitle"
 
 export const query = graphql`
   query SongsPageQuery {
@@ -48,8 +49,9 @@ const SongTemplate = props => {
   }))
 
   return (
-    <Layout>
+    <Layout portal>
       <Seo title="Songs" />
+      <HandyHintTitle title="resources library" />
       <section className="w-100 ph1 mb2">
         <Tab className="br3 ph3 pv4 ph5-ns pv4-ns f6 f5-ns fw5">
           <Centered className="relative">

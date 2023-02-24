@@ -10,6 +10,7 @@ import HeadlineShow from "../content/liveEvents/HeadlineShow"
 import RoamingInteractive from "../content/liveEvents/RoamingInteractive"
 import InteractiveInstallation from "../content/liveEvents/InteractiveInstallation"
 import MakeTakeWorkshops from "../content/liveEvents/MakeTakeWorkshops"
+import Login from "../content/login"
 
 const LiveEvents = ({ data }) => {
   return (
@@ -28,6 +29,8 @@ const LiveEvents = ({ data }) => {
       <RoamingInteractive data={data} />
       <InteractiveInstallation data={data} />
       <MakeTakeWorkshops data={data} />
+      <div id="login" />
+      <Login data={data} />
     </Layout>
   )
 }
@@ -36,6 +39,11 @@ export default LiveEvents
 
 export const query = graphql`
   {
+    loginImage: file(relativePath: { eq: "log in.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+    }
     BulletEyesOne: file(relativePath: { eq: "googly-eyes-one.png" }) {
       publicURL
     }

@@ -17,12 +17,18 @@ const ArtsAwards = ({ data, portal }) => (
       <Paragraph className="fw6 mt4-l mw7">
         As part of the programme we also enable children to work towards the
         fabulous{" "}
-        <Highlight>
-          <a href="https://www.artsaward.org.uk/site/?id=2300">
-            ‘Arts Award Discover’
-          </a>
-          <HighlightCurve />
-        </Highlight>{" "}
+        {portal ? (
+          <NonHighlight href="https://www.artsaward.org.uk/site/?id=2300">
+            ‘Arts Award Discover’{" "}
+          </NonHighlight>
+        ) : (
+          <Highlight>
+            <a href="https://www.artsaward.org.uk/site/?id=2300">
+              ‘Arts Award Discover’
+            </a>
+            <HighlightCurve />
+          </Highlight>
+        )}
         in partnership with Trinity College London.
       </Paragraph>
       <Paragraph className={"fw6 mw7" + (portal ? " mb0" : " mb6-l")}>
@@ -35,7 +41,7 @@ const ArtsAwards = ({ data, portal }) => (
           <OrangeButton
             targetBlank={true}
             className="self-center mt4-l grow"
-            markup={"let's go"}
+            markup={"coming soon"}
           />
         ) : null}
       </ButtonContainer>
@@ -44,6 +50,13 @@ const ArtsAwards = ({ data, portal }) => (
 )
 
 export default ArtsAwards
+
+const NonHighlight = styled.a`
+  color: white;
+  & :visited {
+    color: white;
+  }
+`
 
 const Highlight = styled.span`
   position: relative;

@@ -2,12 +2,14 @@ import * as React from "react"
 import styled from "styled-components"
 import { urlFor } from "../../lib/helpers"
 import SessionResourceLink from "./sessionResourceLink"
+import HandyHintTitle from "./hhTitle"
 
 const IntroSessionBody = ({ ...props }) => {
   const { name, color, image, sessionResources } = props
   return (
     <>
-      <section className="w-100 ph1 mv4">
+      <HandyHintTitle title="resources library" />
+      <section className="w-100 ph1 mb2">
         <Tab
           color={color?.hex}
           className="br3 ph3 pv4 ph5-ns pv4-ns f6 f5-ns fw5"

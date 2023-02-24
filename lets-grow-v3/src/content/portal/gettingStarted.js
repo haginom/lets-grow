@@ -84,7 +84,7 @@ export const GSThree = ({ data }) => (
       which is ideal for getting everyone moving!
     </Paragraph>
     <OrangeButton
-      navigation="/"
+      navigation="/portal/songs"
       className="ml7-ns mt5 grow"
       markup={"listen to our songs"}
     />

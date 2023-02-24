@@ -61,13 +61,13 @@ const ThemeTemplate = props => {
 
   if (errors) {
     return (
-      <Layout>
+      <Layout portal>
         <GraphQLErrorList errors={errors} />
       </Layout>
     )
   }
   return (
-    <Layout>
+    <Layout portal>
       {name ? (
         <Seo title={capitalizeWords(name)} />
       ) : (

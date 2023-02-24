@@ -237,7 +237,7 @@ const SessionTemplateBody = props => {
 
   if (errors) {
     return (
-      <Layout>
+      <Layout portal>
         <GraphQLErrorList errors={errors} />
       </Layout>
     )

@@ -5,6 +5,7 @@ import Seo from "../seo"
 import GraphQLErrorList from "./graphql-error-list"
 import ThemeDetails from "./themeDetails"
 import { capitalizeWords } from "../../lib/helpers"
+import HandyHintTitle from "./hhTitle"
 
 const Theme = props => {
   const { name, backgroundColour, errors } = props
@@ -16,8 +17,10 @@ const Theme = props => {
     )
   }
   return (
-    <Layout>
+    <Layout portal>
       <Seo title={capitalizeWords(name)} />
+      <HandyHintTitle title="resources library" />
+
       <section className="w-100 ph1 mb2">
         <Tab
           color={backgroundColour.hex}

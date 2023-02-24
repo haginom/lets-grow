@@ -232,7 +232,7 @@ const Lb = props => {
   const SortThemesByOrder = themeNodes.sort((a, b) => a.order - b.order)
 
   return (
-    <Layout>
+    <Layout portal>
       <Seo title="Resource Library" />
       <HandyHintTitle title="resources library" />
       {introSessions ? (

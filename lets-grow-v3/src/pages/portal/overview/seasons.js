@@ -146,7 +146,9 @@ const SeasonsOverview = () => {
             enhanced continuous provision.
           </li>
         </List>{" "}
-        <Subheading className="coffeeTea i mv4 ml3">Additionally...</Subheading>
+        <Subheading className="letsgrowfont i mv4 ml3">
+          Additionally...
+        </Subheading>
         <List>
           <li>
             Further seasonal content is available in our 'Celebrations' theme.
@@ -207,7 +209,7 @@ const SeasonsOverview = () => {
           'Seasons' builds development in all seven key areas, but has
           Understanding the World at its core.
         </Paragraph>
-        <Subheading className="coffeeTea i mv3">
+        <Subheading className="letsgrowfont i mv3">
           Opportunities for...
         </Subheading>
         <CheckList className="mt4" mb="6rem">

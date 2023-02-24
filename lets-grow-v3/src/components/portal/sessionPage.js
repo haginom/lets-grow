@@ -6,6 +6,7 @@ import GraphQLErrorList from "./graphql-error-list"
 import { capitalizeWords } from "../../lib/helpers"
 import SessionResourceLink from "./sessionResourceLink"
 import { urlFor } from "../../lib/helpers"
+import HandyHintTitle from "./hhTitle"
 
 const Session = props => {
   const {
@@ -29,15 +30,17 @@ const Session = props => {
   } = props
   if (errors) {
     return (
-      <Layout>
+      <Layout portal>
         <GraphQLErrorList errors={errors} />
       </Layout>
     )
   }
 
   return (
-    <Layout>
+    <Layout portal>
       <Seo title={capitalizeWords(name)} />
+      <HandyHintTitle title="resources library" />
+
       <section className="w-100 ph1 mb2">
         <Tab
           color={color?.hex}

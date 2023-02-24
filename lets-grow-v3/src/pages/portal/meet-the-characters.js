@@ -8,6 +8,9 @@ import styled from "styled-components"
 import { SubHeading } from "../../components/tachyons/text"
 import { GatsbyImage } from "gatsby-plugin-image"
 import FloatingPhotoBL from "../../components/portal/floatingPhotoBorderless"
+import FloatingVideo from "../../components/floatingVideo"
+import promo2020 from "../../videos/lets-grow-promo-2020.mp4"
+import promoPoster from "../../videos/poster-promo-2020.jpg"
 
 const Mtc = () => {
   const data = useStaticQuery(graphql`
@@ -71,13 +74,20 @@ const Mtc = () => {
               meet you all!
             </Paragraph>
           </Width>
-          <FloatingPhotoBL
+          {/* <FloatingPhotoBL
             alt=""
             image={data.mtcOne.childImageSharp.gatsbyImageData}
             direction="right"
             marginTopL="-2rem"
             marginTopS="1rem"
             className="mb2-ns"
+          /> */}
+          <FloatingVideo
+            poster={promoPoster}
+            source={promo2020}
+            direction="right"
+            className="pa5"
+            marginTop="-2rem"
           />
         </StyledFlexContainer>
       </FullWidthPanel>
@@ -204,7 +214,10 @@ const StyledFlexContainer = styled.div`
   gap: 0.5rem;
 
   >div: first-child {
-    flex: 1 1 21rem;
+    flex: 1 1 20rem;
+  }
+  >div: last-child {
+    flex: 0 1 26rem;
   }
 `
 

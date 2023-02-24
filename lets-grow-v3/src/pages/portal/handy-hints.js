@@ -33,7 +33,7 @@ const Hh = () => {
       }
       iconOne: file(relativePath: { eq: "portal/icon-1.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 124)
+          gatsbyImageData(width: 110)
         }
       }
       iconTwo: file(relativePath: { eq: "portal/icon-2.png" }) {

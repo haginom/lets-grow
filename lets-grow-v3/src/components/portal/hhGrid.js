@@ -65,12 +65,12 @@ const Grid = styled.div`
   grid-template-areas: "one two" "three four" "five six" "seven eight";
   max-width: 54rem;
   grid-gap: 15px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 
   @media screen and (min-width: 65em) {
     grid-template-columns: repeat(4, minmax(100px, 1fr));
     grid-template-areas: "one two three four" "five six seven eight";
-    grid-gap: 30px;
+    grid-gap: 20px;
   }
 
   > div {

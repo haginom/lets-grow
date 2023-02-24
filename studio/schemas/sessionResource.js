@@ -18,7 +18,7 @@ export default {
         list: [
           {title: 'PDF', value: 'pdf'},
           {title: 'Video', value: 'video'},
-          {title: 'Image', value: 'image'},
+          {title: 'Folder', value: 'folder'},
           {title: 'Song', value: 'song'},
           {title: 'Webpage', value: 'webpage'},
         ],

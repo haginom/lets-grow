@@ -1,5 +1,5 @@
 import * as React from "react"
-import OrangeButton from "./button"
+import { OrangeButton } from "./button"
 import { GatsbyImage } from "gatsby-plugin-image"
 import IntroImage from "./decorative/introImage"
 import styled from "styled-components"

@@ -6,7 +6,7 @@ import {
   StyledTag,
   ButtonContainer,
 } from "../../components/styled/eventTypeStyles"
-import OrangeButton from "../../components/button"
+import { OrangeButtonInternalLink } from "../../components/button"
 import FloatingPhoto from "../../components/floatingPhoto"
 import RoundedImg from "../../components/roundedImg"
 
@@ -105,7 +105,7 @@ const MakeTakeWorkshops = ({ data }) => (
       </Layout>
     </StyledEventContainer>
     <ButtonContainer>
-      <OrangeButton
+      <OrangeButtonInternalLink
         className={"center grow"}
         navigation={"/#contact"}
         markup={"get in touch"}

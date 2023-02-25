@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import HandyHintTitle from "../../../components/portal/hhTitle"
 import styled from "styled-components"
 import FullWidthPanel from "../../../components/fullWidthPanel"
-import OrangeButton from "../../../components/button"
+import { OrangeButtonInternalLink } from "../../../components/button"
 import FloatingPhotoBL from "../../../components/portal/floatingPhotoBorderless"
 import Seo from "../../../components/seo"
 
@@ -159,12 +159,12 @@ const SeasonsOverview = () => {
           </li>
         </List>
         <Container className="flex ml4-ns">
-          <OrangeButton
+          <OrangeButtonInternalLink
             className={"center grow"}
             navigation={"#curriculum_links"}
             markup={"CURRICULUM LINKS"}
           />
-          <OrangeButton
+          <OrangeButtonInternalLink
             className={"center grow"}
             navigation={"#learning_objectives"}
             markup={"Learning objectives"}

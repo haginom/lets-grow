@@ -1,8 +1,7 @@
 import * as React from "react"
 import { handleLogin } from "../services/auth"
-
-import Button from "./tachyons/buttons"
 import { navigate } from "gatsby"
+import OrangeSubmitButton from "./button-one"
 
 const Input = ({ className, element, label, value, onChange, ...props }) => (
   <label className={`db lh-copy f6 mb2 ${className}`}>
@@ -67,12 +66,7 @@ const LoginForm = () => {
             required
           />
           <div className="">
-            <Button
-              as="input"
-              type="submit"
-              value="Log In"
-              className="input-reset f5 link ph3 pv2 mb2 dib bg-red white br-pill mt3 grow"
-            />
+            <OrangeSubmitButton as="input" value="Log In" markup={"Login"} />
           </div>
         </fieldset>
       </form>

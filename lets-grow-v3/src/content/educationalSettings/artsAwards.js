@@ -3,7 +3,7 @@ import FullWidthPanel from "../../components/fullWidthPanel"
 import { StyledMediumWidth } from "../../components/styled/styled"
 import styled from "styled-components"
 import { Paragraph } from "../../components/tachyons/text"
-import OrangeButton from "../../components/button"
+import {OrangeButtonInternalLink} from "../../components/button"
 
 const ArtsAwards = ({ data, portal }) => (
   <FullWidthPanel
@@ -38,7 +38,7 @@ const ArtsAwards = ({ data, portal }) => (
       </Paragraph>
       <ButtonContainer>
         {portal ? (
-          <OrangeButton
+          <OrangeButtonInternalLink
             targetBlank={true}
             className="self-center mt4-l grow"
             markup={"coming soon"}

@@ -1,56 +1,54 @@
-import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
-import styled from "styled-components";
+import * as React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
+import styled from "styled-components"
 
-const OrangeButton = ({ markup, className}) => {
+const OrangeSubmitButton = ({ markup, className, value }) => {
   const { orangeButton } = useStaticQuery(graphql`
-    query{
-      orangeButton: 
-      file(relativePath: {eq: "orange-button.png"}) {
+    query {
+      orangeButton: file(relativePath: { eq: "orange-button.png" }) {
         childImageSharp {
           gatsbyImageData(width: 220, height: 100)
         }
       }
     }
-  `
-  )
+  `)
   return (
-  <StyledButton
+    <StyledButton
       type="submit"
-      value="Send"
-      className={`${className ? ` ${className}`: ""}`}>
+      value={value}
+      className={`${className ? ` ${className}` : ""}`}
+    >
       <GatsbyImage
-          image={orangeButton.childImageSharp.gatsbyImageData}
-          alt=""
-        />
+        image={orangeButton.childImageSharp.gatsbyImageData}
+        alt=""
+      />
       <InnerWrapper>{markup}</InnerWrapper>
-    </StyledButton> 
-   )
-  
+    </StyledButton>
+  )
 }
 
 const StyledButton = styled.button`
   outline: none;
-    z-index: 2;
-    width: 190px;
-    @media screen and (min-width: 60em){
-      width: 220px;
-    }
-    font-size: 16px;
+  z-index: 2;
+  width: 190px;
+  @media screen and (min-width: 60em) {
+    width: 220px;
+  }
+  font-size: 16px;
 
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  padding: 0;
+  outline: none;
+
+  :not(:disabled) {
+    cursor: pointer;
     outline: none;
-
-    :not(:disabled) {
-      cursor: pointer;
-      outline: none;
-    }
+  }
 `
 
 const InnerWrapper = styled.div`
@@ -69,9 +67,9 @@ const InnerWrapper = styled.div`
   line-height: 1rem;
   color: white;
 
-  &:visited{
+  &:visited {
     color: white;
   }
 `
 
-export default OrangeButton;
+export default OrangeSubmitButton

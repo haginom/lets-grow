@@ -2,7 +2,7 @@ import React from "react";
 import FullWidthPanel from "../../components/fullWidthPanel";
 import styled from "styled-components";
 import { StyledEventContainer, StyledTag, RegularTitle, FlexRow, SecondRow, ThirdRow, ButtonContainer, Paragraph} from "../../components/styled/eventTypeStyles";
-import OrangeButton from "../../components/button";
+import {OrangeButtonInternalLink} from "../../components/button";
 import RoundedImg from "../../components/roundedImg";
 
 const RoamingInteractive = ({data}) => (
@@ -53,7 +53,7 @@ const RoamingInteractive = ({data}) => (
         </ThirdRow>
     </StyledEventContainer>
     <ButtonContainer>
-      <OrangeButton
+      <OrangeButtonInternalLink
         className={"center grow"} 
         navigation={"/#contact"}
         markup={"get in touch"}

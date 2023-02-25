@@ -1,7 +1,7 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { SubHeading, Paragraph } from "../../components/tachyons/text"
-import OrangeButton from "../../components/button"
+import {OrangeButton, OrangeButtonInternalLink} from "../../components/button"
 import styled from "styled-components"
 
 const SessionIntro = ({ data, portal }) => {
@@ -28,7 +28,7 @@ const SessionIntro = ({ data, portal }) => {
               </Paragraph>
             </TextWrapper>
             {portal ? (
-              <OrangeButton
+              <OrangeButtonInternalLink
                 targetBlank={false}
                 navigation="/portal/getting-to-know-each-other"
                 className="self-center mt3-l grow"
@@ -66,7 +66,7 @@ const SessionIntro = ({ data, portal }) => {
               </Paragraph>
             </TextWrapper>
             {portal ? (
-              <OrangeButton
+              <OrangeButtonInternalLink
                 targetBlank={false}
                 navigation="/portal/growing-things"
                 className="self-center mt3-l grow"
@@ -111,7 +111,7 @@ const SessionIntro = ({ data, portal }) => {
               </Paragraph>
             </TextWrapper>
             {portal ? (
-              <OrangeButton
+              <OrangeButtonInternalLink
                 targetBlank={false}
                 className="self-center mt3-l grow"
                 markup={"coming soon"}
@@ -150,7 +150,7 @@ const SessionIntro = ({ data, portal }) => {
               </Paragraph>
             </TextWrapper>
             {portal ? (
-              <OrangeButton
+              <OrangeButtonInternalLink
                 targetBlank={false}
                 className="self-center mt3-l grow"
                 markup={"coming soon"}

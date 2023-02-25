@@ -1,6 +1,5 @@
 import * as React from "react"
-import Button from "./tachyons/buttons/index"
-
+import OrangeSubmitButton from "./button-one"
 const Input = ({ className, element, label, value, onChange, ...props }) => (
   <label className={`db lh-copy f6 mb2 ${className}`}>
     {label}
@@ -29,10 +28,10 @@ const ContactForm = () => {
     e.preventDefault()
     const form = e.target
     console.log(form[4][1].value, "form")
-    fetch("https://formsubmit.co/murasaki.reid@gmail.com", {
+    fetch("https://formsubmit.co/ajax/saki.reid@gmail.com", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      mode: "no-cors",
+
       body: encode({
         "form-name": form.getAttribute("name"),
         name,
@@ -53,7 +52,6 @@ const ContactForm = () => {
   return (
     <form
       className="w-100"
-      method="post"
       data-netlify="true"
       onSubmit={handleSubmit}
       name="contact"
@@ -102,12 +100,7 @@ const ContactForm = () => {
       </fieldset>
       <input type="hidden" name="_subject" value={interest}></input>
       <div className="">
-        <Button
-          as="input"
-          type="submit"
-          value="Send"
-          className="mt3 bg-orange br-pill grow"
-        />
+        <OrangeSubmitButton as="input" value={"Send"} markup={"send"} />
       </div>
     </form>
   )

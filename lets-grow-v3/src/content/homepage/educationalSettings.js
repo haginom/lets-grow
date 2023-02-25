@@ -8,7 +8,7 @@ import promoPoster from "../../videos/poster-promo-2020.jpg"
 import { Paragraph, SubHeading } from "../../components/tachyons/text"
 import { SpeechBubbles, InnerWrapper } from "../../components/speechBubbles"
 import Banner from "../../components/banner"
-import OrangeButton from "../../components/button"
+import { OrangeButtonInternalLink } from "../../components/button"
 import styled from "styled-components"
 
 const EducationalSettings = ({ data }) => {
@@ -108,7 +108,7 @@ const EducationalSettings = ({ data }) => {
       <StyledWidth>
         <Banner />
         <StyledButtonLayout className="ml5-l">
-          <OrangeButton
+          <OrangeButtonInternalLink
             className="grow"
             navigation={"#contact"}
             markup={"Keep me Updated"}

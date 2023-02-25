@@ -4,7 +4,7 @@ import Seo from "../components/seo"
 import styled from "styled-components"
 import FullWidthPanel from "../components/fullWidthPanel"
 import { SubHeading } from "../components/tachyons/text"
-import OrangeButton from "../components/button"
+import { OrangeButton } from "../components/button"
 
 const News = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react"
 import FullWidthPanel from "../../components/fullWidthPanel"
 import FloatingVideo from "../../components/floatingVideo"
-import OrangeButton from "../../components/button"
+import { OrangeButton } from "../../components/button"
 import { Paragraph, SubHeading } from "../../components/tachyons/text"
 import mrBloomVideo from "../../videos/mr-bloom-v01.mp4"
 import mrBloomPoster from "../../videos/poster-mr-bloom-v01.jpg"

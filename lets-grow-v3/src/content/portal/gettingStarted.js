@@ -1,7 +1,7 @@
 import React from "react"
 import FullWidthPanel from "../../components/fullWidthPanel"
 import { SubHeading, Paragraph } from "../../components/tachyons/text"
-import OrangeButton from "../../components/button"
+import { OrangeButtonInternalLink } from "../../components/button"
 import styled from "styled-components"
 import { ThemeIntro } from "../../components/portal/guideTable"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -48,7 +48,7 @@ export const GSOne = ({ data }) => (
         exciting introductory session establishes the idea of the fruit &
         vegetable babies coming to visit the children in your setting.
       </Paragraph>
-      <OrangeButton
+      <OrangeButtonInternalLink
         navigation="/portal/meet-the-characters"
         className="self-center mv4 ml5-ns mt2 grow"
         markup={"meet the characters"}
@@ -83,7 +83,7 @@ export const GSThree = ({ data }) => (
       sing-song with his ukulele. There’s even Bob & Flo’s daily workout video
       which is ideal for getting everyone moving!
     </Paragraph>
-    <OrangeButton
+    <OrangeButtonInternalLink
       navigation="/portal/songs"
       className="ml7-ns mt5 mb4 mb2-ns grow"
       markup={"listen to our songs"}

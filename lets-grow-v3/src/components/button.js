@@ -1,66 +1,117 @@
-import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
-import styled from "styled-components";
+import * as React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
+import styled from "styled-components"
+import { Link } from "gatsby"
 
-const OrangeButton = ({navigation, markup, className, targetBlank}) => {
+export const OrangeButton = ({
+  navigation,
+  markup,
+  className,
+  targetBlank,
+}) => {
   const { orangeButton } = useStaticQuery(graphql`
-    query{
-      orangeButton: 
-      file(relativePath: {eq: "orange-button.png"}) {
+    query {
+      orangeButton: file(relativePath: { eq: "orange-button.png" }) {
         childImageSharp {
           gatsbyImageData(width: 220, height: 100)
         }
       }
     }
-  `
-  )
+  `)
   return (
-  <>
-  { targetBlank ?  
-    <StyledLink
-      target="_BLANK"
-      rel="noopener noreferrer" 
-      className={`${className ? ` ${className}`: ""}`} 
-      href={navigation}>
-      <GatsbyImage
-          image={orangeButton.childImageSharp.gatsbyImageData}
-          alt=""
-        />
-      <InnerWrapper>{markup}</InnerWrapper>
-    </StyledLink> : 
-    <StyledLink
-      className={`${className ? ` ${className}`: ""}`} 
-      href={navigation}>
-      <GatsbyImage
-          image={orangeButton.childImageSharp.gatsbyImageData}
-          alt=""
-        />
-      <InnerWrapper>{markup}</InnerWrapper>
-    </StyledLink> }
+    <>
+      {targetBlank ? (
+        <StyledLink
+          target="_BLANK"
+          rel="noopener noreferrer"
+          className={`${className ? ` ${className}` : ""}`}
+          href={navigation}
+        >
+          <GatsbyImage
+            image={orangeButton.childImageSharp.gatsbyImageData}
+            alt=""
+          />
+          <InnerWrapper>{markup}</InnerWrapper>
+        </StyledLink>
+      ) : (
+        <StyledLink
+          className={`${className ? ` ${className}` : ""}`}
+          href={navigation}
+        >
+          <GatsbyImage
+            image={orangeButton.childImageSharp.gatsbyImageData}
+            alt=""
+          />
+          <InnerWrapper>{markup}</InnerWrapper>
+        </StyledLink>
+      )}
     </>
-   )
-  
+  )
 }
 
+export const OrangeButtonInternalLink = ({ navigation, markup, className }) => {
+  const { orangeButton } = useStaticQuery(graphql`
+    query {
+      orangeButton: file(relativePath: { eq: "orange-button.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 220, height: 100)
+        }
+      }
+    }
+  `)
+  return (
+    <StyledGatsbyLink
+      className={`${className ? ` ${className}` : ""}`}
+      to={navigation}
+    >
+      <GatsbyImage
+        image={orangeButton.childImageSharp.gatsbyImageData}
+        alt=""
+      />
+      <InnerWrapper>{markup}</InnerWrapper>
+    </StyledGatsbyLink>
+  )
+}
+
+const StyledGatsbyLink = styled(props => <Link {...props} />)`
+  z-index: 2;
+  width: 190px;
+  @media screen and (min-width: 60em) {
+    width: 220px;
+  }
+  font-size: 16px;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  padding: 0;
+
+  :not(:disabled) {
+    cursor: pointer;
+  }
+`
+
 const StyledLink = styled.a`
-    z-index: 2;
-    width: 190px;
-    @media screen and (min-width: 60em){
-      width: 220px;
-    }
-    font-size: 16px;
+  z-index: 2;
+  width: 190px;
+  @media screen and (min-width: 60em) {
+    width: 220px;
+  }
+  font-size: 16px;
 
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  padding: 0;
 
-    :not(:disabled) {
-      cursor: pointer;
-    }
+  :not(:disabled) {
+    cursor: pointer;
+  }
 `
 
 const InnerWrapper = styled.div`
@@ -79,9 +130,7 @@ const InnerWrapper = styled.div`
   line-height: 1rem;
   color: white;
 
-  &:visited{
+  &:visited {
     color: white;
   }
 `
-
-export default OrangeButton;

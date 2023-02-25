@@ -4,7 +4,7 @@ import Seo from "../../components/seo"
 import FullWidthPanel from "../../components/fullWidthPanel"
 import WithAuthCheck from "../../components/withAuthCheck"
 import { Paragraph, SubHeading } from "../../components/tachyons/text"
-import OrangeButton from "../../components/button"
+import { OrangeButtonInternalLink } from "../../components/button"
 import SessionIntro from "../../content/educationalSettings/sessionIntro"
 import { graphql, useStaticQuery } from "gatsby"
 import ResourcesLibraryIntro from "../../content/portal/resourcesLib"
@@ -74,7 +74,7 @@ const PortalPage = () => {
             New to Let’s Grow? We’ve got you covered...
           </Paragraph>
           <ButtonContainer>
-            <OrangeButton
+            <OrangeButtonInternalLink
               navigation="/portal/getting-started-guide"
               className="center-m mb3 mt4 grow"
               markup={"let's go"}

@@ -24,8 +24,8 @@ const IndexPage = ({ data }) => {
       <LiveEvents data={data} />
       <div id="login" />
       <Login data={data} />
-      <div id="contact" />
       <Contact data={data} />
+      <div id="contact" />
     </Layout>
   )
 }

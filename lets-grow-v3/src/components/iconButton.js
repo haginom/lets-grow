@@ -3,7 +3,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-export const IconLink = ({ icon, text, heading, navigation }) => {
+export const IconLink = ({ icon, text, navigation }) => {
   return (
     <StyledLink to={navigation}>
       <GatsbyImage image={icon} alt="" />
@@ -12,7 +12,7 @@ export const IconLink = ({ icon, text, heading, navigation }) => {
   )
 }
 
-export const IconButton = ({ icon, text, heading, file }) => {
+export const IconButton = ({ icon, text, file }) => {
   return (
     <StyledButton target="_BLANK" rel="noopener noreferrer" href={file}>
       <GatsbyImage image={icon} alt="" />

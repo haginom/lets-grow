@@ -5,6 +5,7 @@ import GraphQLErrorList from "../components/portal/graphql-error-list"
 import IntroSessionBody from "../components/portal/introSessionBody"
 import Seo from "../components/seo"
 import { capitalizeWords } from "../lib/helpers"
+import HandyHintTitle from "../components/portal/hhTitle"
 
 export const query = graphql`
   query IntroSessionsTemplateQuery($id: String!) {
@@ -73,6 +74,7 @@ const ThemeTemplate = props => {
       ) : (
         <Seo title="Let's Grow Portal" />
       )}
+      <HandyHintTitle title="resources library" />
 
       <IntroSessionBody {...introSessions} />
     </Layout>

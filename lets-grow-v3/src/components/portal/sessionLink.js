@@ -49,13 +49,16 @@ const StyledLink = styled(props => <Link {...props} />)`
 `
 
 const Container = styled.div`
-  height: 6.7rem;
+  height: 5.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   img:last-child {
     max-width: 40%;
+  }
+  @media screen and (min-width: 60em) {
+    font-size: 6.7rem;
   }
 `
 

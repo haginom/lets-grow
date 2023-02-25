@@ -58,46 +58,39 @@ const Mtc = () => {
         colours="bg-purple white"
         maxWidth="58rem"
       >
-        <SubHeading>Meet the Characters</SubHeading>
-        <StyledFlexContainer className="flex flex-wrap">
-          <Width className="mr3">
-            <Paragraph fw="600">
-              Let’s Grow is brought to life by a trio of cheerful gardeners and
-              a family of adorable fruit & vegetable babies.
-            </Paragraph>
-            <Paragraph>
-              There’s always a friendly face ready to welcome you via our
-              engaging and interactive, ‘video calls’.
-            </Paragraph>
-            <Paragraph>
-              So when you’re ready, pop along and say, ‘Ello’. They’d love to
-              meet you all!
-            </Paragraph>
-          </Width>
-          {/* <FloatingPhotoBL
-            alt=""
-            image={data.mtcOne.childImageSharp.gatsbyImageData}
-            direction="right"
-            marginTopL="-2rem"
-            marginTopS="1rem"
-            className="mb2-ns"
-          /> */}
-          <FloatingVideo
-            poster={promoPoster}
-            source={promo2020}
-            direction="right"
-            className="pa5"
-            marginTop="-2rem"
-          />
-        </StyledFlexContainer>
+        <Centered className="ph4 ph2-l center">
+          <SubHeading>Meet the Characters</SubHeading>
+          <StyledFlexContainer className="flex ">
+            <div className="mr5-l mr3">
+              <Paragraph fw="600">
+                Let’s Grow is brought to life by a trio of cheerful gardeners
+                and a family of adorable fruit & vegetable babies.
+              </Paragraph>
+              <Paragraph>
+                There’s always a friendly face ready to welcome you via our
+                engaging and interactive, ‘video calls’.
+              </Paragraph>
+              <Paragraph>
+                So when you’re ready, pop along and say, ‘Ello’. They’d love to
+                meet you all!
+              </Paragraph>
+            </div>
+            <VidContainer className="center mt3">
+              <FloatingVideo
+                poster={promoPoster}
+                source={promo2020}
+                direction="right"
+                className="pa5"
+                marginTopL="-2rem"
+                marginTopS="1rem"
+              />
+            </VidContainer>
+          </StyledFlexContainer>
+        </Centered>
       </FullWidthPanel>
       <div className="dt-l dt--fixed-l h-100 mb2 ph1">
         <div className="dtc-l white br bw0 bw2-l bg-light-green mb2 mb0-l pa2">
-          <StyledWidth
-            mr="0rem"
-            ml="auto"
-            className="flex flex-column ph2 ph4-ns mw6 pt4"
-          >
+          <StyledWidth mr="0rem" ml="auto" className="flex flex-column ph4 pt4">
             <SubHeading>Mr. Bloom</SubHeading>
             <Paragraph fw="600">
               Mr. Bloom is the first character that users will meet when
@@ -123,7 +116,7 @@ const Mtc = () => {
           </StyledWidth>
         </div>
         <div className="dtc-l white bl bw0 bw2-l bg-light-blue mb2 mb0-l pa2">
-          <StyledWidth ml="0rem" className="pa2 pa4-ns mw6 pt4">
+          <StyledWidth ml="0rem" className=" pa4 pt4">
             <SubHeading>Bob & Flo</SubHeading>
             <Wrapper>
               <div className="right">
@@ -157,7 +150,7 @@ const Mtc = () => {
           </StyledWidth>
         </div>
       </div>
-      <FullWidthPanel colours="bg-orange white" maxWidth="58rem">
+      <FullWidthPanel colours="bg-orange white ph4" maxWidth="58rem">
         <SubHeading>The Babies</SubHeading>
         <BabiesWrapper>
           <Paragraph fw="600">
@@ -211,25 +204,18 @@ const MeetTheCharacters = ({ data, ...props }) => (
 )
 
 const StyledFlexContainer = styled.div`
+margin-left:
   gap: 0.5rem;
-
-  >div: first-child {
-    flex: 1 1 20rem;
+  flex-wrap: wrap;
+  @media screen and (min-width: 60em) {
+    flex-wrap: nowrap;
   }
-  >div: last-child {
-    flex: 0 1 26rem;
-  }
-`
-
-const Width = styled.div`
-  max-width: 25rem;
 `
 
 const BabiesWrapper = styled.div`
   max-width: 54rem;
   margin-bottom: 1rem;
 `
-
 const StyledWidth = styled.div`
   display: flex;
   flex-direction: column;
@@ -243,7 +229,6 @@ const StyledWidth = styled.div`
     margin-right: ${props => props.mr || "0rem"};
   }
 `
-
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -258,7 +243,6 @@ const Wrapper = styled.div`
     flex-wrap: nowrap;
   }
 `
-
 const Paragraph = styled.p`
   line-height: 1.2rem;
   font-size: 0.9rem;
@@ -266,6 +250,22 @@ const Paragraph = styled.p`
   padding-top: 0.5rem;
   font-weight: ${props => props.fw || "400"};
   margin-bottom: ${props => props.mb || "0rem"};
+`
+const Centered = styled.div`
+  max-width: 32rem;
+
+  @media all and (min-width: 60em) {
+    max-width: 60rem;
+  }
+`
+
+const VidContainer = styled.div`
+  max-width: 20rem;
+
+  @media all and (min-width: 60em) {
+    max-width: 32rem;
+    margin-right: 2rem;
+  }
 `
 
 export default MeetTheCharacters

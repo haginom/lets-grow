@@ -47,7 +47,7 @@ const Session = props => {
           className="br3 ph3 pv4 ph5-ns pv4-ns f6 f5-ns fw5"
         >
           <Centered mw="66rem" className="relative">
-            <Heading className="coffeeTea fw6 pv4 tc ttu">{name}</Heading>
+            <Heading className="coffeeTea fw6 pv4-l pv3 tc ttu">{name}</Heading>
             {visitingBaby ? (
               <Subheading className="coffeeTea i pv2 ml4">
                 Before you start...
@@ -55,9 +55,11 @@ const Session = props => {
             ) : null}
             <ThreeRegColumns>
               {characterPrep ? (
-                <SessionResourceLink {...characterPrep} />
+                <SessionResourceLink color="#d0c7a9" {...characterPrep} />
               ) : null}
-              {howToVideo && <SessionResourceLink {...howToVideo} />}
+              {howToVideo && (
+                <SessionResourceLink color="#d0c7a9" {...howToVideo} />
+              )}
               {whiteArt && (
                 <StyledImg
                   className="whiteArt"
@@ -88,7 +90,7 @@ const Session = props => {
             <Resources>
               <ThreeColumns>
                 {visitingBaby && (
-                  <PokingBaby>
+                  <PokingBaby className="dn db-l">
                     <img
                       alt="visiting baby for the session"
                       src={urlFor(image)
@@ -249,7 +251,7 @@ const Subheading = styled.h3`
 const StyledImg = styled.img`
   justify-self: end;
   align-self: center;
-  height: 6rem;
+  max-width: 10rem;
 `
 const StyledVideoStill = styled.img`
   justify-self: end;
@@ -268,7 +270,7 @@ const PokingBaby = styled.div`
 
   @media screen and (min-width: 60em) {
     right: 6rem;
-    bottom: 2rem;
+    bottom: 4.4rem;
   }
 `
 const WhiteArt = styled.div`

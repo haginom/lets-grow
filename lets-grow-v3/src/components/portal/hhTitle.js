@@ -6,9 +6,9 @@ const HandyHintTitle = ({ title, icon, maxWidth, colour }) => (
   <section className="flex w-100 ph1 ma1 mb2">
     <Container
       style={{ overflow: "hidden" }}
-      className={`dt ${colour ? colour : "bg-navy"} white br4 f8 f5-ns fw5 ${
-        icon ? "w-90" : "w-100"
-      }`}
+      className={`dt ${
+        colour ? colour : "bg-navy"
+      } white br4 f8-l f6 f5-ns fw5 ${icon ? "w-90" : "w-100"}`}
     >
       <Title className="f2 ttu coffeeTea pv4-ns pv1 tc b dtc v-mid">
         {title}

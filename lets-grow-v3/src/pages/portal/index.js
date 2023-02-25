@@ -14,6 +14,13 @@ import styled from "styled-components"
 const PortalPage = () => {
   const data = useStaticQuery(graphql`
     query {
+      resourcesLibrary: file(
+        relativePath: { eq: "portal/resources-library.jpg" }
+      ) {
+        childImageSharp {
+          gatsbyImageData(width: 300)
+        }
+      }
       flickRosetta: file(
         relativePath: { eq: "vegetables/flick-and-rosette.png" }
       ) {

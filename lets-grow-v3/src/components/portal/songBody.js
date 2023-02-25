@@ -31,11 +31,12 @@ const SongBody = ({ ArrayAlbums }) => {
         alt="musical notes"
         image={data.iconSongs.childImageSharp.gatsbyImageData}
       />
-      <GatsbyImage
-        style={{ position: "absolute", left: "40rem", top: "-1.4rem" }}
-        alt="mr bloom on guitar"
-        image={data.MrBloom.childImageSharp.gatsbyImageData}
-      />
+      <div className="dn db-l absolute" style={{ right: "4rem", top: "-1rem" }}>
+        <GatsbyImage
+          alt="mr bloom on guitar"
+          image={data.MrBloom.childImageSharp.gatsbyImageData}
+        />
+      </div>
       <StyledBackground className="relative">
         <div className="flex mt3-l mb2 flex-wrap">
           <StyledLink className="bg-light-yellow white mv2 mv0-l">
@@ -59,7 +60,8 @@ const StyledBackground = styled.div`
 `
 
 const StyledLink = styled.div`
-  max-width: 30rem;
+  max-width: 36rem;
+  flex: 1 1 18rem;
   overflow: hidden;
   border-radius: 0.8rem;
   box-sizing: border-box;

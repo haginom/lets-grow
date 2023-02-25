@@ -15,7 +15,7 @@ export const GSOne = ({ data }) => (
     maxWidth="58rem"
   >
     <Wrapper className="mw7-l">
-      <SubHeading className="letsgrowfont mb2 mt4">
+      <SubHeading className="letsgrowfont mb2 mt4-l">
         Getting Started Guide
       </SubHeading>
       <Paragraph className="fw6">
@@ -59,7 +59,7 @@ export const GSOne = ({ data }) => (
 
 export const GSTwo = ({ data }) => (
   <FullWidthPanel colours="bg-navy white" maxWidth="58rem">
-    <SubHeading className="mt4">Themes and Sessions at a glance</SubHeading>
+    <SubHeading className="mt4-l">Themes and Sessions at a glance</SubHeading>
     <ThemeIntro data={data} />
   </FullWidthPanel>
 )
@@ -72,7 +72,7 @@ export const GSThree = ({ data }) => (
     colours="bg-gold white"
     maxWidth="58rem"
   >
-    <SubHeading className="mt4">Songs</SubHeading>
+    <SubHeading className="mt4-l">Songs</SubHeading>
     <Paragraph className="mw7">
       As part of Let’s Grow and for use in the wider daily routine, Mr. Bloom’s
       collection of songs can be used whenever the children could do with a
@@ -97,7 +97,7 @@ export const GSThree = ({ data }) => (
 
 export const GSFour = ({ data }) => (
   <FullWidthPanel colours="bg-light-yellow white" maxWidth="58rem">
-    <SubHeading className="mt4">Symbols & Icons</SubHeading>
+    <SubHeading className="mt4-l">Symbols & Icons</SubHeading>
     <SymbolsTable className="mb5">
       <TableColumn>
         <GatsbyImage

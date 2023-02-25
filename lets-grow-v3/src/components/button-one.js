@@ -29,21 +29,16 @@ const OrangeSubmitButton = ({ markup, className, value }) => {
 }
 
 const StyledButton = styled.button`
-  outline: none;
-  z-index: 2;
-  width: 190px;
-  @media screen and (min-width: 60em) {
-    width: 220px;
-  }
-  font-size: 16px;
-
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
-  padding: 0;
   outline: none;
+  z-index: 2;
+  width: 12rem;
+  @media screen and (min-width: 60em) {
+    width: 14rem;
+  }
 
   :not(:disabled) {
     cursor: pointer;
@@ -51,14 +46,11 @@ const StyledButton = styled.button`
   }
 `
 
-const InnerWrapper = styled.div`
-  max-width: 190px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+const InnerWrapper = styled.p`
   position: absolute;
-  text-align: center;
-  justify-content: center;
-  display: inline-block;
+  max-width: 190px;
+  top: 2.5rem;
+  left: 5.75rem;
   margin-bottom: 0.5rem;
   font: inherit;
   text-transform: uppercase;

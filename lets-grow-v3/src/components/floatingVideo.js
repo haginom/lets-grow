@@ -17,9 +17,11 @@ const FloatingVideo = ({
   marginTopL,
   marginLeft,
   marginBottom,
+  mw,
 }) => {
   return (
     <Container
+      mw={mw}
       marginTopS={marginTopS}
       marginTopL={marginTopL}
       style={{
@@ -39,10 +41,11 @@ const FloatingVideo = ({
 }
 
 const Container = styled.div`
-  margin-top: ${props => props.marginTopS || "0rem"};
+  margin-top: ${props => props.marginTopS || "2rem"};
 
   @media all and (min-width: 60em) {
     margin-top: ${props => props.marginTopL || "0rem"};
+    max-width: ${props => props.mw};
   }
 `
 

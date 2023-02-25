@@ -29,10 +29,13 @@ const ThemeDetails = props => {
   return (
     <>
       {image ? (
-        <StyledImg
-          src={urlFor(image).auto("format").fit("max").height(200).url()}
-        />
+        <div className="pv4 pl5 pv0-l pl0-l">
+          <StyledImg
+            src={urlFor(image).auto("format").fit("max").height(200).url()}
+          />
+        </div>
       ) : null}
+
       <Subheading className="coffeeTea i pv2 ml4">About...</Subheading>
       <TwoColumns mb="6.5rem" className="flex ">
         {overview ? (
@@ -114,15 +117,25 @@ const StyledImg = styled.img`
 `
 
 const TwoColumns = styled.div`
-  gap: 1rem;
+  gap: 0.2rem;
   display: grid;
   margin-bottom: ${props => props.mb || "0.25rem"};
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+
+  @media screen and (min-width: 35em) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 `
 
 const ThreeColumns = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  margin-bottom: 4rem;
+
+  @media screen and (min-width: 35em) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 4rem;
+  }
 
   @media screen and (min-width: 60em) {
     grid-template-columns: repeat(3, minmax(0, 1fr));

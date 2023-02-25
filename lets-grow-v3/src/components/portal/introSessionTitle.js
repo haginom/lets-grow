@@ -2,10 +2,7 @@ import * as React from "react"
 import styled from "styled-components"
 import IntroSessionBody from "./introSessionBody"
 
-const IntroSessionTitle = ({
-  className,
-  introSessions,
-}) => {
+const IntroSessionTitle = ({ className, introSessions }) => {
   const [showMore, setShowMore] = React.useState(false)
   return (
     <section className="w-100 ph1 mb2">
@@ -23,10 +20,7 @@ const IntroSessionTitle = ({
           </StyledButton>
           {showMore && introSessions
             ? introSessions.map(session => (
-                <IntroSessionBody
-                  key={session.id}
-                  {...session}
-                />
+                <IntroSessionBody key={session.id} {...session} />
               ))
             : null}
         </Centered>

@@ -2,13 +2,11 @@ import * as React from "react"
 import styled from "styled-components"
 import { urlFor } from "../../lib/helpers"
 import SessionResourceLink from "./sessionResourceLink"
-import HandyHintTitle from "./hhTitle"
 
 const IntroSessionBody = ({ ...props }) => {
   const { name, color, image, sessionResources } = props
   return (
     <>
-      <HandyHintTitle title="resources library" />
       <section className="w-100 ph1 mb2">
         <Tab
           color={color?.hex}
@@ -16,7 +14,7 @@ const IntroSessionBody = ({ ...props }) => {
         >
           <Centered className="relative">
             <Heading className="coffeeTea fw6 pv4 tc ttu">{name}</Heading>
-            <FlexContainer className="flex flex-wrap w-100 justify-around mv5">
+            <FlexContainer className="flex flex-wrap w-100 justify-around mv5-l mv3">
               <div>
                 {sessionResources &&
                   sessionResources.map(resource =>
@@ -32,6 +30,7 @@ const IntroSessionBody = ({ ...props }) => {
               </div>
               {image ? (
                 <StyledImg
+                  className="mt4 mv0-l"
                   src={urlFor(image).auto("format").fit("max").width(400).url()}
                 />
               ) : null}

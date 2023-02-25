@@ -165,16 +165,20 @@ const TwoIcons = styled.div`
 `
 
 const StyledBox = styled.div`
-  height: 6.5rem;
+  height: 5.2rem;
   max-width: 26rem;
   display: flex;
   overflow: hidden;
   box-sizing: border-box;
   position: relative;
   background-color: ${props =>
-    LightenDarkenColor(props.color, 20) || "#cec7ab"};
+    LightenDarkenColor(props.color, 20) || "#d0c7a9"};
   width: 100%;
   margin: ${props => props.margin || "0rem"};
+
+  @media screen and (min-width: 60em) {
+    height: 6.5rem;
+  }
 `
 
 const Container = styled.div`

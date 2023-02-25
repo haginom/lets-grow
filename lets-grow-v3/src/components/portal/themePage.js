@@ -20,11 +20,10 @@ const Theme = props => {
     <Layout portal>
       <Seo title={capitalizeWords(name)} />
       <HandyHintTitle title="resources library" />
-
       <section className="w-100 ph1 mb2">
         <Tab
           color={backgroundColour.hex}
-          className="br3 ph3 pv4 ph5-ns pv4-ns f6 f5-ns fw5"
+          className="br3 ph3 pv2 ph5-ns pv4-ns f6 f5-ns fw5"
         >
           <Centered className="relative">
             <Heading className="coffeeTea fw6 pv4 tc ttu">{name}</Heading>

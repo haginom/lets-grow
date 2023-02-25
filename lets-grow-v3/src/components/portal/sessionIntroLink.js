@@ -33,8 +33,12 @@ const StyledLink = styled(props => <Link {...props} />)`
 `
 
 const Container = styled.div`
+  height: 5.5rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 `
 
 const InnerWrapper = styled.div`

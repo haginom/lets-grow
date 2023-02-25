@@ -81,7 +81,6 @@ const StyledGatsbyLink = styled(props => <Link {...props} />)`
     width: 220px;
   }
   font-size: 16px;
-
   position: relative;
   display: flex;
   justify-content: center;

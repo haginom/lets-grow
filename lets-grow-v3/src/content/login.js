@@ -11,6 +11,7 @@ const Login = ({ data, ...props }) => (
     </div>
     <div className="w-100 w-50-l bl-l b--white bw3">
       <GatsbyImage
+        alt=""
         image={data.loginImage.childImageSharp.gatsbyImageData}
         className="bt b--white bw3 bw0-l"
       />

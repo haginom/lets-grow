@@ -68,7 +68,7 @@ const ThemeDetails = props => {
             color={"#cfc7ac"}
             navigation={`../sessions/introductory-session`}
           >
-            Introductory session with Bob, Flo & the Babies
+            Introductory Session with Bob, Flo & the Babies
           </SessionIntroLink>
         )}
         {mrBloom && (

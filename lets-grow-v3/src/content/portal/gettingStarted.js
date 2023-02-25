@@ -193,7 +193,6 @@ const SymbolsTable = styled.div`
 
   @media all and (min-width: 60em) {
     flex-wrap: nowrap;
-    margin: 3rem 0 0 0;
     max-width: 62rem;
   }
 `

@@ -8,6 +8,7 @@ import styled from "styled-components"
 import FullWidthPanel from "../../../components/fullWidthPanel"
 import OrangeButton from "../../../components/button"
 import FloatingPhotoBL from "../../../components/portal/floatingPhotoBorderless"
+import Seo from "../../../components/seo"
 
 const CelebrationOverview = () => {
   const data = useStaticQuery(graphql`
@@ -143,6 +144,7 @@ const CelebrationOverview = () => {
   return (
     <Layout portal>
       <HandyHintTitle colour={"bg-gold"} title="overview" />
+      <Seo title="Celebrations Overview" />
       <FullWidthPanel
         maxWidth="62rem"
         colours={"bg-yellow white"}
@@ -201,12 +203,12 @@ const CelebrationOverview = () => {
         <Container className="flex ml4-ns">
           <OrangeButton
             className={"center grow"}
-            navigation={"/#contact"}
+            navigation={"#curriculum_links"}
             markup={"CURRICULUM LINKS"}
           />
           <OrangeButton
             className={"center grow"}
-            navigation={"/#contact"}
+            navigation={"#learning_objectives"}
             markup={"Learning objectives"}
           />
         </Container>
@@ -215,6 +217,7 @@ const CelebrationOverview = () => {
           image={data.celebrationsFour.childImageSharp.gatsbyImageData}
         />
       </FullWidthPanel>
+      <div id="curriculum_links" />
       <HandyHintTitle colour="bg-gold" title="curriculum links" />
       <FullWidthPanel
         colours={"bg-yellow white"}
@@ -269,6 +272,7 @@ const CelebrationOverview = () => {
           <li>Promoting healthy eating</li>
         </CheckList>
       </FullWidthPanel>
+      <div id="learning_objectives" />
       <HandyHintTitle colour="bg-gold" title="learning objectives" />
       <FullWidthPanel
         maxWidth="61rem"

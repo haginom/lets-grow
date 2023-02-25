@@ -16,7 +16,12 @@ export const ThemeIntro = ({ data }) => (
       </tr>
       <tr>
         <td className="bg-yellow white">
-          <Overlay className="bg-light-yellow white" width="405%">
+          <Overlay
+            className="bg-light-yellow white"
+            widthM="403.5%"
+            widthS="407%"
+            width="408%"
+          >
             <p>Welcome to Let's Grow with Mr Bloom</p>
           </Overlay>
         </td>
@@ -26,7 +31,7 @@ export const ThemeIntro = ({ data }) => (
       </tr>
       <tr>
         <td className="bg-yellow white">
-          <Overlay className="bg-light-yellow white">
+          <Overlay className="bg-light-yellow white" width="202.75%">
             <p>Introductory session with bob, flo & the babies </p>
           </Overlay>
         </td>
@@ -136,20 +141,34 @@ export const ThemeIntro = ({ data }) => (
       <tr>
         <Td className="bg-yellow white">
           <GatsbyImage
+            style={{
+              marginBottom: "0.5rem",
+              marginLeft: "1rem",
+              marginRight: "1rem",
+            }}
             image={data.gsgSix.childImageSharp.gatsbyImageData}
             alt=""
           />
         </Td>
         <Td className="bg-green white">
           <GatsbyImage
-            style={{ marginBottom: "1rem" }}
+            style={{
+              marginBottom: "0.5rem",
+              marginLeft: "1rem",
+              marginRight: "1rem",
+            }}
             image={data.gsgSeven.childImageSharp.gatsbyImageData}
             alt=""
           />
         </Td>
         <Td className="bg-orange white">
           <GatsbyImage
-            style={{ marginBottom: "-.5rem" }}
+            style={{
+              marginBottom: "-0.1rem",
+              marginLeft: "0.7rem",
+              marginRight: "0.7rem",
+              marginTop: "1rem",
+            }}
             image={data.gsgEight.childImageSharp.gatsbyImageData}
             alt=""
           />
@@ -202,44 +221,57 @@ const Table = styled.table`
   }
 `
 const Th = styled.th`
+  vertical-align: middle;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  padding-top: 1rem;
-  padding-bottom: 2.2rem;
-
+  padding-top: 0.75rem;
+  padding-bottom: 1.5rem;
   text-transform: uppercase;
   line-height: 1rem;
   font-weight: 600;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   @media screen and (min-width: 60em) {
     line-height: 1rem;
     font-size: 0.85rem;
+    padding-bottom: 2.2rem;
   }
 `
 const Td = styled.td`
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   vertical-align: bottom;
   text-align: right;
+
   > * {
     margin: 0.5rem;
   }
+
+  
 `
 const Overlay = styled.div`
   margin-top: 0.25rem;
   margin-bottom: 0.5rem;
-  height: 3.5rem;
-  z-index: 3;
+  height: 3rem;
   position: relative;
   border-radius: 10px;
-  width: ${props => props.width || "201%"};
-  max-width: 57.6rem;
   z-index: 1;
   display: table;
   overflow: hidden;
   border-radius: 12px;
+  width: ${props => props.widthS || "201%"};
 
+  @media screen and (min-width: 35em) and (max-width: 60em) {
+    width: ${props => props.widthM || "201%"};
+  }
+
+  @media screen and (min-width: 60em) {
+    line-height: 1rem;
+    font-size: 0.9rem;
+    width: ${props => props.width || "201%"};
+    max-width: 57.6rem;
+    height: 3.5rem;
+  }
   p {
     display: table-cell;
     vertical-align: middle;
@@ -281,7 +313,7 @@ const SessionGrid = styled.div`
       color: white;
       text-align: center;
       font-size: 0.4rem;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 0.5rem;
 
       @media screen and (min-width: 60em) {

@@ -19,7 +19,7 @@ const SongBody = ({ ArrayAlbums }) => {
       }
       MrBloom: file(relativePath: { eq: "educationalSettings/mr-bloom.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 320)
+          gatsbyImageData(width: 300)
         }
       }
     }
@@ -32,7 +32,7 @@ const SongBody = ({ ArrayAlbums }) => {
         image={data.iconSongs.childImageSharp.gatsbyImageData}
       />
       <GatsbyImage
-        style={{ position: "absolute", left: "40rem", top: "-4rem" }}
+        style={{ position: "absolute", left: "40rem", top: "-1.4rem" }}
         alt="mr bloom on guitar"
         image={data.MrBloom.childImageSharp.gatsbyImageData}
       />

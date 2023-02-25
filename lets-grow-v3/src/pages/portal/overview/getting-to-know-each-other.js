@@ -8,6 +8,7 @@ import FullWidthPanel from "../../../components/fullWidthPanel"
 import OrangeButton from "../../../components/button"
 import { GatsbyImage } from "gatsby-plugin-image"
 import FloatingPhotoBL from "../../../components/portal/floatingPhotoBorderless"
+import Seo from "../../../components/seo"
 
 const GTKEOOverview = () => {
   const data = useStaticQuery(graphql`
@@ -83,6 +84,7 @@ const GTKEOOverview = () => {
   `)
   return (
     <Layout portal>
+      <Seo title="Getting to know each other Overview" />
       <HandyHintTitle title="overview" />
       <FullWidthPanel
         maxWidth="62rem"
@@ -156,18 +158,19 @@ const GTKEOOverview = () => {
           <Container className="flex ml4-ns">
             <OrangeButton
               className={"center grow"}
-              navigation={"/#contact"}
+              navigation={"#curriculum_links"}
               markup={"CURRICULUM LINKS"}
             />
             <OrangeButton
               className={"center grow"}
-              navigation={"/#contact"}
+              navigation={"#learning_objectives"}
               markup={"Learning objectives"}
             />
           </Container>
           <GatsbyImage image={data.gtkeoTwo.childImageSharp.gatsbyImageData} />
         </ImgContainer>
       </FullWidthPanel>
+      <div id="curriculum_links" />
       <HandyHintTitle title="curriculum links" />
       <FullWidthPanel
         colours={"bg-lightest-blue white"}
@@ -222,6 +225,7 @@ const GTKEOOverview = () => {
           <li>Promoting healthy eating</li>
         </CheckList>
       </FullWidthPanel>{" "}
+      <div id="learning_objectives" />
       <HandyHintTitle title="learning objectives" />
       <FullWidthPanel
         colours={"bg-lightest-blue white"}

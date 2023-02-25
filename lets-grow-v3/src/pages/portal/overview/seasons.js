@@ -8,6 +8,7 @@ import styled from "styled-components"
 import FullWidthPanel from "../../../components/fullWidthPanel"
 import OrangeButton from "../../../components/button"
 import FloatingPhotoBL from "../../../components/portal/floatingPhotoBorderless"
+import Seo from "../../../components/seo"
 
 const SeasonsOverview = () => {
   const data = useStaticQuery(graphql`
@@ -110,6 +111,7 @@ const SeasonsOverview = () => {
   `)
   return (
     <Layout portal>
+      <Seo title="Seasons Overview" />
       <HandyHintTitle colour={"bg-pink"} title="overview" />
       <FullWidthPanel
         maxWidth="61rem"
@@ -156,15 +158,15 @@ const SeasonsOverview = () => {
             autumn and could be used to further enhance your topic.
           </li>
         </List>
-        <Container mb="17rem" className="flex ml4-ns">
+        <Container className="flex ml4-ns">
           <OrangeButton
             className={"center grow"}
-            navigation={"/#contact"}
+            navigation={"#curriculum_links"}
             markup={"CURRICULUM LINKS"}
           />
           <OrangeButton
             className={"center grow"}
-            navigation={"/#contact"}
+            navigation={"#learning_objectives"}
             markup={"Learning objectives"}
           />
         </Container>
@@ -172,6 +174,7 @@ const SeasonsOverview = () => {
           image={data.seasonsFlowersBucket.childImageSharp.gatsbyImageData}
         />
       </FullWidthPanel>
+      <div id="curriculum_links" />
       <HandyHintTitle colour="bg-pink" title="curriculum links" />
       <FullWidthPanel
         colours={"bg-light-pink white"}
@@ -226,6 +229,7 @@ const SeasonsOverview = () => {
           image={data.seasonsSnowLeaves.childImageSharp.gatsbyImageData}
         />
       </FullWidthPanel>{" "}
+      <div id="learning_objectives" />
       <HandyHintTitle colour="bg-pink" title="learning objectives" />
       <FullWidthPanel
         colours={"bg-light-pink white"}

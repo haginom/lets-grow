@@ -40,22 +40,22 @@ const GettingStartedGuide = () => {
       }
       gsgSix: file(relativePath: { eq: "portal/GSG-6.png" }) {
         childImageSharp {
-          gatsbyImageData(height: 130)
+          gatsbyImageData(height: 120)
         }
       }
       gsgSeven: file(relativePath: { eq: "portal/GSG-7.png" }) {
         childImageSharp {
-          gatsbyImageData(height: 120)
+          gatsbyImageData(height: 110)
         }
       }
       gsgEight: file(relativePath: { eq: "portal/GSG-8.png" }) {
         childImageSharp {
-          gatsbyImageData(height: 150)
+          gatsbyImageData(height: 140)
         }
       }
       gsgNine: file(relativePath: { eq: "portal/GSG-9.png" }) {
         childImageSharp {
-          gatsbyImageData(height: 130)
+          gatsbyImageData(height: 120)
         }
       }
       gsgTen: file(relativePath: { eq: "portal/GSG-10.png" }) {

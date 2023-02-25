@@ -53,9 +53,9 @@ const SongTemplate = props => {
       <Seo title="Songs" />
       <HandyHintTitle title="resources library" />
       <section className="w-100 ph1 mb2">
-        <Tab className="br3 ph3 pv4 ph5-ns pv4-ns f6 f5-ns fw5">
+        <Tab className="br4 mh1 ph3 ph5-ns f6 f5-ns fw5">
           <Centered className="relative">
-            <Heading className="coffeeTea fw6 pt4 tc ttu">Songs</Heading>
+            <Heading className="coffeeTea fw6 pt4 tc ttu pa4">Songs</Heading>
             <SongBody ArrayAlbums={ArrayAlbums} />
           </Centered>
         </Tab>

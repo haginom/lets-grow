@@ -28,12 +28,12 @@ const Hh = () => {
     query {
       icon: file(relativePath: { eq: "portal/icon-0.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 124, layout: FIXED)
+          gatsbyImageData(width: 124)
         }
       }
       iconOne: file(relativePath: { eq: "portal/icon-1.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 110)
+          gatsbyImageData(width: 124)
         }
       }
       iconTwo: file(relativePath: { eq: "portal/icon-2.png" }) {

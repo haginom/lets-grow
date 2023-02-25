@@ -9,7 +9,7 @@ const ThemeTitle = ({ ArrayAlbums, className, song, ...props }) => {
   return (
     <section className="w-100 ph1 mb2">
       <Tab
-        className="br4 mh1 ph3 ph5-ns  f6 f5-ns fw5"
+        className="br4 mh1 ph3 ph5-ns f6 f5-ns fw5"
         color={backgroundColour?.hex}
       >
         <Centered className="relative">

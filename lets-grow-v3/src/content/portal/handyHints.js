@@ -35,17 +35,17 @@ export const HHTwo = ({ data }) => (
       <IconLink
         navigation="#resources_accessories"
         icon={data.icon.childImageSharp.gatsbyImageData}
-        text={"Resources and Accessories"}
+        text={"RESOURCES AND ACCESSORIES"}
       />
       <IconLink
         navigation="#shopping"
         icon={data.iconOne.childImageSharp.gatsbyImageData}
-        text={"Shopping for the Right Vegetable"}
+        text={"SHOPPING FOR THE RIGHT VEGETABLE"}
       />
       <IconLink
         navigation="#characters"
         icon={data.iconOne.childImageSharp.gatsbyImageData}
-        text={"Turning fruits and vegetables into characters"}
+        text={"TURNING FRUITS AND VEGETABLES INTO CHARACTERS"}
       />
     </IconDiv>
   </FullWidthPanelTwo>

@@ -10,7 +10,7 @@ const HandyHintTitle = ({ title, icon, maxWidth, colour }) => (
         colour ? colour : "bg-navy"
       } white br4 f8-l f6 f5-ns fw5 ${icon ? "w-90" : "w-100"}`}
     >
-      <Title className="f2 ttu coffeeTea pv4-ns pv1 tc b dtc v-mid">
+      <Title className="f2-ns f3 ttu coffeeTea pv4-ns pv1 ph2 tc b dtc v-mid">
         {title}
       </Title>
     </Container>
@@ -24,7 +24,10 @@ const Title = styled.h1`
   margin-top: 0.5rem;
 `
 const Container = styled.div`
-  height: 115px;
+  height: 6rem;
+  @media screen and (min-width: 60em) {
+    height: 115px;
+  }
 `
 
 const ImageContainer = styled.div`

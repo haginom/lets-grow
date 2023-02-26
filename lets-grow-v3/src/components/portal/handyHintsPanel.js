@@ -2,7 +2,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import * as React from "react"
 import styled from "styled-components"
 
-const  HandyHintsPanel = ({
+const HandyHintsPanel = ({
   banner,
   health,
   intro,
@@ -21,12 +21,10 @@ const  HandyHintsPanel = ({
         className={`white bg-gold br3 ph3 pv4 ph5-ns pv4-ns f6 f5-ns fw5`}
       >
         <Page className="br3" size="A4">
-          <Intro>
+          <Intro className="mb2">
             <GatsbyImage
-              imgStyle={{
-                objectFit: "contain",
-              }}
-              className="ml4-ns"
+              objectFit="contain"
+              className="ml4-l mr2"
               image={banner}
               alt=""
             />
@@ -69,24 +67,31 @@ const  HandyHintsPanel = ({
 
 const Intro = styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-
-  div:first-child {
-    flex: 0 0 25%;
-    align-self: flex-start;
-
-    @media screen and (min-width: 30em) {
-      align-self: center;
-    }
-  }
-  .health {
-    margin-left: auto;
-    flex: 0 1 25%;
-  }
 
   @media screen and (min-width: 30em) {
     margin-top: 1rem;
     margin-bottom: 2rem;
+  }
+  @media screen and (min-width: 35em) {
+    flex-wrap: nowrap;
+    margin-top: 1.5rem;
+  }
+
+  div:first-child {
+    max-width: 12rem;
+    @media screen and (min-width: 30em) {
+      align-self: center;
+    }
+    @media screen and (min-width: 65em) {
+      max-width: 16rem;
+    }
+  }
+
+  .health {
+    margin-left: auto;
+    flex: 0 1 25%;
   }
 `
 
@@ -100,17 +105,18 @@ const Page = styled.div`
   box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-bottom: 1rem;
   max-width: 62rem;
 
   @media screen and (min-width: 30em) {
-    height: 337mm;
+    height: 350mm;
   }
 `
 const TextWrapper = styled.div`
   margin: 1rem 0.5rem 1rem 0.5rem;
 
   @media all and (min-width: 60em) {
-    margin: 2rem 2rem 0rem 1rem;
+    margin: 0rem 4rem 0rem 1rem;
   }
 `
 const Display = styled.div`

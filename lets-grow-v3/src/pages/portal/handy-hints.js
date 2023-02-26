@@ -48,7 +48,7 @@ const Hh = () => {
       }
       banner: file(relativePath: { eq: "portal/banner.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 200, layout: FIXED)
+          gatsbyImageData(width: 340)
         }
       }
       craftOne: file(relativePath: { eq: "portal/craft-1.jpeg" }) {
@@ -283,7 +283,7 @@ const Hh = () => {
       }
       decorativeSix: file(relativePath: { eq: "portal/decorative-6.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 205)
+          gatsbyImageData(width: 175)
         }
       }
       decorativeSeven: file(relativePath: { eq: "portal/decorative-7.png" }) {

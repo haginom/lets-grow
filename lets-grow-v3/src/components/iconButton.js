@@ -46,7 +46,7 @@ const StyledLink = styled(props => <Link {...props} />)`
 
 const InnerWrapper = styled.div`
   margin-top: 0.5rem;
-  max-width: 100px;
+  max-width: 120px;
   font-weight: 600;
   font-size: 0.8rem;
   line-height: 1rem;

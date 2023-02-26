@@ -107,7 +107,7 @@ export const HHFive = ({ data }) => (
     banner={data.banner.childImageSharp.gatsbyImageData}
     intro={
       <>
-        <Paragraph>
+        <Paragraph mts="-1rem">
           To make the fruit & vegetable baby characters you will need the
           following resources.
         </Paragraph>
@@ -158,10 +158,10 @@ export const HHFive = ({ data }) => (
         transform={"scale(1.2)"}
       />
     </HHGrid>
-    <Paragraph ml={"2.5rem"} fw="600" mb={"0.5rem"} mt={"1rem"}>
+    <Paragraph ml={"2.5rem"} fw="600" mb={"0.5rem"} mtm="1rem" mt={"1rem"}>
       Baby Items
     </Paragraph>
-    <HHGrid>
+    <HHGrid className="mb3">
       <HHGridItem
         transform={"scale(1.3) translate(0px,0px)"}
         image={data.babyOne.childImageSharp.gatsbyImageData}
@@ -210,7 +210,7 @@ export const HHSix = ({ data }) => (
     banner={data.banner.childImageSharp.gatsbyImageData}
     intro={
       <>
-        <Paragraph>
+        <Paragraph mts="-1rem">
           Add accessories to enhance the experience of the fruit & vegetable
           babies coming to visit. From cute costumes to comfy cribs, the
           possibilities are endless. Have fun and make it your own! Here are
@@ -219,7 +219,7 @@ export const HHSix = ({ data }) => (
       </>
     }
   >
-    <HHGrid>
+    <HHGrid className="mt3-m">
       <HHGridItem
         transform={"scale(1) translate(0px, 0px)"}
         image={data.accessoriesOne.childImageSharp.gatsbyImageData}
@@ -282,8 +282,8 @@ export const HHSix = ({ data }) => (
     </HHGrid>
     <HHGrid>
       <HHGridItemTwo
-        maxHeight={"150px"}
-        transform={"scale(1) translate(0px, 10px)"}
+        maxHeight={"130px"}
+        transform={"scale(1) translate(0px, 0px)"}
         image={data.accessoriesTen.childImageSharp.gatsbyImageData}
         text={"Dug loves playing in vehicles that can fly"}
       />
@@ -304,7 +304,7 @@ export const HHSeven = ({ data }) => (
     image={data.decorativeThree.childImageSharp.gatsbyImageData}
     intro={
       <>
-        <Paragraph>
+        <Paragraph mts="-1rem">
           Add accessories to enhance the experience of the fruit & vegetable
           babies coming to visit. From cute costumes to comfy cribs, the
           possibilities are endless. Have fun and make it your own! Here are
@@ -440,7 +440,7 @@ export const HHNine = ({ data }) => (
     bottom={"-5rem"}
     banner={data.banner.childImageSharp.gatsbyImageData}
   >
-    <Paragraph>
+    <Paragraph mts="-1rem" mt="-1rem">
       We recommend going to a large market or supermarket where you’ll find good
       quantities to choose from.
     </Paragraph>
@@ -463,7 +463,7 @@ export const HHNine = ({ data }) => (
       session as they are replaced. Also make sure this adheres as best as
       possible to how the babies appear in the films.
     </Paragraph>
-    <Paragraph mb={"0rem"} fw={"600"}>
+    <Paragraph mbl={"-0.5rem"} mtm={"1rem"} fw={"600"}>
       Nappies{" "}
     </Paragraph>
     <Paragraph>
@@ -483,7 +483,7 @@ export const HHNine = ({ data }) => (
       putting the nappy on. Some people find that doing it on a table or work
       top can make the job harder.{" "}
     </Paragraph>
-    <Paragraph mb={"0rem"} fw={"600"}>
+    <Paragraph mbl={"-0.5rem"} mtm={"1rem"} fw={"600"}>
       Googly eyes{" "}
     </Paragraph>
     <Paragraph>
@@ -512,8 +512,8 @@ export const HHNine = ({ data }) => (
       wonky position. If this doesn’t work, just peel it off and use a different
       eye.{" "}
     </Paragraph>
-    <Paragraph mb={"0rem"} fw={"600"}>
-      Mouths{" "}
+    <Paragraph mbl={"-0.5rem"} mtm={"1rem"} fw={"600"}>
+      Mouths
     </Paragraph>
     <Paragraph>
       When carving the mouth START SMALL. Once it’s gone, you can’t put it back!
@@ -545,7 +545,7 @@ export const HHTen = ({ data }) => (
     bottom={"0rem"}
     banner={data.banner.childImageSharp.gatsbyImageData}
   >
-    <Paragraph mb={"-0.25rem"} fw={"600"}>
+    <Paragraph mt="-1rem" mb={"-0.25rem"} fw={"600"}>
       Making the moment special
     </Paragraph>
     <Paragraph mb={"-0.25rem"}>
@@ -566,10 +566,10 @@ export const HHTen = ({ data }) => (
       as it will lay the foundations for how they engage with the character and
       therefore the whole experience of Let’s Grow.
     </Paragraph>
-    <Paragraph mb={"-1rem"} fw={"600"}>
+    <Paragraph mts="1rem" mbs="1rem" mtm={"1rem"} mbm="1rem" fw={"600"}>
       Some ideas:
     </Paragraph>
-    <List mb="1rem">
+    <List>
       <li>
         Unseen by the children, place the baby outside the door to the
         classroom. Suggest that you think you heard a knock at the door. When
@@ -612,7 +612,14 @@ export const HHTen = ({ data }) => (
         or somehow covered in paint. Be creative and have fun!
       </li>
     </List>
-    <Paragraph mt={"0.5rem"} mb={"-1rem"} fw={"600"}>
+    <Paragraph
+      mts="1rem"
+      mbs="1rem"
+      mtm={"1rem"}
+      mbm="1rem"
+      mt={"0.5rem"}
+      fw={"600"}
+    >
       When interacting with the babies remember to...{" "}
     </Paragraph>
     <List>
@@ -739,7 +746,9 @@ export const HHTwelve = ({ data }) => (
       instinctively. Teachers can support and encourage this positive behaviour
       by co-creating some rules for play with the children.
     </Paragraph>
-    <Paragraph fw={"600"}>Here are some ideas...</Paragraph>
+    <Paragraph mtm="1rem" mts="1rem" mbs="1rem" fw={"600"}>
+      Here are some ideas...
+    </Paragraph>
     <List>
       <li>
         Agree that it would be ideal if the children play with the visiting
@@ -787,13 +796,13 @@ export const HHThirteen = ({ data }) => (
     bottom={"-0.4rem"}
     banner={data.banner.childImageSharp.gatsbyImageData}
   >
-    <List ti={"0rem"} ml={"0rem"}>
-      <li>
-        <span className="fw6">
+    <QandA>
+      <DefinitionList>
+        <DefinitonTitle>
           What do I do if the children ask, ”Are the fruit & vegetable babies
           real?”
-        </span>{" "}
-        <Paragraph ml={"3.3rem"}>
+        </DefinitonTitle>
+        <DefinitionDescription mt="-0.5rem">
           As the fiction is established, the children may ask you if the babies
           are real. Your response should be an unequivocal clear and confident:
           YES! The babies are REAL fruit & vegetables. All of them will have
@@ -810,21 +819,21 @@ export const HHThirteen = ({ data }) => (
           the children to be consenting and willing participants in the fiction
           of Let’s Grow and co-creators of the imaginative play that ensues.
           Children will naturally test the boundaries.
-        </Paragraph>
-      </li>
-      <li>
-        <span className="fw6">
+        </DefinitionDescription>
+      </DefinitionList>
+      <DefinitionList>
+        <DefinitonTitle className="fw6">
           What to do if the children ask, ”Can we eat the fruit & vegetable
           babies?”
-        </span>{" "}
-        <Paragraph ml={"3.3rem"}>
+        </DefinitonTitle>
+        <DefinitionDescription mt="-0.5rem">
           If children bring up the matter of ‘eating’ the babies, that is of
           course a good point. After all, they’re REAL fruits and vegetables.
           The answer here is really, quite simple. Let them know that we eat ALL
           fruits and vegetables, but would you eat the one that has eyes? No
           way!
-        </Paragraph>
-        <Paragraph ml={"3.3rem"}>
+        </DefinitionDescription>
+        <DefinitionDescription>
           If a child is keen to taste one of the characters, this is the ideal
           opportunity for the child to try this fruit or vegetable, while their
           interest is pricked! Teachers should get a spare one without eyes on,
@@ -832,48 +841,51 @@ export const HHThirteen = ({ data }) => (
           baby character will be very excited to watch this and find out what
           the child thinks it tastes and smells like! This is a fantastic
           outcome!
-        </Paragraph>
-      </li>
-      <li>
-        <span className="fw6">
+        </DefinitionDescription>
+      </DefinitionList>
+      <DefinitionList>
+        <DefinitonTitle className="fw6">
           ”How does Let’s Grow encourage healthy eating?”
-        </span>{" "}
-        <Paragraph ml={"3.3rem"}>
+        </DefinitonTitle>{" "}
+        <DefinitionDescription mt="-0.5rem">
           Included in Let’s Grow are opportunities for healthy eating, with
           themed recipes for children to try food that they might not have
           tasted before. Furthermore, by handling a variety of fruits and
           vegetables, the sensory experience the children encounter, allows them
           to become familar with what can sometimes be, quite an alien looking
           object.
-        </Paragraph>
-        <Paragraph ml={"3.3rem"}>
+        </DefinitionDescription>
+        <DefinitionDescription>
           The babies in our story are fantastic encouragers for eating
           healthily. Reassure the children and any1 concerned adults that it is
           ONLY the fruit or vegetable with eyes that we don’t eat.
-        </Paragraph>
-      </li>
-      <li>
-        <span className="fw6">
+        </DefinitionDescription>
+      </DefinitionList>
+
+      <DefinitionList>
+        <DefinitonTitle className="fw6">
           ”What if a fruit or vegetable baby incurs any injury or accident when
           being played with?”
-        </span>
-        <Paragraph ml={"3.3rem"}>
+        </DefinitonTitle>
+        <DefinitionDescription mt="-0.5rem">
           Use a plaster to conceal any ‘injuries’ the baby may recieve during
           the lesson, just as you would if a child had fallen and cut their
           knee. The children can help you with this. Never make a big fuss, just
           reassure the child using soothing, kind words and actions.
-        </Paragraph>
-        <Paragraph ml={"3.3rem"}>
+        </DefinitionDescription>
+        <DefinitionDescription>
           Sometimes major injuries occur. If they do, put the baby down and
           explain, “Oh dear Hoola, you’re going to have a bump on your head
           later!” and then remove the baby from the classroomn, so as to have a
           little lie down. You can mend or replace them, out of sight, later on.
           Always have spare fruits or vegetables to hand.
-        </Paragraph>
-      </li>
-      <li>
-        <span className="fw6">“How long do the fruits & vegetables last?”</span>
-        <Paragraph ml={"3.3rem"}>
+        </DefinitionDescription>
+      </DefinitionList>
+      <DefinitionList>
+        <DefinitonTitle className="fw6">
+          “How long do the fruits & vegetables last?”
+        </DefinitonTitle>
+        <DefinitionDescription mt="-0.5rem">
           All of the babies are perishible food produce, so have a certain
           ‘lifespan’. For the purposes of Let’s Grow, they need to look in prime
           and be the best representation of that particular fruit or vegetable.
@@ -887,9 +899,9 @@ export const HHThirteen = ({ data }) => (
           fridge, to replace without children knowing, so they always look their
           best. Keep each character version as similar as possible, for
           continuity purposes.
-        </Paragraph>
-      </li>
-    </List>
+        </DefinitionDescription>
+      </DefinitionList>
+    </QandA>
   </HandyHintsPanel>
 )
 
@@ -905,7 +917,7 @@ export const HHFourteen = ({ data }) => (
       Adults will make the baby characters before introducing them to the
       children. This activity is not intended to be an adult and child activity.
     </Paragraph>
-    <Paragraph mb={"0rem"} fw={"600"}>
+    <Paragraph mb={"0rem"} mtm="1rem" fw={"600"}>
       Gluing on the googly eyes{" "}
     </Paragraph>
     <Paragraph>
@@ -919,7 +931,7 @@ export const HHFourteen = ({ data }) => (
     </Paragraph>
     <Paragraph>Glue guns should be kept out of reach of children. </Paragraph>
     <Paragraph>Remember to turn the glue gun off straight after use.</Paragraph>
-    <Paragraph mb={"0rem"} fw={"600"}>
+    <Paragraph mb={"0rem"} mtm="1rem" fw={"600"}>
       Carving the mouth{" "}
     </Paragraph>
     <Paragraph>
@@ -928,14 +940,14 @@ export const HHFourteen = ({ data }) => (
       yourself with this safe tool. Pay attention and be careful not to cut
       yourself on the blades of the children’s scissors.
     </Paragraph>
-    <Paragraph mb={"0rem"} fw={"600"}>
+    <Paragraph mb={"0rem"} mtm="1rem" fw={"600"}>
       Applying the nappy pin
     </Paragraph>
     <Paragraph>
       Nappy pins have a sharp point. When placing the nappy pin on the baby’s
       nappy, be careful not to prick yourself.
     </Paragraph>
-    <Paragraph mb={"0rem"} fw={"600"}>
+    <Paragraph mb={"0rem"} mtm="1rem" fw={"600"}>
       Resources & accessories
     </Paragraph>
     <Paragraph>
@@ -951,14 +963,14 @@ export const HHFourteen = ({ data }) => (
       All resources are for adult use only and should be kept out of reach of
       all children, especially those under 36 months.
     </Paragraph>
-    <Paragraph>
+    <Paragraph mtm="1rem">
       <span className="fw6">WARNING:</span> Please be aware that if you choose
       to use items that contain natural fibres like 100% cotton (found in muslin
       cloths, baby socks, blankets and sweatbands), the material is NOT flame
       resistant and should be kept away from fire. Polyester alternatives are
       inherently flame resistant.
     </Paragraph>
-    <Paragraph fw={"600"}>
+    <Paragraph mtm="1rem" fw={"600"}>
       Some of the suggested resources contain the following hazardous parts:
     </Paragraph>
     <List>
@@ -974,7 +986,7 @@ export const HHFourteen = ({ data }) => (
         will burn skin if it comes into contact.
       </li>
     </List>
-    <Paragraph mb={"0rem"} fw={"600"} mt={"1rem"}>
+    <Paragraph mtm="1rem" mb={"0rem"} fw={"600"} mt={"1rem"}>
       Risk assessment
     </Paragraph>
     <Paragraph>
@@ -996,11 +1008,11 @@ export const HHFifteen = ({ data }) => (
       The fruit & vegetable babies are not suitable for children under 36 months
       to play with.
     </Paragraph>
-    <Paragraph>
+    <Paragraph mtm="1rem">
       <span className="fw6">WARNING:</span>Children playing with the baby fruits
       & vegetables should do so under the direct supervision of an adult.
     </Paragraph>
-    <Paragraph fw={"600"}>
+    <Paragraph mtm="1rem" fw={"600"}>
       There is danger of the following hazardous component parts falling off or
       being picked off or taken off by children when playing with the fruit or
       vegetable babies:
@@ -1015,7 +1027,7 @@ export const HHFifteen = ({ data }) => (
         are a choking hazard.
       </li>
     </List>
-    <Paragraph>
+    <Paragraph mtm="1rem">
       A good way to manage safety in any setting, is to create a designated
       space for playing with the babies, where an adult can always be close by
       and oversee safe play; for example, by creating a ’Baby Area’. As children
@@ -1026,7 +1038,9 @@ export const HHFifteen = ({ data }) => (
       character to this spot (wherever it is placed). Children will understand
       that any rules for play are applicable.
     </Paragraph>
-    <Paragraph fw={"600"}>Due care must be taken to ensure that...</Paragraph>
+    <Paragraph mtm="1rem" fw={"600"}>
+      Due care must be taken to ensure that...
+    </Paragraph>
     <List>
       <li>
         Children don’t pull off the googly eyes and put them in their mouth as
@@ -1097,7 +1111,7 @@ export const HHSixteen = ({ data }) => (
         leaves should be rounded off with scissors beforehand.
       </li>
     </List>
-    <Paragraph mb={"0rem"} fw={"600"} mt={"1rem"}>
+    <Paragraph mb={"0rem"} mtm="1rem" fw={"600"} mt={"1rem"}>
       Risk assessment
     </Paragraph>
     <Paragraph>
@@ -1107,27 +1121,86 @@ export const HHSixteen = ({ data }) => (
   </HandyHintsPanel>
 )
 
+const QandA = styled.div`
+  @media screen and (min-width: 60em) {
+    margin-top: -2rem;
+  }
+`
+const DefinitionList = styled.dl`
+  > dt:before {
+    content: "\\00B7";
+    font-size: 4rem;
+    margin-left: 1rem;
+    padding-right: 1rem;
+    vertical-align: middle;
+    line-height: 1.2rem;
+  }
+`
+
+const DefinitonTitle = styled.dt`
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  line-height: 1rem;
+  max-width: 56rem;
+  text-indent: -2.9rem;
+  margin-left: 2.9rem;
+
+  @media screen and (min-width: 35em) {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  @media screen and (min-width: 60em) {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+`
+const DefinitionDescription = styled.dd`
+  font-size: 0.7rem;
+  line-height: 1rem;
+  max-width: 56rem;
+  margin-left: ${props => (props.ml ? props.ml : "2.9rem")};
+
+  @media screen and (min-width: 35em) {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+  }
+  @media screen and (min-width: 60em) {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+`
+
 const List = styled.ul`
   margin-left: ${props => (props.ml ? props.ml : "2rem")};
   text-indent: ${props => (props.ti ? props.ti : "-3.3rem")};
 
   > li {
-    font-size: 0.7rem;
     list-style-position: inside;
     list-style-type: none;
-    margin-bottom: ${props => (props.mb ? props.ml : "0.4rem")};
-    margin-left: ${props => (props.ml ? props.ml : "1rem")};
-    margin-right: 1rem;
-    margin-top: 0;
-    padding-top: 0;
-    font-weight: 400;
+    font-size: 0.7rem;
     line-height: 1rem;
+    max-width: 56rem;
+    margin-bottom: ${props => (props.mb ? props.ml : "0rem")};
+    margin-left: ${props => (props.ml ? props.ml : "1rem")};
+    margin-top: ${props => (props.mts ? props.mts : "0rem")};
+    font-weight: ${props => (props.fw ? props.fw : "400")};
     vertical-align: top;
 
     @media screen and (min-width: 35em) {
+      font-size: 0.9rem;
+      line-height: 1.1rem;
+      margin-top: ${props => (props.mt ? props.mtm : "0.5rem")};
+      margin-bottom: ${props => (props.mb ? props.mb : "0rem")};
+    }
+    @media screen and (min-width: 60em) {
       font-size: 1rem;
       line-height: 1.3rem;
-      margin-top: 0.75rem;
+      margin-left: ${props => (props.ml ? props.ml : "1rem")};
+      margin-bottom: ${props => (props.mb ? props.mb : "0rem")};
+      margin-top: ${props => (props.mt ? props.mt : "0.5rem")};
     }
   }
 
@@ -1136,24 +1209,33 @@ const List = styled.ul`
     font-size: 5rem;
     margin-left: 1rem;
     padding-right: 1rem;
-
     vertical-align: middle;
   }
 `
 
 const Paragraph = styled.p`
+  max-width: 56rem;
   font-size: 0.7rem;
-  margin-bottom: ${props => (props.mb ? props.mb : "0.5rem")};
   line-height: 1rem;
   font-weight: ${props => (props.fw ? props.fw : "400")};
-  max-width: 58rem;
-  margin-top: ${props => (props.mt ? props.mt : "0rem")};
+  margin-bottom: ${props => (props.mbs ? props.mbs : "0rem")};
+  margin-top: ${props => (props.mts ? props.mts : "0.5rem")};
 
   @media screen and (min-width: 35em) {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    margin-top: ${props => (props.mtm ? props.mtm : "0.5rem")};
+    margin-bottom: ${props => (props.mbm ? props.mbm : "0rem")};
+    margin-left: ${props => (props.ml ? props.ml : "1rem")};
+  }
+
+  @media screen and (min-width: 60em) {
     font-size: 1rem;
     line-height: 1.3rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
     margin-left: ${props => (props.ml ? props.ml : "1rem")};
+    margin-bottom: ${props => (props.mbl ? props.mbl : "0rem")};
+    margin-top: ${props => (props.mt ? props.mt : "0.5rem")};
   }
 `
 

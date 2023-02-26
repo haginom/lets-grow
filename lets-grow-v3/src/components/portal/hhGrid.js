@@ -2,10 +2,10 @@ import * as React from "react"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-export const HHGrid = ({ data, children }) => {
+export const HHGrid = ({ children, className }) => {
   return (
     <>
-      <Grid className="grid">
+      <Grid className={`grid ${className ? className : ""}`}>
         {children.map(item => {
           return item && <div>{item}</div>
         })}
@@ -64,10 +64,9 @@ const Grid = styled.div`
   grid-template-columns: repeat(2, minmax(100px, 1fr));
   grid-template-areas: "one two" "three four" "five six" "seven eight";
   max-width: 54rem;
-  grid-gap: 15px;
-  margin-bottom: 0.5rem;
+  grid-gap: 10px;
 
-  @media screen and (min-width: 65em) {
+  @media screen and (min-width: 35em) {
     grid-template-columns: repeat(4, minmax(100px, 1fr));
     grid-template-areas: "one two three four" "five six seven eight";
     grid-gap: 20px;
@@ -80,12 +79,19 @@ const Grid = styled.div`
 
     p {
       margin: auto;
-      margin-top: 0.5rem;
+      margin-top: 0.25rem;
       white-space: pre-wrap;
       line-height: 1rem;
       font-size: 0.7rem;
 
       @media screen and (min-width: 35em) {
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+        padding-bottom: 0.25rem;
+        padding-top: 0.25rem;
+      }
+
+      @media screen and (min-width: 60em) {
         font-size: 1rem;
         line-height: 1.3rem;
         padding-bottom: 0.5rem;

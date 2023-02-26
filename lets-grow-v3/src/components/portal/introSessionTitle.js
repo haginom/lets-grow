@@ -6,7 +6,7 @@ const IntroSessionTitle = ({ className, introSessions }) => {
   const [showMore, setShowMore] = React.useState(false)
   return (
     <section className="w-100 ph1 mb2">
-      <Tab className="br4 mh1 ph3 ph5-ns  f6 f5-ns fw5">
+      <Tab className="br4 mh1 ph3 ph5-ns f6 f5-ns fw5">
         <Centered className="relative">
           <StyledButton
             onClick={() => setShowMore(!showMore)}
@@ -14,7 +14,7 @@ const IntroSessionTitle = ({ className, introSessions }) => {
               className ? ` ${className}` : ""
             } dt white f8 f5-ns fw5 center`}
           >
-            <InnerWrapper className="f2 ttu coffeeTea pv3-ns pv1 tc b dtc v-mid">
+            <InnerWrapper className="f2-ns f3 ttu coffeeTea pv3-ns pv1 tc b dtc v-mid">
               Welcome to Let's Grow
             </InnerWrapper>
           </StyledButton>
@@ -49,8 +49,8 @@ const StyledButton = styled.button`
 `
 
 const InnerWrapper = styled.p`
-  padding-top: 1.65rem;
-  padding-bottom: 1rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   &:visited {
     color: white;
   }

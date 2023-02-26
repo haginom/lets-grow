@@ -19,7 +19,7 @@ const ThemeTitle = ({ ArrayAlbums, className, song, ...props }) => {
               className ? ` ${className}` : ""
             } dt white f8 f5-ns fw5 center`}
           >
-            <InnerWrapper className="f2 ttu coffeeTea pv3-ns pv1 tc b dtc v-mid">
+            <InnerWrapper className="f2-ns f3 ttu coffeeTea pv3-ns pt3 pb1 tc b dtc v-mid">
               {name}
               {comingSoon ? (
                 <span className="ttl">(coming soon ...)</span>

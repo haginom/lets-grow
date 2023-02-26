@@ -395,7 +395,7 @@ export const HHEight = ({ data }) => (
     bottom={"0rem"}
     image={data.decorativeFour.childImageSharp.gatsbyImageData}
   >
-    <List>
+    <List className="mb0-ns mb6">
       <li>
         We recommend going to a large market or supermarket where you’ll find
         good quantities to choose from.
@@ -520,7 +520,7 @@ export const HHNine = ({ data }) => (
       As you increase the size of the hole, have the dummy to hand. Keep
       checking if it will fit and most importantly, stay in place.
     </Paragraph>
-    <Paragraph mb="0rem">
+    <Paragraph mb="0rem" className="mb0-ns mb4">
       You’ll notice some babies have a mouth, while others do not. This is
       largely dictated by the fact that some fruits and vegetables are better
       built to hold a dummy and feeding bottle than others. For example, you can
@@ -622,7 +622,7 @@ export const HHTen = ({ data }) => (
     >
       When interacting with the babies remember to...{" "}
     </Paragraph>
-    <List>
+    <List className="mb0-ns mb4">
       <li>
         Treat them as REAL babies. No ‘acting’ is needed, simply draw on your
         own experience of caring for a baby. Children instinctively understand
@@ -712,7 +712,7 @@ export const HHEleven = ({ data }) => (
     <Paragraph mb={"0.1rem"} fw={"600"}>
       Keep communication in mind
     </Paragraph>
-    <Paragraph>
+    <Paragraph className="mb0-ns mb4">
       Build in moments where the children need to listen carefully and give
       their attention, as well as communicating their own ideas. This is a key
       aspect of SLCN (Speech language and communication needs) that young
@@ -749,7 +749,7 @@ export const HHTwelve = ({ data }) => (
     <Paragraph mtm="1rem" mts="1rem" mbs="1rem" fw={"600"}>
       Here are some ideas...
     </Paragraph>
-    <List>
+    <List className="mb0-ns mb4">
       <li>
         Agree that it would be ideal if the children play with the visiting
         character in the allocated ‘Baby Area’.
@@ -796,7 +796,7 @@ export const HHThirteen = ({ data }) => (
     bottom={"-0.4rem"}
     banner={data.banner.childImageSharp.gatsbyImageData}
   >
-    <QandA>
+    <QandA className="mb0-ns mb4">
       <DefinitionList>
         <DefinitonTitle>
           What do I do if the children ask, ”Are the fruit & vegetable babies
@@ -989,7 +989,7 @@ export const HHFourteen = ({ data }) => (
     <Paragraph mtm="1rem" mb={"0rem"} fw={"600"} mt={"1rem"}>
       Risk assessment
     </Paragraph>
-    <Paragraph>
+    <Paragraph className="mb0-ns mb4">
       A generic ‘risk assessment’ for health & safety in preparation is
       available for you to use and<br></br>adapt for your setting.
     </Paragraph>
@@ -1114,7 +1114,7 @@ export const HHSixteen = ({ data }) => (
     <Paragraph mb={"0rem"} mtm="1rem" fw={"600"} mt={"1rem"}>
       Risk assessment
     </Paragraph>
-    <Paragraph>
+    <Paragraph className="mb0-ns mb4">
       A generic ‘risk assessment’ for health & safety in preparation is
       available for you to use and<br></br>adapt for your setting.
     </Paragraph>

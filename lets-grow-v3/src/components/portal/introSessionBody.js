@@ -13,9 +13,11 @@ const IntroSessionBody = ({ ...props }) => {
           className="br3 ph3 pv4 ph5-ns pv4-ns f6 f5-ns fw5"
         >
           <Centered className="relative">
-            <Heading className="coffeeTea fw6 pv4 tc ttu">{name}</Heading>
+            <Heading className="coffeeTea fw6 pv4-ns pv2 tc ttu f4 f2-ns">
+              {name}
+            </Heading>
             <FlexContainer className="flex flex-wrap w-100 justify-around mv5-l mv3">
-              <div>
+              <div className="mr3">
                 {sessionResources &&
                   sessionResources.map(resource =>
                     resource ? (
@@ -43,8 +45,10 @@ const IntroSessionBody = ({ ...props }) => {
 }
 
 const FlexContainer = styled.div`
-  div: first-child {
-    flex: 0 1 26rem;
+  @media screen and (min-width: 60em) {
+    div: first-child {
+      flex: 0 1 26rem;
+    }
   }
 `
 
@@ -56,6 +60,8 @@ const StyledImg = styled.img`
   border-radius: 0.6rem;
   box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.73);
   align-self: flex-start;
+  
+}
 `
 
 const Tab = styled.div`

@@ -31,14 +31,16 @@ export default {
       name: 'url',
       title: 'Link',
       type: 'urlLink',
-      hidden: ({document}) => document?.fileCategory !== 'webpage',
+      hidden: ({document}) =>
+        document?.fileCategory !== 'webpage' && document?.fileCategory !== 'song',
     },
 
     {
       name: 'fileAttachment',
       title: 'Upload File',
       type: 'fileAttachment',
-      hidden: ({document}) => document?.fileCategory === 'webpage',
+      hidden: ({document}) =>
+        document?.fileCategory === 'webpage' || document?.fileCategory === 'song',
     },
   ],
 }

@@ -27,7 +27,7 @@ const ThemeTitle = ({ ArrayAlbums, className, song, ...props }) => {
             </InnerWrapper>
           </StyledButton>
           {!comingSoon && showMore && !song ? (
-            <ThemeDetails key={id} {...props} />
+            <ThemeDetails color={backgroundColour?.hex} key={id} {...props} />
           ) : null}
           {!comingSoon && showMore && song ? (
             <SongBody ArrayAlbums={ArrayAlbums} />

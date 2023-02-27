@@ -35,7 +35,7 @@ const Session = props => {
       </Layout>
     )
   }
-
+  console.log(sessionResources)
   return (
     <Layout portal>
       <Seo title={capitalizeWords(name)} />
@@ -79,7 +79,7 @@ const Session = props => {
               )}
               {videoStill && (
                 <StyledVideoStill
-                  className="videoStill"
+                  className="videoStill dn db-l"
                   src={urlFor(videoStill).auto("format").fit("max").url()}
                 />
               )}
@@ -117,7 +117,11 @@ const Session = props => {
                 )}
                 {songs && <SessionResourceLink color={color?.hex} {...songs} />}
               </ThreeColumns>
-              <ThreeColumns visitingBaby={!visitingBaby} mt="0.5rem" mb="4rem">
+              <ThreeColumns
+                visitingBaby={!visitingBaby}
+                mt="0.5rem"
+                mb={sessionResources.length > 0 ? "4rem" : "8rem"}
+              >
                 {sessionResources
                   ? sessionResources.map(resource => (
                       <SessionResourceLink
@@ -128,7 +132,7 @@ const Session = props => {
                     ))
                   : null}
                 {!visitingBaby && (
-                  <WhiteArt>
+                  <WhiteArt className="dn db-l">
                     <img
                       alt=""
                       src={urlFor(image)
@@ -166,7 +170,7 @@ const Centered = styled.div`
 `
 const ThreeRegColumns = styled.div`
   display: grid;
-  gap: 0.25rem;
+  gap: 0.5rem;
   @media screen and (min-width: 30em) {
     grid-template-columns: repeat(2, minmax(15rem, 20rem));
   }
@@ -186,8 +190,6 @@ const ThreeRegColumns = styled.div`
 
   .videoStill {
     height: 100%;
-    margin-left: 1rem;
-    margin-top: -1.5rem;
     transform: rotate(-3deg);
     border-radius: 0.6rem;
     box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.73);
@@ -257,6 +259,17 @@ const StyledVideoStill = styled.img`
   justify-self: end;
   align-self: center;
   height: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 35em) and (max-width: 60em) {
+    grid-column: 2;
+    margin: 1rem;
+  }
+  @media-screen and (min-width: 60rem) {
+    margin-left: 1rem;
+    margin-top: -1.5rem;
+  }
 `
 const PokingBaby = styled.div`
   position: absolute;
@@ -275,7 +288,7 @@ const PokingBaby = styled.div`
 `
 const WhiteArt = styled.div`
   position: absolute;
-  left: 28rem;
+  right: 2rem;
   top: -4rem;
 `
 

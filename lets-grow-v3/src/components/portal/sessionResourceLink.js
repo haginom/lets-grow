@@ -37,7 +37,6 @@ const SessionResourceLink = ({
     }
   `)
   const { fileCategory, image, fileAttachment, url } = props
-  console.log(fileAttachment, url)
   return (
     <>
       <StyledBox
@@ -175,6 +174,7 @@ const StyledBox = styled.div`
     LightenDarkenColor(props.color, 20) || "#d0c7a9"};
   width: 100%;
   margin: ${props => props.margin || "0rem"};
+  margin-bottom: 0.5rem;
 
   @media screen and (min-width: 60em) {
     height: 6.5rem;

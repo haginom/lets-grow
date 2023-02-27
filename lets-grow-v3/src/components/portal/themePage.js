@@ -27,7 +27,7 @@ const Theme = props => {
         >
           <Centered className="relative">
             <Heading className="coffeeTea fw6 pv4 tc ttu">{name}</Heading>
-            <ThemeDetails {...props} />
+            <ThemeDetails {...props} color={backgroundColour?.hex}/>
           </Centered>
         </Tab>
       </section>

@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { capitalizeWords, urlFor } from "../../lib/helpers"
 
-const SessionLink = ({ className, ...props }) => {
+const SessionLink = ({ center, className, ...props }) => {
   const { fileName, name, color, image, slug, visitingBaby } = props
   return (
     <>
@@ -13,17 +13,21 @@ const SessionLink = ({ className, ...props }) => {
         color={color?.hex}
       >
         <Container>
-          <InnerWrapper>
+          <InnerWrapper className={`${center ? ` center` : ""}`}>
             {name ? (
               <p>{capitalizeWords(name)}</p>
             ) : fileName ? (
               <p>{capitalizeWords(fileName)}</p>
             ) : null}
           </InnerWrapper>
-          {image && (
+          {image && visitingBaby ? (
             <StyledImg
-              bottom={`${visitingBaby ? "-25px" : "0rem"}`}
+              bottom="-25px"
               src={urlFor(image).auto("format").fit("max").height(120).url()}
+            />
+          ) : (
+            <StyledImg
+              src={urlFor(image).auto("format").fit("min").height(75).url()}
             />
           )}
         </Container>
@@ -82,7 +86,6 @@ const InnerWrapper = styled.div`
 const StyledImg = styled.img`
   position: absolute;
   right: 10px;
-  bottom: ${props => props.bottom || "0rem"};
 `
 
 export default SessionLink

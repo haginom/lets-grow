@@ -17,6 +17,7 @@ const ThemeDetails = props => {
     sessions,
     slug,
     errors,
+    color,
   } = props
   if (errors) {
     return (
@@ -74,18 +75,18 @@ const ThemeDetails = props => {
         {mrBloom && (
           <StyledMrBloom
             alt="Mr Bloom "
-            src={urlFor(mrBloom).auto("format").fit("max").height(400).url()}
+            src={urlFor(mrBloom).auto("format").fit("max").width(320).url()}
           />
         )}
       </TwoColumns>
 
       {sessions.length <= 4 ? (
-        <TwoColumns>
+        <TwoColumns color={color}>
           {sessions &&
             sessions.map(session =>
               session ? (
                 <div key={session._id}>
-                  <SessionLink {...session} />
+                  <SessionLink center {...session} />
                 </div>
               ) : null
             )}
@@ -108,6 +109,8 @@ const ThemeDetails = props => {
 
 const StyledMrBloom = styled.img`
   position: absolute;
+  right: 5rem;
+  top: -9rem;
 `
 const StyledImg = styled.img`
   display: block;
@@ -119,11 +122,15 @@ const StyledImg = styled.img`
 const TwoColumns = styled.div`
   gap: 0.2rem;
   display: grid;
+  position: relative;
+  background: ${props => props.color};
   margin-bottom: ${props => props.mb || "0.25rem"};
   grid-template-columns: repeat(1, minmax(0, 1fr));
+  margin-bottom: 4rem;
 
   @media screen and (min-width: 35em) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 4rem;
   }
 `
 

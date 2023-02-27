@@ -22,7 +22,6 @@ const SessionLink = ({ center, className, ...props }) => {
           </InnerWrapper>
           {image && visitingBaby ? (
             <StyledImg
-              bottom="-25px"
               src={urlFor(image).auto("format").fit("max").height(120).url()}
             />
           ) : (
@@ -86,6 +85,7 @@ const InnerWrapper = styled.div`
 const StyledImg = styled.img`
   position: absolute;
   right: 10px;
+  bottom: -15px;
 `
 
 export default SessionLink

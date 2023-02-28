@@ -216,7 +216,7 @@ export const query = graphql`
     bobFloVideoCall: file(relativePath: { eq: "bob-flo-video-call.mp4" }) {
       publicURL
     }
-    song: file(relativePath: { eq: "tidy-up-song.wav" }) {
+    song: file(relativePath: { eq: "IcongSong.mp4" }) {
       publicURL
     }
     curriculumLinksOne: file(relativePath: { eq: "getting-to-know-cl.pdf" }) {

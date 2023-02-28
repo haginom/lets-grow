@@ -41,20 +41,37 @@ const EducationalSettingsIntro = ({ data }) => {
             </Paragraph>
             <Paragraph>Users have access to:</Paragraph>
             <List>
+              <ListItem>Comporehensive session plans</ListItem>
               <ListItem>
                 Simple preparation and practical delivery guides
               </ListItem>
               <ListItem>
-                A comprehensive toolkit full of ideas and helpful advice
+                A series of interactive, pre-recorded{" "}
+                <span className="fw6">'Video Calls'</span> that kick-start each
+                session
               </ListItem>
               <ListItem>
-                A series of pre-recorded interactive video calls to kick off
-                each session
+                A suite of multimedia resources including films, songs and
+                printables
               </ListItem>
-              <ListItem>Over 50 engaging films</ListItem>
-              <ListItem>A suite of original music and songs</ListItem>
-              <ListItem className="mb4">
+              <ListItem>
+                Easy to implement <span className="fw6">‘Handy Hints’</span>{" "}
+                full of helpful ideas and advice
+              </ListItem>
+              <ListItem>Curriculum linked activities </ListItem>
+              <ListItem>Enhanced continuos provision ideas</ListItem>
+              <ListItem>
                 The opportunity to complete Arts Award Discover
+              </ListItem>
+              <ListItem>
+                Our session plans have interactive, clickable buttons and
+                highlighted links so you can access all the resources you need
+                at every stage.{" "}
+              </ListItem>
+              <ListItem className="mb4">
+                Below you’ll find some examples of the rich and varied resources
+                available to enable educators to deliver our engaging session
+                “Find the Seed.”
               </ListItem>
             </List>
           </StyledSmallWidth>

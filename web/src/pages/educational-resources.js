@@ -58,7 +58,7 @@ export const query = graphql`
       relativePath: { eq: "educationalSettings/intro-video-calls.png" }
     ) {
       childImageSharp {
-        gatsbyImageData(width: 130, height: 125)
+        gatsbyImagexData(width: 130, height: 125)
       }
     }
     iconFour: file(
@@ -216,7 +216,7 @@ export const query = graphql`
     bobFloVideoCall: file(relativePath: { eq: "bob-flo-video-call.mp4" }) {
       publicURL
     }
-    song: file(relativePath: { eq: "IcongSong.mp4" }) {
+    song: file(relativePath: { eq: "IconSong.mp4" }) {
       publicURL
     }
     curriculumLinksOne: file(relativePath: { eq: "getting-to-know-cl.pdf" }) {

@@ -58,7 +58,7 @@ export const query = graphql`
       relativePath: { eq: "educationalSettings/intro-video-calls.png" }
     ) {
       childImageSharp {
-        gatsbyImagexData(width: 130, height: 125)
+        gatsbyImageData(width: 130, height: 125)
       }
     }
     iconFour: file(

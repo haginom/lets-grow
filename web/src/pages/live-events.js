@@ -239,21 +239,21 @@ export const query = graphql`
       }
     }
     mtwTwo: file(
-      relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw-2.jpg" }
+      relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw2.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 390)
       }
     }
     mtwThree: file(
-      relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw-3.jpg" }
+      relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw3.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 390)
       }
     }
     mtwFour: file(
-      relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw-4.jpg" }
+      relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw4.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 390)

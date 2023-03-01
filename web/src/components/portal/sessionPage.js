@@ -35,7 +35,6 @@ const Session = props => {
       </Layout>
     )
   }
-  console.log(sessionResources)
   return (
     <Layout portal>
       <Seo title={capitalizeWords(name)} />

@@ -20,13 +20,23 @@ const HeaderLayout = ({ image }) => (
       </Nav.Link>
       <Nav.Link
         to="/"
-        className="mr0"
+        className="mr3 mr4-ns"
         onClick={e => {
           e.preventDefault()
           navigate("/#contact")
         }}
       >
         CONTACT
+      </Nav.Link>
+      <Nav.Link
+        to="/"
+        className="mr0"
+        onClick={e => {
+          e.preventDefault()
+          navigate("/#login")
+        }}
+      >
+        LOGIN
       </Nav.Link>
     </Nav>
   </header>

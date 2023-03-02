@@ -41,7 +41,7 @@ const EducationalSettingsIntro = ({ data }) => {
             </Paragraph>
             <Paragraph>Users have access to:</Paragraph>
             <List>
-              <ListItem>Comporehensive session plans</ListItem>
+              <ListItem>Comprehensive session plans</ListItem>
               <ListItem>
                 Simple preparation and practical delivery guides
               </ListItem>
@@ -62,16 +62,6 @@ const EducationalSettingsIntro = ({ data }) => {
               <ListItem>Enhanced continuos provision ideas</ListItem>
               <ListItem>
                 The opportunity to complete Arts Award Discover
-              </ListItem>
-              <ListItem>
-                Our session plans have interactive, clickable buttons and
-                highlighted links so you can access all the resources you need
-                at every stage.{" "}
-              </ListItem>
-              <ListItem className="mb4">
-                Below you’ll find some examples of the rich and varied resources
-                available to enable educators to deliver our engaging session
-                “Find the Seed.”
               </ListItem>
             </List>
           </StyledSmallWidth>

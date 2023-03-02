@@ -185,7 +185,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex: 0 1 32rem;
+  flex: 0 1 26rem;
 
   .download {
     margin-right: 1rem;

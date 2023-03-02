@@ -69,7 +69,7 @@ const Session = props => {
             <Subheading mt="3rem" className="coffeeTea i pv2 ml4">
               Session Plan...
             </Subheading>
-            <ThreeRegColumns>
+            <ThreeColumns>
               {sessionPlan1 && (
                 <SessionResourceLink color={color?.hex} {...sessionPlan1} />
               )}
@@ -82,7 +82,7 @@ const Session = props => {
                   src={urlFor(videoStill).auto("format").fit("max").url()}
                 />
               )}
-            </ThreeRegColumns>
+            </ThreeColumns>
             <Subheading mt="3rem" className="coffeeTea i pv2 ml4">
               Resources...
             </Subheading>
@@ -187,12 +187,6 @@ const ThreeRegColumns = styled.div`
     break-inside: avoid-column;
   }
 
-  .videoStill {
-    height: 100%;
-    transform: rotate(-3deg);
-    border-radius: 0.6rem;
-    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.73);
-  }
   .whiteArt {
     margin-left: 12rem;
     display: none;
@@ -257,9 +251,12 @@ const StyledImg = styled.img`
 const StyledVideoStill = styled.img`
   justify-self: end;
   align-self: center;
-  height: 6rem;
   margin-left: auto;
   margin-right: auto;
+  max-width: 16rem;
+  transform: rotate(-3deg);
+  border-radius: 0.6rem;
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.73);
 
   @media screen and (min-width: 35em) and (max-width: 60em) {
     grid-column: 2;
@@ -268,6 +265,7 @@ const StyledVideoStill = styled.img`
   @media-screen and (min-width: 60rem) {
     margin-left: 1rem;
     margin-top: -1.5rem;
+    display: none;
   }
 `
 const PokingBaby = styled.div`

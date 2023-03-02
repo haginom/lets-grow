@@ -74,6 +74,7 @@ const ThemeDetails = props => {
         )}
         {mrBloom && (
           <StyledMrBloom
+            className="dn db-l"
             alt="Mr Bloom "
             src={urlFor(mrBloom).auto("format").fit("max").width(320).url()}
           />

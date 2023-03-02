@@ -38,7 +38,7 @@ const SongBody = ({ ArrayAlbums }) => {
         />
       </div>
       <StyledBackground className="relative">
-        <div className="flex mt3-l mb2 flex-wrap">
+        <div className="flex mt3-l mb2">
           <StyledLink className="bg-light-yellow white mv2 mv0-l">
             <InnerWrapper>Audio Recordings</InnerWrapper>
           </StyledLink>

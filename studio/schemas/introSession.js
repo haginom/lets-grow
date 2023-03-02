@@ -36,7 +36,7 @@ export default {
         input: SlugInput,
       },
       options: {
-        urlPrefix: 'http://localhost:8000/sessions/',
+        urlPrefix: 'http://www.letsgrow.org.uk/sessions/',
         slugify: (slugString) => slugString.toLowerCase(),
         // You can also avoid slugifying entirely by returning the full value:
       },

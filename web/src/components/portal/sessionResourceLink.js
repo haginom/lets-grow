@@ -3,7 +3,8 @@ import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { urlFor } from "../../lib/helpers"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { LightenDarkenColor } from "../../lib/helpers"
+import { LightenDarkenColor, slugify } from "../../lib/helpers"
+import { Link } from "gatsby"
 
 const SessionResourceLink = ({
   className,
@@ -36,7 +37,7 @@ const SessionResourceLink = ({
       }
     }
   `)
-  const { fileCategory, image, fileAttachment, url } = props
+  const { fileCategory, image, fileAttachment, url, name } = props
   return (
     <>
       <StyledBox
@@ -59,50 +60,64 @@ const SessionResourceLink = ({
               src={urlFor(image).auto("format").fit("max").height(100).url()}
             />
           )}
-          <StyledIconButton
-            href={`${
-              url
-                ? `${url.url}`
-                : fileAttachment?.file?.asset
-                ? `${fileAttachment.file.asset.url}`
-                : "resource-not-found"
-            }`}
-            target="_blank"
-            className="grow"
-          >
-            {fileCategory === "video" && (
-              <GatsbyImage
-                alt=""
-                objectFit="contain"
-                className="play"
-                image={data.iconPlay.childImageSharp.gatsbyImageData}
-              />
-            )}
-            {fileCategory === "folder" && (
-              <GatsbyImage
-                alt=""
-                className="download"
-                objectFit="contain"
-                image={data.iconDownload.childImageSharp.gatsbyImageData}
-              />
-            )}
-            {fileCategory === "webpage" && (
-              <GatsbyImage
-                alt=""
-                objectFit="contain"
-                className="magGlass"
-                image={data.iconMagGlass.childImageSharp.gatsbyImageData}
-              />
-            )}
-            {fileCategory === "song" && (
+
+          {fileCategory === "song" && (
+            <StyledIconLink
+              href={`${
+                url
+                  ? `${url.url}`
+                  : fileAttachment?.file?.asset
+                  ? `${fileAttachment.file.asset.url}`
+                  : "resource-not-found"
+              }`}
+              className="grow"
+            >
               <GatsbyImage
                 alt=""
                 objectFit="contain"
                 className="song"
                 image={data.iconSongs.childImageSharp.gatsbyImageData}
               />
-            )}
-          </StyledIconButton>
+            </StyledIconLink>
+          )}
+
+          {fileCategory === "video" && (
+            <StyledIconLink
+              to={`${
+                name
+                  ? `/portal/resources-library/${slugify(name)}`
+                  : "resource-not-found"
+              }`}
+              className="grow"
+            >
+              <GatsbyImage
+                alt=""
+                objectFit="contain"
+                className="play"
+                image={data.iconPlay.childImageSharp.gatsbyImageData}
+              />
+            </StyledIconLink>
+          )}
+
+          {fileCategory === "webpage" && (
+            <StyledIconLink
+              href={`${
+                url
+                  ? `${url.url}`
+                  : fileAttachment?.file?.asset
+                  ? `${fileAttachment.file.asset.url}`
+                  : "resource-not-found"
+              }`}
+              className="grow"
+            >
+              <GatsbyImage
+                alt=""
+                objectFit="contain"
+                className="magGlass"
+                image={data.iconMagGlass.childImageSharp.gatsbyImageData}
+              />
+            </StyledIconLink>
+          )}
 
           {fileCategory === "pdf" && (
             <TwoIcons>
@@ -147,6 +162,16 @@ const SessionResourceLink = ({
     </>
   )
 }
+
+const StyledIconLink = styled(props => <Link {...props} />)`
+  outline: none;
+  padding: 0rem;
+
+  :not(:disabled) {
+    cursor: pointer;
+    outline: none;
+  }
+`
 
 const StyledIconButton = styled.a`
   outline: none;

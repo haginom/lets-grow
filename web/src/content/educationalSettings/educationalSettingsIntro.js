@@ -65,7 +65,9 @@ const EducationalSettingsIntro = ({ data }) => {
               </ListItem>
             </List>
           </StyledSmallWidth>
-
+          <h3 className="letsgrowfont ml0 f3 f2-ns mt5-ns mt3">
+            Excerpts of Let’s Grow content
+          </h3>
           <IconDiv className="mh3-m">
             <IconButton
               icon={data.iconOne.childImageSharp.gatsbyImageData}
@@ -135,7 +137,7 @@ const IconDiv = styled.div`
   margin-top: 2rem;
 
   @media screen and (min-width: 45em) {
-    margin-top: 4rem;
+    margin-top: 2rem;
     justify-content: start;
   }
 

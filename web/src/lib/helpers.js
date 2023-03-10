@@ -21,6 +21,15 @@ export function filterOutDocsWithoutSlugs({ slug }) {
   return (slug || {}).current
 }
 
+export function slugify(str) {
+  return str
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/[\s_-]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+}
+
 export function LightenDarkenColor(col, amt) {
   var usePound = false
   if (col[0] === "#") {

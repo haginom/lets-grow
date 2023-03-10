@@ -1,6 +1,8 @@
 import * as React from "react"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { slugify } from "../../lib/helpers"
+import { Link } from "gatsby"
 
 const SongLink = ({ iconPlay, ...props }) => {
   const { albums } = props
@@ -17,9 +19,11 @@ const Album = ({ iconPlay, ...props }) => {
   const { name, artist, category, songUpload } = props
   let order = 0
   category === "audio" ? (order = 1) : (order = 2)
+
+  const URL = `${slugify(name)}-${slugify(artist)}`
   return (
     <>
-      <StyledLink href={`${songUpload?.song.asset?.url}`} order={order}>
+      <StyledLink to={URL} order={order}>
         <Container>
           <InnerWrapper>
             <p>{name}</p>
@@ -43,7 +47,7 @@ const TwoColumns = styled.div`
   grid-template-columns: repeat(2, minmax(0, 1fr));
 `
 
-const StyledLink = styled.a`
+const StyledLink = styled(props => <Link {...props} />)`
   order: ${props => props.order};
   grid-column: ${props => props.order};
   overflow: hidden;

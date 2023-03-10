@@ -100,6 +100,7 @@ export const query = graphql`
       }
       email {
         id
+        name
         fileCategory
         fileAttachment {
           fileName
@@ -116,6 +117,7 @@ export const query = graphql`
       }
       videoCall {
         id
+        name
         fileCategory
         fileAttachment {
           fileName
@@ -214,6 +216,7 @@ export const query = graphql`
       }
       howToVideo {
         id
+        name
         fileCategory
         url {
           linkName

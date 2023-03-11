@@ -11,7 +11,7 @@ const Video = ({ song, videoCall, ...props }) => {
     url = fileAttachment?.file.asset.url
   }
   return (
-    <Layout>
+    <Layout portal>
       <Seo title="" />
       {url ? (
         <div

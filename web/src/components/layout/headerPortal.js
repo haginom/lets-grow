@@ -8,11 +8,14 @@ import Nav from "../tachyons/nav/logoLinksInlineCollapse.jsx"
 const HeaderLayout = ({ image }) => (
   <header>
     <Nav portal image={image}>
-      <Nav.Link to="/educational-resources" className="mr3 mr4-ns">
-        ABOUT
+      <Nav.Link to="/portal" className="mr3 mr4-ns">
+        HOME
+      </Nav.Link>
+      <Nav.Link to="/portal/getting-started-guide" className="mr3 mr4-ns">
+        GETTING STARTED GUIDE
       </Nav.Link>
       <Nav.Link to="/portal/resources-library" className="mr3 mr4-ns">
-        LIBRARY
+        RESOURCES LIBRARY
       </Nav.Link>
       <Nav.Link
         to="/"

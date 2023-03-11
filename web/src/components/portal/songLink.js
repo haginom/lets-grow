@@ -16,14 +16,14 @@ const SongLink = ({ iconPlay, ...props }) => {
 }
 
 const Album = ({ iconPlay, ...props }) => {
-  const { name, artist, category, songUpload } = props
+  const { name, artist, category } = props
   let order = 0
   category === "audio" ? (order = 1) : (order = 2)
 
-  const URL = `${slugify(name)}-${slugify(artist)}`
+  const URL = `portal/songs/${slugify(name)}-${slugify(artist)}`
   return (
     <>
-      <StyledLink to={URL} order={order}>
+      <StyledLink to={`/${URL}`} order={order}>
         <Container>
           <InnerWrapper>
             <p>{name}</p>

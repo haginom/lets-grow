@@ -13,7 +13,7 @@ const Logo = ({ image, className, portal }) => {
   return (
     <>
     {portal?
-    <Container to="/portal">
+    <Container to="/">
       <GatsbyImage 
         className={`dib ${portal ? "w-100" : " w2 h2"}`}
         style={{zIndex: -1}}

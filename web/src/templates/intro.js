@@ -37,6 +37,7 @@ export const query = graphql`
       }
       sessionResources {
         fileCategory
+        name
         id
         url {
           linkName

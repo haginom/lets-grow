@@ -71,7 +71,7 @@ const EducationalSettingsIntro = ({ data }) => {
           <IconDiv className="mh3-m">
             <IconButton
               icon={data.iconOne.childImageSharp.gatsbyImageData}
-              text={"Mr. Bloom Session Plan"}
+              text={"Mr. Bloom Session Plan Excerpt"}
               file={data.bloomSessionPlan.publicURL}
             />
             <IconButton
@@ -91,7 +91,7 @@ const EducationalSettingsIntro = ({ data }) => {
             />
             <IconButton
               icon={data.iconOne.childImageSharp.gatsbyImageData}
-              text={"Bob & Flo Session Plan"}
+              text={"Bob & Flo Session Plan Excerpt"}
               file={data.bobFloSessionPlan.publicURL}
             />
             <IconButton

@@ -104,7 +104,7 @@ const LiveEvents = ({ data }) => {
         <ColumnsCollapse backgroundColour="blue">
           <FloatingPhoto
             alt="Crowd pictured at a Lets Grow Live event with Mr bloom on stage"
-            image={data.liveEventsOne.childImageSharp.gatsbyImageData}
+            image={data.hsFive.childImageSharp.gatsbyImageData}
             direction="left"
             marginTop="3rem"
           />

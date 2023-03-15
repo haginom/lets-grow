@@ -24,6 +24,11 @@ const SongBody = ({ ArrayAlbums }) => {
       }
     }
   `)
+
+  const SortedAlbums = ArrayAlbums.sort((a, b) => {
+    return a.albums.length - b.albums.length
+  })
+
   return (
     <>
       <GatsbyImage
@@ -46,8 +51,13 @@ const SongBody = ({ ArrayAlbums }) => {
             <InnerWrapper>Video Calls</InnerWrapper>
           </StyledLink>
         </div>
-        {ArrayAlbums.map(album => (
-          <SongLink {...album} iconPlay={data.iconPlay} />
+
+        {SortedAlbums.map(album => (
+          <SongLink
+            key={`song${album.name}`}
+            {...album}
+            iconPlay={data.iconPlay}
+          />
         ))}
       </StyledBackground>
     </>

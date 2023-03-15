@@ -6,11 +6,24 @@ import { Link } from "gatsby"
 
 const SongLink = ({ iconPlay, ...props }) => {
   const { albums } = props
+  //sorting album z-a
+  if (albums.length > 2) {
+    albums.sort((a, b) => {
+      if (a.artist < b.artist) {
+        return 1
+      }
+      if (a.artist > b.artist) {
+        return -1
+      }
+      return 0
+    })
+  }
+
   return (
     <TwoColumns>
-      {albums.map(song => (
-        <Album iconPlay={iconPlay} {...song} />
-      ))}
+      {albums.map(song => {
+        return <Album key={song.id} iconPlay={iconPlay} {...song} />
+      })}
     </TwoColumns>
   )
 }

@@ -29,7 +29,7 @@ const EventTypeIntro = ({ data }) => {
             <StyledTableCells>
               <FloatingPhoto
                 alt=""
-                image={data.eventsIntroTwo.childImageSharp.gatsbyImageData}
+                image={data.hs1Cover.childImageSharp.gatsbyImageData}
                 direction="left"
                 marginTop="2rem"
                 marginBottom="1rem"
@@ -50,7 +50,7 @@ const EventTypeIntro = ({ data }) => {
             <StyledTableCells>
               <FloatingPhoto
                 alt=""
-                image={data.eventsIntroFour.childImageSharp.gatsbyImageData}
+                image={data.riCover.childImageSharp.gatsbyImageData}
                 direction="right"
                 marginTop="2rem"
                 marginBottom="1rem"
@@ -73,7 +73,7 @@ const EventTypeIntro = ({ data }) => {
             <StyledTableCells>
               <FloatingPhoto
                 alt=""
-                image={data.eventsIntroOne.childImageSharp.gatsbyImageData}
+                image={data.ii2Cover.childImageSharp.gatsbyImageData}
                 direction="left"
                 marginTop="2rem"
                 marginBottom="2rem"
@@ -94,7 +94,7 @@ const EventTypeIntro = ({ data }) => {
 
             <FloatingPhoto
               alt=""
-              image={data.eventsIntroThree.childImageSharp.gatsbyImageData}
+              image={data.mtw3Cover.childImageSharp.gatsbyImageData}
               direction="right"
               marginTop="3rem"
               marginBottom="1rem"

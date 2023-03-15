@@ -52,7 +52,7 @@ const HeadlineShow = ({ data }) => (
       </Rows>
       <LastRow>
         <RoundedImg
-          image={data.hsOne?.childImageSharp.gatsbyImageData}
+          image={data.hs1Cover?.childImageSharp.gatsbyImageData}
           alt="Stage of Mr Bloom & Band playing live"
         />
         <RoundedImg

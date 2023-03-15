@@ -116,7 +116,7 @@ const Hh = () => {
           gatsbyImageData(width: 375)
         }
       }
-      accessoriesOne: file(relativePath: { eq: "portal/accessories-1.jpeg" }) {
+      accessoriesOne: file(relativePath: { eq: "portal/accessories-1.jpg" }) {
         childImageSharp {
           gatsbyImageData(width: 375)
         }
@@ -131,7 +131,7 @@ const Hh = () => {
           gatsbyImageData(width: 375)
         }
       }
-      accessoriesFour: file(relativePath: { eq: "portal/accessories-4.jpeg" }) {
+      accessoriesFour: file(relativePath: { eq: "portal/accessories-4.jpg" }) {
         childImageSharp {
           gatsbyImageData(width: 375)
         }
@@ -167,7 +167,7 @@ const Hh = () => {
         }
       }
       accessoriesEleven: file(
-        relativePath: { eq: "portal/accessories-11.jpeg" }
+        relativePath: { eq: "portal/accessories-11.jpg" }
       ) {
         childImageSharp {
           gatsbyImageData(width: 375)
@@ -182,14 +182,14 @@ const Hh = () => {
       }
 
       accessoriesThirteen: file(
-        relativePath: { eq: "portal/accessories-13.jpeg" }
+        relativePath: { eq: "portal/accessories-13.jpg" }
       ) {
         childImageSharp {
           gatsbyImageData(width: 375)
         }
       }
       accessoriesFourteen: file(
-        relativePath: { eq: "portal/accessories-14.jpeg" }
+        relativePath: { eq: "portal/accessories-14.jpg" }
       ) {
         childImageSharp {
           gatsbyImageData(width: 375)
@@ -203,14 +203,14 @@ const Hh = () => {
         }
       }
       accessoriesSixteen: file(
-        relativePath: { eq: "portal/accessories-16.jpeg" }
+        relativePath: { eq: "portal/accessories-16.jpg" }
       ) {
         childImageSharp {
           gatsbyImageData(width: 375)
         }
       }
       accessoriesSeventeen: file(
-        relativePath: { eq: "portal/accessories-17.jpeg" }
+        relativePath: { eq: "portal/accessories-17.jpg" }
       ) {
         childImageSharp {
           gatsbyImageData(width: 375)
@@ -224,7 +224,7 @@ const Hh = () => {
         }
       }
       accessoriesNineteen: file(
-        relativePath: { eq: "portal/accessories-19.jpeg" }
+        relativePath: { eq: "portal/accessories-19.jpg" }
       ) {
         childImageSharp {
           gatsbyImageData(width: 375)
@@ -238,7 +238,7 @@ const Hh = () => {
         }
       }
       accessoriesTwentyOne: file(
-        relativePath: { eq: "portal/accessories-21.jpeg" }
+        relativePath: { eq: "portal/accessories-21.jpg" }
       ) {
         childImageSharp {
           gatsbyImageData(width: 375)

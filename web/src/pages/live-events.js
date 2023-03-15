@@ -56,26 +56,7 @@ export const query = graphql`
     BulletEyesFour: file(relativePath: { eq: "googly-eyes-four.png" }) {
       publicURL
     }
-    eventsIntroOne: file(relativePath: { eq: "events-intro-one.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 450, height: 300)
-      }
-    }
-    eventsIntroTwo: file(relativePath: { eq: "events-intro-two.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 450, height: 300)
-      }
-    }
-    eventsIntroThree: file(relativePath: { eq: "events-intro-three.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 450, height: 300)
-      }
-    }
-    eventsIntroFour: file(relativePath: { eq: "events-intro-four.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 450, height: 300)
-      }
-    }
+
     vegCoupleOne: file(relativePath: { eq: "liveEvents/veg-couple-one.png" }) {
       childImageSharp {
         gatsbyImageData(width: 300, layout: FIXED)
@@ -96,136 +77,141 @@ export const query = graphql`
         gatsbyImageData(width: 420, layout: FIXED)
       }
     }
-    hsOne: file(relativePath: { eq: "liveEvents/headlineShow/hs-1.jpg" }) {
+    hs1Cover: file(
+      relativePath: { eq: "liveEvents/headlineShow/hs1-cover.jpg" }
+    ) {
       childImageSharp {
-        gatsbyImageData(width: 435, height: 274)
+        gatsbyImageData(width: 450, height: 300)
       }
     }
-    hsTwo: file(relativePath: { eq: "liveEvents/headlineShow/hs-2.jpg" }) {
+    hsTwo: file(relativePath: { eq: "liveEvents/headlineShow/hs2.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 390, height: 324)
       }
     }
-    hsThree: file(relativePath: { eq: "liveEvents/headlineShow/hs-3.jpg" }) {
+    hsThree: file(relativePath: { eq: "liveEvents/headlineShow/hs3.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 435, height: 274)
       }
     }
-    hsFour: file(relativePath: { eq: "liveEvents/headlineShow/hs-4.jpg" }) {
+    hsFour: file(relativePath: { eq: "liveEvents/headlineShow/hs4.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 420, height: 254)
       }
     }
-    hsFive: file(relativePath: { eq: "liveEvents/headlineShow/hs-5.jpg" }) {
+    hsFive: file(relativePath: { eq: "liveEvents/headlineShow/hs5.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 420, height: 254)
       }
     }
-    hsSix: file(relativePath: { eq: "liveEvents/headlineShow/hs-6.jpg" }) {
+    hsSix: file(relativePath: { eq: "liveEvents/headlineShow/hs6.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 420)
       }
     }
-    riOne: file(
-      relativePath: { eq: "liveEvents/roamingInteractive/ri-1.jpg" }
-    ) {
+    riOne: file(relativePath: { eq: "liveEvents/roamingInteractive/ri1.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 400)
       }
     }
-    riTwo: file(
-      relativePath: { eq: "liveEvents/roamingInteractive/ri-2.jpg" }
-    ) {
+    riTwo: file(relativePath: { eq: "liveEvents/roamingInteractive/ri2.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 400)
       }
     }
     riThree: file(
-      relativePath: { eq: "liveEvents/roamingInteractive/ri-3.jpg" }
+      relativePath: { eq: "liveEvents/roamingInteractive/ri3.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 400)
       }
     }
     riFour: file(
-      relativePath: { eq: "liveEvents/roamingInteractive/ri-4.jpg" }
+      relativePath: { eq: "liveEvents/roamingInteractive/ri4.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(width: 400)
+      }
+    }
+    riCover: file(
+      relativePath: { eq: "liveEvents/roamingInteractive/ricover.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 400)
       }
     }
     iiOne: file(
-      relativePath: { eq: "liveEvents/interactiveInstallation/ii-1.jpg" }
+      relativePath: { eq: "liveEvents/interactiveInstallation/ii1.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 400)
       }
     }
-    iiTwo: file(
-      relativePath: { eq: "liveEvents/interactiveInstallation/ii-2.jpg" }
+    ii2Cover: file(
+      relativePath: { eq: "liveEvents/interactiveInstallation/ii2-cover.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 400)
       }
     }
     iiThree: file(
-      relativePath: { eq: "liveEvents/interactiveInstallation/ii-3.jpg" }
+      relativePath: { eq: "liveEvents/interactiveInstallation/ii3.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 400)
       }
     }
     iiFour: file(
-      relativePath: { eq: "liveEvents/interactiveInstallation/ii-4.jpg" }
+      relativePath: { eq: "liveEvents/interactiveInstallation/ii4.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 400)
       }
     }
     iiaOne: file(
-      relativePath: { eq: "liveEvents/interactiveInstallation/iia-1.jpg" }
+      relativePath: { eq: "liveEvents/interactiveInstallation/iia1.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 320)
       }
     }
     iiaTwo: file(
-      relativePath: { eq: "liveEvents/interactiveInstallation/iia-2.jpg" }
+      relativePath: { eq: "liveEvents/interactiveInstallation/iia2.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 320)
       }
     }
     iiaThree: file(
-      relativePath: { eq: "liveEvents/interactiveInstallation/iia-3.jpg" }
+      relativePath: { eq: "liveEvents/interactiveInstallation/iia3.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 320)
       }
     }
     iiaFour: file(
-      relativePath: { eq: "liveEvents/interactiveInstallation/iia-4.jpg" }
+      relativePath: { eq: "liveEvents/interactiveInstallation/iia4.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 320)
       }
     }
     iiaFive: file(
-      relativePath: { eq: "liveEvents/interactiveInstallation/iia-5.jpg" }
+      relativePath: { eq: "liveEvents/interactiveInstallation/iia5.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 320)
       }
     }
     iiaSix: file(
-      relativePath: { eq: "liveEvents/interactiveInstallation/iia-6.jpg" }
+      relativePath: { eq: "liveEvents/interactiveInstallation/iia6.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 320)
       }
     }
     iiaSeven: file(
-      relativePath: { eq: "liveEvents/interactiveInstallation/iia-7.jpg" }
+      relativePath: { eq: "liveEvents/interactiveInstallation/iia7.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 320)
@@ -245,8 +231,8 @@ export const query = graphql`
         gatsbyImageData(width: 390)
       }
     }
-    mtwThree: file(
-      relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw3.jpg" }
+    mtw3Cover: file(
+      relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw3-cover.jpg" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 390)

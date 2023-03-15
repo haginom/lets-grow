@@ -55,7 +55,7 @@ const InteractiveInstallation = ({ data }) => (
       </SecondRow>
       <ThirdRow>
         <RoundedImg
-          image={data.iiTwo.childImageSharp.gatsbyImageData}
+          image={data.ii2Cover.childImageSharp.gatsbyImageData}
           alt="Event setup image"
         />
         <RoundedImg

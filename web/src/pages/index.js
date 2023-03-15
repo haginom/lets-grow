@@ -79,17 +79,21 @@ export const query = graphql`
         gatsbyImageData(width: 550, height: 290)
       }
     }
-    liveEventsOne: file(relativePath: { eq: "live-events-1.jpg" }) {
+    hsFive: file(relativePath: { eq: "liveEvents/headlineShow/hs5.jpg" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH)
       }
     }
-    liveEventsTwo: file(relativePath: { eq: "live-events-2.jpg" }) {
+    liveEventsTwo: file(
+      relativePath: { eq: "liveEvents/interactiveInstallation/ii1.jpg" }
+    ) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH)
       }
     }
-    liveEventsThree: file(relativePath: { eq: "live-events-3.jpg" }) {
+    liveEventsThree: file(
+      relativePath: { eq: "liveEvents/roamingInteractive/ri4.jpg" }
+    ) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH)
       }

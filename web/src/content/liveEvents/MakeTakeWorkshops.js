@@ -65,7 +65,7 @@ const MakeTakeWorkshops = ({ data }) => (
             Mr. Bloom Gardening Hats
           </StyledTag>
           <RoundedImg
-            image={data.mtwThree.childImageSharp.gatsbyImageData}
+            image={data.mtw3Cover.childImageSharp.gatsbyImageData}
             alt="two kids with hats"
           />
           <Paragraph className="mb2">

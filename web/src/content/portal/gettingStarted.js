@@ -19,35 +19,42 @@ export const GSOne = ({ data }) => (
         Getting Started Guide
       </SubHeading>
       <Paragraph className="fw6">
-        Our schemes of work are designed with flexibility in mind. Sessions can
-        be delivered in sequential order or as standalone content to compliment
-        the wider curriculum.
+        Sessions can be delivered in sequential order or as standalone content
+        to compliment the wider curriculum.
       </Paragraph>
       <Paragraph>
         You decide how Let’s Grow works best in your setting throughout the
-        academic year, however, there’s only one way to begin...
+        year, however, there’s only one way to begin - deliver the{" "}
+        <span className="fw6">
+          ‘Welcome to Let’s Grow with Mr Bloom Session’
+        </span>
+         to your children first. This short session introduces the children to
+        the wonderful world of Let’s Grow, setting the scene for everything to
+        come. It’s accessible from every theme, wherever you choose to start.
       </Paragraph>
       <Paragraph>
-        Start by watching our opening video call, ‘Welcome to Let’s Grow with
-        Mr. Bloom’, with your children. From here, you can dive straight into
-        any of the four themes.
+        In <span className="fw6">‘Getting to Know Each Other’</span> and 
+        <span className="fw6">‘Celebrations’</span> you’ll follow Mr. Bloom’s
+        welcome by delivering the {" "}
+        <span className="fw6">
+          ‘Introductory Session with Bob, Flo &amp; the babies.’
+        </span>
+         Here you meet the new characters and establish the idea of the fruit
+        &amp; vegetable babies coming to visit the children in your setting.
       </Paragraph>
       <Paragraph>
-        A video call to one or more of our characters begins every session,
-        which in turn acts as the catalyst for the fun and learning that
-        follows.
+        After the relevant introductions have been made, you can deliver any
+        session you like!
       </Paragraph>
       <Paragraph>
-        Session plans are divided into two parts, with ‘Part One’ introducing
-        the theme and characters. ‘Part Two’ goes on to provide curriculum
+        All subsequent session plans are divided into two parts, with 
+        <span className="fw6">‘Part One’</span> introducing the theme and
+        characters, acting as a catalyst for the fun and learning that follows. 
+        <span className="fw6">‘Part Two’ </span>goes on to provide curriculum
         linked activities and ideas to support the facilitation of your enhanced
         continuous provision.
       </Paragraph>
-      <Paragraph>
-        Note, that in ‘Getting to Know Each Other’ and ‘Celebrations’ an
-        exciting introductory session establishes the idea of the fruit &
-        vegetable babies coming to visit the children in your setting.
-      </Paragraph>
+
       <OrangeButtonInternalLink
         navigation="/portal/meet-the-characters"
         className="self-center mv4 ml5-ns mt2 grow"

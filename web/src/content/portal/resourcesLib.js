@@ -28,6 +28,7 @@ const ResourcesLibraryIntro = ({ data }) => {
           </ButtonContainer>
         </TextContainer>
         <FloatingPhoto
+          alt="Mr Bloom"
           className="mv4 mv0-l"
           image={data.resourcesLibrary.childImageSharp.gatsbyImageData}
           direction="right"

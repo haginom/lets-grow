@@ -143,6 +143,7 @@ export const query = graphql`
           }
           sessionResources {
             fileCategory
+            name
             id
             url {
               linkName
@@ -243,7 +244,9 @@ const Lb = props => {
       ) : null}
 
       {SortThemesByOrder
-        ? SortThemesByOrder.map(theme => <ThemeTitle key={theme.id} {...theme} />)
+        ? SortThemesByOrder.map(theme => (
+            <ThemeTitle key={theme.id} {...theme} />
+          ))
         : null}
     </Layout>
   )

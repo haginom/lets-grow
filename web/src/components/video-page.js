@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "./layout/layout"
 import Seo from "./seo"
+import MuxPlayer from "@mux/mux-player-react"
 
 const Video = ({ song, videoCall, ...props }) => {
   const { songUpload, fileAttachment } = props
@@ -13,7 +14,17 @@ const Video = ({ song, videoCall, ...props }) => {
   return (
     <Layout portal>
       <Seo title="" />
-      {url ? (
+      <MuxPlayer
+        streamType="on-demand"
+        playbackId="aUYz91kpRzK01oSOQF2QvTLlRXxxvvsuWWckjXdV6Dls"
+        metadata={{
+          video_id: "video-id-54321",
+          video_title: "Test video title",
+          viewer_user_id: "user-id-007",
+        }}
+      />
+
+      {/* {url ? (
         <div
           className="db pt2 pb1 ph2"
           style={{ width: "100vw", maxWidth: "100vw" }}
@@ -23,7 +34,7 @@ const Video = ({ song, videoCall, ...props }) => {
             Your browser does not support the video tag.
           </video>
         </div>
-      ) : null}
+      ) : null} */}
     </Layout>
   )
 }

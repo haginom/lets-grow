@@ -4,6 +4,7 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 import {colorInput} from '@sanity/color-input'
 import {myStructure} from './deskStructure'
+import {muxInput} from 'sanity-plugin-mux-input'
 
 export default defineConfig({
   name: 'default',
@@ -17,6 +18,7 @@ export default defineConfig({
     }),
     visionTool(),
     colorInput(),
+    muxInput({mp4_support: 'standard'}),
   ],
 
   schema: {

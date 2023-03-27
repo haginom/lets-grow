@@ -17,7 +17,6 @@ const Input = ({ className, element, label, value, onChange, ...props }) => (
 
 const LoginForm = () => {
   const [name, setName] = React.useState("")
-  const [organisation, setOrganisation] = React.useState("")
   const [password, setPassword] = React.useState("")
   const handleSubmit = e => {
     e.preventDefault()
@@ -47,19 +46,12 @@ const LoginForm = () => {
             onChange={setName}
             required
           />
-          <Input
-            element="input"
-            type="text"
-            name="organisation"
-            placeholder="Organisation"
-            value={organisation}
-            onChange={setOrganisation}
-            required
-          />
+
           <Input
             element="input"
             type="password"
             name="password"
+            autoComplete="off"
             placeholder="Password"
             value={password}
             onChange={setPassword}

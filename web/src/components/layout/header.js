@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import Nav from "../tachyons/nav/logoLinksInlineCollapse.jsx"
 import Dropdown from "./dropdown.js"
+import { isLoggedIn } from "../../services/auth.js"
 
 const HeaderLayout = ({ image }) => (
   <header className="relative mv2">
@@ -33,7 +34,9 @@ const HeaderLayout = ({ image }) => (
         className="mr0"
         onClick={e => {
           e.preventDefault()
-          navigate("/#login")
+          if (isLoggedIn()) {
+            navigate("/portal")
+          } else navigate("/#login")
         }}
       >
         LOGIN

@@ -1,34 +1,32 @@
-import React from "react";
-import FullWidthPanel from "../../components/fullWidthPanel";
-import { Paragraph, SubHeading } from "../../components/tachyons/text";
-import { GatsbyImage } from "gatsby-plugin-image";
-import styled from "styled-components";
+import React from "react"
+import FullWidthPanel from "../../components/fullWidthPanel"
+import { Paragraph, SubHeading } from "../../components/tachyons/text"
+import { GatsbyImage } from "gatsby-plugin-image"
+import styled from "styled-components"
 
-const WhyUse = ({data}) => {
+const WhyUse = ({ data }) => {
   return (
-    <FullWidthPanel image={data.vegCoupleTwo.childImageSharp.gatsbyImageData} bottom="-9.5rem" left="48rem" colours={"bg-purple white"} maxWidth="64rem">
-      <SubHeading>
-        Why Use Let's Grow?
-      </SubHeading>
+    <FullWidthPanel
+      image={data.vegCoupleTwo.childImageSharp.gatsbyImageData}
+      bottom="-9.5rem"
+      left="48rem"
+      colours={"bg-purple white"}
+      maxWidth="64rem"
+    >
+      <SubHeading>Why Use Let's Grow?</SubHeading>
       <StyledGrid className="ml5-l">
         <StyledBox colour="#a99a28" className="boxOne">
           <Paragraph className="fw5">Let's Grow...</Paragraph>
           <List>
+            <li>Raises attainment</li>
+            <li>Covers all areas of the E.Y.F.S curriculum</li>
+            <li>Is based on ‘Development Matters’</li>
+            <li>Is informed by the ‘Characteristics of Effective Learning’</li>
+            <li>Offers a raft of multimedia resources and supportive guides</li>
             <li>
-              Covers all areas of the E.Y.F.S curriculum
+              Comprises session plans, curriculum linked activities and enhanced
+              continuous provision ideas.
             </li>
-            <li>
-              Is based on ‘Development Matters’
-            </li>
-            <li>
-              Is informed by the ‘Characteristics of Effective Learning’
-            </li>
-            <li>
-              Provides opportunities for hands-on sensory experiences
-            </li>
-            <li>
-              Offers a raft of multimedia resources and supportive guides
-             </li>
           </List>
         </StyledBox>
         <StyledBox colour={"#68979c"} className="boxTwo">
@@ -36,78 +34,61 @@ const WhyUse = ({data}) => {
             <GatsbyImage
               image={data.courgette.childImageSharp.gatsbyImageData}
               alt="picture of courgette"
-              />
-            </ToggleDecoration>
+            />
+          </ToggleDecoration>
           <Paragraph className="fw5">Teachers use Let's Grow...</Paragraph>
           <List>
             <li>To deliver a creative E.Y.F.S curriculum</li>
-            <li>As an irresistible invitation to learn through play</li>
+            <li>To harness the power of creativity and play</li>
             <li>To aid in collecting baseline data</li>
+            <li>For parental engagement opportunities</li>
+            <li>For professional development</li>
             <li>To support and encourage learning on...</li>
             <StyledList>
-                <li>
-                  Healthy eating and nutrition
-                </li>
-                <li>
-                  The four seasons and celebrations throughout the year
-                </li>
-                <li>
-                  The natural world and gardening
-                </li>
-                <li>
-                  Essential early life skills
-                </li>
+              <li>Identity and belonging</li>
+              <li>Healthy eating and nutrition</li>
+              <li>The four seasons and celebrations throughout the year</li>
+              <li>The natural world and gardening</li>
+              <li>Essential early life skills</li>
             </StyledList>
           </List>
         </StyledBox>
         <StyledBox colour="#e57d37" className="boxThree">
           <ToggleDecoration top="-8rem" right="2%">
-            <GatsbyImage  
-                image={data.cauliflower.childImageSharp.gatsbyImageData}
-                alt="picture of cauliflower"
-                />
-            </ToggleDecoration>
-          <Paragraph className="fw5">Let's Grow provides children with the opportunity to...</Paragraph>
+            <GatsbyImage
+              image={data.cauliflower.childImageSharp.gatsbyImageData}
+              alt="picture of cauliflower"
+            />
+          </ToggleDecoration>
+          <Paragraph className="fw5">
+            Let's Grow provides children with the opportunity to...
+          </Paragraph>
           <StyledList>
+            <li>Explore and engage with the natural world</li>
+            <li>Build personal, social and emotional confidence</li>
+            <li>Develop language and communication skills</li>
+            <li>Think critically</li>
+            <li>Grow a stronger sense of wellbeing</li>
+            <li>Engage in immersive, imaginative play</li>
             <li>
-              Explore and engage with the natural world
-              </li>
-            <li>
-              Build personal, social and emotional confidence
-              </li>
-            <li>
-              Develop language and communication skills
+              Have hands-on sensory experiences. Attain Arts Award Discover
             </li>
-            <li>
-              Think critically
-            </li>
-            <li>
-              Grow a stronger sense of wellbeing
-            </li>
-            <li>
-              Engage in immersive, imaginative play
-            </li>
-            <li>
-              Develop a sense of nurture, caretaking and responsibility
-            </li>
-            <li>
-              Achieve school readiness
-            </li>
+            <li>Develop a sense of nurture, caretaking and responsibility</li>
+            <li>Achieve school readiness</li>
           </StyledList>
         </StyledBox>
       </StyledGrid>
-
     </FullWidthPanel>
-  );
-};
+  )
+}
 
 const List = styled.ul`
   line-height: 1.5rem;
   margin-left: 0.5rem;
   list-style: disc outside !important;
   li {
-    padding-left: .5rem;
-    margin-left: .5rem;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
   }
 `
 
@@ -116,41 +97,40 @@ const StyledBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-weight:500;
+  font-weight: 500;
   border: white solid 0.5rem;
   border-radius: 30px;
   transform-style: preserve-3d;
-  background: ${props => props.colour || "orange"}
+  background: ${props => props.colour || "orange"};
 `
 
 const ToggleDecoration = styled.div`
-  display:none; 
+  display: none;
   @media all and (min-width: 45em) {
     display: block;
     position: absolute;
-    transform:translateZ(-1px);
+    transform: translateZ(-1px);
     top: ${props => props.top || "0px"};
     right: ${props => props.right || "0px"};
   }
-` 
-
+`
 
 const StyledList = styled.ul`
   > li {
-    padding-left:10px;
+    padding-left: 10px;
     line-height: 1.5rem;
     position: relative;
     display: block;
-    list-style:none;
+    list-style: none;
     margin-left: 2rem;
   }
-  
+
   li:before {
     content: "✓";
     color: #ffffff;
-    position:absolute;
+    position: absolute;
     display: block;
-    margin-right:1rem;
+    margin-right: 1rem;
     left: -1rem;
   }
 `
@@ -198,4 +178,4 @@ margin: 2rem 0 2rem 0;
 }
 }
 `
-export default WhyUse;
+export default WhyUse

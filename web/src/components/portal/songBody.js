@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import SongLink from "../../components/portal/songLink"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SongBody = ({ ArrayAlbums }) => {
+const SongBody = ({ songs }) => {
   const data = useStaticQuery(graphql`
     {
       iconSongs: file(relativePath: { eq: "portal/GSG-5.png" }) {
@@ -25,9 +25,10 @@ const SongBody = ({ ArrayAlbums }) => {
     }
   `)
 
-  const SortedAlbums = ArrayAlbums.sort((a, b) => {
-    return a.albums.length - b.albums.length
+  const SortedAlbums = songs?.sort((a, b) => {
+    return a.songVideo.length - b.songVideo.length
   })
+
 
   return (
     <>
@@ -52,7 +53,7 @@ const SongBody = ({ ArrayAlbums }) => {
           </StyledLink>
         </div>
 
-        {SortedAlbums.map(album => (
+        {SortedAlbums?.map(album => (
           <SongLink
             key={`song${album.name}`}
             {...album}

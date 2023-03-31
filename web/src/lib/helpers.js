@@ -68,3 +68,10 @@ export const groupBy = (array, property) =>
     }),
     {}
   )
+export const getStringBeforeHyphen = str => {
+  const index = str.indexOf("-")
+  if (index === -1) {
+    return str // return the whole string if there's no hyphen
+  }
+  return str.slice(0, index).trim() // return the substring before the hyphen
+}

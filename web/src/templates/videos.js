@@ -8,25 +8,32 @@ import Video from "../components/video-page"
 export const query = graphql`
   query videoPageTemplate($id: String!) {
     videoCalls: sanitySessionResources(id: { eq: $id }) {
-      id
       name
-      fileAttachment {
-        file {
+      fileCategory
+      id
+      videoResources {
+        name
+        video {
           asset {
-            url
+            filename
+            playbackId
+            assetId
           }
         }
       }
     }
-    songs: sanitySongs(id: { eq: $id }) {
-      name
+    songs: sanitySongVideo(id: { eq: $id }) {
       id
-      artist
+      name
       category
-      songUpload {
-        song {
+      artist
+      videoResources {
+        video {
           asset {
-            url
+            status
+            assetId
+            playbackId
+            filename
           }
         }
       }
@@ -37,7 +44,7 @@ const VideoTemplateBody = props => {
   const { data, errors } = props
   const songs = data && data.songs
   const videoCalls = data && data.videoCalls
-
+  console.log(videoCalls)
   if (errors) {
     return (
       <Layout portal>

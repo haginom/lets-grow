@@ -5,9 +5,9 @@ import theme from './theme'
 import siteSettings from './siteSettings'
 import introSession from './introSession'
 import link from './link'
-import songs from './song'
-import songUpload from './songUpload'
-import video from './video'
+import songs from './songs'
+import songVideo from './songVideo'
+import videoResource from './videoResource'
 
 export const schemaTypes = [
   theme,
@@ -18,6 +18,6 @@ export const schemaTypes = [
   sessionResource,
   siteSettings,
   songs,
-  songUpload,
-  video,
+  songVideo,
+  videoResource,
 ]

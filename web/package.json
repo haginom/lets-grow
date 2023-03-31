@@ -36,7 +36,7 @@
     "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-remark-responsive-iframe": "^5.23.0",
     "gatsby-source-filesystem": "^4.17.0",
-    "gatsby-source-sanity": "^7.6.3",
+    "gatsby-source-sanity": "^7.6.1",
     "gatsby-transformer-remark": "^5.17.0",
     "gatsby-transformer-sharp": "^4.17.0",
     "gbimage-bridge": "^0.2.2",

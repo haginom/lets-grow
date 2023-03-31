@@ -5,7 +5,7 @@ import Layout from "../../components/layout/layout"
 import WithAuthCheck from "../../components/withAuthCheck"
 import HandyHintTitle from "../../components/portal/hhTitle"
 import ThemeTitle from "../../components/portal/themeTitle"
-import { mapEdgesToNodes, groupBy } from "../../lib/helpers"
+import { mapEdgesToNodes } from "../../lib/helpers"
 import IntroSessionTitle from "../../components/portal/introSessionTitle"
 import Seo from "../../components/seo"
 
@@ -14,14 +14,20 @@ export const query = graphql`
     songs: allSanitySongs {
       edges {
         node {
-          name
           id
-          artist
-          category
-          songUpload {
-            song {
-              asset {
-                url
+          name
+          songVideo {
+            artist
+            category
+            id
+            name
+            videoResources {
+              video {
+                asset {
+                  filename
+                  playbackId
+                  assetId
+                }
               }
             }
           }
@@ -149,6 +155,16 @@ export const query = graphql`
               linkName
               url
             }
+            videoResources {
+              name
+              video {
+                asset {
+                  filename
+                  assetId
+                  playbackId
+                }
+              }
+            }
             fileAttachment {
               fileName
               file {
@@ -187,17 +203,13 @@ export const query = graphql`
             }
           }
           howToVideo {
+            name
             id
-            fileCategory
-            url {
-              linkName
-              url
-            }
-            fileAttachment {
-              fileName
-              file {
+            videoResources {
+              name
+              video {
                 asset {
-                  url
+                  playbackId
                 }
               }
             }
@@ -225,13 +237,7 @@ const Lb = props => {
     ? mapEdgesToNodes(data.introSessions)
     : []
 
-  const GroupedSongs = groupBy(songNodes, "name")
-  const ArrayAlbums = Object.entries(GroupedSongs).map(([key, val]) => ({
-    name: key,
-    albums: val,
-  }))
   const SortThemesByOrder = themeNodes.sort((a, b) => a.order - b.order)
-
   return (
     <Layout portal>
       <Seo title="Resource Library" />
@@ -239,9 +245,7 @@ const Lb = props => {
       {introSessions ? (
         <IntroSessionTitle introSessions={introSessions} />
       ) : null}
-      {songNodes ? (
-        <ThemeTitle name={"Songs"} song ArrayAlbums={ArrayAlbums} />
-      ) : null}
+      {songNodes ? <ThemeTitle name={"Songs"} song songs={songNodes} /> : null}
 
       {SortThemesByOrder
         ? SortThemesByOrder.map(theme => (

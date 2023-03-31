@@ -37,7 +37,8 @@ const SessionResourceLink = ({
       }
     }
   `)
-  const { fileCategory, image, fileAttachment, url, name } = props
+  const { fileCategory, image, fileAttachment, url, name, videoResources } =
+    props
   return (
     <>
       <StyledBox
@@ -51,8 +52,10 @@ const SessionResourceLink = ({
           >
             {url ? (
               <p>{url?.linkName}</p>
-            ) : fileAttachment ? (
+            ) : fileAttachment?.fileName ? (
               <p>{fileAttachment?.fileName}</p>
+            ) : videoResources ? (
+              <p>{videoResources?.name}</p>
             ) : null}
           </InnerWrapper>
           {image && (

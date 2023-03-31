@@ -1,7 +1,10 @@
+import {FaFolder} from 'react-icons/fa'
+
 export default {
   name: 'sessionResources',
   title: 'Session Resources',
   type: 'document',
+  icon: FaFolder,
   fields: [
     {
       name: 'name',
@@ -40,7 +43,15 @@ export default {
       title: 'Upload File',
       type: 'fileAttachment',
       hidden: ({document}) =>
-        document?.fileCategory === 'webpage' || document?.fileCategory === 'song',
+        document?.fileCategory === 'webpage' ||
+        document?.fileCategory === 'song' ||
+        document?.fileCategory === 'video',
+    },
+    {
+      name: 'videoResources',
+      title: 'Upload File',
+      type: 'videoResources',
+      hidden: ({document}) => document?.fileCategory !== 'video',
     },
   ],
 }

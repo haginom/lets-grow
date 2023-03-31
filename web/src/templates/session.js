@@ -102,34 +102,30 @@ export const query = graphql`
         id
         name
         fileCategory
-        fileAttachment {
-          fileName
-          file {
+        videoResources {
+          name
+          video {
             asset {
-              url
+              filename
+              assetId
+              playbackId
             }
           }
-        }
-        url {
-          linkName
-          url
         }
       }
       videoCall {
         id
         name
         fileCategory
-        fileAttachment {
-          fileName
-          file {
+        videoResources {
+          name
+          video {
             asset {
-              url
+              filename
+              assetId
+              playbackId
             }
           }
-        }
-        url {
-          linkName
-          url
         }
       }
       sessionPlan2 {
@@ -215,18 +211,14 @@ export const query = graphql`
         }
       }
       howToVideo {
-        id
         name
         fileCategory
-        url {
-          linkName
-          url
-        }
-        fileAttachment {
-          fileName
-          file {
+        id
+        videoResources {
+          name
+          video {
             asset {
-              url
+              playbackId
             }
           }
         }

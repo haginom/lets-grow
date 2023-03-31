@@ -1,12 +1,11 @@
 import {FaMusic} from 'react-icons/fa'
 
 export default {
-  name: 'songs',
-  title: 'Songs',
+  name: 'songVideo',
+  title: 'Song Videos',
   type: 'document',
   icon: FaMusic,
   fields: [
-
     {
       name: 'name',
       title: 'Name',
@@ -35,8 +34,8 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      name: 'songUpload',
-      type: 'songUpload',
+      name: 'videoResources',
+      type: 'videoResources',
     },
   ],
 }

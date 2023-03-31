@@ -43,6 +43,16 @@ export const query = graphql`
           linkName
           url
         }
+        videoResources {
+          name
+          video {
+            asset {
+              filename
+              assetId
+              playbackId
+            }
+          }
+        }
         fileAttachment {
           fileName
           file {

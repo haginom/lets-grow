@@ -63,18 +63,18 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      allSanitySongs {
+      allSanitySongVideo {
         edges {
           node {
             id
             name
+            category
             artist
           }
         }
       }
     }
   `)
-
   result.data.allSanitySessionResources.edges.forEach(edge => {
     const id = edge.node.id
     const name = edge.node.name
@@ -116,7 +116,7 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-  result.data.allSanitySongs.edges.forEach(edge => {
+  result.data.allSanitySongVideo.edges.forEach(edge => {
     const id = edge.node.id
     const name = edge.node.name
     const artist = edge.node.artist

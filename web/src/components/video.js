@@ -1,21 +1,22 @@
-import React, { useState, useRef } from "react";
-import playButton from "../images/play-button-white.png";
+import React, { useState, useRef } from "react"
+import playButton from "../images/play-button-white.png"
 
 const Video = ({ poster, source }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false)
+  const videoRef = useRef(null)
   const togglePlaystate = () => {
-    setIsPlaying(!isPlaying);
+    setIsPlaying(!isPlaying)
     if (isPlaying) {
-      videoRef.current.pause();
+      videoRef.current.pause()
     } else {
-      videoRef.current.play();
+      videoRef.current.play()
     }
-  };
+  }
   return (
     <div className="mb4" style={{ position: "relative", maxWidth: "130vh" }}>
       {!isPlaying && (
         <img
+          alt="play button"
           src={playButton}
           style={{
             width: "20%",
@@ -23,7 +24,7 @@ const Video = ({ poster, source }) => {
             position: "absolute",
             left: "40%",
             top: "35%",
-            pointerEvents: "none"
+            pointerEvents: "none",
           }}
         />
       )}
@@ -39,7 +40,7 @@ const Video = ({ poster, source }) => {
         </video>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Video;
+export default Video

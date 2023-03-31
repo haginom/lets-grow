@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../../components/layout/layout"
 import GraphQLErrorList from "../../components/portal/graphql-error-list"
 import Seo from "../../components/seo"
-import { mapEdgesToNodes, groupBy } from "../../lib/helpers"
+import { mapEdgesToNodes } from "../../lib/helpers"
 import SongBody from "../../components/portal/songBody"
 import styled from "styled-components"
 import HandyHintTitle from "../../components/portal/hhTitle"
@@ -13,14 +13,20 @@ export const query = graphql`
     songs: allSanitySongs {
       edges {
         node {
-          name
           id
-          artist
-          category
-          songUpload {
-            song {
-              asset {
-                url
+          name
+          songVideo {
+            artist
+            category
+            id
+            name
+            videoResources {
+              video {
+                asset {
+                  filename
+                  playbackId
+                  assetId
+                }
               }
             }
           }
@@ -33,7 +39,6 @@ export const query = graphql`
 const SongTemplate = props => {
   const { data, errors } = props
   const songNodes = (data || {}).songs ? mapEdgesToNodes(data.songs) : []
-
   if (errors) {
     return (
       <Layout>
@@ -42,12 +47,7 @@ const SongTemplate = props => {
     )
   }
 
-  const GroupedSongs = groupBy(songNodes, "name")
-  const ArrayAlbums = Object.entries(GroupedSongs).map(([key, val]) => ({
-    name: key,
-    albums: val,
-  }))
-
+  console.log(songNodes)
   return (
     <Layout portal>
       <Seo title="Songs" />
@@ -56,7 +56,7 @@ const SongTemplate = props => {
         <Tab className="br4 mh1 ph3 ph5-ns f6 f5-ns fw5">
           <Centered className="relative">
             <Heading className="coffeeTea fw6 pt4 tc ttu pa4">Songs</Heading>
-            <SongBody ArrayAlbums={ArrayAlbums} />
+            <SongBody songs={songNodes} />
           </Centered>
         </Tab>
       </section>

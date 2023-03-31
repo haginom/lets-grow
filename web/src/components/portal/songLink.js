@@ -1,14 +1,14 @@
 import * as React from "react"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { slugify } from "../../lib/helpers"
+import { slugify, getStringBeforeHyphen } from "../../lib/helpers"
 import { Link } from "gatsby"
 
 const SongLink = ({ iconPlay, ...props }) => {
-  const { albums } = props
-  //sorting album z-a
-  if (albums.length > 2) {
-    albums.sort((a, b) => {
+  const { songVideo } = props
+  // sorting album z-a
+  if (songVideo.length > 2) {
+    songVideo.sort((a, b) => {
       if (a.artist < b.artist) {
         return 1
       }
@@ -18,10 +18,9 @@ const SongLink = ({ iconPlay, ...props }) => {
       return 0
     })
   }
-
   return (
     <TwoColumns>
-      {albums.map(song => {
+      {songVideo.map(song => {
         return <Album key={song.id} iconPlay={iconPlay} {...song} />
       })}
     </TwoColumns>
@@ -39,7 +38,7 @@ const Album = ({ iconPlay, ...props }) => {
       <StyledLink to={`/${URL}`} order={order}>
         <Container>
           <InnerWrapper>
-            <p>{name}</p>
+            <p>{getStringBeforeHyphen(name)}</p>
             <p className="fw4">{artist}</p>
           </InnerWrapper>
           <GatsbyImage

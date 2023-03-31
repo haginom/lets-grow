@@ -3,7 +3,7 @@ import styled from "styled-components"
 import SongBody from "./songBody"
 import ThemeDetails from "./themeDetails"
 
-const ThemeTitle = ({ ArrayAlbums, className, song, ...props }) => {
+const ThemeTitle = ({ songs, className, song, ...props }) => {
   const { name, backgroundColour, id, comingSoon } = props
   const [showMore, setShowMore] = React.useState(false)
   return (
@@ -29,9 +29,7 @@ const ThemeTitle = ({ ArrayAlbums, className, song, ...props }) => {
           {!comingSoon && showMore && !song ? (
             <ThemeDetails color={backgroundColour?.hex} key={id} {...props} />
           ) : null}
-          {!comingSoon && showMore && song ? (
-            <SongBody ArrayAlbums={ArrayAlbums} />
-          ) : null}
+          {!comingSoon && showMore && song ? <SongBody songs={songs} /> : null}
         </Centered>
       </Tab>
     </section>

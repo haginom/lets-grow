@@ -107,6 +107,9 @@ export const ThemeIntro = ({ data }) => (
         </td>
         <td className="bg-orange white">
           <SessionGrid color="#E87D2E">
+            <div style={{ gridColumn: "1/3" }}>
+              <p>Get Growing Guide</p>
+            </div>
             <div>
               <p>Seeds</p>
             </div>
@@ -246,8 +249,6 @@ const Td = styled.td`
   > * {
     margin: 0.5rem;
   }
-
-  
 `
 const Overlay = styled.div`
   margin-top: 0.25rem;

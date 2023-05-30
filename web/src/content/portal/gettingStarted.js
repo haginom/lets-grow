@@ -5,6 +5,12 @@ import { OrangeButtonInternalLink } from "../../components/button"
 import styled from "styled-components"
 import { ThemeIntro } from "../../components/portal/guideTable"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
+
+const StyledGatsbyLink = styled(props => <Link {...props} />)`
+  color: white;
+  font-weight: 600;
+`
 
 export const GSOne = ({ data }) => (
   <FullWidthPanel
@@ -19,41 +25,44 @@ export const GSOne = ({ data }) => (
         Getting Started Guide
       </SubHeading>
       <Paragraph className="fw6">
-        Sessions can be delivered in sequential order or as standalone content
-        to compliment the wider curriculum.
+        Our creative schemes of work are designed with flexibility in mind.
+        Sessions can be delivered in sequential order or cherry picked as
+        standalone content to compliment the wider curriculum.
       </Paragraph>
       <Paragraph>
         You decide how Let’s Grow works best in your setting throughout the
-        year, however, there’s only one way to begin - deliver the{" "}
-        <span className="fw6">
+        academic year, however, there’s only one way to begin...
+      </Paragraph>
+      <Paragraph>
+        Start by watching our opening video call,{"  "}
+        <StyledGatsbyLink to={"/portal/sessions/welcome-session"}>
           ‘Welcome to Let’s Grow with Mr Bloom Session’
-        </span>
-         to your children first. This short session introduces the children to
-        the wonderful world of Let’s Grow, setting the scene for everything to
-        come. It’s accessible from every theme, wherever you choose to start.
+        </StyledGatsbyLink>
+         with your children. From here, you can dive straight into any of the
+        four themes.
       </Paragraph>
       <Paragraph>
-        In <span className="fw6">‘Getting to Know Each Other’</span> and 
-        <span className="fw6">‘Celebrations’</span> you’ll follow Mr. Bloom’s
-        welcome by delivering the {" "}
-        <span className="fw6">
-          ‘Introductory Session with Bob, Flo &amp; the babies.’
-        </span>
-         Here you meet the new characters and establish the idea of the fruit
-        &amp; vegetable babies coming to visit the children in your setting.
+        In both{" "}
+        <StyledGatsbyLink to={"/portal/getting-to-know-each-other"}>
+          ‘Getting to Know Each Other’
+        </StyledGatsbyLink>{" "}
+        and{" "}
+        <StyledGatsbyLink to={"/portal/celebrations"}>
+          ‘Celebrations’
+        </StyledGatsbyLink>{" "}
+        you’ll find the{" "}
+        <StyledGatsbyLink to={"/portal/sessions/introductory-session"}>
+          ‘Introductory Session with Bob, Flo & the Babies’
+        </StyledGatsbyLink>
+        , meet new characters and establish the idea of the fruit &amp;
+        vegetable babies coming to visit the children in your setting.
       </Paragraph>
       <Paragraph>
-        After the relevant introductions have been made, you can deliver any
-        session you like!
+        Once introductions have been made, every session begins with a video
+        call to one or more of the Let’s Grow characters, which in turn acts as
+        the catalyst for the fun and learning that follows.
       </Paragraph>
-      <Paragraph>
-        All subsequent session plans are divided into two parts, with 
-        <span className="fw6">‘Part One’</span> introducing the theme and
-        characters, acting as a catalyst for the fun and learning that follows. 
-        <span className="fw6">‘Part Two’ </span>goes on to provide curriculum
-        linked activities and ideas to support the facilitation of your enhanced
-        continuous provision.
-      </Paragraph>
+      <Paragraph>Now, go fill your boots!</Paragraph>
 
       <OrangeButtonInternalLink
         navigation="/portal/meet-the-characters"

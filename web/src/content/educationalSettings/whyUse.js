@@ -70,9 +70,8 @@ const WhyUse = ({ data }) => {
             <li>Think critically</li>
             <li>Grow a stronger sense of wellbeing</li>
             <li>Engage in immersive, imaginative play</li>
-            <li>
-              Have hands-on sensory experiences. Attain Arts Award Discover
-            </li>
+            <li>Have hands-on sensory experiences.</li>
+            <li>Attain Arts Award Discover</li>
             <li>Develop a sense of nurture, caretaking and responsibility</li>
             <li>Achieve school readiness</li>
           </StyledList>

@@ -8,6 +8,7 @@ import { urlFor } from "../../lib/helpers"
 
 const ThemeDetails = props => {
   const {
+    name,
     image,
     mrBloom,
     overview,
@@ -52,6 +53,11 @@ const ThemeDetails = props => {
         {handyHints ? (
           <SessionIntroLink className="ttu" navigation={`../handy-hints`}>
             Handy Hints
+          </SessionIntroLink>
+        ) : null}
+        {name === "Growing Things" ? (
+          <SessionIntroLink className="ttu" navigation={`../handy-hints`}>
+            GET GROWING GUIDE
           </SessionIntroLink>
         ) : null}
       </TwoColumns>
@@ -112,7 +118,7 @@ const ThemeDetails = props => {
 
 const StyledMrBloom = styled.img`
   position: absolute;
-  right: 5rem;
+  right: 0rem;
   top: -9rem;
 `
 const StyledImg = styled.img`

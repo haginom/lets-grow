@@ -16,6 +16,7 @@ const Video = ({ song, videoCall, ...props }) => {
           style={{ aspectRatio: "16 / 9" }}
           streamType="on-demand"
           playbackId={playbackId}
+          thumbnailTime="0"
           metadata={{
             video_id: { assetId },
             video_title: `${name}`,

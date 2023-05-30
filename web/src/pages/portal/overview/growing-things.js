@@ -197,13 +197,13 @@ const CelebrationOverview = () => {
         <div className="flex justify-between flex-wrap">
           <CheckList>
             <li>Listening, attention and understanding</li>
-            <li> Speaking</li>
-            <li> Self regulation</li>
-            <li> Building relationships</li>
-            <li> Managing self</li>
-            <li> Comprehension</li>
+            <li>Speaking</li>
+            <li>Self regulation</li>
+            <li>Building relationships</li>
+            <li>Managing self</li>
+            <li>Comprehension</li>
             <li>People, culture and communities</li>
-            <li> The natural world</li>
+            <li>The natural world</li>
             <li>Being imaginative and expressive</li>
           </CheckList>
           <FloatingPhotoBL
@@ -225,11 +225,11 @@ const CelebrationOverview = () => {
         </Subheading>
         <CheckList className="mt4" mb="8rem">
           <li>Parental engagement</li>
-          <li> Problem solving</li>
-          <li> Critical thinking</li>
+          <li>Problem solving</li>
+          <li>Critical thinking</li>
           <li>Verbal and non-verbal communication</li>
-          <li> Turn taking</li>
-          <li> Imaginative engagement</li>
+          <li>Turn taking</li>
+          <li>Imaginative engagement</li>
           <li>Promoting healthy eating</li>
         </CheckList>
         <GatsbyImage
@@ -369,15 +369,18 @@ const CelebrationOverview = () => {
                     transformOrigin: "left",
                   }}
                   image={data.gtSix.childImageSharp.gatsbyImageData}
-                  alt="Potatoes (March to July)"
+                  alt="Potatoes & Peppers (June/July/Sept/Oct)"
                 />
                 <Bullets>
-                  <BulletPoint>To introduce the theme of summer.</BulletPoint>
                   <BulletPoint>
-                    To explore some of the environmental impacts of summer.{" "}
+                    To discover the different parts of a plant and the jobs that
+                    they do.
                   </BulletPoint>
                   <BulletPoint>
-                    To be able to stay safe in the summer sun.
+                    To be able to handle plants with care.
+                  </BulletPoint>
+                  <BulletPoint>
+                    To understand where our food comes from.
                   </BulletPoint>
                 </Bullets>
                 <GatsbyImage

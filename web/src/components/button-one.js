@@ -35,7 +35,6 @@ const StyledButton = styled.button`
     width: 220px;
   }
   font-size: 16px;
-
   position: relative;
   display: flex;
   justify-content: center;

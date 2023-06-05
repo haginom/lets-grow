@@ -27,16 +27,16 @@ const ContactForm = () => {
   const handleSubmit = e => {
     e.preventDefault()
     const form = e.target
-    let email
+    let letsGrowEmail
     if (interest === "Educational Resources") {
-      email = "online@letsgrow.org.uk"
+      letsGrowEmail = "online@letsgrow.org.uk"
     } else if (interest === "Live Events") {
-      email = "events@letsgrow.org.uk"
+      letsGrowEmail = "events@letsgrow.org.uk"
     } else {
-      email = "hello@letsgrow.org.uk"
+      letsGrowEmail = "hello@letsgrow.org.uk"
     }
 
-    fetch(`https://formsubmit.co/ajax/${email}`, {
+    fetch(`https://formsubmit.co/ajax/${letsGrowEmail}`, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
 
@@ -108,7 +108,12 @@ const ContactForm = () => {
       </fieldset>
       {/* <input type="hidden" name="_subject" value={interest}></input> */}
       <div className="">
-        <OrangeSubmitButton as="input" value={"Send"} markup={"send"} />
+        <OrangeSubmitButton
+          as="input"
+          value={"Send"}
+          markup={"send"}
+          className="grow"
+        />
       </div>
     </form>
   )

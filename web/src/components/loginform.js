@@ -58,7 +58,12 @@ const LoginForm = () => {
             required
           />
           <div className="">
-            <OrangeSubmitButton as="input" value="Log In" markup={"Login"} />
+            <OrangeSubmitButton
+              as="input"
+              value="Log In"
+              markup={"Login"}
+              className="grow"
+            />
           </div>
         </fieldset>
       </form>

@@ -2,6 +2,16 @@ import * as React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+
+export const IconLinkStatic = ({ icon, text, navigation }) => {
+  return (
+    <StyledLink to={navigation}>
+      {icon && icon}
+      <InnerWrapper>{text}</InnerWrapper>
+    </StyledLink>
+  )
+}
 
 export const IconLink = ({ icon, text, navigation }) => {
   return (

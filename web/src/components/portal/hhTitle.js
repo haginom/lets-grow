@@ -8,7 +8,7 @@ const HandyHintTitle = ({ title, icon, maxWidth, colour }) => (
       style={{ overflow: "hidden" }}
       className={`dt ${
         colour ? colour : "bg-navy"
-      } white br4 f8-l f6 f5-ns fw5 ${icon ? "w-90" : "w-100"}`}
+      } white br4 f8-l f6 f5-ns fw5 ph1 ma1 ${icon ? "w-90" : "w-100"}`}
     >
       <Title className="f2-ns f3 ttu coffeeTea pv4-ns pv1 ph2 tc b dtc v-mid">
         {title}

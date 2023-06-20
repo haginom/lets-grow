@@ -1,5 +1,4 @@
 import * as React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -9,8 +8,8 @@ export const GrowingCalender = ({ data }) => (
       <tr>
         <th
           className="bg-hot-pink white col-header first-col-header"
-          rowspan="2"
-          colspan="2"
+          rowSpan="2"
+          colSpan="2"
         >
           <StyledHeading>
             <StaticImage
@@ -56,7 +55,7 @@ export const GrowingCalender = ({ data }) => (
         <td className="bg-gold white"></td>
       </tr>
       <tr>
-        <th className="bg-hot-pink white col-header" rowspan="1" colspan="2">
+        <th className="bg-hot-pink white col-header" rowSpan="1" colSpan="2">
           <StyledHeading>
             <StaticImage
               alt=""
@@ -80,7 +79,7 @@ export const GrowingCalender = ({ data }) => (
         <td className="bg-gold white"></td>
       </tr>
       <tr>
-        <th className="bg-hot-pink white col-header" rowspan="1" colspan="2">
+        <th className="bg-hot-pink white col-header" rowSpan="1" colSpan="2">
           <StyledHeading>
             <StaticImage
               alt=""
@@ -100,7 +99,7 @@ export const GrowingCalender = ({ data }) => (
         <td className="bg-gold white"></td>
       </tr>
       <tr>
-        <th className="bg-hot-pink white col-header" rowspan="1" colspan="2">
+        <th className="bg-hot-pink white col-header" rowSpan="1" colSpan="2">
           <StyledHeading>
             <StaticImage
               alt=""
@@ -120,7 +119,7 @@ export const GrowingCalender = ({ data }) => (
         <td className="bg-gold white"></td>
       </tr>
       <tr>
-        <th className="bg-hot-pink white col-header" rowspan="2" colspan="2">
+        <th className="bg-hot-pink white col-header" rowSpan="2" colSpan="2">
           <StyledHeading>
             <StaticImage
               alt=""
@@ -153,7 +152,7 @@ export const GrowingCalender = ({ data }) => (
         <Th className="bg-hot-pink white ">Nov</Th>
       </tr>
       <tr>
-        <th className="bg-hot-pink white col-header" rowspan="1" colspan="2">
+        <th className="bg-hot-pink white col-header" rowSpan="1" colSpan="2">
           <StyledHeading>
             <StaticImage
               alt=""
@@ -173,7 +172,7 @@ export const GrowingCalender = ({ data }) => (
         <td className="bg-gold white">Plant.</td>
       </tr>
       <tr>
-        <th className="bg-hot-pink white col-header" rowspan="1" colspan="2">
+        <th className="bg-hot-pink white col-header" rowSpan="1" colSpan="2">
           <StyledHeading>
             <StaticImage
               alt=""
@@ -193,7 +192,7 @@ export const GrowingCalender = ({ data }) => (
         <td className="bg-gold white"></td>
       </tr>
       <tr>
-        <th className="bg-hot-pink white col-header" rowspan="1" colspan="2">
+        <th className="bg-hot-pink white col-header" rowSpan="1" colSpan="2">
           <StyledHeading>
             <StaticImage
               alt=""
@@ -216,7 +215,7 @@ export const GrowingCalender = ({ data }) => (
         <td className="bg-gold white"></td>
       </tr>
       <tr>
-        <th className="bg-hot-pink white col-header" rowspan="1" colspan="2">
+        <th className="bg-hot-pink white col-header" rowSpan="1" colSpan="2">
           <StyledHeading>
             <StaticImage
               alt=""
@@ -245,7 +244,7 @@ export const GrowingCalender = ({ data }) => (
         <td className="bg-gold white"></td>
       </tr>
       <tr>
-        <th className="bg-hot-pink white col-header" rowspan="2" colspan="2">
+        <th className="bg-hot-pink white col-header" rowSpan="2" colSpan="2">
           <StyledHeading>
             <StaticImage
               alt=""
@@ -286,7 +285,7 @@ export const GrowingCalender = ({ data }) => (
         <Th className="bg-hot-pink white ">Nov</Th>
       </tr>
       <tr>
-        <th className="bg-hot-pink white col-header" rowspan="1" colspan="2">
+        <th className="bg-hot-pink white col-header" rowSpan="1" colSpan="2">
           <StyledHeading>
             <StaticImage
               alt=""
@@ -315,7 +314,7 @@ export const GrowingCalender = ({ data }) => (
         <td className="bg-gold white"></td>
       </tr>
       <tr>
-        <th className="bg-hot-pink white col-header" rowspan="1" colspan="2">
+        <th className="bg-hot-pink white col-header" rowSpan="1" colSpan="2">
           <StyledHeading>
             <StaticImage
               alt=""
@@ -335,7 +334,7 @@ export const GrowingCalender = ({ data }) => (
         <td className="bg-gold white"></td>
       </tr>
       <tr>
-        <th className="bg-hot-pink white col-header" rowspan="1" colspan="2">
+        <th className="bg-hot-pink white col-header" rowSpan="1" colSpan="2">
           <StyledHeading>
             <StaticImage
               alt=""
@@ -366,8 +365,8 @@ export const GrowingCalender = ({ data }) => (
       <tr>
         <th
           className="bg-hot-pink white col-header bottom-column"
-          rowspan="1"
-          colspan="2"
+          rowSpan="1"
+          colSpan="2"
         >
           <StyledHeading>
             <StaticImage
@@ -380,7 +379,7 @@ export const GrowingCalender = ({ data }) => (
         <td
           style={{ verticalAlign: "middle", textAlign: "center" }}
           className="bg-gold white bottom-column"
-          colspan="9"
+          colSpan="9"
         >
           You can have fun growing an avocado plant from a stone any time of
           year.

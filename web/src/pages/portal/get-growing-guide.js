@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../../components/layout/layout"
 import Seo from "../../components/seo"
 import WithAuthCheck from "../../components/withAuthCheck"
@@ -8,8 +7,22 @@ import HandyHintTitle from "../../components/portal/hhTitle"
 import FullWidthPanel from "../../components/fullWidthPanel"
 import { StaticImage } from "gatsby-plugin-image"
 import { IconLinkStatic } from "../../components/iconButton"
-import { Link } from "gatsby"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { GrowingCalender } from "../../content/portal/get-growing-guide/growingCalender"
+import PotatoeGrowingGuide from "../../content/portal/get-growing-guide/potatoes"
+import CourgettesGrowingGuide from "../../content/portal/get-growing-guide/courgettes"
+import TomatoGrowingGuide from "../../content/portal/get-growing-guide/tomatoes"
+import PeppersGrowingGuide from "../../content/portal/get-growing-guide/peppers"
+import OnionsGrowingGuide from "../../content/portal/get-growing-guide/onions"
+import ApplesGrowingGuide from "../../content/portal/get-growing-guide/apples"
+import SquashGrowingGuide from "../../content/portal/get-growing-guide/squash"
+import StrawberryGrowingGuide from "../../content/portal/get-growing-guide/strawberries"
+import CarrotsGrowingGuide from "../../content/portal/get-growing-guide/carrot"
+import RainbowChardGrowingGuide from "../../content/portal/get-growing-guide/rainbowChard"
+import LettuceGrowingGuide from "../../content/portal/get-growing-guide/lettuce"
+import CucumberGrowingGuide from "../../content/portal/get-growing-guide/cucumber"
+import LeekGrowingGuide from "../../content/portal/get-growing-guide/leek"
+import AvocadoGrowingGuide from "../../content/portal/get-growing-guide/avocado"
 
 const Ggg = () => {
   return (
@@ -78,12 +91,12 @@ const Ggg = () => {
             </div>
           </div>
         </FullWidthPanel>
-        <FullWidthPanel colours="bg-gold white" maxWidth="58rem">
+        <FullWidthPanel colours="bg-gold white" maxWidth="56rem">
           <Subheading className="coffeeTea mb4">Contents</Subheading>
           <GridContainer>
             <GridItem className="mb4">
               <IconLinkStatic
-                navigation="#"
+                navigation="#overview"
                 icon={
                   <StaticImage src="../../images/portal/get-growing-guide/grow-icon.png" />
                 }
@@ -93,7 +106,7 @@ const Ggg = () => {
           </GridContainer>
           <GridContainer className="mb5">
             <GridItem>
-              <StyledLink to="#">
+              <StyledLink to="#potatoes">
                 <StaticImage
                   alt=""
                   src="../../images/portal/get-growing-guide/Potatoes.png"
@@ -102,7 +115,7 @@ const Ggg = () => {
               </StyledLink>
             </GridItem>
             <GridItem>
-              <StyledLink to="#">
+              <StyledLink to="#courgette">
                 <StaticImage
                   alt=""
                   src="../../images/portal/get-growing-guide/Courgette.png"
@@ -111,7 +124,7 @@ const Ggg = () => {
               </StyledLink>
             </GridItem>
             <GridItem>
-              <StyledLink to="#">
+              <StyledLink to="#tomato">
                 <StaticImage
                   alt=""
                   src="../../images/portal/get-growing-guide/Tomatoes.png"
@@ -120,7 +133,7 @@ const Ggg = () => {
               </StyledLink>
             </GridItem>
             <GridItem>
-              <StyledLink to="#">
+              <StyledLink to="#pepper">
                 <StaticImage
                   alt=""
                   src="../../images/portal/get-growing-guide/Pepper.png"
@@ -129,7 +142,7 @@ const Ggg = () => {
               </StyledLink>
             </GridItem>
             <GridItem>
-              <StyledLink to="#">
+              <StyledLink to="#onion">
                 <StaticImage
                   alt=""
                   src="../../images/portal/get-growing-guide/Onion.png"
@@ -138,7 +151,7 @@ const Ggg = () => {
               </StyledLink>
             </GridItem>
             <GridItem>
-              <StyledLink to="#">
+              <StyledLink to="#apple">
                 <StaticImage
                   alt=""
                   src="../../images/portal/get-growing-guide/Apple.png"
@@ -147,7 +160,7 @@ const Ggg = () => {
               </StyledLink>
             </GridItem>
             <GridItem>
-              <StyledLink to="#">
+              <StyledLink to="#squash">
                 <StaticImage
                   alt=""
                   src="../../images/portal/get-growing-guide/Squash.png"
@@ -156,7 +169,7 @@ const Ggg = () => {
               </StyledLink>
             </GridItem>
             <GridItem>
-              <StyledLink to="#">
+              <StyledLink to="#strawberry">
                 <StaticImage
                   alt=""
                   src="../../images/portal/get-growing-guide/Strawberry.png"
@@ -165,7 +178,7 @@ const Ggg = () => {
               </StyledLink>
             </GridItem>
             <GridItem>
-              <StyledLink to="#">
+              <StyledLink to="#carrot">
                 <StaticImage
                   alt=""
                   src="../../images/portal/get-growing-guide/Carrot.png"
@@ -174,7 +187,7 @@ const Ggg = () => {
               </StyledLink>
             </GridItem>
             <GridItem>
-              <StyledLink to="#">
+              <StyledLink to="#chard">
                 <StaticImage
                   alt=""
                   src="../../images/portal/get-growing-guide/Rainbow Chard.png"
@@ -183,7 +196,7 @@ const Ggg = () => {
               </StyledLink>
             </GridItem>
             <GridItem>
-              <StyledLink to="#">
+              <StyledLink to="#lettuce">
                 <StaticImage
                   alt=""
                   src="../../images/portal/get-growing-guide/Lettuce.png"
@@ -192,7 +205,7 @@ const Ggg = () => {
               </StyledLink>
             </GridItem>
             <GridItem>
-              <StyledLink to="#">
+              <StyledLink to="#cucumber">
                 <StaticImage
                   alt=""
                   src="../../images/portal/get-growing-guide/Cucumber.png"
@@ -201,7 +214,7 @@ const Ggg = () => {
               </StyledLink>
             </GridItem>
             <GridItem>
-              <StyledLink to="#">
+              <StyledLink to="#leek">
                 <StaticImage
                   alt=""
                   src="../../images/portal/get-growing-guide/Leek.png"
@@ -210,7 +223,7 @@ const Ggg = () => {
               </StyledLink>
             </GridItem>
             <GridItem>
-              <StyledLink to="#">
+              <StyledLink to="#avocado">
                 <StaticImage
                   alt=""
                   src="../../images/portal/get-growing-guide/Avocado.png"
@@ -221,10 +234,23 @@ const Ggg = () => {
           </GridContainer>
         </FullWidthPanel>
         <HandyHintTitle title="when do i need to do things" />
-
-        <FullWidthPanel colours="bg-gold white" maxWidth="60rem">
+        <FullWidthPanel colours="bg-gold white" maxWidth="57rem">
           <GrowingCalender />
         </FullWidthPanel>
+        <PotatoeGrowingGuide />
+        <CourgettesGrowingGuide />
+        <TomatoGrowingGuide />
+        <PeppersGrowingGuide />
+        <OnionsGrowingGuide />
+        <ApplesGrowingGuide />
+        <SquashGrowingGuide />
+        <StrawberryGrowingGuide />
+        <CarrotsGrowingGuide />
+        <RainbowChardGrowingGuide />
+        <LettuceGrowingGuide />
+        <CucumberGrowingGuide />
+        <LeekGrowingGuide />
+        <AvocadoGrowingGuide />
       </Layout>
     </>
   )
@@ -282,13 +308,7 @@ const GridItem = styled.div`
   grid-row: span 1;
 `
 
-const GridImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`
-
-const StyledLink = styled(props => <Link {...props} />)`
+const StyledLink = styled(props => <AnchorLink {...props} />)`
   display: flex;
   flex-direction: column;
   align-items: center;

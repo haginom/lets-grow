@@ -61,12 +61,13 @@ const LeekGrowingGuide = () => {
           <StaticImage
             style={{
               position: "absolute",
-              height: "12rem",
-              width: "12rem",
+              height: "20vw",
+              width: "20vw",
               top: "1rem",
               right: "5%",
+              maxWidth: "12rem",
+              maxHeight: "12rem",
             }}
-            alt=""
             src="../../../images/portal/get-growing-guide/Leek.png"
           />
         }
@@ -110,9 +111,11 @@ const LeekGrowingGuide = () => {
         <div className="mb3">
           <StaticImage
             style={{
+              width: "20vw",
               maxWidth: "12rem",
               float: "right",
-              marginTop: "-2rem",
+              marginTop: "-1rem",
+              marginLeft: "1rem",
               transform: "rotate(13deg)",
             }}
             objectFit="contain"
@@ -132,8 +135,13 @@ const LeekGrowingGuide = () => {
             <StaticImage
               objectFit="contain"
               style={{
-                marginTop: "20rem",
-                paddingLeft: "2rem",
+                position: "absolute",
+                height: "16vw",
+                width: "16vw",
+                maxHeight: "8rem",
+                maxWidth: "8rem",
+                bottom: "2rem",
+                left: 0,
               }}
               src="../../../images/portal/get-growing-guide/leek-assets/leeks-new.png"
               alt="image"

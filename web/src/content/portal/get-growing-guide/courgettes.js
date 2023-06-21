@@ -15,10 +15,12 @@ const CourgettesGrowingGuide = () => {
           <StaticImage
             style={{
               position: "absolute",
-              height: "12rem",
-              width: "12rem",
+              height: "20vw",
+              width: "20vw",
               top: "1rem",
               right: "5%",
+              maxWidth: "12rem",
+              maxHeight: "12rem",
             }}
             alt=""
             src="../../../images/portal/get-growing-guide/Courgette.png"
@@ -68,7 +70,7 @@ const CourgettesGrowingGuide = () => {
           July to October - Harvest (you are likely to return in Sept to some
           very large courgettes!)
         </Paragraph>
-        <Subheading className="coffeeTea mb3">What to do?</Subheading>
+        <Subheading className="coffeeTea  mb3 mt4">What to do?</Subheading>
         <Paragraph className="fw6 mv3">
           If planting from seed in April/ early May...
         </Paragraph>
@@ -176,7 +178,7 @@ const CourgettesGrowingGuide = () => {
           </li>
         </List>
         <StaticImage
-          style={{ float: "right", width: "550px" }}
+          style={{ width: "60vw", maxWidth: "20rem", float: "right" }}
           src="../../../images/portal/get-growing-guide/courgette-assets/watering-can-gloves.png"
           alt=""
         />
@@ -235,8 +237,10 @@ const CourgettesGrowingGuide = () => {
           vegetableImage={
             <StaticImage
               style={{
-                width: "200px",
-                height: "260px",
+                width: "35vw",
+                height: "40vw",
+                maxWidth: "200px",
+                maxHeight: "260px",
                 bottom: "-1.5rem",
                 right: "-1rem",
                 transform: "rotate(5deg)",

@@ -190,7 +190,7 @@ const Ggg = () => {
               <StyledLink to="#chard">
                 <StaticImage
                   alt=""
-                  src="../../images/portal/get-growing-guide/Rainbow Chard.png"
+                  src="../../images/portal/get-growing-guide/RainbowChard.png"
                 />
                 <InnerWrapper>Rainbow Chard</InnerWrapper>
               </StyledLink>
@@ -233,8 +233,8 @@ const Ggg = () => {
             </GridItem>
           </GridContainer>
         </FullWidthPanel>
-        <HandyHintTitle title="when do i need to do things" />
-        <FullWidthPanel colours="bg-gold white" maxWidth="57rem">
+        <HandyHintTitle title="when do i need to do things?" />
+        <FullWidthPanel colours="bg-gold white" noPadding maxWidth="57rem">
           <GrowingCalender />
         </FullWidthPanel>
         <PotatoeGrowingGuide />
@@ -265,7 +265,7 @@ const GetGrowingGuide = ({ ...props }) => (
 const Subheading = styled.h2`
   font-size: 1.8rem;
   font-style: italic;
-  @media screen and (min-width: 35em) {
+  @media screen and (min-width: 60em) {
     margin-left: ${props => (props.ml ? props.ml : "1rem")};
   }
 `
@@ -279,8 +279,8 @@ const Paragraph = styled.p`
   margin-top: ${props => (props.mts ? props.mts : "0.5rem")};
 
   @media screen and (min-width: 35em) {
-    font-size: 1.2rem;
-    line-height: 1.1rem;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
     margin-top: ${props => (props.mtm ? props.mtm : "0.5rem")};
     margin-bottom: ${props => (props.mbm ? props.mbm : "0rem")};
   }
@@ -298,9 +298,18 @@ const Paragraph = styled.p`
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  gap: 3rem;
+
+  gap: 0.5rem;
+
+  @media screen and (min-width: 35rem) {
+    gap: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  @media screen and (min-width: 60rem) {
+    gap: 3rem;
+  }
 `
 
 const GridItem = styled.div`

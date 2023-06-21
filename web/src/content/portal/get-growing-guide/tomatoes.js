@@ -37,10 +37,12 @@ const TomatoGrowingGuide = () => {
           <StaticImage
             style={{
               position: "absolute",
-              height: "12rem",
-              width: "12rem",
+              height: "20vw",
+              width: "20vw",
               top: "1rem",
               right: "5%",
+              maxWidth: "12rem",
+              maxHeight: "12rem",
             }}
             alt=""
             src="../../../images/portal/get-growing-guide/Tomatoes.png"
@@ -49,7 +51,7 @@ const TomatoGrowingGuide = () => {
       />
 
       <FullWidthPanel colours="bg-gold white" maxWidth="56rem">
-        <Subheading className="coffeeTea mv3">Planting Tomatos</Subheading>
+        <Subheading className="coffeeTea mv3">Planting Tomatoes</Subheading>
         <Paragraph className="mb4 fw6">
           It is not difficult to grow tomatoes from seed, however you may find
           that just one or two plants bought from your garden centre in
@@ -120,9 +122,11 @@ const TomatoGrowingGuide = () => {
           vegetableImage={
             <StaticImage
               style={{
-                width: "200px",
-                height: "160px",
-                bottom: "-3rem",
+                width: "35vw",
+                height: "30vw",
+                maxWidth: "200px",
+                maxHeight: "160px",
+                bottom: "-2rem",
                 right: "3rem",
               }}
               imgStyle={{}}

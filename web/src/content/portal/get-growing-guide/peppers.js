@@ -75,10 +75,12 @@ const PeppersGrowingGuide = () => {
           <StaticImage
             style={{
               position: "absolute",
-              height: "12rem",
-              width: "12rem",
+              height: "20vw",
+              width: "20vw",
               top: "1rem",
               right: "5%",
+              maxWidth: "12rem",
+              maxHeight: "12rem",
             }}
             alt=""
             src="../../../images/portal/get-growing-guide/Pepper.png"
@@ -126,7 +128,7 @@ const PeppersGrowingGuide = () => {
         <Subheading className="coffeeTea mb3 ">When?</Subheading>
         <Paragraph className="fw6">April/ early May - Planting.</Paragraph>
         <Paragraph className=" fw6 mb4">July to October - Harvest.</Paragraph>
-        <Subheading className="coffeeTea mb3">What to do?</Subheading>
+        <Subheading className="coffeeTea  mb3 mt4">What to do?</Subheading>
         <List>
           {plantingInstructions.map((list, index) => (
             <li key={index}>{list}</li>
@@ -134,7 +136,7 @@ const PeppersGrowingGuide = () => {
         </List>
         <div className="w-100 cf">
           <StaticImage
-            style={{ maxWidth: "30rem", float: "right" }}
+            style={{ width: "60vw", maxWidth: "30rem", float: "right" }}
             src="../../../images/portal/get-growing-guide/peppers-assets/peppers-watering-can.png"
           />
         </div>
@@ -156,8 +158,8 @@ const PeppersGrowingGuide = () => {
               transform: "scaleX(-1) rotate(10deg) scale(0.6)",
               objectFit: "contain",
               marginRight: "2rem",
-              marginLeft: "-5rem",
-              marginTop: "-5rem",
+              marginLeft: "-3rem",
+              marginTop: "-3rem",
             }}
             src="../../../images/portal/get-growing-guide/peppers-assets/pepper-image.png"
           />
@@ -165,7 +167,7 @@ const PeppersGrowingGuide = () => {
             style={{
               transform: "scale(1.1)",
               objectFit: "contain",
-              marginLeft: "3rem",
+              marginLeft: "2rem",
             }}
             src="../../../images/portal/get-growing-guide/peppers-assets/Peppers-what-you-need.png"
           />
@@ -184,7 +186,7 @@ const PeppersGrowingGuide = () => {
         </List>
         <div style={{ maxWidth: "58rem" }}>
           <StaticImage
-            style={{ maxWidth: "30rem", float: "right" }}
+            style={{ width: "60vw", maxWidth: "30rem", float: "right" }}
             src="../../../images/portal/get-growing-guide/peppers-assets/peppers-trowel.png"
           />
         </div>
@@ -209,12 +211,14 @@ const PeppersGrowingGuide = () => {
           vegetableImage={
             <StaticImage
               style={{
-                width: "200px",
-                height: "250px",
-                bottom: "-5rem",
-                right: "3rem",
+                width: "30vw",
+                height: "35vw",
+                maxWidth: "180px",
+                maxHeight: "220px",
+                bottom: "-1.5rem",
+                right: "1rem",
+                transform: "rotate(5deg)",
               }}
-              imgStyle={{}}
               className="vegetableImage"
               src="../../../images/vegetables/Peppers.png"
               alt="image"

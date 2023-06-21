@@ -75,10 +75,12 @@ const SquashGrowingGuide = () => {
           <StaticImage
             style={{
               position: "absolute",
-              height: "12rem",
-              width: "12rem",
+              height: "20vw",
+              width: "20vw",
               top: "1rem",
               right: "5%",
+              maxWidth: "12rem",
+              maxHeight: "12rem",
             }}
             alt=""
             src="../../../images/portal/get-growing-guide/Squash.png"
@@ -135,7 +137,7 @@ const SquashGrowingGuide = () => {
         </Paragraph>
         <Paragraph className="fw6">LateMay/ June - Plant out.</Paragraph>
         <Paragraph className="fw6 mb4">July-October - Harvest.</Paragraph>
-        <Subheading className="coffeeTea mb3">What to do?</Subheading>
+        <Subheading className="coffeeTea mb3 mt4">What to do?</Subheading>
         <List>
           {plantingInstructions.map((list, index) => (
             <li>{list}</li>

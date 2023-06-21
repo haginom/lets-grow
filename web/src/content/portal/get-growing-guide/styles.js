@@ -37,10 +37,13 @@ export const Spacer = styled.tr`
   width: 100%;
 `
 export const Subheading = styled.h2`
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-style: italic;
+
   @media screen and (min-width: 35em) {
+    font-size: 1.8rem;
     margin-left: ${props => (props.ml ? props.ml : "1rem")};
+    margin-bottom: 1rem;
   }
 `
 
@@ -48,14 +51,14 @@ export const Paragraph = styled.p`
   font-size: 0.8rem;
   line-height: 1rem;
   font-weight: ${props => (props.fw ? props.fw : "400")};
-  margin-bottom: ${props => (props.mbs ? props.mbs : "0rem")};
+  margin-bottom: ${props => (props.mbs ? props.mbs : "0.25rem")};
   margin-top: ${props => (props.mts ? props.mts : "0.5rem")};
 
   @media screen and (min-width: 35em) {
     font-size: 1.2rem;
     line-height: 1.3rem;
     margin-top: ${props => (props.mtm ? props.mtm : "0.5rem")};
-    margin-bottom: ${props => (props.mbm ? props.mbm : "0rem")};
+    margin-bottom: ${props => (props.mbm ? props.mbm : "0.5rem")};
   }
 
   @media screen and (min-width: 60em) {
@@ -63,7 +66,7 @@ export const Paragraph = styled.p`
     line-height: 1.5rem;
     padding-bottom: 0.25rem;
     margin-left: ${props => (props.ml ? props.ml : "1rem")};
-    margin-bottom: ${props => (props.mbl ? props.mbl : "0rem")};
+    margin-bottom: ${props => (props.mbl ? props.mbl : "0.75rem")};
     margin-top: ${props => (props.mt ? props.mt : "0.25rem")};
   }
 `
@@ -76,8 +79,8 @@ export const List = styled.ul`
   > li {
     list-style-position: inside;
     list-style-type: none;
-    font-size: 1.2rem;
-    line-height: 1.3rem;
+    font-size: 0.8rem;
+    line-height: 1rem;
     max-width: 56rem;
     margin-bottom: ${props => (props.mb ? props.ml : "1rem")};
     margin-left: ${props => (props.ml ? props.ml : "1rem")};

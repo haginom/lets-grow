@@ -79,10 +79,12 @@ const CucumberGrowingGuide = () => {
           <StaticImage
             style={{
               position: "absolute",
-              height: "12rem",
-              width: "12rem",
+              height: "20vw",
+              width: "20vw",
               top: "1rem",
               right: "5%",
+              maxWidth: "12rem",
+              maxHeight: "12rem",
             }}
             alt=""
             src="../../../images/portal/get-growing-guide/Cucumber.png"
@@ -112,7 +114,7 @@ const CucumberGrowingGuide = () => {
 
         <Paragraph className="fw6">Feb/ March - Sow seed.</Paragraph>
         <Paragraph className="fw6 mb4">July to Oct - Harvest.</Paragraph>
-        <Subheading className="coffeeTea mb3">What to do?</Subheading>
+        <Subheading className="coffeeTea  mb3 mt4">What to do?</Subheading>
 
         <List>
           {cucumberPlantingInstructions.map((instruction, index) => (

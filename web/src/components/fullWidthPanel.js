@@ -7,6 +7,7 @@ import Bunting from "./decorative/bunting"
 import MrBloom from "./decorative/mrBloom"
 
 const FullWidthPanel = ({
+  noPadding,
   isMrBloom,
   children,
   colours,
@@ -25,7 +26,9 @@ const FullWidthPanel = ({
   <section className="w-100 ph1 mb2">
     <div
       style={{ overflow: "hidden" }}
-      className={`${colours} br3 ph3 pv4 ph5-ns pv4-ns f6 f5-ns fw5`}
+      className={`${colours} br3 ${
+        noPadding ? "ph1 pv1 " : "ph3 pv4 "
+      }ph5-ns pv4-ns f6 f5-ns fw5`}
     >
       <Centered className="relative" maxWidth={maxWidth}>
         {hasBunting && <Bunting />}

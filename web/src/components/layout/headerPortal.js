@@ -11,9 +11,7 @@ const HeaderLayout = ({ image }) => (
       <Nav.Link to="/portal" className="mr3 mr4-ns">
         HOME
       </Nav.Link>
-      <Nav.Link to="/portal/getting-started-guide" className="mr3 mr4-ns">
-        GETTING STARTED GUIDE
-      </Nav.Link>
+
       <Nav.Link to="/portal/resources-library" className="mr3 mr4-ns">
         RESOURCES LIBRARY
       </Nav.Link>

@@ -47,10 +47,12 @@ const LettuceGrowingGuide = () => {
           <StaticImage
             style={{
               position: "absolute",
-              height: "12rem",
-              width: "12rem",
+              height: "20vw",
+              width: "20vw",
               top: "1rem",
               right: "5%",
+              maxWidth: "12rem",
+              maxHeight: "12rem",
             }}
             alt=""
             src="../../../images/portal/get-growing-guide/Lettuce.png"
@@ -90,12 +92,19 @@ const LettuceGrowingGuide = () => {
         <Paragraph className="fw6 mb4">
           June to October - Harvest, depending on when you planted.
         </Paragraph>
-        <Subheading className="coffeeTea m3">What to do?</Subheading>
+        <Subheading className="coffeeTea mb3 mt4">What to do?</Subheading>
         <List>
           {lettucePlantingInstructions.map((list, index) => (
             <li key={index}>{list}</li>
           ))}
         </List>
+        <div style={{ maxWidth: "58rem" }}>
+          <StaticImage
+            style={{ width: "60vw", maxWidth: "40rem", float: "right" }}
+            objectFit="contain"
+            src="../../../images/portal/get-growing-guide/lettuce-assets/lettuce-wellies.png"
+          />
+        </div>
       </FullWidthPanel>
       <VegTitle
         colour="bg-gold white"
@@ -108,11 +117,21 @@ const LettuceGrowingGuide = () => {
           facts={lettuceFacts}
           recipeInstructions={recipeInstructions}
           ingredients={lettuceIngredients}
-          moreInfo={
-            <p>
-              Check out our Transitions session in the Celebrations theme, where
-              you will meet Doop the Butternut Squash.
-            </p>
+          vegetableImage={
+            <StaticImage
+              objectFit="contain"
+              style={{
+                position: "absolute",
+                height: "16vw",
+                width: "16vw",
+                maxHeight: "8rem",
+                maxWidth: "8rem",
+                bottom: 0,
+                left: 0,
+              }}
+              src="../../../images/portal/get-growing-guide/lettuce-assets/lettuce-single.png"
+              alt="image"
+            />
           }
         />
       </FullWidthPanel>

@@ -70,10 +70,12 @@ const ApplesGrowingGuide = () => {
           <StaticImage
             style={{
               position: "absolute",
-              height: "12rem",
-              width: "12rem",
+              height: "20vw",
+              width: "20vw",
               top: "1rem",
               right: "5%",
+              maxWidth: "12rem",
+              maxHeight: "12rem",
             }}
             alt=""
             src="../../../images/portal/get-growing-guide/Apple.png"
@@ -141,7 +143,7 @@ const ApplesGrowingGuide = () => {
           Plant in September/ October/ November or March/ April/ May, but not
           when the ground is frozen.
         </Paragraph>
-        <Subheading className="coffeeTea mb3">What to do?</Subheading>
+        <Subheading className="coffeeTea mb3 mt4">What to do?</Subheading>
         <List>
           {plantingInstructions.map((list, index) => (
             <li>{list}</li>
@@ -169,10 +171,12 @@ const ApplesGrowingGuide = () => {
           vegetableImage={
             <StaticImage
               style={{
-                width: "250px",
-                height: "160px",
-                bottom: "-0.5rem",
-                right: "3rem",
+                width: "35vw",
+                height: "35vw",
+                maxWidth: "240px",
+                maxHeight: "200px",
+                bottom: "-1.5rem",
+                right: "2rem",
                 transform: "rotate(3deg)",
               }}
               imgStyle={{}}

@@ -56,10 +56,12 @@ const AvocadoGrowingGuide = () => {
           <StaticImage
             style={{
               position: "absolute",
-              height: "12rem",
-              width: "12rem",
+              height: "20vw",
+              width: "20vw",
               top: "1rem",
               right: "5%",
+              maxWidth: "12rem",
+              maxHeight: "12rem",
             }}
             alt=""
             src="../../../images/portal/get-growing-guide/Avocado.png"
@@ -131,10 +133,12 @@ const AvocadoGrowingGuide = () => {
           vegetableImage={
             <StaticImage
               style={{
-                width: "200px",
-                height: "250px",
-                bottom: "-5rem",
-                left: "3rem",
+                width: "20vw",
+                height: "25vw",
+                maxWidth: "125px",
+                maxHeight: "150px",
+                bottom: "-2rem",
+                right: "2rem",
               }}
               imgStyle={{}}
               className="vegetableImage"

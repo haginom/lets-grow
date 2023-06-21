@@ -122,7 +122,6 @@ const VegetableTable = ({
 export const StyledTable = styled.table`
   table-layout: fixed;
   position: relative;
-  margin-top: 2rem;
   border-collapse: separate;
   border-spacing: 0;
   overflow: hidden;
@@ -133,9 +132,9 @@ export const StyledTable = styled.table`
   tr {
     th {
       text-align: left;
-      padding: 1rem;
-      font-size: 1.2rem;
-      line-height: 1.5rem;
+      padding: 0.5rem;
+      font-size: 0.8rem;
+      line-height: 1rem;
       font-weight: 600;
       border-bottom: 3px solid white;
       border-top: 3px solid white;
@@ -143,10 +142,10 @@ export const StyledTable = styled.table`
     td {
       border: 3px solid white;
       border-left: 5px solid white;
-      font-size: 1.2rem;
-      line-height: 1.5rem;
+      font-size: 0.8rem;
+      line-height: 1rem;
       font-weight: 400;
-      padding: 0.75rem;
+      padding: 0.5rem;
     }
 
     .corner-left {
@@ -162,17 +161,61 @@ export const StyledTable = styled.table`
       border-bottom-right-radius: 12px;
     }
     .col-one {
+      width: 12%;
+    }
+    .col-three {
+      width: 12%;
+    }
+  }
+
+  @media screen and (min-width: 35rem) {
+    tr {
+      th {
+        padding: 0.75rem;
+
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+      td {
+        padding: 0.75rem;
+
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+    }
+    .col-one {
+      width: 14%;
+    }
+    .col-three {
+      width: 14%;
+    }
+  }
+  @media screen and (min-width: 60rem) {
+    margin-top: 2rem;
+
+    tr {
+      th {
+        padding: 1rem;
+
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+      td {
+        padding: 1rem;
+
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+    }
+    td {
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+    }
+    .col-one {
       width: 18%;
     }
     .col-three {
       width: 19%;
-    }
-  }
-
-  @media screen and (min-width: 60em) {
-    td {
-      border-left: 1px solid white;
-      border-right: 1px solid white;
     }
   }
 

@@ -14,10 +14,12 @@ const PotatoeGrowingGuide = () => {
           <StaticImage
             style={{
               position: "absolute",
-              height: "12rem",
-              width: "12rem",
+              height: "20vw",
+              width: "20vw",
               top: "1rem",
               right: "5%",
+              maxWidth: "12rem",
+              maxHeight: "12rem",
             }}
             alt=""
             src="../../../images/portal/get-growing-guide/Potatoes.png"
@@ -25,7 +27,7 @@ const PotatoeGrowingGuide = () => {
         }
       />
       <FullWidthPanel colours="bg-gold white" maxWidth="58rem">
-        <Subheading className="coffeeTea mv2">Planting Potatoes</Subheading>
+        <Subheading className="coffeeTea mv3">Planting Potatoes</Subheading>
         <Paragraph className="mb4">
           Potatoes are one of the easiest and most satisfying things to grow
           with children. You can easily see the growth.
@@ -67,7 +69,7 @@ const PotatoeGrowingGuide = () => {
           three shoots, so rub off any extra ones with your thumb just before
           planting. This process is called chitting.
         </Paragraph>
-        <Subheading className="coffeeTea mb3">Planting...</Subheading>
+        <Subheading className="coffeeTea mb3 mt4">Planting...</Subheading>
         <List>
           <li>
             Fill your bag or pot with 10cm compost and put three-five potatoes
@@ -95,6 +97,13 @@ const PotatoeGrowingGuide = () => {
             have died back.
           </li>
         </List>
+        <div style={{ maxWidth: "58rem" }}>
+          <StaticImage
+            style={{ width: "50vw", maxWidth: "20rem", float: "right" }}
+            objectFit="contain"
+            src="../../../images/portal/get-growing-guide/potato-assets/sack-of-potatoes.png"
+          />
+        </div>
       </FullWidthPanel>
       <VegTitle
         colour="bg-gold white"
@@ -141,8 +150,10 @@ const PotatoeGrowingGuide = () => {
           dug={
             <StaticImage
               style={{
-                width: "80px",
-                height: "120px",
+                width: "25vw",
+                height: "25vw",
+                maxWidth: "80px",
+                maxHeight: "120px",
                 bottom: "-2rem",
                 left: "1rem",
               }}
@@ -155,10 +166,12 @@ const PotatoeGrowingGuide = () => {
           vegetableImage={
             <StaticImage
               style={{
-                width: "240px",
-                height: "200px",
+                width: "35vw",
+                height: "35vw",
+                maxWidth: "240px",
+                maxHeight: "200px",
                 bottom: "-3rem",
-                right: "3rem",
+                right: "1rem",
               }}
               imgStyle={{ transform: "rotate(5deg)" }}
               className="vegetableImage"

@@ -55,10 +55,12 @@ const ChardGrowingGuide = () => {
           <StaticImage
             style={{
               position: "absolute",
-              height: "12rem",
-              width: "12rem",
+              height: "20vw",
+              width: "20vw",
               top: "1rem",
               right: "5%",
+              maxWidth: "12rem",
+              maxHeight: "12rem",
             }}
             alt=""
             src="../../../images/portal/get-growing-guide/RainbowChard.png"
@@ -75,7 +77,12 @@ const ChardGrowingGuide = () => {
           growing. You can plant Rainbow Chard leaves three weeks in advance of
           delivering our “Seedlings” session.
         </Paragraph>
-        <NotepadWrapper flexItemOneSize="20%">
+        <NotepadWrapper flexItemOneSize="80%">
+          <StaticImage
+            alt=""
+            objectFit="contain"
+            src="../../../images/portal/get-growing-guide/chard-assets/rainbow-chard.png"
+          />
           <StaticImage
             alt=""
             objectFit="contain"
@@ -96,7 +103,7 @@ const ChardGrowingGuide = () => {
         <Paragraph className="fw6 mb4">
           June to November - Harvest, depending on when you planted.
         </Paragraph>
-        <Subheading className="coffeeTea mb3">What to do?</Subheading>
+        <Subheading className="coffeeTea  mb3 mt4">What to do?</Subheading>
         <List>
           {plantingInstructions.map((list, index) => (
             <li key={index}>{list}</li>
@@ -104,6 +111,7 @@ const ChardGrowingGuide = () => {
         </List>
         <StaticImage
           alt=""
+          style={{ marginTop: "-2rem" }}
           objectFit="contain"
           src="../../../images/portal/get-growing-guide/chard-assets/chard-tools.png"
         />
@@ -119,6 +127,22 @@ const ChardGrowingGuide = () => {
           facts={facts}
           recipeInstructions={recipeInstructions}
           ingredients={ingredients}
+          vegetableImage={
+            <StaticImage
+              objectFit="contain"
+              style={{
+                position: "absolute",
+                height: "16vw",
+                width: "16vw",
+                maxHeight: "8rem",
+                maxWidth: "8rem",
+                bottom: "2rem",
+                left: 0,
+              }}
+              src="../../../images/portal/get-growing-guide/chard-assets/rainbow-chard.png"
+              alt="image"
+            />
+          }
         />
       </FullWidthPanel>
     </section>

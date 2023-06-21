@@ -58,10 +58,12 @@ const OnionsGrowingGuide = () => {
           <StaticImage
             style={{
               position: "absolute",
-              height: "12rem",
-              width: "12rem",
+              height: "20vw",
+              width: "20vw",
               top: "1rem",
               right: "5%",
+              maxWidth: "12rem",
+              maxHeight: "12rem",
             }}
             alt=""
             src="../../../images/portal/get-growing-guide/Onion.png"
@@ -98,17 +100,17 @@ const OnionsGrowingGuide = () => {
         <Paragraph className="mb4 fw6">
           Harvest in Aug/ Sept, if you planted in March/ April.
         </Paragraph>
-        <Subheading className="coffeeTea mb3">What to do?</Subheading>
+        <Subheading className="coffeeTea mb3 mt4">What to do?</Subheading>
         <List>
           {plantingInstructions.map((list, index) => (
-            <li>{list}</li>
+            <li key={index}>{list}</li>
           ))}
         </List>
         <StaticImage
           alt=""
           objectFit="contain"
           style={{ width: "100%" }}
-          src="../../../images/portal/get-growing-guide/onions-assets/onion-group.png"
+          src="../../../images/portal/get-growing-guide/onions-assets/onions-bucket.png"
         />
       </FullWidthPanel>
       <VegTitle
@@ -131,10 +133,12 @@ const OnionsGrowingGuide = () => {
           vegetableImage={
             <StaticImage
               style={{
-                width: "200px",
-                height: "160px",
+                width: "35vw",
+                height: "35vw",
+                maxWidth: "240px",
+                maxHeight: "200px",
                 bottom: "-3rem",
-                left: "3rem",
+                right: "1rem",
               }}
               imgStyle={{}}
               className="vegetableImage"

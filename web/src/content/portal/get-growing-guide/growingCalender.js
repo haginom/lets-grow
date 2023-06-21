@@ -2,7 +2,7 @@ import * as React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 
-export const GrowingCalender = ({ data }) => (
+export const GrowingCalender = () => (
   <>
     <Table className="dt dt--fixed">
       <tr>
@@ -14,20 +14,21 @@ export const GrowingCalender = ({ data }) => (
           <StyledHeading>
             <StaticImage
               alt=""
+              style={{ width: "80%", height: "80%" }}
               src="../../../images/portal/get-growing-guide/Potatoes.png"
             />
             <InnerWrapper>Potatoes</InnerWrapper>
           </StyledHeading>
         </th>
 
-        <Th className="bg-hot-pink white first-left-column">February</Th>
+        <Th className="bg-hot-pink white first-left-column">Feb</Th>
         <Th className="bg-hot-pink white">March</Th>
         <Th className="bg-hot-pink white">April</Th>
         <Th className="bg-hot-pink white">May</Th>
         <Th className="bg-hot-pink white">June</Th>
         <Th className="bg-hot-pink white">July</Th>
         <Th className="bg-hot-pink white">Sept</Th>
-        <Th className="bg-hot-pink white">October</Th>
+        <Th className="bg-hot-pink white">Oct</Th>
         <Th className="bg-hot-pink white last-right-column">Nov</Th>
       </tr>
       <tr>
@@ -59,6 +60,7 @@ export const GrowingCalender = ({ data }) => (
           <StyledHeading>
             <StaticImage
               alt=""
+              style={{ width: "80%", height: "80%" }}
               src="../../../images/portal/get-growing-guide/Courgette.png"
             />
             <InnerWrapper>Courgettes</InnerWrapper>
@@ -83,6 +85,7 @@ export const GrowingCalender = ({ data }) => (
           <StyledHeading>
             <StaticImage
               alt=""
+              style={{ width: "80%", height: "80%" }}
               src="../../../images/portal/get-growing-guide/Tomatoes.png"
             />
             <InnerWrapper>Tomatoes</InnerWrapper>
@@ -103,6 +106,7 @@ export const GrowingCalender = ({ data }) => (
           <StyledHeading>
             <StaticImage
               alt=""
+              style={{ width: "80%", height: "80%" }}
               src="../../../images/portal/get-growing-guide/Pepper.png"
             />
             <InnerWrapper>Peppers</InnerWrapper>
@@ -124,6 +128,7 @@ export const GrowingCalender = ({ data }) => (
             <StaticImage
               alt=""
               src="../../../images/portal/get-growing-guide/Onion.png"
+              style={{ width: "80%", height: "80%" }}
             />
             <InnerWrapper>Onions</InnerWrapper>
           </StyledHeading>
@@ -141,14 +146,14 @@ export const GrowingCalender = ({ data }) => (
         <td className="bg-gold white">Buy and plant 'onion sets'</td>
       </tr>
       <tr>
-        <Th className="bg-hot-pink white ">February</Th>
+        <Th className="bg-hot-pink white ">Feb</Th>
         <Th className="bg-hot-pink white">March</Th>
         <Th className="bg-hot-pink white">April</Th>
         <Th className="bg-hot-pink white">May</Th>
         <Th className="bg-hot-pink white">June</Th>
         <Th className="bg-hot-pink white">July</Th>
         <Th className="bg-hot-pink white">Sept</Th>
-        <Th className="bg-hot-pink white">October</Th>
+        <Th className="bg-hot-pink white">Oct</Th>
         <Th className="bg-hot-pink white ">Nov</Th>
       </tr>
       <tr>
@@ -156,6 +161,7 @@ export const GrowingCalender = ({ data }) => (
           <StyledHeading>
             <StaticImage
               alt=""
+              style={{ width: "80%", height: "80%" }}
               src="../../../images/portal/get-growing-guide/Apple.png"
             />
             <InnerWrapper>Apples</InnerWrapper>
@@ -176,6 +182,7 @@ export const GrowingCalender = ({ data }) => (
           <StyledHeading>
             <StaticImage
               alt=""
+              style={{ width: "80%", height: "80%" }}
               src="../../../images/portal/get-growing-guide/Squash.png"
             />
             <InnerWrapper>Squash</InnerWrapper>
@@ -196,6 +203,7 @@ export const GrowingCalender = ({ data }) => (
           <StyledHeading>
             <StaticImage
               alt=""
+              style={{ width: "80%", height: "80%" }}
               src="../../../images/portal/get-growing-guide/Strawberry.png"
             />
             <InnerWrapper>Strawberries</InnerWrapper>
@@ -219,6 +227,7 @@ export const GrowingCalender = ({ data }) => (
           <StyledHeading>
             <StaticImage
               alt=""
+              style={{ width: "80%", height: "80%" }}
               src="../../../images/portal/get-growing-guide/Carrot.png"
             />
             <InnerWrapper>Carrots</InnerWrapper>
@@ -248,6 +257,7 @@ export const GrowingCalender = ({ data }) => (
           <StyledHeading>
             <StaticImage
               alt=""
+              style={{ width: "80%", height: "80%" }}
               src="../../../images/portal/get-growing-guide/Rainbow Chard.png"
             />
             <InnerWrapper>Rainbow Chard</InnerWrapper>
@@ -274,14 +284,14 @@ export const GrowingCalender = ({ data }) => (
         <td className="bg-gold white">Harvest by cutting leaves.</td>
       </tr>
       <tr>
-        <Th className="bg-hot-pink white ">February</Th>
+        <Th className="bg-hot-pink white ">Feb</Th>
         <Th className="bg-hot-pink white">March</Th>
         <Th className="bg-hot-pink white">April</Th>
         <Th className="bg-hot-pink white">May</Th>
         <Th className="bg-hot-pink white">June</Th>
         <Th className="bg-hot-pink white">July</Th>
         <Th className="bg-hot-pink white">Sept</Th>
-        <Th className="bg-hot-pink white">October</Th>
+        <Th className="bg-hot-pink white">Oct</Th>
         <Th className="bg-hot-pink white ">Nov</Th>
       </tr>
       <tr>
@@ -289,6 +299,7 @@ export const GrowingCalender = ({ data }) => (
           <StyledHeading>
             <StaticImage
               alt=""
+              style={{ width: "80%", height: "80%" }}
               src="../../../images/portal/get-growing-guide/Carrot.png"
             />
             <InnerWrapper>Carrots</InnerWrapper>
@@ -318,6 +329,7 @@ export const GrowingCalender = ({ data }) => (
           <StyledHeading>
             <StaticImage
               alt=""
+              style={{ width: "80%", height: "80%" }}
               src="../../../images/portal/get-growing-guide/Cucumber.png"
             />
             <InnerWrapper>Cucumber</InnerWrapper>
@@ -338,6 +350,7 @@ export const GrowingCalender = ({ data }) => (
           <StyledHeading>
             <StaticImage
               alt=""
+              style={{ width: "80%", height: "80%" }}
               src="../../../images/portal/get-growing-guide/Leek.png"
             />
             <InnerWrapper>Leek</InnerWrapper>
@@ -371,6 +384,7 @@ export const GrowingCalender = ({ data }) => (
           <StyledHeading>
             <StaticImage
               alt=""
+              style={{ width: "80%", height: "80%" }}
               src="../../../images/portal/get-growing-guide/Avocado.png"
             />
             <InnerWrapper>Avocado</InnerWrapper>
@@ -395,8 +409,9 @@ const Table = styled.table`
   border-spacing: 0;
   overflow: hidden;
   border-radius: 12px;
-  border: 10px solid white;
+  border: 3px solid white;
   background-color: white;
+
   tr {
     th {
       border-left: ${props => props.bl || "1px solid white"};
@@ -404,16 +419,17 @@ const Table = styled.table`
     }
     td {
       border: 1px solid white;
-      font-size: 0.8rem;
+      font-size: 0.4rem;
       line-height: 1rem;
       font-weight: 400;
-      padding: 0.5rem;
+      padding: 0.2rem;
     }
 
     .col-header {
       border: 1px solid white;
-      padding: 1rem;
-      border-right: 10px solid white;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-right: 3px solid white;
       vertical-align: middle;
     }
 
@@ -433,28 +449,63 @@ const Table = styled.table`
     }
   }
 
-  @media screen and (min-width: 60em) {
-    th {
-      border-left: ${props => props.bl || "1px solid white"};
-      border-right: 1px solid white;
+  @media screen and (min-width: 35em) {
+    border: 6px solid white;
+
+    tr {
+      td {
+        font-size: 0.6rem;
+      }
+      .col-header {
+        border-right: 6px solid white;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+      }
     }
-    td {
-      border-left: 1px solid white;
-      border-right: 1px solid white;
+  }
+
+  @media screen and (min-width: 60em) {
+    border: 10px solid white;
+
+    tr {
+      th {
+        border-left: ${props => props.bl || "1px solid white"};
+        border-right: 1px solid white;
+      }
+      td {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+      }
+      .col-header {
+        border-right: 10px solid white;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
     }
   }
 `
 const Th = styled.th`
   vertical-align: middle;
-  padding: 0.5rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   text-transform: uppercase;
   line-height: 1rem;
   font-weight: 600;
-  font-size: 0.65rem;
+  font-size: 0.5rem;
+
+  @media screen and (min-width: 35rem) {
+    padding: 0.5rem;
+
+    line-height: 0.8rem;
+    font-size: 0.65rem;
+  }
 
   @media screen and (min-width: 60em) {
+    padding: 0.5rem;
+
     line-height: 1rem;
     font-size: 0.85rem;
   }

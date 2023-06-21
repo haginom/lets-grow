@@ -53,10 +53,12 @@ const StrawberryGrowingGuide = () => {
           <StaticImage
             style={{
               position: "absolute",
-              height: "12rem",
-              width: "12rem",
+              height: "20vw",
+              width: "20vw",
               top: "1rem",
               right: "5%",
+              maxWidth: "12rem",
+              maxHeight: "12rem",
             }}
             alt=""
             src="../../../images/portal/get-growing-guide/Strawberry.png"
@@ -99,7 +101,7 @@ const StrawberryGrowingGuide = () => {
         <Paragraph className="mb4 fw6">
           June/ July/ Aug/ Sept - Harvest.
         </Paragraph>
-        <Subheading className="coffeeTea mb3">What to do?</Subheading>
+        <Subheading className="coffeeTea  mb3 mt4">What to do?</Subheading>
         <List>
           {plantingInstructions.map((list, index) => (
             <li key={index}>{list}</li>
@@ -107,7 +109,7 @@ const StrawberryGrowingGuide = () => {
         </List>
         <div style={{ maxWidth: "58rem" }}>
           <StaticImage
-            style={{ maxWidth: "40rem", float: "right" }}
+            style={{ width: "60vw", maxWidth: "40rem", float: "right" }}
             objectFit="contain"
             src="../../../images/portal/get-growing-guide/strawberry-assets/strawberry-watering-can.png"
           />
@@ -128,8 +130,13 @@ const StrawberryGrowingGuide = () => {
             <StaticImage
               objectFit="contain"
               style={{
-                marginTop: "14rem",
-                paddingLeft: "2rem",
+                position: "absolute",
+                height: "16vw",
+                width: "16vw",
+                maxHeight: "8rem",
+                maxWidth: "8rem",
+                bottom: "2rem",
+                left: 0,
               }}
               src="../../../images/portal/get-growing-guide/strawberry-assets/strawberry-new.png"
               alt="image"

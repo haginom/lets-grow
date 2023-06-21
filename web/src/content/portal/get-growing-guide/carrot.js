@@ -61,10 +61,12 @@ const CarrotGrowingGuide = () => {
           <StaticImage
             style={{
               position: "absolute",
-              height: "12rem",
-              width: "12rem",
+              height: "20vw",
+              width: "20vw",
               top: "1rem",
               right: "5%",
+              maxWidth: "12rem",
+              maxHeight: "12rem",
             }}
             alt=""
             src="../../../images/portal/get-growing-guide/Carrot.png"
@@ -124,7 +126,7 @@ const CarrotGrowingGuide = () => {
           May to Oct - Harvest, dependent upon when you planted (12 to 16 weeks
           from planting).
         </Paragraph>
-        <Subheading className="coffeeTea m3">What to do?</Subheading>
+        <Subheading className="coffeeTea  mb3 mt4">What to do?</Subheading>
         <List>
           {plantingInstructions.map((list, index) => (
             <li key={index}>{list}</li>
@@ -132,7 +134,7 @@ const CarrotGrowingGuide = () => {
         </List>
         <div>
           <StaticImage
-            style={{ maxWidth: "40rem", float: "right", marginTop: "-2rem" }}
+            style={{ width: "60vw", maxWidth: "40rem", float: "right" }}
             objectFit="contain"
             src="../../../images/portal/get-growing-guide/carrots-assets/carrots-snippers.png"
           />
@@ -153,8 +155,13 @@ const CarrotGrowingGuide = () => {
             <StaticImage
               objectFit="contain"
               style={{
-                marginTop: "18rem",
-                paddingLeft: "2rem",
+                position: "absolute",
+                height: "16vw",
+                width: "16vw",
+                maxHeight: "8rem",
+                maxWidth: "8rem",
+                bottom: "2rem",
+                left: 0,
               }}
               src="../../../images/portal/get-growing-guide/carrots-assets/carrots-new.png"
               alt="image"

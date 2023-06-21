@@ -4,6 +4,7 @@ import VegTitle from "../../../components/portal/vegTitle"
 import { Subheading, Paragraph, List, NotepadWrapper } from "./styles"
 import VegetableTable from "../../../components/portal/continuousProvisionTable"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 const plantingInstructions = [
   "Make sure that your large container and compost are ready.",
@@ -204,8 +205,15 @@ const PeppersGrowingGuide = () => {
           ingredients={ingredients}
           moreInfo={
             <p>
-              Check out our Favourite Things session in the Getting To Know Each
-              Other theme, where you will meet Dilly & Dally the Peppers.
+              Check out our{" "}
+              <Link to="/portal/getting-to-know-each-other" className="fw6">
+                ‘Favourite Things ’
+              </Link>{" "}
+              session in the{" "}
+              <Link to="/portal/getting-to-know-each-other" className="fw6">
+                ‘Getting To Know Each Other’
+              </Link>{" "}
+              theme, where you will meet Dilly & Dally the Peppers.
             </p>
           }
           vegetableImage={
@@ -215,7 +223,7 @@ const PeppersGrowingGuide = () => {
                 height: "35vw",
                 maxWidth: "180px",
                 maxHeight: "220px",
-                bottom: "-1.5rem",
+                bottom: "-3.5rem",
                 right: "1rem",
                 transform: "rotate(5deg)",
               }}

@@ -4,6 +4,7 @@ import VegTitle from "../../../components/portal/vegTitle"
 import { Subheading, Paragraph, List } from "./styles"
 import VegetableTable from "../../../components/portal/continuousProvisionTable"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 const plantingInstructions = [
   "Make sure that you have enough large containers and compost ready.",
@@ -126,17 +127,24 @@ const OnionsGrowingGuide = () => {
           ingredients={ingredients}
           moreInfo={
             <p>
-              Check out our Bonfire Night session in the Celebrations theme,
-              where you will meet Sparks the Onion.
+              Check out our{" "}
+              <Link to="/portal/sessions/bonfire-night" className="fw6">
+                Bonfire Night{" "}
+              </Link>
+              session in the{" "}
+              <Link to="/portal/celebrations" className="fw6">
+                Celebrations
+              </Link>{" "}
+              theme, where you will meet Sparks the Onion.
             </p>
           }
           vegetableImage={
             <StaticImage
               style={{
                 width: "35vw",
-                height: "35vw",
-                maxWidth: "240px",
-                maxHeight: "200px",
+                height: "30vw",
+                maxWidth: "160px",
+                maxHeight: "160px",
                 bottom: "-3rem",
                 right: "1rem",
               }}

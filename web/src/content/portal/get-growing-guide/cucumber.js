@@ -5,6 +5,7 @@ import { Subheading, Paragraph, List } from "./styles"
 import VegetableTable from "../../../components/portal/continuousProvisionTable"
 import { StaticImage } from "gatsby-plugin-image"
 import { NotepadWrapper } from "./styles"
+import { Link } from "gatsby"
 
 const cucumberPlantingInstructions = [
   "Ensure that you have enough yoghurt pot sized containers for your seeds.",
@@ -150,8 +151,15 @@ const CucumberGrowingGuide = () => {
           ingredients={cucumberIngredients}
           moreInfo={
             <p>
-              Check out our Eid session in the Celebrations theme, where you
-              will meet Pip the Cucumber.
+              Check out our{" "}
+              <Link to="/portal/sessions/eid" className="fw6">
+                Eid{" "}
+              </Link>{" "}
+              session in the{" "}
+              <Link to="/portal/celebrations" className="fw6">
+                Celebrations{" "}
+              </Link>{" "}
+              theme, where you will meet Pip the Cucumber.
             </p>
           }
           spacerHeight={"12rem"}
@@ -161,7 +169,7 @@ const CucumberGrowingGuide = () => {
                 width: "200px",
                 height: "260px",
                 bottom: "-2.5rem",
-                right: "6rem",
+                right: "2rem",
                 transform: "rotate(5deg)",
               }}
               imgStyle={{}}

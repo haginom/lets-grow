@@ -5,6 +5,7 @@ import { Subheading, Paragraph, List } from "./styles"
 import VegetableTable from "../../../components/portal/continuousProvisionTable"
 import { StaticImage } from "gatsby-plugin-image"
 import { NotepadWrapper } from "./styles"
+import { Link } from "gatsby"
 
 const plantingInstructions = [
   "Have your pot, 'feet', compost, and stones ready.",
@@ -164,8 +165,15 @@ const ApplesGrowingGuide = () => {
           ingredients={ingredients}
           moreInfo={
             <p>
-              Check out our Easter session in the Celebrations theme, where you
-              will meet Bee the Apple.
+              Check out our{" "}
+              <Link to="/portal/sessions/easter" className="fw6">
+                Easter{" "}
+              </Link>
+              session in the{" "}
+              <Link to="/portal/celebrations" className="fw6">
+                Celebrations{" "}
+              </Link>
+              theme, where you will meet Bee the Apple.
             </p>
           }
           vegetableImage={

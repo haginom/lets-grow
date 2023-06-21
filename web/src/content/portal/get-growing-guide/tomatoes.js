@@ -5,6 +5,7 @@ import { Subheading, Paragraph, List } from "./styles"
 import VegetableTable from "../../../components/portal/continuousProvisionTable"
 import { NotepadWrapperSwap } from "./styles"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 const plantingOutText = [
   "Fill your container to 5cm from the top with compost.",
@@ -115,8 +116,15 @@ const TomatoGrowingGuide = () => {
           ]}
           moreInfo={
             <p>
-              Check out our ‘Looking after me’ session in the ‘Getting To Know
-              Each Other’ theme, where you will meet the Teeny Toms.
+              Check out our{" "}
+              <Link to="/portal/sessions/looking-after-me" className="fw6">
+                Looking after me’
+              </Link>
+              ‘ session in the{" "}
+              <Link to="/portal/getting-to-know-each-other" className="fw6">
+                ‘Getting To Know Each Other’
+              </Link>{" "}
+              theme, where you will meet the Teeny Toms.
             </p>
           }
           vegetableImage={
@@ -126,10 +134,9 @@ const TomatoGrowingGuide = () => {
                 height: "30vw",
                 maxWidth: "200px",
                 maxHeight: "160px",
-                bottom: "-2rem",
+                bottom: "-3rem",
                 right: "3rem",
               }}
-              imgStyle={{}}
               className="vegetableImage"
               src="../../../images/vegetables/teeny-toms.png"
               alt="image"

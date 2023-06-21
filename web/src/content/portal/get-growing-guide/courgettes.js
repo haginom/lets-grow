@@ -5,6 +5,7 @@ import { Subheading, Paragraph, List } from "./styles"
 import VegetableTable from "../../../components/portal/continuousProvisionTable"
 import { NotepadWrapper } from "./styles"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 const CourgettesGrowingGuide = () => {
   return (
@@ -228,9 +229,15 @@ const CourgettesGrowingGuide = () => {
           ]}
           moreInfo={
             <p>
-              Check out our <span className="fw6">All About Me</span> session in
-              the <span className="fw6">Getting To Know Each Other</span> theme,
-              where you will meet Oz the Courgette.
+              Check out our{" "}
+              <Link to="/portal/sessions/all-about-me" className="fw6">
+                All About Me
+              </Link>{" "}
+              session in the{" "}
+              <Link to="/portal/getting-to-know-each-other" className="fw6">
+                Getting To Know Each Other
+              </Link>{" "}
+              theme, where you will meet Oz the Courgette.
             </p>
           }
           spacerHeight={"12rem"}
@@ -241,7 +248,7 @@ const CourgettesGrowingGuide = () => {
                 height: "40vw",
                 maxWidth: "200px",
                 maxHeight: "260px",
-                bottom: "-1.5rem",
+                bottom: "-2.5rem",
                 right: "-1rem",
                 transform: "rotate(5deg)",
               }}

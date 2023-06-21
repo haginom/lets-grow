@@ -4,6 +4,7 @@ import VegTitle from "../../../components/portal/vegTitle"
 import { Subheading, Paragraph, List, NotepadWrapper } from "./styles"
 import VegetableTable from "../../../components/portal/continuousProvisionTable"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 const PotatoeGrowingGuide = () => {
   return (
@@ -139,11 +140,27 @@ const PotatoeGrowingGuide = () => {
           ]}
           moreInfo={
             <p>
-              Check out our <span className="fw6">Special People </span>session
-              in the<span className="fw6"> Getting To Know Each Other </span>
+              Check out our{" "}
+              <Link to={"/portal/sessions/special-people"} className="fw6">
+                Special People{" "}
+              </Link>
+              session in the
+              <Link to="/portal/getting-to-know-each-other" className="fw6">
+                {" "}
+                Getting To Know Each Other{" "}
+              </Link>
               theme, where you will meet Dug the Potato. Additonally, you can
-              get to know Tibbs the Big Potato in our Diwali session, in our
-              Celebrations theme.
+              get to know Tibbs the Big Potato in our{" "}
+              <Link to="/portal/sessions/diwali" className="fw6">
+                {" "}
+                Diwali{" "}
+              </Link>
+              session, in our{" "}
+              <Link to="/portal/celebrations" className="fw6">
+                {" "}
+                Celebrations{" "}
+              </Link>
+              theme.
             </p>
           }
           spacerHeight={"12rem"}
@@ -171,7 +188,7 @@ const PotatoeGrowingGuide = () => {
                 maxWidth: "240px",
                 maxHeight: "200px",
                 bottom: "-3rem",
-                right: "1rem",
+                right: "-1rem",
               }}
               imgStyle={{ transform: "rotate(5deg)" }}
               className="vegetableImage"

@@ -5,6 +5,7 @@ import { Subheading, Paragraph, List } from "./styles"
 import VegetableTable from "../../../components/portal/continuousProvisionTable"
 import { StaticImage } from "gatsby-plugin-image"
 import { NotepadWrapper } from "./styles"
+import { Link } from "gatsby"
 
 const avocadoPlantingInstructions = [
   "Look carefully at the stone.",
@@ -126,8 +127,15 @@ const AvocadoGrowingGuide = () => {
           ingredients={avocadoIngredients}
           moreInfo={
             <p>
-              Check out our Valentines Day session in the Celebrations theme,
-              where you'll meet Edz the Avocado.
+              Check out our{" "}
+              <Link to="/portal/sessions/valentines-day" className="fw6">
+                Valentines Day{" "}
+              </Link>{" "}
+              session in the{" "}
+              <Link to="/portal/celebrations" className="fw6">
+                Celebrations{" "}
+              </Link>{" "}
+              theme, where you'll meet Edz the Avocado.
             </p>
           }
           vegetableImage={

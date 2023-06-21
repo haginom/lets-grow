@@ -221,6 +221,18 @@ export const StyledTable = styled.table`
 
   .vegetableImage {
     position: absolute;
+    display: none;
+  }
+
+  @media screen and (min-width: 35rem) {
+    .vegetableImage {
+      position: absolute;
+      display: block;
+    }
+  }
+
+  a {
+    color: black;
   }
 `
 

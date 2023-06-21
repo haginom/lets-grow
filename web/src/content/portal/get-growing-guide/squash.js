@@ -1,10 +1,10 @@
 import * as React from "react"
 import FullWidthPanel from "../../../components/fullWidthPanel"
 import VegTitle from "../../../components/portal/vegTitle"
-import { Subheading, Paragraph, List } from "./styles"
+import { Subheading, Paragraph, List, NotepadWrapper } from "./styles"
 import VegetableTable from "../../../components/portal/continuousProvisionTable"
 import { StaticImage } from "gatsby-plugin-image"
-import { NotepadWrapper } from "./styles"
+import { Link } from "gatsby"
 
 const plantingInstructions = [
   "Ensure that you have enough yoghurt pot sized containers for your seeds.",
@@ -158,8 +158,15 @@ const SquashGrowingGuide = () => {
           ingredients={ingredients}
           moreInfo={
             <p>
-              Check out our Transitions session in the Celebrations theme, where
-              you will meet Doop the Butternut Squash.
+              Check out our{" "}
+              <Link to="/portal/sessions/transitions" className="fw6">
+                Transitions{" "}
+              </Link>{" "}
+              session in the{" "}
+              <Link to="/portal/celebrations" className="fw6">
+                Celebrations{" "}
+              </Link>{" "}
+              theme, where you will meet Doop the Butternut Squash.
             </p>
           }
           vegetableImage={

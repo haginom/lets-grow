@@ -83,7 +83,7 @@ const EducationalSettingsIntro = ({ data }) => {
             <IconButton
               icon={data.iconSix.childImageSharp.gatsbyImageData}
               text={"Get Growing Guide"}
-              file={data.bobFloVideoCall.publicURL}
+              file={data.gggExample.publicURL}
             />
             <IconButton
               icon={data.iconFour.childImageSharp.gatsbyImageData}

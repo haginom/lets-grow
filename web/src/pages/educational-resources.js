@@ -211,6 +211,9 @@ export const query = graphql`
     ) {
       publicURL
     }
+    gggExample: file(relativePath: { eq: "ggg-example-doc.pdf" }) {
+      publicURL
+    }
     bloomVideoCall: file(relativePath: { eq: "find-seed-video-call.mp4" }) {
       publicURL
     }

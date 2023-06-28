@@ -38,7 +38,7 @@ const CelebrationOverview = () => {
           gatsbyImageData(width: 200)
         }
       }
-      gtSix: file(relativePath: { eq: "portal/overview/gt-6.png" }) {
+      gtSix: file(relativePath: { eq: "portal/overview/gt-7.png" }) {
         childImageSharp {
           gatsbyImageData(width: 200)
         }

@@ -116,8 +116,8 @@ const SeasonsOverview = () => {
       <FullWidthPanel
         maxWidth="61rem"
         colours={"bg-light-pink white"}
-        left={"27rem"}
-        bottom={"-37rem"}
+        left={"30rem"}
+        bottom={"-40rem"}
         image={data.seasonsOne.childImageSharp.gatsbyImageData}
       >
         <Subheading className="letsgrowfont i mv4 ml3">Seasons</Subheading>

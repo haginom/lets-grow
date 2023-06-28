@@ -256,7 +256,7 @@ const CelebrationOverview = () => {
         <Paragraph ml="0rem" fw="600" mt="1rem">
           All sessions have been written with close reference to Development
           Matters and informed by the Characteristics of Effective Learning.
-          'Getting To Know Each Other' builds development in all seven key
+          'Getting to know each other' builds development in all seven key
           areas, but has Understanding the World at its core.
         </Paragraph>
         <Subheading className="letsgrowfont i mv3">

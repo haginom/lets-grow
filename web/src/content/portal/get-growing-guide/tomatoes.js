@@ -122,7 +122,7 @@ const TomatoGrowingGuide = () => {
               </Link>
               ‘ session in the{" "}
               <Link to="/portal/getting-to-know-each-other" className="fw6">
-                ‘Getting To Know Each Other’
+                ‘Getting to know each other
               </Link>{" "}
               theme, where you will meet the Teeny Toms.
             </p>

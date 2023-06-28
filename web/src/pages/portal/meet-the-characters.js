@@ -94,7 +94,7 @@ const Mtc = () => {
             <SubHeading>Mr. Bloom</SubHeading>
             <Paragraph fw="600">
               Mr. Bloom is the first character that users will meet when
-              beginning Let’s Grow. As CBeebies best loved gardener, he
+              beginning Let’s Grow. As CBeebies' best loved gardener, he
               champions nature and the great outdoors, encouraging everyone to
               be excited by the natural world and to get involved with
               gardening.
@@ -164,7 +164,7 @@ const Mtc = () => {
             setting. Each baby has its own unique personality which is backed up
             by a fun scrapbook resource, full of detail and illustration. Upon
             arrival, the babies are duly integrated into all learning activities
-            within the classroom and are cared for by the children and their
+            within the setting and are cared for by the children and their
             teacher.
           </Paragraph>
           <Paragraph>

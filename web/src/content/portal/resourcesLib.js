@@ -15,9 +15,9 @@ const ResourcesLibraryIntro = ({ data }) => {
         <TextContainer>
           <Paragraph>
             Let’s Grow content covers engaging themes which are flexible enough
-            for teachers to fit into wider learning plans. Sessions are brought
-            to life with the help of innovative, multimedia resources and can be
-            delivered in a variety of ways to suit the setting.
+            to fit into wider learning plans. Sessions are brought to life with
+            the help of innovative, multimedia resources and can be delivered in
+            a variety of ways to suit the setting.
           </Paragraph>
           <ButtonContainer>
             <OrangeButton

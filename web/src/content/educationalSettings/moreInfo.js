@@ -17,10 +17,10 @@ const MoreInfo = ({ data }) => {
           <StyledSmallWidth>
             <Paragraph className="fw6">
               Let's Grow content covers engaging themes which are flexible
-              enough for teachers to fit into wider learning plans. Sessions are
-              brought to life with the help of innovative, multimedia resources
-              and can be delivered in a variety of ways to suit the setting and
-              needs of children.
+              enough to fit into wider learning plans. Sessions are brought to
+              life with the help of innovative, multimedia resources and can be
+              delivered in a variety of ways to suit the setting and needs of
+              children.
             </Paragraph>
           </StyledSmallWidth>
         </div>

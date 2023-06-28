@@ -147,7 +147,7 @@ const PotatoeGrowingGuide = () => {
               session in the
               <Link to="/portal/getting-to-know-each-other" className="fw6">
                 {" "}
-                Getting To Know Each Other{" "}
+                Getting to know each other{" "}
               </Link>
               theme, where you will meet Dug the Potato. Additonally, you can
               get to know Tibbs the Big Potato in our{" "}

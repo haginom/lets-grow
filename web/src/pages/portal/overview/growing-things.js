@@ -90,7 +90,7 @@ const CelebrationOverview = () => {
   `)
   return (
     <Layout portal>
-      <Seo title="Growing Things Overview" />
+      <Seo title="Growing things overview" />
       <HandyHintTitle colour={"bg-orange"} title="overview" />
       <FullWidthPanel
         maxWidth="62rem"
@@ -126,7 +126,7 @@ const CelebrationOverview = () => {
             enhanced continuous provision.
           </li>
           <li>
-            By its nature, 'Growing Things' has seasonal restrictions, these are
+            By its nature, 'Growing things' has seasonal restrictions, these are
             indicated at the beginning of each resource, as a guide.
           </li>
           <li>
@@ -189,10 +189,10 @@ const CelebrationOverview = () => {
         maxWidth="62rem"
       >
         <Subheading className="letsgrowfont i mt4 mb3 ">
-          Growing Things
+          Growing things
         </Subheading>
         <Paragraph ml="0rem" fw="600" mt="1rem">
-          'Growing Things' relates to numerous Early Learning Goals, primarily;
+          'Growing things' relates to numerous Early Learning Goals, primarily;
         </Paragraph>
         <div className="flex justify-between flex-wrap">
           <CheckList>
@@ -217,7 +217,7 @@ const CelebrationOverview = () => {
         <Paragraph ml="0rem" fw="600" mt="1rem">
           All sessions have been written with close reference to Development
           Matters and informed by the Characteristics of Effective Learning.
-          'Growing Things' builds development in all seven key areas, but has
+          'Growing things' builds development in all seven key areas, but has
           Understanding the World at its core.
         </Paragraph>
         <Subheading className="letsgrowfont i mv3">
@@ -246,7 +246,7 @@ const CelebrationOverview = () => {
         bottom={"0rem"}
       >
         <Subheading className="letsgrowfont i mt4 mb3 ">
-          Growing Things
+          Growing things
         </Subheading>
         <ul>
           <OuterListBullet>

@@ -99,7 +99,7 @@ const HeadlineShow = ({ data }) => (
 
         <TextWrapper mw="380px" mb="1rem" className="mt2">
           <Paragraph className="fw6">
-            Mr. Bloom, CBeebies best loved Gardener, brings you a fantastic
+            Mr. Bloom, CBeebies' best loved Gardener, brings you a fantastic
             one-man stage show based on his award-winning TV shows.
           </Paragraph>
           <Paragraph>

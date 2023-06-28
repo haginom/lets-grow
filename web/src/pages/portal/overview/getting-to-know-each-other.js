@@ -128,7 +128,7 @@ const GTKEOOverview = () => {
         </Subheading>
         <List>
           <li>
-            'Getting To Know Each Other' is a fantastic way to begin Let’s Grow.
+            'Getting to know each other' is a fantastic way to begin Let’s Grow.
           </li>
           <li>
             It's a perfect way for teachers to gather their baseline data.
@@ -180,7 +180,7 @@ const GTKEOOverview = () => {
         image={data.gtkeoFour.childImageSharp.gatsbyImageData}
       >
         <Subheading className="letsgrowfont i mt4 mb3 ">
-          Getting To Know Each Other
+          Getting to know each other
         </Subheading>
         <Paragraph ml="0rem" fw="600" mt="1rem">
           An emotional connection with the characters and fiction offers
@@ -209,7 +209,7 @@ const GTKEOOverview = () => {
         <Paragraph ml="0rem" fw="600" mt="1rem">
           All sessions have been written with close reference to Development
           Matters and informed by the Characteristics of Effective Learning.
-          'Getting To Know Each Other' builds development in all seven key
+          'Getting to know each other' builds development in all seven key
           areas, but has Understanding the World at its core.
         </Paragraph>
         <Subheading className="letsgrowfont i mv3">
@@ -234,7 +234,7 @@ const GTKEOOverview = () => {
         maxWidth="61rem"
       >
         <Subheading className="letsgrowfont i mt4 mb3 ">
-          Getting To Know Each Other
+          Getting to know each other
         </Subheading>
         <ul>
           <OuterListBullet>

@@ -75,6 +75,13 @@ export const query = graphql`
         gatsbyImageData(width: 115, height: 115)
       }
     }
+    iconSix: file(
+      relativePath: { eq: "educationalSettings/tt-growing-guide.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(width: 130, height: 128)
+      }
+    }
     polaroidBob: file(
       relativePath: { eq: "educationalSettings/Polaroid-Frame-Bob.png" }
     ) {

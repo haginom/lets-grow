@@ -26,8 +26,9 @@ const EducationalSettingsIntro = ({ data }) => {
           <StyledSmallWidth className="mb4">
             <Paragraph>
               Our unique online Early Years resources have been designed for
-              mainstream, SEND and alternative provision schools, nurseries and
-              home educators to use throughout the academic year.
+              mainstream, SEND and alternative provision schools, nurseries,
+              pre-schools, childminders and home educators to use throughout the
+              academic year.
             </Paragraph>
             <Paragraph>
               Let’s Grow has the Early Years Foundation Stage curriculum
@@ -78,6 +79,11 @@ const EducationalSettingsIntro = ({ data }) => {
               icon={data.iconThree.childImageSharp.gatsbyImageData}
               text={"Mr. Bloom Video Call"}
               file={data.bloomVideoCall.publicURL}
+            />
+            <IconButton
+              icon={data.iconSix.childImageSharp.gatsbyImageData}
+              text={"Get Growing Guide"}
+              file={data.bobFloVideoCall.publicURL}
             />
             <IconButton
               icon={data.iconFour.childImageSharp.gatsbyImageData}
@@ -142,7 +148,7 @@ const IconDiv = styled.div`
   }
 
   @media screen and (min-width: 60em) {
-    margin-left: -2rem;
+    margin-left: -1rem;
   }
 `
 const Column = styled.div`

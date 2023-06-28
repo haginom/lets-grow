@@ -1,7 +1,7 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { SubHeading, Paragraph } from "../../components/tachyons/text"
-import {OrangeButton, OrangeButtonInternalLink} from "../../components/button"
+import { OrangeButton, OrangeButtonInternalLink } from "../../components/button"
 import styled from "styled-components"
 
 const SessionIntro = ({ data, portal }) => {
@@ -53,12 +53,13 @@ const SessionIntro = ({ data, portal }) => {
         </div>
         <div className="dtc-l white bl bw0 bw2-l bg-orange mb2 mb0-l pa2">
           <StyledWidth ml="1rem" className="ph2 ph4-ns mw6 pt4">
-            <SubHeading>Growing Things</SubHeading>
+            <SubHeading>Growing things</SubHeading>
             <TextWrapper>
               <Paragraph>
                 These four practical sessions focus on the natural world,
                 plants, growing things and where our food comes from. Each
-                session is introduced by CBeebies favourite gardener, Mr. Bloom.
+                session is introduced by CBeebies' favourite gardener, Mr.
+                Bloom.
               </Paragraph>
               <Paragraph>
                 Children get hands-on experience growing mushrooms, radishes,
@@ -100,8 +101,8 @@ const SessionIntro = ({ data, portal }) => {
             <SubHeading>Celebrations</SubHeading>
             <TextWrapper>
               <Paragraph>
-                A series of 12 sessions exploring celebrations throughout the
-                year. Children are visited and care for a new baby fruit or
+                A series of twelve sessions exploring celebrations throughout
+                the year. Children are visited and care for a new baby fruit or
                 vegetable who’s keen to learn more. Each session is introduced
                 by Bob, Flo and the babies.{" "}
               </Paragraph>
@@ -113,8 +114,9 @@ const SessionIntro = ({ data, portal }) => {
             {portal ? (
               <OrangeButtonInternalLink
                 targetBlank={false}
+                navigation="/portal/celebrations"
                 className="self-center mt3-l grow"
-                markup={"coming soon"}
+                markup={"let's go"}
               />
             ) : (
               <OrangeButton
@@ -142,7 +144,7 @@ const SessionIntro = ({ data, portal }) => {
             <TextWrapper>
               <Paragraph>
                 A collection of four sessions, looking at each season. Each is
-                introduced by Cbeebies favourite gardener, Mr. Bloom.
+                introduced by Cbeebies' favourite gardener, Mr. Bloom.
               </Paragraph>
               <Paragraph>
                 Ideal for learning about changes in weather and the seasonal
@@ -152,8 +154,9 @@ const SessionIntro = ({ data, portal }) => {
             {portal ? (
               <OrangeButtonInternalLink
                 targetBlank={false}
+                navigation="/portal/seasons"
                 className="self-center mt3-l grow"
-                markup={"coming soon"}
+                markup={"let's go"}
               />
             ) : (
               <OrangeButton

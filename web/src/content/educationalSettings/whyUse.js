@@ -25,8 +25,9 @@ const WhyUse = ({ data }) => {
             <li>Offers a raft of multimedia resources and supportive guides</li>
             <li>
               Comprises session plans, curriculum linked activities and enhanced
-              continuous provision ideas.
+              continuous provision ideas
             </li>
+            <li>Features a comprehensive ‘Get Growing Guide’</li>
           </List>
         </StyledBox>
         <StyledBox colour={"#68979c"} className="boxTwo">
@@ -44,6 +45,7 @@ const WhyUse = ({ data }) => {
             <li>For parental engagement opportunities</li>
             <li>For professional development</li>
             <li>To support and encourage learning on...</li>
+            <li>To be able to grow fruits and vegetables with confidence</li>
             <StyledList>
               <li>Identity and belonging</li>
               <li>Healthy eating and nutrition</li>
@@ -70,10 +72,14 @@ const WhyUse = ({ data }) => {
             <li>Think critically</li>
             <li>Grow a stronger sense of wellbeing</li>
             <li>Engage in immersive, imaginative play</li>
-            <li>Have hands-on sensory experiences.</li>
-            <li>Attain Arts Award Discover</li>
             <li>Develop a sense of nurture, caretaking and responsibility</li>
             <li>Achieve school readiness</li>
+            <li>Have hands-on sensory experiences</li>
+            <li>
+              Experience growing a range of fruit and veg from seed to harvest
+            </li>
+            <li>To develop fine motor skills</li>
+            <li>To understand and experience ‘caring for’ and ‘nurturing’</li>
           </StyledList>
         </StyledBox>
       </StyledGrid>

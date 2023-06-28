@@ -25,9 +25,9 @@ export const GSOne = ({ data }) => (
         Getting Started Guide
       </SubHeading>
       <Paragraph className="fw6">
-        Our creative schemes of work are designed with flexibility in mind.
-        Sessions can be delivered in sequential order or cherry picked as
-        standalone content to compliment the wider curriculum.
+        Our schemes of work are designed with flexibility in mind. Sessions can
+        be delivered in sequential order or cherry picked as standalone content
+        to compliment the wider curriculum.
       </Paragraph>
       <Paragraph>
         You decide how Let’s Grow works best in your setting throughout the
@@ -38,19 +38,11 @@ export const GSOne = ({ data }) => (
         <StyledGatsbyLink to={"/portal/sessions/welcome-session"}>
           ‘Welcome to Let’s Grow with Mr Bloom Session’
         </StyledGatsbyLink>
-         with your children. From here, you can dive straight into any of the
-        four themes.
+         with your children, then follow the short session plan. From here you
+        can dive straight into any of our themes.
       </Paragraph>
       <Paragraph>
-        In both{" "}
-        <StyledGatsbyLink to={"/portal/getting-to-know-each-other"}>
-          ‘Getting to Know Each Other’
-        </StyledGatsbyLink>{" "}
-        and{" "}
-        <StyledGatsbyLink to={"/portal/celebrations"}>
-          ‘Celebrations’
-        </StyledGatsbyLink>{" "}
-        you’ll find the{" "}
+        In both ‘Getting to know each other’ and ‘Celebrations’ you’ll find the{" "}
         <StyledGatsbyLink to={"/portal/sessions/introductory-session"}>
           ‘Introductory Session with Bob, Flo & the Babies’
         </StyledGatsbyLink>
@@ -75,7 +67,7 @@ export const GSOne = ({ data }) => (
 
 export const GSTwo = ({ data }) => (
   <FullWidthPanel colours="bg-navy white" maxWidth="58rem">
-    <SubHeading className="mt4-l">Themes and Sessions at a glance</SubHeading>
+    <SubHeading className="mt4-l">Themes and sessions at a glance</SubHeading>
     <ThemeIntro data={data} />
   </FullWidthPanel>
 )
@@ -93,11 +85,11 @@ export const GSThree = ({ data }) => (
       As part of Let’s Grow and for use in the wider daily routine, Mr. Bloom’s
       collection of songs can be used whenever the children could do with a
       little motivation! Songs are designed to encourage children to wash their
-      hands, tidy up, eat lunch, keep active and there’s a one minute countdown
-      song. There are audio versions of Mr. Bloom and his band singing the songs
-      and you can also video call Mr. Bloom at his shed for an acoustic
-      sing-song with his ukulele. There’s even Bob & Flo’s daily workout video
-      which is ideal for getting everyone moving!
+      hands, tidy up, eat lunch, keep active and there’s also a one minute
+      countdown song. There are audio versions of Mr. Bloom and his band singing
+      the songs and you can also video call Mr. Bloom at his shed for an
+      acoustic sing-song with his ukulele.There’s even Bob & Flo’s daily workout
+      video which is ideal for getting the everyone moving!
     </Paragraph>
     <OrangeButtonInternalLink
       navigation="/portal/songs"
@@ -127,7 +119,7 @@ export const GSFour = ({ data }) => (
           alt=""
         />
         <Text>
-          Bubbles contain suggested teacher dialogue to frame the activity.
+          Bubbles contain suggested dialogue to use to frame the activity.
         </Text>
       </TableColumn>
       <TableColumn>
@@ -154,7 +146,7 @@ export const GSFour = ({ data }) => (
         />
         <Text>
           A highlighter references a multimedia resource which you will find in
-          the library.
+          the resources library.
         </Text>
       </TableColumn>
       <TableColumn mt="-4.6rem">

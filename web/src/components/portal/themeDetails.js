@@ -21,7 +21,7 @@ const ThemeDetails = props => {
     color,
   } = props
 
-  console.log(props, "props")
+  console.log(props.name, "props")
   if (errors) {
     return (
       <Layout>
@@ -55,8 +55,8 @@ const ThemeDetails = props => {
             Handy Hints
           </SessionIntroLink>
         ) : null}
-        {name === "Growing Things" ? (
-          <SessionIntroLink className="ttu" navigation={`../handy-hints`}>
+        {name === "Growing things" ? (
+          <SessionIntroLink className="ttu" navigation={`../get-growing-guide`}>
             GET GROWING GUIDE
           </SessionIntroLink>
         ) : null}

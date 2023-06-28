@@ -40,8 +40,8 @@ const EducationalSettings = ({ data }) => {
       <StyledLayout className="ml5-l mb3 mb5-ns">
         <Paragraph className="fw6 mb3-ns">
           Our online Early Years resources offer a captivating range of
-          innovative session plans, creative schemes of work, interactive films,
-          songs and ideas for hands-on sensory experiences. Joy and learning for
+          innovative session plans, schemes of work, interactive films, songs
+          and ideas for hands-on sensory experiences. Joy and learning for
           children aged 3-5yrs, while also great fun for children up to 7yrs.
         </Paragraph>
         <div
@@ -55,14 +55,15 @@ const EducationalSettings = ({ data }) => {
           />
         </div>
         <Paragraph>
-          Developed hand-in-hand with Early Years Practitioners, every
+          Developed hand-in-hand with early years practitioners, every
           easy-to-use resource aligns to the Early Years Foundation Stage
           curriculum.
         </Paragraph>
         <Paragraph style={{ marginBottom: "-15px" }}>
           Deliverable in a range of settings such as nurseries, pre-schools and
-          primary schools, our content supports the development of children’s
-          social skills, language and communication, confidence and knowledge.
+          primary schools, as well as by childminders and homeschoolers, our
+          content supports the development of children’s social skills, language
+          and communication, confidence and knowledge.
         </Paragraph>
       </StyledLayout>
       <StyledContainer>

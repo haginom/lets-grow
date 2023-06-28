@@ -45,7 +45,7 @@ const Session = props => {
           color={color?.hex}
           className="br3 ph3 pv4 ph5-ns pv4-ns f6 f5-ns fw5"
         >
-          <Centered mw="66rem" className="relative">
+          <Centered mw="62rem" className="relative">
             <Heading className="coffeeTea fw6 pv4-l pv3 tc ttu">{name}</Heading>
             {visitingBaby ? (
               <Subheading className="coffeeTea i pv2 ml4">
@@ -61,6 +61,10 @@ const Session = props => {
               )}
               {whiteArt && (
                 <StyledImg
+                  style={{
+                    transform: "scale(1.3)",
+                    transformOrigin: "bottom right",
+                  }}
                   className="whiteArt"
                   src={urlFor(whiteArt).auto("format").fit("max").url()}
                 />
@@ -175,8 +179,8 @@ const ThreeRegColumns = styled.div`
   }
 
   @media screen and (min-width: 50em) {
-    display: block;
-    column-count: 3;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20rem, 22rem));
     columns: 20rem;
     column-gap: 10px;
   }
@@ -192,7 +196,7 @@ const ThreeRegColumns = styled.div`
     display: none;
 
     @media screen and (min-width: 60em) {
-      display: block;
+      display: grid;
       margin-left: 6rem;
       width: 15rem;
       height: 100%;
@@ -244,8 +248,8 @@ const Subheading = styled.h3`
   }
 `
 const StyledImg = styled.img`
-  justify-self: end;
-  align-self: center;
+  justify-self: center;
+  align-self: start;
   max-width: 10rem;
 `
 const StyledVideoStill = styled.img`

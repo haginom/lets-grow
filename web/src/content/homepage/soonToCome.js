@@ -55,7 +55,7 @@ const SoonToCome = () => {
             style={{ margin: "0.5rem auto 0.5rem auto" }}
           />
           <StyledParagraph>
-            For parents, carers, nannies and childminders.
+            For parents, grandparents, carers and nannies.
             <br />
             Playful sessions perfect for enjoyment in a home setting.
           </StyledParagraph>

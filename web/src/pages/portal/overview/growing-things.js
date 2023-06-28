@@ -100,7 +100,7 @@ const CelebrationOverview = () => {
         image={data.gtOne.childImageSharp.gatsbyImageData}
       >
         <Subheading className="letsgrowfont i mv4 ml3">
-          Growing Things
+          'Growing things' with Mr. Bloom
         </Subheading>
         <List>
           <li>

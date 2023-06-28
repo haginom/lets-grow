@@ -8,7 +8,7 @@ import { NotepadWrapper } from "./styles"
 
 const plantingInstructions = [
   "Make sure you have all of your containers, compost and seed ready.",
-  "Fill your containers to 7cm or so from the top.",
+  "Fill your containers with compost to 7cm or so from the top.",
   "Now water your compost surface.",
   "Sprinkle your seed very finely across the surface of the compost.",
   "Very lightly sprinkle a little more compost on top, barely covering the carrots at all.",

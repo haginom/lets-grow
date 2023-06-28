@@ -96,8 +96,14 @@ const CucumberGrowingGuide = () => {
       <FullWidthPanel colours="bg-gold white" maxWidth="56rem">
         <Subheading className="coffeeTea mb3">Planting Cucumber</Subheading>
         <Paragraph className="fw6 mb3">
-          There are many varieties of cucumber to choose from. Select your
-          favorite cucumber and follow these planting instructions:
+          Some varieties of cucumber will grow outside. However, you may find
+          that some of the smaller cucumber varieties offer more opportunities
+          for children to enjoy picking and eating the fruit with more
+          regularity. You should look for varieties that are labelled “mini”,
+          “lunchbox”, “snack”. These will be best grown in a greenhouse,
+          although you should refer to the seed packet instructions for your
+          chosen variety. Planting from seed will work well or you may prefer to
+          purchase a seedling from a garden centre in May.
         </Paragraph>
         <NotepadWrapper flexItemOneSize="85%">
           <StaticImage

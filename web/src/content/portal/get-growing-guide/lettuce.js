@@ -9,11 +9,13 @@ import { NotepadWrapper } from "./styles"
 const lettucePlantingInstructions = [
   "Fill your pot or seed tray with compost.",
   "Water the compost to ensure that it is damp, but not waterlogged.",
-  "Sow the lettuce seeds on top of the compost with some spacing between them.",
-  "Keep the pots inside in March and April, and leave them outside from May to September.",
+  "You will have lots of seeds in your packet, so you should expect to sow seed in several pots or two seed trays.",
+  "You will find that the lettuce seeds are quite small, try to sprinkle the seeds on top of the compost with some spacing between them.",
+  "You should keep the pots inside in March and April, to give them a good start whilst it is still cold.",
+  "In May to September you can leave the pots outside.",
   "Keep the compost damp.",
-  "The seeds should show signs of growth within a week or so and will be ready for pricking out in three to four weeks. Follow the guidance in the ‘Seedlings’ session from this point onwards.",
-  "Once pricked out and grown into sturdy little plants, water them whenever the compost feels dry to the touch.",
+  "The seeds should show signs of growth within a week or so and will be ready for pricking out in three/four weeks. Follow the guidance in the ‘Seedlings’ session from this point onwards.",
+  "Once pricked out and grown into strudy little plants, they should be watered whenever the compost feels dry to the touch.",
   "Expect to harvest lettuce between 4 to 14 weeks.",
 ]
 

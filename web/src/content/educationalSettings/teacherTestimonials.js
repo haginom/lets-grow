@@ -120,9 +120,11 @@ const TeacherTestimonials = ({ data }) => {
         </div>
         <StyledBanner className="center relative">
           <GatsbyImage
-            alt="Banner with text, Lets Grow Online launches in 2023"
+            objectFit="contain"
+            imgStyle={{ width: "100%", marginBottom: "1rem" }}
+            alt="Banner with text, Lets Grow Online is coming soon"
             className="center"
-            style={{ maxWidth: "50rem" }}
+            style={{ minWidth: "100%", maxWidth: "20rem" }}
             image={data.banner.childImageSharp.gatsbyImageData}
           />
         </StyledBanner>
@@ -163,7 +165,7 @@ const ImgContainer = styled.div`
 
   @media screen and (min-width: 60em) {
     padding: 0rem;
-    margin-bottom: 2rem;
+    margin-top: 0rem;
   }
 `
 const StyledParagraph = styled.p`
@@ -179,7 +181,7 @@ const StyledBanner = styled.div`
 
   @media screen and (min-width: 60em) {
     max-width: 66rem;
-    margin-top: -11rem;
+    margin-top: -10rem;
   }
 `
 export default TeacherTestimonials

@@ -163,7 +163,7 @@ export const query = graphql`
       relativePath: { eq: "educationalSettings/banner-ed-set.png" }
     ) {
       childImageSharp {
-        gatsbyImageData(width: 832, height: 400)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     decorativeOne: file(

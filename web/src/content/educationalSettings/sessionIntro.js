@@ -17,10 +17,10 @@ const SessionIntro = ({ data, portal }) => {
             <SubHeading>Getting to know each other</SubHeading>
             <TextWrapper>
               <Paragraph>
-                A series of seven sessions where the children meet and care for
-                an adorable family of baby fruits & vegetables in turn,
-                exploring their own identity and diving into the world of Let’s
-                Grow. Each session is introduced by Bob, Flo & the babies.
+                A series of sessions where the children meet and care for an
+                adorable family of baby fruits & vegetables in turn, exploring
+                their own identity and diving into the world of Let’s Grow. Each
+                session is introduced by Bob, Flo & the babies.
               </Paragraph>
               <Paragraph>
                 Ideal for collecting baseline data and helping children settle
@@ -56,14 +56,15 @@ const SessionIntro = ({ data, portal }) => {
             <SubHeading>Growing things</SubHeading>
             <TextWrapper>
               <Paragraph>
-                These four practical sessions focus on the natural world,
-                plants, growing things and where our food comes from. Each
-                session is introduced by CBeebies' favourite gardener, Mr.
-                Bloom.
+                Practical sessions that focus on the natural world, plants,
+                growing things and where our food comes from. Children get
+                hands-on experience growing mushrooms, radishes, potatoes,
+                peppers, rainbow chard and lettuce. Each session is introduced
+                by CBeebies’ favourite gardener, Mr. Bloom.
               </Paragraph>
               <Paragraph>
-                Children get hands-on experience growing mushrooms, radishes,
-                potatoes, peppers, rainbow chard and lettuce.
+                Our ‘Get Growing Guide’ is easy to implement and will have you
+                growing fruits and vegetables with confidence in no time!
               </Paragraph>
             </TextWrapper>
             {portal ? (
@@ -101,10 +102,10 @@ const SessionIntro = ({ data, portal }) => {
             <SubHeading>Celebrations</SubHeading>
             <TextWrapper>
               <Paragraph>
-                A series of twelve sessions exploring celebrations throughout
-                the year. Children are visited and care for a new baby fruit or
+                A calendar of sessions exploring celebrations throughout the
+                year. Children are visited and care for a new baby fruit or
                 vegetable who’s keen to learn more. Each session is introduced
-                by Bob, Flo and the babies.{" "}
+                by Bob, Flo and the babies.
               </Paragraph>
               <Paragraph>
                 Perfect for exploring beliefs and traditions, and how we
@@ -143,8 +144,9 @@ const SessionIntro = ({ data, portal }) => {
             <SubHeading>Seasons</SubHeading>
             <TextWrapper>
               <Paragraph>
-                A collection of four sessions, looking at each season. Each is
-                introduced by Cbeebies' favourite gardener, Mr. Bloom.
+                Four sessions that introduce the seasons of the year. Each
+                session is introduced by CBeebies’ favourite gardener, Mr.
+                Bloom.
               </Paragraph>
               <Paragraph>
                 Ideal for learning about changes in weather and the seasonal

@@ -56,13 +56,21 @@ const EducationalSettingsIntro = ({ data }) => {
                 printables
               </ListItem>
               <ListItem>
-                Easy to implement <span className="fw6">‘Handy Hints’</span>{" "}
-                full of helpful ideas and advice
+                A step-by-step ‘Growing Guide’ to get you growing fruits and
+                vegetables straight away
+              </ListItem>
+              <ListItem>
+                Recipes, sensory engagment and nutritional information to
+                support healthy eating
               </ListItem>
               <ListItem>Curriculum linked activities </ListItem>
               <ListItem>Enhanced continuos provision ideas</ListItem>
               <ListItem>
                 The opportunity to complete Arts Award Discover
+              </ListItem>
+              <ListItem>
+                Easy to implement <span className="fw6">‘Handy Hints’</span>{" "}
+                full of helpful ideas and advice
               </ListItem>
             </List>
           </StyledSmallWidth>
@@ -91,11 +99,6 @@ const EducationalSettingsIntro = ({ data }) => {
               file={data.song.publicURL}
             />
             <IconButton
-              icon={data.iconTwo.childImageSharp.gatsbyImageData}
-              text={"Handy Hints"}
-              file={data.handyHintsInfo.publicURL}
-            />
-            <IconButton
               icon={data.iconOne.childImageSharp.gatsbyImageData}
               text={"Bob & Flo Session Plan Excerpt"}
               file={data.bobFloSessionPlan.publicURL}
@@ -104,6 +107,11 @@ const EducationalSettingsIntro = ({ data }) => {
               icon={data.iconThree.childImageSharp.gatsbyImageData}
               text={"Bob & Flo Video Call"}
               file={data.bobFloVideoCall.publicURL}
+            />
+            <IconButton
+              icon={data.iconTwo.childImageSharp.gatsbyImageData}
+              text={"Handy Hints"}
+              file={data.handyHintsInfo.publicURL}
             />
           </IconDiv>
         </Column>

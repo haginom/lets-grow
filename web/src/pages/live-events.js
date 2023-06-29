@@ -81,7 +81,7 @@ export const query = graphql`
       relativePath: { eq: "liveEvents/headlineShow/hs1-cover.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(width: 450, height: 300)
+        gatsbyImageData(width: 460, height: 300)
       }
     }
     hsTwo: file(relativePath: { eq: "liveEvents/headlineShow/hs2.jpg" }) {
@@ -137,7 +137,7 @@ export const query = graphql`
       relativePath: { eq: "liveEvents/roamingInteractive/ricover.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(width: 400)
+        gatsbyImageData(width: 460)
       }
     }
     iiOne: file(
@@ -151,7 +151,7 @@ export const query = graphql`
       relativePath: { eq: "liveEvents/interactiveInstallation/ii2-cover.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(width: 400)
+        gatsbyImageData(width: 460)
       }
     }
     iiThree: file(
@@ -235,7 +235,7 @@ export const query = graphql`
       relativePath: { eq: "liveEvents/makeTakeWorkshops/mtw3-cover.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(width: 390)
+        gatsbyImageData(width: 460)
       }
     }
     mtwFour: file(

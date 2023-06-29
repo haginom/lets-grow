@@ -21,7 +21,6 @@ const ThemeDetails = props => {
     color,
   } = props
 
-  console.log(props.name, "props")
   if (errors) {
     return (
       <Layout>

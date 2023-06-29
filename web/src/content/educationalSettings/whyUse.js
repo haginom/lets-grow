@@ -44,8 +44,8 @@ const WhyUse = ({ data }) => {
             <li>To aid in collecting baseline data</li>
             <li>For parental engagement opportunities</li>
             <li>For professional development</li>
-            <li>To support and encourage learning on...</li>
             <li>To be able to grow fruits and vegetables with confidence</li>
+            <li className="mb2">To support and encourage learning on...</li>
             <StyledList>
               <li>Identity and belonging</li>
               <li>Healthy eating and nutrition</li>

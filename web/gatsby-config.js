@@ -77,5 +77,15 @@ module.exports = {
         dataset: "production",
       },
     },
+    {
+      resolve: "gatsby-plugin-csp",
+      options: {
+        directives: {
+          // Existing directives...
+          "style-src": "'http://cdn.sanity.io' 'unsafe-inline'",
+          // Other directives...
+        },
+      },
+    },
   ],
 }

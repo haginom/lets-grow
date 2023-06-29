@@ -9,6 +9,9 @@ import { isLoggedIn } from "../../services/auth.js"
 const HeaderLayout = ({ image }) => (
   <header className="relative mv2">
     <Nav subheading image={image}>
+      <Nav.Link to="/" className="mr3 mr4-ns">
+        HOME
+      </Nav.Link>
       <Dropdown
         activatorText={"WHAT WE DO "}
         items={[
@@ -16,6 +19,7 @@ const HeaderLayout = ({ image }) => (
           { text: "Live Events", url: "live-events" },
         ]}
       />
+
       <Nav.Link to="/news" className="mr3 mr4-ns">
         NEWS
       </Nav.Link>

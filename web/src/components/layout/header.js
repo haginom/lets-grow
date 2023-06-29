@@ -19,7 +19,6 @@ const HeaderLayout = ({ image }) => (
           { text: "Live Events", url: "live-events" },
         ]}
       />
-
       <Nav.Link to="/news" className="mr3 mr4-ns">
         NEWS
       </Nav.Link>

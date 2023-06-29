@@ -120,7 +120,7 @@ export const ThemeIntro = ({ data }) => (
               <p>Mushrooms & Radishes</p>
             </div>
             <div>
-              <p>Potatoes</p>
+              <p>Potatoes & Peppers</p>
             </div>
           </SessionGrid>
         </td>

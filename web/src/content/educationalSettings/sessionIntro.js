@@ -238,7 +238,7 @@ const StyledWidth = styled.div`
 `
 
 const TextWrapper = styled.div`
-  flex: 1 1 180px;
+  flex: 1 1 15rem;
 `
 
 export default SessionIntro

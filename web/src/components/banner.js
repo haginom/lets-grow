@@ -6,7 +6,7 @@ import styled from "styled-components"
 const Banner = () => {
   const { banner } = useStaticQuery(graphql`
     query {
-      banner: file(relativePath: { eq: "banner-with-babies.png" }) {
+      banner: file(relativePath: { eq: "banner.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH)
         }
@@ -29,7 +29,7 @@ const Banner = () => {
 const StyledBanner = styled.div`
   @media screen and (min-width: 60em) {
     max-width: 62rem;
-    margin-top: -11rem;
+    margin-top: -9rem;
     margin-right: -10rem;
   }
 `

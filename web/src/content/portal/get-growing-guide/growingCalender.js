@@ -258,7 +258,7 @@ export const GrowingCalender = () => (
             <StaticImage
               alt=""
               style={{ width: "80%", height: "80%" }}
-              src="../../../images/portal/get-growing-guide/Rainbow Chard.png"
+              src="../../../images/portal/get-growing-guide/RainbowChard.png"
             />
             <InnerWrapper>Rainbow Chard</InnerWrapper>
           </StyledHeading>

@@ -44,7 +44,6 @@ const VideoTemplateBody = props => {
   const { data, errors } = props
   const songs = data && data.songs
   const videoCalls = data && data.videoCalls
-  console.log(videoCalls)
   if (errors) {
     return (
       <Layout portal>

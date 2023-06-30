@@ -7,7 +7,7 @@ import styled from "styled-components"
 const Video = ({ song, videoCall, ...props }) => {
   const { name, assetId, videoResources } = props
   let playbackId = videoResources?.video?.asset?.playbackId
-
+  console.log(playbackId)
   return (
     <Layout portal>
       <Seo title={`${name}`} />

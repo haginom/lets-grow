@@ -47,7 +47,6 @@ const SongTemplate = props => {
     )
   }
 
-  console.log(songNodes)
   return (
     <Layout portal>
       <Seo title="Songs" />

@@ -217,8 +217,8 @@ const CelebrationOverview = () => {
         <Paragraph ml="0rem" fw="600" mt="1rem">
           All sessions have been written with close reference to Development
           Matters and informed by the Characteristics of Effective Learning.
-          'Growing things' builds development in all seven key areas, but has
-          Understanding the World at its core.
+          'Growing Things' builds development in all of the 7 areas of learning,
+          but has Understanding the World at it's core.
         </Paragraph>
         <Subheading className="letsgrowfont i mv3">
           Opportunities for...

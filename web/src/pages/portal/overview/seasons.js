@@ -131,15 +131,15 @@ const SeasonsOverview = () => {
             around them.
           </li>
           <li>
-            Each season has a dedicated session that focuses upon: Changes in
-            weather
+            Each season has a dedicated session that focuses upon:
+            <br></br>Changes in weather
             <br></br>Seasonal impact upon plants and animals
           </li>
           <li>
-            'Seasons' is not intended as a comprehensive standalone scheme of
+            Seasons' is not intended as a comprehensive standalone scheme of
             work; rather to enhance, support and broaden seasonally based
             content within the class teacher's existing framework; with our four
-            seasons • sessions providing a spring board for further exploration.
+            season sessions providing a spring board for further exploration.
           </li>
           <li>
             Session plans are divided into two parts, with 'Part One'
@@ -209,8 +209,8 @@ const SeasonsOverview = () => {
         <Paragraph ml="0rem" fw="600" mt="1rem">
           All sessions have been written with close reference to Development
           Matters and informed by the Characteristics of Effective Learning.
-          'Seasons' builds development in all seven key areas, but has
-          Understanding the World at its core.
+          'Seasons' builds development in all of the 7 areas of learning, but
+          has Understanding the World at it's core.
         </Paragraph>
         <Subheading className="letsgrowfont i mv3">
           Opportunities for...

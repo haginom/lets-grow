@@ -182,13 +182,8 @@ const CelebrationOverview = () => {
             imaginative play.
           </li>
           <li>
-            A fruit or vegetable baby visits as part of every session and the
-            children are encouraged to nurture and care for the baby through
-            imaginative play.
-          </li>
-          <li>
-            Teachers prepare by making the visiting character out of a real
-            fruit or vegetable, following our guidance.
+            Prepare in advance for sessions, by making the visiting character
+            out of a real fruit or vegetable, following our guidance.
           </li>
           <li>
             Session plans are divided into two parts, with 'Part One'
@@ -199,6 +194,14 @@ const CelebrationOverview = () => {
           <li>Our 'Handy Hints' support preparation and delivery. </li>
           <li>Deliver as stand-alone sessions throughout the year.</li>
         </List>
+
+        <Subheading className="letsgrowfont i mv3">Additionally...</Subheading>
+        <Paragraph>
+          Further content that complements ‘Celebrations’, can be found in the
+          ‘Seasons’ scheme of work. For example, the ‘Winter’ session in
+          ‘Seasons,' can sit alongside the Diwali, Christmas and Chinese New
+          Year sessions, giving seasonal context.
+        </Paragraph>
 
         <Container className="flex ml4-ns">
           <OrangeButtonInternalLink
@@ -256,19 +259,19 @@ const CelebrationOverview = () => {
         <Paragraph ml="0rem" fw="600" mt="1rem">
           All sessions have been written with close reference to Development
           Matters and informed by the Characteristics of Effective Learning.
-          'Getting to know each other' builds development in all seven key
-          areas, but has Understanding the World at its core.
+          'Celebrations' builds development in all of the 7 areas of learning,
+          but has Understanding the World at it's core.
         </Paragraph>
         <Subheading className="letsgrowfont i mv3">
           Opportunities for...
         </Subheading>
         <CheckList className="mt4" mb="26rem">
           <li>Parental engagement</li>
-          <li> Problem solving</li>
-          <li> Critical thinking</li>
+          <li>Problem solving</li>
+          <li>Critical thinking</li>
           <li>Verbal and non-verbal communication</li>
-          <li> Turn taking</li>
-          <li> Imaginative engagement</li>
+          <li>Turn taking</li>
+          <li>Imaginative engagement</li>
           <li>Promoting healthy eating</li>
         </CheckList>
       </FullWidthPanel>

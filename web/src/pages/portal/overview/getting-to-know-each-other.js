@@ -112,8 +112,8 @@ const GTKEOOverview = () => {
           </li>
 
           <li>
-            Teachers prepare by making the visiting character out of a real
-            fruit or vegetable, following our guidance.
+            Prepare in advance for sessions, by making the visiting character
+            out of a real fruit or vegetable, following our guidance.
           </li>
           <li>
             Session plans are divided into two parts, with 'Part One'
@@ -130,9 +130,7 @@ const GTKEOOverview = () => {
           <li>
             'Getting to know each other' is a fantastic way to begin Let’s Grow.
           </li>
-          <li>
-            It's a perfect way for teachers to gather their baseline data.
-          </li>
+          <li>It's a perfect way to gather baseline data.</li>
           <li>
             It's an ideal theme for children who are settling into a new class.
           </li>
@@ -209,8 +207,8 @@ const GTKEOOverview = () => {
         <Paragraph ml="0rem" fw="600" mt="1rem">
           All sessions have been written with close reference to Development
           Matters and informed by the Characteristics of Effective Learning.
-          'Getting to know each other' builds development in all seven key
-          areas, but has Understanding the World at its core.
+          'Getting to know each other' builds development in all of the 7 areas
+          of learning, but has Understanding the World at it's core.
         </Paragraph>
         <Subheading className="letsgrowfont i mv3">
           Opportunities for...

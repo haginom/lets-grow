@@ -137,7 +137,7 @@ export const HHFive = ({ data }) => (
       <HHGridItem
         transform={"scale(1.5) translate(0px, -10px)"}
         image={data.craftThree.childImageSharp.gatsbyImageData}
-        text={"18mm googly\neyes x 50"}
+        text={"18mm googly\neyes x 100"}
       />
       <HHGridItem
         image={data.craftFour.childImageSharp.gatsbyImageData}

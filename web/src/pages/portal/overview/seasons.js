@@ -136,7 +136,7 @@ const SeasonsOverview = () => {
             <br></br>Seasonal impact upon plants and animals
           </li>
           <li>
-            Seasons' is not intended as a comprehensive standalone scheme of
+            'Seasons' is not intended as a comprehensive standalone scheme of
             work; rather to enhance, support and broaden seasonally based
             content within the class teacher's existing framework; with our four
             season sessions providing a spring board for further exploration.

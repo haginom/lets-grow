@@ -196,7 +196,7 @@ const CelebrationOverview = () => {
         </List>
 
         <Subheading className="letsgrowfont i mv3">Additionally...</Subheading>
-        <Paragraph>
+        <Paragraph ml="0rem" fw="600" mt="1rem">
           Further content that complements ‘Celebrations’, can be found in the
           ‘Seasons’ scheme of work. For example, the ‘Winter’ session in
           ‘Seasons,' can sit alongside the Diwali, Christmas and Chinese New

@@ -73,7 +73,7 @@ const LogoLinksInlineCollapse = ({ portal, image, children }) => {
         <StyledNav>
           <Logo style={{ zIndex: -1 }} image={image} />
           <LinksContainer>{children}</LinksContainer>
-          <StyledSubHeading className="absolute letsgrowfont tl-l">
+          <StyledSubHeading className="letsgrowfont tl-l">
             Engaging educational resources and tailored live events led by
             CBeebies' best loved gardener Mr. Bloom & his friends!
           </StyledSubHeading>
@@ -107,10 +107,14 @@ const StyledSubHeading = styled.h2`
   max-width: 52rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  position: relative;
+  margin-bottom: -2rem;
 
   @media screen and (min-width: 30em) {
     bottom: -5rem;
     font-size: 1.5rem;
+    position: absolute;
+    margin-bottom: 0rem;
   }
   @media screen and (min-width: 60em) {
     left: 8rem;

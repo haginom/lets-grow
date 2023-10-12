@@ -19,7 +19,7 @@ const WhyUse = ({ data }) => {
           <Paragraph className="fw5">Let's Grow...</Paragraph>
           <List>
             <li>Raises attainment</li>
-            <li>Covers all areas of the E.Y.F.S curriculum</li>
+            <li>Covers all areas of the EYFS curriculum</li>
             <li>Is based on ‘Development Matters’</li>
             <li>Is informed by the ‘Characteristics of Effective Learning’</li>
             <li>Offers a raft of multimedia resources and supportive guides</li>
@@ -37,9 +37,12 @@ const WhyUse = ({ data }) => {
               alt="picture of courgette"
             />
           </ToggleDecoration>
-          <Paragraph className="fw5">Teachers use Let's Grow...</Paragraph>
+          <Paragraph className="fw5 mr5 pr3">
+            Teachers, childcare professionals and home educators use Let's
+            Grow...
+          </Paragraph>
           <List>
-            <li>To deliver a creative E.Y.F.S curriculum</li>
+            <li>To deliver a creative EYFS curriculum</li>
             <li>To harness the power of creativity and play</li>
             <li>To aid in collecting baseline data</li>
             <li>For parental engagement opportunities</li>

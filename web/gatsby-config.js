@@ -11,6 +11,8 @@ module.exports = {
     title: `Let's Grow`,
     description: `Let's Grow is an innovative, multi-media resource for educational settings that offers an irresistible invitation to learn and play for children and their educators.`,
     author: `@haginom`,
+    siteUrl: `https://letsgrow.org.uk/`,
+    image: `./images/logo large.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

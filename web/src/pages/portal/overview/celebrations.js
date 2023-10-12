@@ -318,7 +318,7 @@ const CelebrationOverview = () => {
             </SessionBullet>
           </OuterListBullet>
         </ul>
-        <Subheading className="coffeeTea i mv5 ">
+        <Subheading className="letsgrowfont i mv5 ">
           To explore the theme of:
         </Subheading>
         <FlexContainer className="flex flex-wrap justify-between ">

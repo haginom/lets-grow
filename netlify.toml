@@ -1,6 +1,0 @@
-[build]
-  publish = "web/public"
-  command = "npm run build"
-  
-  # Cache Git LFS objects
-  cache = { paths = [".gitattributes", ".git", ".git/lfs/objects/**/*"] }
